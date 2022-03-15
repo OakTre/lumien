@@ -21,4 +21,4 @@ ___node_modules/pug-parser/lib/inline-tag.js теги a, span, img___
 
 удалить теги 
 
-__ a, span, img___
+__a, span, img___
