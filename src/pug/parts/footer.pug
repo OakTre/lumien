@@ -1,3 +1,59 @@
+-
+	let nav_arr = ["Новости", "О компании", "Контакты", "Диллерам"];
+	let nav_arr2 = ["Помощь", "Как выбрать экран", "Сервисное обслуживание", "FAQ", "Глоссарий", "Регистрация изделий"];
+	let nav_arr3 = ["Образование", "Бизнес", "Домашнее использование", "Музеи и выставки", "Бары и рестораны", "Развлекательные площадки", "Гос.сектор", "VR"];
+	let social_arr = ["inst", "tl", "wt", "fb"]
+
+
 footer.footer
 	.site-container
-		h1 footer
+		.footer__container.grid-container
+			.footer__block
+				a.footer__logo.logo(href="/")
+					+icon-multi("logo")(width="161" height="22" class="logo__icon")
+			.footer__block
+				ul.footer__nav
+					for item in nav_arr
+						li.footer__item
+							a.footer__link.footer__legend(href="/")= item
+			.footer__block
+				p.footer__legend.footer__legend-height(href="/")
+					|	Клиентам
+				ul.footer__nav-small
+					for item in nav_arr2
+						li.footer__nav-small-item
+							a.footer__nav-small-link.footer__small-legend(href="/")= item
+			.footer__block
+				p.footer__legend.footer__legend-height(href="/")
+					|	Сферы применения
+				ul.footer__nav-small
+					for item in nav_arr3
+						li.footer__nav-small-item
+							a.footer__nav-small-link.footer__small-legend(href="/")= item
+			.footer__block
+				p.footer__legend.footer__legend-height
+					|	Подписывайтесь на наши новости и события
+				.footer__form
+					label.footer__form-label
+						input.footer__input(placeholder="Введите ваш email")
+						button.button-reset.footer__form-btn
+							+icon-mono("send-email")(width="24" height="24" class="footer__form-btn-icon")
+				p.footer__small-legend.footer__adress
+					|	г.&nbsp;Москва, Звёздный бульвар, д.&nbsp;21
+				a.footer__small-legend.footer__tel(href="tel:+74957975775")
+					|	+7&nbsp;495&nbsp;797-57-75
+				a.footer__small-legend.footer__tel(href="tel:++79267975775")
+					|	+7&nbsp;926&nbsp;797-57-75
+				ul.social
+					for item in social_arr
+						li.social__item
+							a.social__link(href="/")
+								+icon-mono(`${item}`)(width="24" height="24" class="social__link-icon")
+		.footer__copyright
+			p
+				|	© LUMIEN, 2011–2022
+			a.footer__copyright-link(href="/")
+				|	 Политика конфиденциальности
+			a.footer__copyright-link.markweber(href="/")
+				|	 Разработка сайта
+				+icon-multi("MarkWeber")(width="77" height="19" class="markweber__logo")

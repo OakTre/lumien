@@ -1,3 +1,24 @@
-header.header
-	.site-container
-		h1 header
+header.header(class=headerClass)
+	.site-container.header__container.grid-container
+		.header__block
+			a.logo.header__logo(href="/")
+				+icon-multi("logo")(width="161" height="22" class="logo__icon")
+		.header__block
+			a.header__link(href="/")
+				|	Каталог
+		.header__block
+			button.button-reset.header__menu-btn
+				span
+				span
+				span
+			a.header__link(href="/")
+				|	Сферы применения
+			a.header__link(href="/")
+				|	Кейсы
+		.header__block
+			a.header__link.header__page-link(href="/")
+				|	ENG
+			a.header__link.header__page-link(href="tel:+74957975775")
+				|	+7 495 797-57-75
+			button.button-reset.button.header__btn
+				|	Оставить заявку
