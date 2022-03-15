@@ -19,6 +19,7 @@
 
 ___node_modules/pug-parser/lib/inline-tag.js теги a, span, img___
 
-удалить теги 
-
-__a, span, img___
+удалить теги
+```
+a, span, img
+``` 
