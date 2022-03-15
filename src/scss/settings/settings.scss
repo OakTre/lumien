@@ -103,6 +103,16 @@ input:focus {
 	column-gap: var(--grid-offset);
 }
 
+.grid-container__block {
+	&:nth-child(1) {
+		grid-column: 2 span;
+	}
+
+	&:nth-child(2) {
+		grid-column: 10 span;
+	}
+}
+
 .button-reset {
 	margin: 0;
 	padding: 0;
@@ -118,6 +128,7 @@ input:focus {
 	border-radius: 10rem;
 	padding: 3.8rem;
 	color: var(--color-white);
+	text-transform: uppercase;
 	cursor: pointer;
 
 	&:active {
@@ -125,6 +136,17 @@ input:focus {
 	}
 }
 
+.input-reset {
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+
 .markweber {
 	opacity: 0.6;
+}
+
+.site-heading {
+	font: var(--font-title-1);
 }

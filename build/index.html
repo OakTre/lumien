@@ -26,9 +26,37 @@
         </div>
       </header>
       <main class="page-main main">
-        <section class="hero">
+        <section class="intro">
           <div class="site-container">
             <h1>Hero Heading</h1>
+          </div>
+        </section>
+        <section class="contacts-us">
+          <div class="site-container contacts-us__container grid-container">
+            <div class="grid-container__block"></div>
+            <div class="grid-container__block contacts-us__content">
+              <div class="contacts-us__content-block">
+                <h2 class="site-heading contacts-us__heading">	Связаться с нами</h2>
+              </div>
+              <div class="contacts-us__content-block">
+                <form class="contacts-us__form form">
+                  <label class="form__label">
+                    <input class="form__input input-reset" type="text" name="name" placeholder="Выберите тип оборудования">
+                  </label>
+                  <label class="form__label">
+                    <input class="form__input input-reset" type="text" name="name" placeholder="Имя">
+                  </label>
+                  <label class="form__label">
+                    <input class="form__input input-reset" type="tel" name="tel" placeholder="+7 999 999-99-99">
+                  </label>
+                  <label class="form__agreement-label">
+                    <input class="visually-hidden" type="checkbox" name="agreement">
+                    <p>	Согласен на обработку персональных данных</p>
+                  </label>
+                  <button class="button-reset button form__btn">	Отправить заявку</button>
+                </form>
+              </div>
+            </div>
           </div>
         </section>
       </main>

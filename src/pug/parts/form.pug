@@ -1,0 +1,21 @@
+section.contacts-us
+	.site-container.contacts-us__container.grid-container
+		.grid-container__block
+		.grid-container__block.contacts-us__content
+			.contacts-us__content-block
+				h2.site-heading.contacts-us__heading
+					|	Связаться с нами
+			.contacts-us__content-block
+				form.contacts-us__form.form
+					label.form__label
+						input(type="text" class="form__input input-reset" name="name" placeholder="Выберите тип оборудования")
+					label.form__label
+						input(type="text" class="form__input input-reset" name="name" placeholder="Имя")
+					label.form__label
+						input(type="tel" class="form__input input-reset" name="tel" placeholder="+7 999 999-99-99")
+					label.form__agreement-label
+						input(type="checkbox" class="visually-hidden" name="agreement")
+						p
+							|	Согласен на обработку персональных данных
+					button.button-reset.button.form__btn
+						|	Отправить заявку
