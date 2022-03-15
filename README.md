@@ -16,9 +16,9 @@
 ### Особенности
 
 После устоновки всех пакетов нужно из файла:
-
-___node_modules/pug-parser/lib/inline-tag.js теги a, span, img___
-
+```
+node_modules/pug-parser/lib/inline-tag.js теги a, span, img
+```
 удалить теги
 ```
 a, span, img
