@@ -1,8 +1,14 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import 'focus-visible';
-import lazyIMages from './modules/lazyIMages';
 import documenReady from './helpers/documenReady';
+import lazyIMages from './modules/lazyIMages';
+import validation from './modules/validation';
+import inputmask from './modules/inputmask';
+import newsSlider from './modules/newsSlider';
 
 documenReady(() => {
   lazyIMages();
+  validation();
+  inputmask();
+  newsSlider();
 });

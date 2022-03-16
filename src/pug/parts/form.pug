@@ -5,16 +5,21 @@ section.contacts-us
 			.contacts-us__content-block
 				h2.site-heading.contacts-us__heading
 					|	Связаться с нами
+				a.contacts-us__link(href="tel:+74957975775")
+					|	+7 495 797-57-75
+				a.contacts-us__link._colored(href="mailto:info@auvix.ru")
+					|	info@auvix.ru
+
 			.contacts-us__content-block
-				form.contacts-us__form.form
+				form.contacts-us__form.form(data-need-validation)
 					label.form__label
-						input(type="text" class="form__input input-reset" name="name" placeholder="Выберите тип оборудования")
+						input(type="text" class="form__input input-reset" name="name" placeholder="Выберите тип оборудования" data-parsley-required)
 					label.form__label
-						input(type="text" class="form__input input-reset" name="name" placeholder="Имя")
+						input(type="text" class="form__input input-reset" name="name" placeholder="Имя" data-parsley-required)
 					label.form__label
-						input(type="tel" class="form__input input-reset" name="tel" placeholder="+7 999 999-99-99")
+						input(type="tel" class="form__input input-reset js-phone-mask" name="tel" placeholder="+7 999 999-99-99" data-parsley-required data-parsley-phone)
 					label.form__agreement-label
-						input(type="checkbox" class="visually-hidden" name="agreement")
+						input(type="checkbox" class="visually-hidden" name="agreement" data-parsley-required)
 						p
 							|	Согласен на обработку персональных данных
 					button.button-reset.button.form__btn
