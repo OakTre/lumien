@@ -26,6 +26,9 @@
     border-radius: 1.2rem;
     overflow: hidden;
     width: 38.3rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &::before {
         position: absolute;
