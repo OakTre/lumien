@@ -31,6 +31,47 @@
             <h1>Hero Heading</h1>
           </div>
         </section>
+        <section class="equipment-filter">
+          <div class="site-container equipment-filter__container grid-container">
+            <div class="grid-container__block"></div>
+            <div class="grid-container__block equipment-filter__content">
+              <div class="equipment-filter__content-block">
+                <h2 class="equipment-filter__heading site-second-heading">Оборудование под ваши цели</h2>
+              </div>
+              <div class="equipment-filter__content-block">
+                <form class="equipment-filter__form js-choises-parent">
+                  <div class="equipment-filter__form-wrapper">
+                    <label class="equipment-filter__form-label select-wrapper custom-select">
+                      <select class="select js-equipment-select" name="equipment-type">
+                        <option value="Выберите тип оборудования" placeholder>Выберите тип оборудования</option>
+                        <option value="second">second</option>
+                        <option value="third">third</option>
+                      </select>
+                    </label>
+                    <label class="equipment-filter__form-label select-wrapper custom-select">
+                      <select class="select js-equipment-select" name="equipment-format">
+                        <option value="Выберите формат" placeholder>Выберите формат</option>
+                        <option value="second">second</option>
+                        <option value="third">third</option>
+                      </select>
+                    </label>
+                    <label class="equipment-filter__form-label select-wrapper custom-select">
+                      <select class="select js-equipment-select" name="screen-type">
+                        <option value="Выбрать тип экрана" placeholder>Выбрать тип экрана</option>
+                        <option value="second">second</option>
+                        <option value="third">third</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="equipment-filter__form-btns">
+                    <button class="button-reset equipment-filter__form-btn-reset js-equipment-clear" type="button">сброс</button>
+                    <button class="button-reset equipment-filter__form-btn-send button">смотреть</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="section-catalog">
           <div class="site-container section-catalog__container">
             <div class="grid-container">
@@ -45,6 +86,43 @@
               </div>
             </div>
             <div class="section-catalog__list"><a class="section-catalog__item" href="/"><span class="section-catalog__item-btn">Проекционные <br> экраны</span><img class="section-catalog__img" src="images/section-catalog/item1.png" alt="Проекционные экраны"></a><a class="section-catalog__item" href="/"><span class="section-catalog__item-btn _small">Интерактивные <br> дисплеи</span><img class="section-catalog__img" src="images/section-catalog/item2.png" alt="Интерактивные дисплеи"></a><a class="section-catalog__item" href="/"><span class="section-catalog__item-btn _small">Мебель</span><img class="section-catalog__img" src="images/section-catalog/item1.png" alt="Мебель"></a></div><a class="section-catalog__link button" href="/">смотреть все оборудование</a>
+          </div>
+        </section>
+        <section class="section-indent spheres">
+          <div class="spheres__slide-item">
+            <div class="site-container grid-container spheres__container">
+              <div class="grid-container__block"></div>
+              <div class="grid-container__block spheres__content-info">
+                <div class="spheres__content-info-block"><span class="site-second-heading spheres__second-heading">Сферы <br> применения</span></div>
+                <div class="spheres__content-info-block">
+                  <h2 class="site-first-heading spheres__first-heading">Домашние развлечения</h2>
+                  <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="site-container spheres__nav-container">
+            <button class="slider-nav__btn button-reset js-spheres-btn-prev">
+              <svg class="icon icon-shevron-left slider-nav__btn-icon" width="9" height="13">
+                <use xlink:href="images/sprites/sprite-mono.svg#shevron-left"></use>
+              </svg>
+            </button>
+            <div class="swiper spheres__nav">
+              <div class="swiper-wrapper">
+                <div class="spheres__nav-item swiper-slide">Домашние развлечения</div>
+                <div class="spheres__nav-item swiper-slide">Бары и рестораны</div>
+                <div class="spheres__nav-item swiper-slide">Образование</div>
+                <div class="spheres__nav-item swiper-slide">VR</div>
+                <div class="spheres__nav-item swiper-slide">Госсектор</div>
+                <div class="spheres__nav-item swiper-slide">Развлекательные площадки</div>
+                <div class="spheres__nav-item swiper-slide">Корпоративные события</div>
+              </div>
+            </div>
+            <button class="slider-nav__btn button-reset js-spheres-btn-next">
+              <svg class="icon icon-shevron-right slider-nav__btn-icon" width="9" height="13">
+                <use xlink:href="images/sprites/sprite-mono.svg#shevron-right"></use>
+              </svg>
+            </button>
           </div>
         </section>
         <section class="advantages section-indent">

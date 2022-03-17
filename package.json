@@ -75,6 +75,7 @@
 		"vinyl-source-stream": "^2.0.0"
 	},
 	"dependencies": {
+		"choices.js": "^10.1.0",
 		"dayjs": "^1.11.0",
 		"inputmask": "^5.0.7",
 		"jquery": "^3.6.0",

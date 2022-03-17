@@ -6,6 +6,8 @@ import validation from './modules/validation';
 import inputmask from './modules/inputmask';
 import newsSlider from './modules/newsSlider';
 import advantagesSlider from './modules/advantagesSlider';
+import initSelects from "./modules/initSelects";
+import equipmentSelects from "./modules/equipmentSelects";
 
 documenReady(() => {
   lazyIMages();
@@ -13,4 +15,6 @@ documenReady(() => {
   inputmask();
   newsSlider();
   advantagesSlider();
+  initSelects();
+  equipmentSelects();
 });
