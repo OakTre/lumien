@@ -1,0 +1,34 @@
+import gsap from 'gsap';
+import { disableScroll, enableScroll } from '../helpers/disableScroll';
+
+export default () => {
+  const openBtn = document.querySelector(".js-open-menu-btn");
+  const closeBtn = document.querySelector(".js-close-menu-btn");
+  const timeline = gsap.timeline({
+    paused: true,
+    reversed: true
+  });
+
+  gsap.set(".menu", {autoAlpha: 0});
+  gsap.set(".menu_layer", {autoAlpha: 0});
+  gsap.set(".menu__container", {yPercent: -100});
+  gsap.set(".menu__block", {opacity: 0, y: '2rem'});
+  gsap.set("._bottom-line", {xPercent: -100});
+
+  timeline
+    .to(".menu", {autoAlpha: 1, duration: 0.1})
+    .to(".menu_layer", {autoAlpha: 1, duration: 0.1}, "-=0.1")
+    .to(".menu__container", {yPercent: 0}, "-=0.1")
+    .to(".menu__block", {opacity: 1, y: 0, duration: 0.2})
+    .to("._bottom-line", {xPercent: 0}, "-=0.1");
+
+  openBtn.addEventListener("click", ()=>{
+    timeline.play();
+    disableScroll();
+  });
+
+  closeBtn.addEventListener("click", ()=>{
+    timeline.reverse();
+    enableScroll();
+  });
+};

@@ -1,0 +1,63 @@
+-
+  let arr = [
+    "Новости",
+    "О компании",
+    "Контакты",
+    "Дилерам"
+  ]
+
+  let arr2 = [
+    "Образование",
+    "Бизнес",
+    "Домашнее использование",
+    "Музеи и выставки",
+    "Бары и рестораны",
+    "Развлекательные площадки",
+    "Гос.сектор",
+    "VR"
+  ]
+
+  let arr3 = [
+    "Помощь",
+    "Как выбрать экран",
+    "Сервисное обслуживание",
+    "FAQ",
+    "Глоссарий",
+    "Регистрация изделий"
+  ]
+
+.menu.fix-blocks
+  .menu_layer
+  .menu__container
+    .site-container.grid-container
+      .menu__block
+        a.logo.menu__logo(href="/")
+          +icon-multi("logo")(width="161" height="22" class="logo__icon")
+      .menu__block
+        .menu__nav-container
+          .menu__nav-wrapper
+            span._bottom-line
+            nav.menu__nav
+              ul.menu__nav-list
+                for item in arr
+                  li.menu__nav-item
+                    a.menu__nav-link.menu__legend(href="/")= item
+            nav.menu__nav
+              a(href="/" class="menu__legend menu__nav-legend") Сферы применения
+              ul.menu__nav-list
+                for item in arr2
+                  li.menu__nav-item-small
+                    a.menu__nav-link.menu__legend-small(href="/")= item
+            nav.menu__nav
+              a(href="/" class="menu__legend menu__nav-legend") Клиентам
+              ul.menu__nav-list
+                for item in arr3
+                  li.menu__nav-item-small
+                    a.menu__nav-link.menu__legend-small(href="/")= item
+          a.menu__download-link(href="/" download)
+            | Скачать каталог
+            .menu__download-icon-wrapper
+              +icon-mono("dwnld")(class="menu__download-link-icon" width="9" height="13")
+        button.button-reset.menu__close-btn.js-close-menu-btn
+          +icon-mono("cross")(class="menu__close-btn-icon" width="13" height="13")
+

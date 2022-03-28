@@ -9,6 +9,8 @@ import advantagesSlider from './modules/advantagesSlider';
 import initSelects from './modules/initSelects';
 import equipmentSelects from './modules/equipmentSelects';
 import spheresSlider from './modules/spheresSlider';
+import openMenu from './modules/openMenu';
+import closePreloadre from './modules/closePreloadre';
 
 documenReady(() => {
   lazyIMages();
@@ -19,4 +21,6 @@ documenReady(() => {
   initSelects();
   equipmentSelects();
   spheresSlider();
+  openMenu();
+  closePreloadre();
 });
