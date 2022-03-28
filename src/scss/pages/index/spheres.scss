@@ -1,12 +1,30 @@
 .spheres {
   position: relative;
   height: 99.2rem;
-  background-color: var(--color-cream);
+  background-color: var(--color-dark);
   color: var(--color-white);
 
   &__slide-item {
     position: relative;
     padding-top: 11.7rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0.61deg, rgba(30, 30, 30, 0.7) 2.57%, rgba(0, 0, 0, 0) 42.02%), linear-gradient(227.74deg, rgba(4, 2, 81, 0.34) 17.52%, rgba(0, 0, 0, 0.34) 45.1%);
+      content: "";
+    }
+  }
+
+  &__slider {
+    height: 100%;
   }
 
   &__content-info {
@@ -59,9 +77,56 @@
   &__nav-container {
     position: absolute;
     bottom: 6.6rem;
-    left: 40px;
+    left: 0;
     width: 100%;
+
+    .site-container {
+      display: flex;
+      align-items: center;
+      min-width: 0;
+    }
+  }
+
+  &__nav {
+    flex-grow: 1;
+    margin: 0 2.7rem;
+    padding: 1rem 0.5rem;
     display: flex;
     align-items: center;
+  }
+
+  &__nav-item {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    color: rgba($color: #fff, $alpha: 0.4);
+    font: var(--font-body-S);
+    margin-right: 3.2rem;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.swiper-slide-thumb-active {
+      color: var(--color-white);
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 104%;
+        height: 104%;
+        transform: translate(-50%, -50%);
+        border: 1px solid var(--color-white);
+        border-radius: 3rem;
+        content: "";
+      }
+    }
+  }
+
+  &__nav-btn {
+    flex-shrink: 0;
   }
 }

@@ -1,10 +1,20 @@
 .header {
   padding-top: 1.6rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   --default-color: var(--color-white);
 
   &.is-dark {
     --default-color: var(--color-dark);
+  }
+
+  &.logo-hidden {
+    .logo {
+      display: none;
+    }
   }
 
 	&__logo {

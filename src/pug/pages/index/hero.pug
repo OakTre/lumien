@@ -1,3 +1,21 @@
 section.intro
-	.site-container
-		h1 Hero Heading
+  .site-container.intro__container.grid-container
+    .grid-container__block
+      a.logo.header__logo(href="/")
+        +icon-multi("logo")(width="161" height="22" class="logo__icon")
+    .grid-container__block.intro-content
+      .intro-content__block
+        ul.intro-slider-nav
+          li.intro-slider-nav__item Дисплеи
+      .intro-content__block
+        span.intro-content__heading Интерактивные дисплеи
+
+        .intro-content__btn-wrapper
+          p
+            | Профессиональная панель последнего поколения, поддерживающая технологию мультитач применима для <span>развлекательных площадок</span>, <span>образования</span>, <span>корпоративных событий</span>,<span>госсектора</span>, <span>VR</span>
+          a.intro-content__btn(href="/")
+            span.intro-content__btn-circle-wrapper
+              span.intro-content__btn-outer-circle
+              +icon-multi("tv-small")(class="intro-content__btn-icon" width="52" height="39")
+            span.intro-content__btn-text смотреть модели
+
