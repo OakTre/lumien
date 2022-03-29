@@ -11,6 +11,11 @@ import equipmentSelects from './modules/equipmentSelects';
 import spheresSlider from './modules/spheresSlider';
 import openMenu from './modules/openMenu';
 import closePreloadre from './modules/closePreloadre';
+import introSlider from './modules/introSlider';
+
+window.onload = () => {
+  closePreloadre();
+};
 
 documenReady(() => {
   lazyIMages();
@@ -22,5 +27,5 @@ documenReady(() => {
   equipmentSelects();
   spheresSlider();
   openMenu();
-  closePreloadre();
+  introSlider();
 });

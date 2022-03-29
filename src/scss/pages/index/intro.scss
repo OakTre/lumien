@@ -14,8 +14,16 @@
   display: grid;
   grid-template-columns: repeat(10,1fr);
   column-gap: var(--grid-offset);
+  min-width: 0;
+
+  &__slider-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
 
   &__block {
+    overflow: hidden;
+
     &:nth-child(1) {
       grid-column: 3 span;
     }
@@ -29,6 +37,7 @@
 
   &__heading {
     font: var(--font-title-1);
+    display: block;
   }
 
   &__btn-wrapper {
@@ -120,4 +129,63 @@
     flex-shrink: 0;
     transition: transform var(--transition);
   }
+}
+
+
+.intro-content-slider {
+  overflow: hidden;
+  min-width: 0;
+}
+
+.intro-slider-nav {
+  &__item {
+    display: block;
+    position: relative;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    font: var(--font-body-S);
+    color: var(--color-rgba-white-06);
+
+    &.swiper-pagination-bullet-active {
+      color: var(--color-white);
+
+      &::after {
+        animation: slide-progress 3s cubic-bezier(.3,0,.3,1) forwards;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: calc(100% - 26.7rem);
+      width: 19.7rem;
+      height: 0.1rem;
+      background-color: #5A5A5A;
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: calc(100% - 26.7rem);
+      width: 0;
+      height: 0.1rem;
+      background-color: var(--color-white);
+      content: "";
+    }
+  }
+}
+
+@keyframes slide-progress {
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: 19.7rem;
+	}
 }

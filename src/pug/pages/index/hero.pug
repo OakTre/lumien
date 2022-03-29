@@ -5,10 +5,20 @@ section.intro
         +icon-multi("logo")(width="161" height="22" class="logo__icon")
     .grid-container__block.intro-content
       .intro-content__block
-        ul.intro-slider-nav
-          li.intro-slider-nav__item Дисплеи
+        .intro-slider-nav
       .intro-content__block
-        span.intro-content__heading Интерактивные дисплеи
+        .intro-content__slider-wrapper
+          .intro-content-slider.swiper
+            .swiper-wrapper
+              .swiper-slide
+                span.intro-content__heading(data-name="Дисплеи")
+                  | Интерактивные <br> дисплеи
+              .swiper-slide
+                span.intro-content__heading(data-name="Экраны")
+                  | Проекционные <br> экраны
+              .swiper-slide
+                span.intro-content__heading(data-name="Мебель")
+                  | Мебель
 
         .intro-content__btn-wrapper
           p
