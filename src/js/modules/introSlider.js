@@ -2,39 +2,49 @@ import Swiper, {
   Navigation,
   Pagination,
   EffectFade,
-  Autoplay
+  Autoplay,
+  Thumbs,
+  Controller
 } from 'swiper/swiper-bundle';
 
-Swiper.use([Navigation, Pagination, EffectFade, Autoplay]);
+Swiper.use([Navigation, Pagination, EffectFade, Autoplay, Thumbs, Controller]);
 
 export default () => {
-  let menu = [];
-  const slides = Array.from(document.querySelectorAll(".intro-content__heading"));
-
-  slides.forEach((slide)=>{
-    let menuName = slide.dataset.name;
-    menu.push(menuName);
+  let sliderIntroNav = new Swiper(".intro-slider-nav", {
+    slidesPerView: 1,
+    direction: 'vertical',
+    spaceBetween: 30,
+    watchSlidesProgress: true,
   });
 
   let sliderIntro = new Swiper(".intro-content-slider", {
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     spaceBetween: 0,
-    loop: true,
-    autoplay: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
     effect: 'fade',
 		fadeEffect: {
 		  crossFade: true,
 		},
-    pagination: {
-      el: '.intro-slider-nav',
-			// clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="intro-slider-nav__item ' + className + '">' + (menu[index]) + '</span>';
-      },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
     },
   });
+
+  sliderIntroNav.controller.control = sliderIntro;
+  sliderIntro.controller.control = sliderIntroNav;
+
+  // setTimeout(() => {
+  //   document.querySelector(".intro-slider-nav .swiper-slide-active").classList.add("swiper-paused");
+  //   sliderIntro.autoplay.stop();
+  // }, 3000);
+
+  // document.addEventListener("visibilitychange", function() {
+	// 	if (document.visibilityState === 'visible') {
+  //     document.querySelector(".intro-slider-nav .swiper-slide-active").classList.remove("swiper-paused");
+  //     sliderIntro.autoplay.start();
+	// 	} else {
+  //     document.querySelector(".intro-slider-nav .swiper-slide-active").classList.add("swiper-paused");
+  //     sliderIntro.autoplay.stop();
+	// 	}
+	// });
 };

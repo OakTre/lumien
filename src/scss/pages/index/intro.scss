@@ -138,6 +138,18 @@
 }
 
 .intro-slider-nav {
+  height: 100%;
+  overflow: visible;
+
+  &__wrapper {
+    min-height: 0;
+    height: 1.9rem;
+
+    .swiper-wrapper {
+      transform: none !important;
+    }
+  }
+
   &__item {
     display: block;
     position: relative;
@@ -146,11 +158,17 @@
     font: var(--font-body-S);
     color: var(--color-rgba-white-06);
 
-    &.swiper-pagination-bullet-active {
+    &.swiper-slide-active {
       color: var(--color-white);
 
       &::after {
         animation: slide-progress 3s cubic-bezier(.3,0,.3,1) forwards;
+      }
+    }
+
+    &.swiper-paused {
+      &::after {
+        animation-play-state: paused;
       }
     }
 
