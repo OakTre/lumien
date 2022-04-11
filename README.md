@@ -3,6 +3,8 @@
 ## Ссылки
 
 1. [Главная](https://oaktre.github.io/lumien/build/)
+1. [Общий каталог](https://oaktre.github.io/lumien/build/common-catalog.html)
+
 
 
 
@@ -22,4 +24,4 @@ node_modules/pug-parser/lib/inline-tag.js
 удалить теги
 ```
 a, span, img
-``` 
+```
