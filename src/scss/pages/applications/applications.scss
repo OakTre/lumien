@@ -1,0 +1,9 @@
+.applications {
+  &__content {
+    gap: 4rem var(--grid-offset);
+  }
+
+  &__content-item {
+    grid-column: 4 span;
+  }
+}

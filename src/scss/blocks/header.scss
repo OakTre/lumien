@@ -58,6 +58,10 @@
     &:last-child {
       margin-right: 0;
     }
+
+    &._is-current {
+      color: var(--color-accent);
+    }
   }
 
   &__page-link {

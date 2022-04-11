@@ -3,7 +3,9 @@
 ## Ссылки
 
 1. [Главная](https://oaktre.github.io/lumien/build/)
-1. [Общий каталог](https://oaktre.github.io/lumien/build/common-catalog.html)
+2. [Общий каталог](https://oaktre.github.io/lumien/build/common-catalog.html)
+3. [Сферы применения](https://oaktre.github.io/lumien/build/spheres.html)
+
 
 
 

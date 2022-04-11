@@ -6,8 +6,14 @@ const fontsBuild = () => (
     .pipe(gulp.dest(config.dest.fonts))
 );
 
-export const assetsBuild = gulp.parallel(fontsBuild);
+const faviconBuild = () => (
+  gulp.src(`${config.src.favicon}/**/*`)
+    .pipe(gulp.dest(config.dest.favicon))
+);
+
+export const assetsBuild = gulp.parallel(fontsBuild, faviconBuild);
 
 export const assetsWatch = () => {
   gulp.watch(`${config.src.fonts}/**/*`, fontsBuild);
+  gulp.watch(`${config.src.favicon}/**/*`, faviconBuild);
 };
