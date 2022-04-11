@@ -1,4 +1,29 @@
+-
+  let intro_arr = [
+    {
+      name: "Интерактивные <br> дисплеи",
+      slug: "Дисплеи",
+      img: "images/index-slider/img1.png",
+      text: "Профессиональный дисплей последнего поколения, поддерживающая технологию мультитач применима для <span>развлекательных площадок</span>, <span>образования</span>, <span>корпоративных событий</span>,<span>госсектора</span>, <span>VR</span>"
+    },
+    {
+      name: "Проекционные <br> экраны",
+      slug: "Экраны",
+      img: "",
+      text: "Профессиональная панель последнего поколения, поддерживающая технологию мультитач применима для <span>развлекательных площадок</span>, <span>образования</span>, <span>корпоративных событий</span>,<span>госсектора</span>, <span>VR</span>"
+    },
+    {
+      name: "Мебель",
+      slug: "Мебель",
+      img: "images/index-slider/img2.png",
+      text: "Профессиональная мебель последнего поколения, поддерживающая технологию мультитач применима для <span>развлекательных площадок</span>, <span>образования</span>, <span>корпоративных событий</span>,<span>госсектора</span>, <span>VR</span>"
+    }
+  ]
+
 section.intro
+  .intro__layer-slide.mod-show
+  .intro__layer-slide
+  .intro__layer-slide
   .site-container.intro__container.grid-container
     .grid-container__block
       a.logo.header__logo(href="/")
@@ -8,30 +33,25 @@ section.intro
         .intro-slider-nav__wrapper
           .intro-slider-nav.swiper
             .swiper-wrapper
-              .intro-slider-nav__item.swiper-slide Дисплеи
-              .intro-slider-nav__item.swiper-slide Экраны
-              .intro-slider-nav__item.swiper-slide Мебель
-
+              for item in intro_arr
+                .intro-slider-nav__item.swiper-slide= item.slug
       .intro-content__block
         .intro-content__slider-wrapper
           .intro-content-slider.swiper
             .swiper-wrapper
-              .swiper-slide
-                span.intro-content__heading(data-name="Дисплеи")
-                  | Интерактивные <br> дисплеи
-              .swiper-slide
-                span.intro-content__heading(data-name="Экраны")
-                  | Проекционные <br> экраны
-              .swiper-slide
-                span.intro-content__heading(data-name="Мебель")
-                  | Мебель
+              for item in intro_arr
+                .swiper-slide
+                  span.intro-content__heading(data-name=item.slug)!= item.name
+                  .intro-content__btn-wrapper
+                    p!= item.text
+                    a.intro-content__btn(href="/")
+                      span.intro-content__btn-circle-wrapper
+                        span.intro-content__btn-outer-circle
+                        +icon-multi("tv-small")(class="intro-content__btn-icon" width="52" height="39")
+                      span.intro-content__btn-text смотреть модели
+    img(src="images/index-slider/img1.png" alt="" class="intro-content__img mod-show")
+    img(src="images/index-slider/img2.png" alt="" class="intro-content__img")
+    img(src="images/index-slider/img2.png" alt="" class="intro-content__img")
 
-        .intro-content__btn-wrapper
-          p
-            | Профессиональная панель последнего поколения, поддерживающая технологию мультитач применима для <span>развлекательных площадок</span>, <span>образования</span>, <span>корпоративных событий</span>,<span>госсектора</span>, <span>VR</span>
-          a.intro-content__btn(href="/")
-            span.intro-content__btn-circle-wrapper
-              span.intro-content__btn-outer-circle
-              +icon-multi("tv-small")(class="intro-content__btn-icon" width="52" height="39")
-            span.intro-content__btn-text смотреть модели
+
 

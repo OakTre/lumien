@@ -3,6 +3,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 9;
   width: 100%;
 
   --default-color: var(--color-white);
@@ -80,6 +81,7 @@
       height: 0.1rem;
       background-color: var(--default-color);
       margin-bottom: 0.5rem;
+      transition: background-color var(--transition);
 
       &:last-child {
         align-self: flex-start;
@@ -88,11 +90,31 @@
         width: 3rem;
       }
     }
+
+    &:hover,
+    &:focus {
+      span {
+        background-color: var(--color-accent);
+      }
+    }
   }
 
   &__btn {
     padding: 0.8rem 1rem;
     border-radius: 2.5rem;
     text-transform: none;
+  }
+
+  &__search-btn {
+    cursor: pointer;
+    transition: fill var(--transition);
+
+    &:hover {
+      fill: var(--color-accent);
+    }
+
+    &:focus {
+      fill: var(--color-accent);
+    }
   }
 }
