@@ -12,6 +12,7 @@ import spheresSlider from './modules/spheresSlider';
 import openMenu from './modules/openMenu';
 import closePreloadre from './modules/closePreloadre';
 import introSlider from './modules/introSlider';
+import initAccordion from './modules/initAccordion';
 
 window.onload = () => {
   closePreloadre();
@@ -28,4 +29,5 @@ documenReady(() => {
   spheresSlider();
   openMenu();
   introSlider();
+  initAccordion();
 });

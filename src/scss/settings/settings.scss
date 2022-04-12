@@ -179,3 +179,9 @@ input:focus {
 .section-heading-offset {
   margin-bottom: 10rem;
 }
+
+.drop-menu-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition);
+}

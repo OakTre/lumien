@@ -1,0 +1,6 @@
+mixin intro-block(heading, img)
+  section.intro-block.top-offset.section-indent(style=`background-image: url(images/intro-block/${img}.jpg)`)
+    .site-container.grid-container
+      .grid-container__block
+      .grid-container__block
+        h1.site-heading.intro-block__heading!= heading

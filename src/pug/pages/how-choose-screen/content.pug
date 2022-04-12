@@ -1,0 +1,89 @@
+-
+  let accordion_arr = [
+    "Мобильные на штативе",
+    "Натяжные на раме",
+    "С функцией отражени внешней засветки",
+    "С электроприводом",
+    "Встраиваемые",
+    "Рулонные ручные",
+    "Для крупных инсталляций"
+  ]
+
+section.section-indent.how-choose-screen-content
+  .site-container.grid-container.how-choose-screen-content__container
+    .grid-container__block
+    .grid-container__block
+      p.how-choose-screen-content__text
+        | Экраны являются неотъемлемой частью проекционной системы. От того, насколько правильно и корректно подобран проекционный экран, зависит общее впечатление от увиденного.
+      h3.how-choose-screen-content__heading
+        | Основные критерии при выборе экрана:
+      ul.how-choose-screen-content__list
+        li Тип экрана
+        li Формат экрана
+        li Размер экрана
+        li Проекционное полотно
+      ul.accordion-list
+        li.accordion
+          button.accordion__btn.button-reset.js-drop-menu-btn
+            p.accordion__heading Тип экрана
+            span.accordion__icon
+              span
+              span
+          .drop-menu-container.js-drop-menu-container
+            .accordion__body.drop-menu.js-drop-menu
+              .accordion__body-text-wrapper
+                p
+                  | Экраны LUMIEN выпускаются нескольких типов:
+                .accordion__body-feautures-wrapper
+                  for item in accordion_arr
+                    p.accordion__body-feautures= item
+
+        li.accordion
+          button.accordion__btn.button-reset.js-drop-menu-btn
+            p.accordion__heading Фомат экрана
+            span.accordion__icon
+              span
+              span
+          .drop-menu-container.js-drop-menu-container
+            .accordion__body.drop-menu.js-drop-menu
+              .accordion__body-text-wrapper
+                p
+                  | Экраны LUMIEN поставляются в трёх наиболее популярных форматах, применяемых в сфере бизнеса, образования и для домашнего кинотеатра:
+                .accordion__body-formats-wrapper
+                  img.accordion__body-formats-img(src="images/formats/img1.svg" alt="Формат экрана 1:1")
+                  img.accordion__body-formats-img(src="images/formats/img2.svg" alt="Формат экрана 3:4")
+                  img.accordion__body-formats-img(src="images/formats/img3.svg" alt="Формат экрана 16:9")
+
+        li.accordion
+          button.accordion__btn.button-reset.js-drop-menu-btn
+            p.accordion__heading Размер экрана
+            span.accordion__icon
+              span
+              span
+          .drop-menu-container.js-drop-menu-container
+            .accordion__body.drop-menu.js-drop-menu
+              .accordion__body-text-wrapper
+                p
+                  | Размер экрана подбирается исходя из следующей методики:
+                ul.accordion__body-sizes-list
+                  li
+                    +icon-mono("sizes-height")(width="45" height="45" class="accordion__body-sizes-icon")
+                    p Высота проекционного экрана = 1/6 расстояния от экрана до последнего ряда зрителей
+                  li
+                    +icon-mono("sizes-width")(width="45" height="45" class="accordion__body-sizes-icon")
+                    p Ширина проекционного <br> экрана:
+                .accordion__body-formats-wrapper.mod-size
+                  .accordion__body-formats-img-wrapper
+                    img.accordion__body-formats-img.mod-size(src="images/sizes/img1.svg" alt="Формат экрана 1:1")
+                    p Ширина=Высота
+                  .accordion__body-formats-img-wrapper
+                    img.accordion__body-formats-img.mod-size(src="images/sizes/img2.svg" alt="Формат экрана 3:4")
+                    p Ширина = 1,33 х Высота
+                  .accordion__body-formats-img-wrapper
+                    img.accordion__body-formats-img.mod-size(src="images/sizes/img3.svg" alt="Формат экрана 16:9")
+                    p Ширина = 1,78 х Высота
+                  .accordion__body-formats-img-wrapper
+                    img.accordion__body-formats-img.mod-size(src="images/sizes/img4.svg" alt="Формат экрана 16:10")
+                    p Ширина = 1,6 x Высота
+                p
+                  | Определите размер экрана в зависимости от дизайна помещения и расположения зрительских мест. Залогом успеха служит правило располагать экран перед аудиторией, а не перед проектором. Для этого может потребоваться дополнительно слегка опустить точку подвеса экрана при потолочном креплении. Экран должен располагаться так, чтобы был виден всем зрителям.
