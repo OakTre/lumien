@@ -185,3 +185,55 @@ input:focus {
   overflow: hidden;
   transition: max-height var(--transition);
 }
+
+.site-content {
+  h5 {
+    font: var(--font-title-5);
+    margin: 5rem 0 2rem;
+
+    &:nth-of-type(1) {
+      margin-top: 0;
+    }
+  }
+
+  a {
+    color: var(--color-accent);
+  }
+
+  ul {
+    margin-bottom: 5rem;
+
+    li {
+      position: relative;
+      font: var(--font-body-S);
+      margin-bottom: 1rem;
+      color: var(--text-color);
+      padding-left: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: currentColor;
+        border-radius: 50%;
+        content: "";
+      }
+    }
+  }
+
+  p {
+    font: var(--font-body-S);
+    margin-bottom: 4rem;
+    color: var(--text-color);
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+}
