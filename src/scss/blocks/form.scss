@@ -235,4 +235,15 @@
   &__form-btn {
     padding: 3.8rem 11.3rem;
   }
+
+  &__tel {
+    display: inline-block;
+    font-size: 3rem;
+    line-height: 1;
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 4rem;
+  }
 }
