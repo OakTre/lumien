@@ -13,6 +13,7 @@ import openMenu from './modules/openMenu';
 import closePreloadre from './modules/closePreloadre';
 import introSlider from './modules/introSlider';
 import initAccordion from './modules/initAccordion';
+import contactsMap from './modules/contactsMap';
 
 window.onload = () => {
   closePreloadre();
@@ -30,4 +31,5 @@ documenReady(() => {
   openMenu();
   introSlider();
   initAccordion();
+  contactsMap();
 });

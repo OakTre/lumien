@@ -1,0 +1,35 @@
+section.contacts-map
+  .site-container.grid-container
+    .grid-container__block
+    .grid-container__block
+      .contacts-map__nav
+        label.contacts-map__label
+          input(type="radio" name="country" value="rus" checked class="visually-hidden js-map-country")
+          span.contacts-map__label-heading Россия
+        label.contacts-map__label
+          input(type="radio" name="country" value="bel" class="visually-hidden js-map-country")
+          span.contacts-map__label-heading Беларусь
+        label.contacts-map__label
+          input(type="radio" name="country" value="kz" class="visually-hidden js-map-country")
+          span.contacts-map__label-heading Казахстан
+  .contacts-map__inner
+    .contacts-map__map.js-map
+    .site-container.grid-container.contacts-map__container
+      .grid-container__block
+      .grid-container__block
+        .contacts-map__content-block
+          h2.contacts-map__content-heading.js-heading Официальный представитель LUMIEN в России
+          p.contacts-map__content-text.js-text
+            | г. Москва, Звездный бульвар, д. 21
+          a.contacts-map__link(href="mailto: info@auvix.ru") info@auvix.ru
+          a.contacts-map__link(href="www.auvix.ru" target="_blank") www.auvix.ru
+          .contacts-map__links
+            a.contacts-map__link._tel(href="tel:+74957975775") +7 (495) 797-5775
+            a.contacts-map__link._tel(href="tel:+79267975775") +7 (926) 797-5775
+          span.contacts-map__requisites ООО «АУВИКС»
+          span.contacts-map__requisites ИНН\КПП 7708651718\771701001
+          span.contacts-map__requisites ОГРН 1077761595064
+
+script(src="https://api-maps.yandex.ru/2.1/?apikey=b0b15954-57af-4901-b78c-0ad5bd94cda8&lang=ru_RU")
+
+
