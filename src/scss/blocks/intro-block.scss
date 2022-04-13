@@ -3,4 +3,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  &_white {
+    .intro-block__heading {
+      color: var(--color-white);
+    }
+  }
 }

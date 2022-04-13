@@ -6,7 +6,7 @@
 2. [Общий каталог](https://oaktre.github.io/lumien/build/common-catalog.html)
 3. [Сферы применения](https://oaktre.github.io/lumien/build/spheres.html)
 4. [Как выбрать экран](https://oaktre.github.io/lumien/build/how-choose-screen.html)
-
+5. [Сервисное обслуживание](https://oaktre.github.io/lumien/build/service.html)
 
 
 

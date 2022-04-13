@@ -112,6 +112,7 @@
   &__search-btn {
     cursor: pointer;
     transition: fill var(--transition);
+    fill: var(--default-color);
 
     &:hover {
       fill: var(--color-accent);
