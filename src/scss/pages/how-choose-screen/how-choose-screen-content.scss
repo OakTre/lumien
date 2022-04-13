@@ -10,6 +10,16 @@
     margin-bottom: 3rem;
   }
 
+  &__container {
+    .grid-container__block {
+      &:nth-child(2) {
+        display: grid;
+        grid-template-columns: 8fr 2fr;
+        gap: var(--grid-offset);
+      }
+    }
+  }
+
   &__list {
     margin-bottom: 6.4rem;
 

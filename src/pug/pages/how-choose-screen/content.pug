@@ -9,81 +9,181 @@
     "Для крупных инсталляций"
   ]
 
+  let canvases_arr = [
+    {
+      name: "FiberGlass Matte White",
+      text: "Полотно FiberGlass Matte White - универсальное полотно с белой матовой поверхностью, состоящее из четырёх слоёв: чёрного ПВХ, основы из стекловолокна, белого ПВХ и отражающей поверхности. Слой из переплетённого стекловолокна обеспечивает абсолютно ровную поверхность и долговечность, защищая полотно от деформации при температурных колебаниях. Равномерное распределение света исключает появление горячих пятен и изменение цвета."
+    },
+    {
+      name: "Matte White",
+      text: "Полотно Matte White - универсальное полотно с белой матовой поверхностью, состоящее из четырёх слоёв: чёрного ПВХ, текстильной основы, белого ПВХ и отражающей поверхности. Равномерное распределение света исключает появление горячих пятен и изменение цвета."
+    },
+    {
+      name: "Matte White Sound",
+      text: "Акустически прозрачное полотно на текстильной основе. Позволяет размещать звуковые колонки непосредственно за экраном, пропускает звуковые волны практически без потери звука и без ущебра для изображения",
+      feautures: [
+        "Угол обзора 160˚",
+        "коэффициент усиления 1",
+      ]
+    },
+    {
+      name: "High Contrast",
+      text: "Высококонтрастное проекционное полотно на основе стекловолокна с покрытием ПВХ. Превосходно отображает контент в формате HD даже в условиях сильного внутреннего освещения. Благодаря наличию серой подложки и отражающей серой поверхности, полотно превосходно воспроизводит оттенки чёрного цвета без ухудшения качества уровней белого",
+      feautures: [
+        "Угол обзора 100˚",
+        "коэффициент усиления 1.1",
+      ]
+    },
+    {
+      name: "High Contrast Sound",
+      text: "Высококонтрастное акустически прозрачное проекционное полотно на основе стекловолокна с покрытием ПВХ. Превосходно отображает контент в формате HD даже в условиях сильного внутреннего освещения. Благодаря наличию серой подложки и отражающей серой поверхности, полотно превосходно воспроизводит оттенки чёрного цвета без ухудшения качества уровней белого. Верхний слой полотна перфорирован для пропускания звуковых волн, что позволяет размещать динамики непосредственно за экраном и получать звук превосходного качества.",
+      feautures: [
+        "Угол обзора 160˚",
+        "коэффициент усиления 1",
+      ]
+    },
+    {
+      name: "Rear Projection",
+      text: "Полотно для обратного проецирования. Специальная обработка поверхности сводит к минимуму поглощение света при его проникновении вглубь полотна и обеспечивает его максимальную отдачу в пространство по направлению к зрителю.",
+      feautures: [
+        "Угол обзора 170˚",
+        "коэффициент усиления 0,8",
+      ]
+    },
+    {
+      name: "Radiance 0,8",
+      text: "Чёрное полотно прямой проекции обеспечивает коэффициент отражения 0.8, совместимо с проекцией разрешения 4К. Поглощает внешний свет, что позволяет достичь яркого и чёткого изображения в условиях неконтролируемого окружающего освещения. Подходит для стандартного и длиннофокусного проецирования.",
+      feautures: [
+        "Угол обзора 170˚",
+        "коэффициент усиления 0,8",
+      ]
+    },
+    {
+      name: "Radiance",
+      text: "Чёрное полотно прямой проекции обеспечивает коэффициент отражения 0.46, совместимо с проекцией разрешения 4К. Поглощает внешний свет, что позволяет достичь ярко-го и чёткого изображения в условиях неконтролируемого окружающего освещения. Подходит для короткофокусного и ультракороткофокусного проецирования.",
+      feautures: [
+        "Угол обзора 160˚",
+        "коэффициент усиления 0,46",
+      ]
+    }
+  ]
+
 section.section-indent.how-choose-screen-content
   .site-container.grid-container.how-choose-screen-content__container
     .grid-container__block
     .grid-container__block
-      p.how-choose-screen-content__text
-        | Экраны являются неотъемлемой частью проекционной системы. От того, насколько правильно и корректно подобран проекционный экран, зависит общее впечатление от увиденного.
-      h3.how-choose-screen-content__heading
-        | Основные критерии при выборе экрана:
-      ul.how-choose-screen-content__list
-        li Тип экрана
-        li Формат экрана
-        li Размер экрана
-        li Проекционное полотно
-      ul.accordion-list
-        li.accordion
-          button.accordion__btn.button-reset.js-drop-menu-btn
-            p.accordion__heading Тип экрана
-            span.accordion__icon
-              span
-              span
-          .drop-menu-container.js-drop-menu-container
-            .accordion__body.drop-menu.js-drop-menu
-              .accordion__body-text-wrapper
-                p
-                  | Экраны LUMIEN выпускаются нескольких типов:
-                .accordion__body-feautures-wrapper
-                  for item in accordion_arr
-                    p.accordion__body-feautures= item
+      .how-choose-screen-content__container-block
+        p.how-choose-screen-content__text
+          | Экраны являются неотъемлемой частью проекционной системы. От того, насколько правильно и корректно подобран проекционный экран, зависит общее впечатление от увиденного.
+        h3.how-choose-screen-content__heading
+          | Основные критерии при выборе экрана:
+        ul.how-choose-screen-content__list
+          li Тип экрана
+          li Формат экрана
+          li Размер экрана
+          li Проекционное полотно
+        ul.accordion-list
+          li.accordion
+            button.accordion__btn.button-reset.js-drop-menu-btn
+              p.accordion__heading Тип экрана
+              span.accordion__icon
+                span
+                span
+            .drop-menu-container.js-drop-menu-container
+              .accordion__body.drop-menu.js-drop-menu
+                .accordion__body-text-wrapper
+                  p
+                    | Экраны LUMIEN выпускаются нескольких типов:
+                  .accordion__body-feautures-wrapper
+                    for item in accordion_arr
+                      p.accordion__body-feautures= item
 
-        li.accordion
-          button.accordion__btn.button-reset.js-drop-menu-btn
-            p.accordion__heading Фомат экрана
-            span.accordion__icon
-              span
-              span
-          .drop-menu-container.js-drop-menu-container
-            .accordion__body.drop-menu.js-drop-menu
-              .accordion__body-text-wrapper
-                p
-                  | Экраны LUMIEN поставляются в трёх наиболее популярных форматах, применяемых в сфере бизнеса, образования и для домашнего кинотеатра:
-                .accordion__body-formats-wrapper
-                  img.accordion__body-formats-img(src="images/formats/img1.svg" alt="Формат экрана 1:1")
-                  img.accordion__body-formats-img(src="images/formats/img2.svg" alt="Формат экрана 3:4")
-                  img.accordion__body-formats-img(src="images/formats/img3.svg" alt="Формат экрана 16:9")
+          li.accordion
+            button.accordion__btn.button-reset.js-drop-menu-btn
+              p.accordion__heading Фомат экрана
+              span.accordion__icon
+                span
+                span
+            .drop-menu-container.js-drop-menu-container
+              .accordion__body.drop-menu.js-drop-menu
+                .accordion__body-text-wrapper
+                  p
+                    | Экраны LUMIEN поставляются в трёх наиболее популярных форматах, применяемых в сфере бизнеса, образования и для домашнего кинотеатра:
+                  .accordion__body-formats-wrapper
+                    img.accordion__body-formats-img(src="images/formats/img1.svg" alt="Формат экрана 1:1")
+                    img.accordion__body-formats-img(src="images/formats/img2.svg" alt="Формат экрана 3:4")
+                    img.accordion__body-formats-img(src="images/formats/img3.svg" alt="Формат экрана 16:9")
 
-        li.accordion
-          button.accordion__btn.button-reset.js-drop-menu-btn
-            p.accordion__heading Размер экрана
-            span.accordion__icon
-              span
-              span
-          .drop-menu-container.js-drop-menu-container
-            .accordion__body.drop-menu.js-drop-menu
-              .accordion__body-text-wrapper
-                p
-                  | Размер экрана подбирается исходя из следующей методики:
-                ul.accordion__body-sizes-list
-                  li
-                    +icon-mono("sizes-height")(width="45" height="45" class="accordion__body-sizes-icon")
-                    p Высота проекционного экрана = 1/6 расстояния от экрана до последнего ряда зрителей
-                  li
-                    +icon-mono("sizes-width")(width="45" height="45" class="accordion__body-sizes-icon")
-                    p Ширина проекционного <br> экрана:
-                .accordion__body-formats-wrapper.mod-size
-                  .accordion__body-formats-img-wrapper
-                    img.accordion__body-formats-img.mod-size(src="images/sizes/img1.svg" alt="Формат экрана 1:1")
-                    p Ширина=Высота
-                  .accordion__body-formats-img-wrapper
-                    img.accordion__body-formats-img.mod-size(src="images/sizes/img2.svg" alt="Формат экрана 3:4")
-                    p Ширина = 1,33 х Высота
-                  .accordion__body-formats-img-wrapper
-                    img.accordion__body-formats-img.mod-size(src="images/sizes/img3.svg" alt="Формат экрана 16:9")
-                    p Ширина = 1,78 х Высота
-                  .accordion__body-formats-img-wrapper
-                    img.accordion__body-formats-img.mod-size(src="images/sizes/img4.svg" alt="Формат экрана 16:10")
-                    p Ширина = 1,6 x Высота
-                p
-                  | Определите размер экрана в зависимости от дизайна помещения и расположения зрительских мест. Залогом успеха служит правило располагать экран перед аудиторией, а не перед проектором. Для этого может потребоваться дополнительно слегка опустить точку подвеса экрана при потолочном креплении. Экран должен располагаться так, чтобы был виден всем зрителям.
+          li.accordion
+            button.accordion__btn.button-reset.js-drop-menu-btn
+              p.accordion__heading Размер экрана
+              span.accordion__icon
+                span
+                span
+            .drop-menu-container.js-drop-menu-container
+              .accordion__body.drop-menu.js-drop-menu
+                .accordion__body-text-wrapper
+                  p
+                    | Размер экрана подбирается исходя из следующей методики:
+                  ul.accordion__body-sizes-list
+                    li
+                      +icon-mono("sizes-height")(width="45" height="45" class="accordion__body-sizes-icon")
+                      p Высота проекционного экрана = 1/6 расстояния от экрана до последнего ряда зрителей
+                    li
+                      +icon-mono("sizes-width")(width="45" height="45" class="accordion__body-sizes-icon")
+                      p Ширина проекционного <br> экрана:
+                  .accordion__body-formats-wrapper.mod-size
+                    .accordion__body-formats-img-wrapper
+                      img.accordion__body-formats-img.mod-size(src="images/sizes/img1.svg" alt="Формат экрана 1:1")
+                      p Ширина=Высота
+                    .accordion__body-formats-img-wrapper
+                      img.accordion__body-formats-img.mod-size(src="images/sizes/img2.svg" alt="Формат экрана 3:4")
+                      p Ширина = 1,33 х Высота
+                    .accordion__body-formats-img-wrapper
+                      img.accordion__body-formats-img.mod-size(src="images/sizes/img3.svg" alt="Формат экрана 16:9")
+                      p Ширина = 1,78 х Высота
+                    .accordion__body-formats-img-wrapper
+                      img.accordion__body-formats-img.mod-size(src="images/sizes/img4.svg" alt="Формат экрана 16:10")
+                      p Ширина = 1,6 x Высота
+                .accordion__body-shiled
+                  h3.accordion__body-shiled-heading Оптимальное восприятие проецируемого изображения обеспечивается при выполнении следующих условий:
+                  img.accordion__body-shiled-img(src="images/sizes/shild.png" alt="Разммеры оптимального расстояния расположения экрана от зрителей и пола")
+                  p
+                    | Расстояние от нижнего края проекционного экрана до пола должно быть не менее 125 см для бизнеса и образования и не более 90 см для домашнего кинотеатра
+                  p
+                    | Минимальное расстояние от экрана до первого ряда зрителей должно быть в полтора раза больше высоты экрана (X x 1,5)
+                .accordion__body-text-wrapper
+                  p
+                    | Определите размер экрана в зависимости от дизайна помещения и расположения зрительских мест. Залогом успеха служит правило располагать экран перед аудиторией, а не перед проектором. Для этого может потребоваться дополнительно слегка опустить точку подвеса экрана при потолочном креплении. Экран должен располагаться так, чтобы был виден всем зрителям.
+
+          li.accordion
+            button.accordion__btn.button-reset.js-drop-menu-btn
+              p.accordion__heading Проекционное полотно
+              span.accordion__icon
+                span
+                span
+            .drop-menu-container.js-drop-menu-container
+              .accordion__body.drop-menu.js-drop-menu
+                .accordion__body-text-wrapper
+                  p.how-choose-screen-content__text
+                    | Экраны Lumien поставляются со всеми наиболее востребованными на рынке проекционными полотнами, ассортимент которых отличаются многообразием и широтой выбора.
+                  p
+                    | Проекционные полотна для прямой проекции могут быть диффузными, равномерно рассеивающими свет во все стороны, и отражательными, концентрирующими световой поток в направлении пользователей. Диффузные полотна могут быть матово-белыми или светло-серыми, оптимизированными для увеличения контрастности и детализации. При широком угле обзора белые матовые экраны обеспечивают максимальную яркость, светло-серые — максимальную контрастность. Белые матовые экраны имеют коэффициент усиления 1, серые — около 0.8.
+                  img(src="images/accordion-content-img.svg" alt="Изображение-схема правильного расположения проекционного полотна" class="accordion__body-content-img")
+                  img(src="images/accordion-content-img2.svg" alt="Изображение-схема проекционного полотна с градусами обзора" class="accordion__body-content-img")
+                  img(src="images/accordion-content-img3.svg" alt="Яркость изображения в зависимости от угла зрения" class="accordion__body-content-img")
+                  p
+                    | Отражательные экраны применяются, когда невозможно затемнить помещение. Верхний слой такого полотна подвергается специальной обработке, усиливающей отражаемый свет. Угол обзора таких экранов существенно ниже – в пределах 40⁰, а коэффициент усиления выше – до 2.5. В экранах с полотном для обратной проекции (экраны «на просвет») проектор устанавливается позади экрана, и световой поток от проектора, проходя сквозь экран, рассеивается в направлении зрителей. Задачей такого полотна является минимизация световых потерь при прохождении через экран.
+                  p
+                    | Полотна для экранов Lumien выпускаются на основе текстиля, стекловолокна и винила. Полотно на тканевой основе благодаря прочной основе обеспечивает ровную, исключающую искажения изображений, поверхность. Полотно на основе стекловолокна выпускаются плотными и усиленными, и их не нужно натягивать со всех сторон. Полотна на основе винила могут растягиваться, обеспечивая необходимую плоскость полотна для качественного изображения. Все проекционные полотна Lumien экологически безопасны, полностью удовлетворяют требованиям пожарной безопасности, устойчивы к образованию плесени и просты в уходе (проекционные полотна можно мыть).
+                h3.how-choose-screen-content__heading.accordion__body-heading Виды проекционных полотен
+                .accordion__body-canvases-list
+                  for item in canvases_arr
+                    .accordion__body-canvases-item.accordion__body-shiled
+                      h3.accordion__body-shiled-heading= item.name
+                      p= item.text
+                      if item.feautures
+                        ul.accordion__body-shiled-list
+                          for feat in item.feautures
+                            li.accordion__body-shiled-item= feat
+      .how-choose-screen-content__container-block

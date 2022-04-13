@@ -10,12 +10,14 @@ footer.footer
     .footer__subscribe.grid-container
       .grid-container__block
       .grid-container__block.footer__subscribe-content
-        p.footer__subscribe-heading Подписывайтесь на наши новости и события
-        .footer__form
-          label.footer__form-label
-            input.footer__input(placeholder="Введите ваш email" name="email" type="email")
-            button.button-reset.footer__form-btn(type="submit")
-              +icon-mono("send-email")(width="24" height="24" class="footer__form-btn-icon")
+        .footer__subscribe-content-block
+          p.footer__subscribe-heading Подписывайтесь на наши новости и события
+        .footer__subscribe-content-block
+          .footer__form
+            label.footer__form-label
+              input.footer__input(placeholder="Введите ваш email" name="email" type="email")
+              button.button-reset.footer__form-btn(type="submit")
+                +icon-mono("send-email")(width="24" height="24" class="footer__form-btn-icon")
     .footer__container.grid-container
       .footer__block
         a.footer__logo.logo(href="/")

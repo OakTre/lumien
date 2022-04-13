@@ -107,9 +107,8 @@
   }
 
   &__form {
-    margin-bottom: 4.2rem;
     flex-shrink: 0;
-    width: 38.4rem;
+    width: 100%;
   }
 
   &__form-label {
@@ -171,14 +170,23 @@
   }
 
   &__subscribe-heading {
-    max-width: 62.1rem;
     color: var(--color-white);
     font: var(--font-title-2);
-    margin-right: 10.3rem;
   }
 
   &__subscribe-content {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: var(--grid-offset);
+  }
+
+  &__subscribe-content-block {
+    &:nth-child(1) {
+      grid-column: 5 span;
+    }
+
+    &:nth-child(2) {
+      grid-column: 3 span;
+    }
   }
 }
