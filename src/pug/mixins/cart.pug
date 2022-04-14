@@ -1,0 +1,19 @@
+mixin cart(tags, imgs, name, txt, feats)
+  a.cart(href="/")&attributes(attributes)
+    .cart__top
+      for tag in tags
+        - let newClass = tag.new ? "_new" : null
+        span.cart__tag(class=`${newClass}`)= tag.name
+    .cart__middle
+      .swiper.cart__img-slider.js-cart-img-slider
+        .swiper-wrapper
+          for img in imgs
+            .swiper-slide
+              img.cart__img(src=`images/cart/${img}.png` alt=txt)
+      .cart__img-pagination
+    .cart__bottom
+      h4.cart__name= name
+      p.cart__txt= txt
+      .cart__feautures
+        for feature in feats
+          span.cart__feautures-item= feature

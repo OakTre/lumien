@@ -1,0 +1,48 @@
+.search.fix-blocks
+  .search__layer
+  .site-container
+    .grid-container.search__container
+      .search__container-block
+      .search__container-block
+        form.search__form
+          label.search__input-label
+            +icon-mono("search")(width="22" height="22" class="search__input-icon")
+            input(type="text" name="q" class="search__from-input" placeholder="Найти..")
+            button(type="button" class="button-reset search__close-btn js-search-close-btn" aria-label="Закрыть поиск")
+      .search__container-block
+    .search__content
+      .search__content-empty-results
+        p.search__content-empty-results-txt К сожалению по вашему запросу ничего не найдено
+      .grid-container.search__content-wrapper
+        .search__content-block
+        .search__content-block
+          .search__content-col
+            .search__content-row
+              .search__content-heading-wrapper
+                h3.search__content-heading Каталог
+                a.search__content-link(href="/") смотреть все найденные
+              +cart([{name: "Натяжные на раме"}], ["img1"], "Cinema Thin Bezel", "Натяжной экран c тонкой рамой толщиной 1 см", ["Ширина экрана(см) 178–354", "Угол обзора 160°"])(class="mod-search")
+            .search__content-row
+              +cart([{name: "Новинка", new: true}, {name: "Натяжные на раме"}], ["img1"], "Cinema Control", "Экран для домашнего кинотеатра с электроприводом", ["Ширина экрана(см) 177–352", "Угол обзора 160°"])(class="mod-search")
+        .search__content-block
+        .search__content-block
+          .search__content-col
+            .search__content-row
+              .search__content-heading-wrapper
+                h3.search__content-heading Кейсы
+                a.search__content-link(href="/") смотреть все найденные
+              .search__content-cards-wrapper
+                a.search__content-card(href="/" class="lazy" data-bg="images/search/img1.jpg" data-bg-fallback="images/search/img1.jpg")
+                  p.search__content-card-txt Актовый зал дома молодёжи «Пулковец»
+                a.search__content-card(href="/" class="lazy" data-bg="images/search/img2.jpg" data-bg-fallback="images/search/img2.jpg")
+                  p.search__content-card-txt Центр Здоровья Verba Mayr
+            .search__content-row
+              .search__content-heading-wrapper
+                h3.search__content-heading Новости
+                a.search__content-link(href="/") смотреть все найденные
+              .search__content-cards-wrapper
+                a.search__content-card(href="/" class="lazy" data-bg="images/search/img3.jpg" data-bg-fallback="images/search/img1.jpg")
+                  p.search__content-card-txt Master Recessed Control – must have для корпоративного сектора..
+                a.search__content-card(href="/" class="lazy" data-bg="images/search/img4.jpg" data-bg-fallback="images/search/img2.jpg")
+                  p.search__content-card-txt Lumien Radiance: отражение внешней засветки
+        .search__content-block

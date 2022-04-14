@@ -14,6 +14,7 @@ import closePreloadre from './modules/closePreloadre';
 import introSlider from './modules/introSlider';
 import initAccordion from './modules/initAccordion';
 import contactsMap from './modules/contactsMap';
+import search from './modules/search';
 
 window.onload = () => {
   closePreloadre();
@@ -32,4 +33,5 @@ documenReady(() => {
   introSlider();
   initAccordion();
   contactsMap();
+  search();
 });
