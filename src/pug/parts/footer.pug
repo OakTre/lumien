@@ -1,8 +1,8 @@
 -
-  let nav_arr = ["Новости", "О компании", "Контакты", "Диллерам"];
-  let nav_arr2 = ["Помощь", "Как выбрать экран", "Сервисное обслуживание", "FAQ", "Глоссарий", "Регистрация изделий"];
-  let nav_arr3 = ["Образование", "Бизнес", "Домашнее использование", "Музеи и выставки", "Бары и рестораны", "Развлекательные площадки", "Гос.сектор", "VR"];
-  let social_arr = ["inst", "tl", "wt", "fb"]
+  let nav_arr = ["Каталог", "Кейсы", "О компании", "Дилерам"];
+  let nav_arr2 = ["Сферы применения", "Новости", "Контакты"];
+  let nav_arr3 = ["Материалы для скачивания", "Как выбрать экран", "Сервисное обслуживание", "FAQ", "Глоссарий", "Регистрация изделий"];
+  let social_arr = ["tl", "wt", "fb"]
 
 
 footer.footer
@@ -28,15 +28,13 @@ footer.footer
             li.footer__item
               a.footer__link.footer__legend(href="/")= item
       .footer__block
-        p.footer__legend.footer__legend-height(href="/")
-          |	Клиентам
-        ul.footer__nav-small
+        ul.footer__nav
           for item in nav_arr2
-            li.footer__nav-small-item
-              a.footer__nav-small-link.footer__small-legend(href="/")= item
+            li.footer__item
+              a.footer__link.footer__legend(href="/")= item
       .footer__block
         p.footer__legend.footer__legend-height(href="/")
-          |	Сферы применения
+          |	Клиентам
         ul.footer__nav-small
           for item in nav_arr3
             li.footer__nav-small-item

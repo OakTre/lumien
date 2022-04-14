@@ -113,8 +113,11 @@ section.contacts-us
 
         .contacts-us__content-block
           form.contacts-us__form.form(data-need-validation)
-            label.form__label
-              input(type="text" class="form__input input-reset" name="name" placeholder="Выберите тип оборудования" data-parsley-required)
+            label.form__label.select-wrapper.mod-send-form.custom-select
+              select(name="equipment-type" class="select js-custom-select")
+                option(value="Выберите модель оборудования" placeholder) Выберите тип оборудования
+                option(value="first") first
+                option(value="second") second
             label.form__label
               input(type="text" class="form__input input-reset" name="name" placeholder="Имя" data-parsley-required)
             label.form__label

@@ -24,9 +24,26 @@
         border-radius: 1rem 1rem 0 0;
       }
     }
+
+    &.is-open {
+      &::after {
+        transform: translateY(-50%) rotate(-225deg);
+      }
+    }
+
+    &::after {
+      border: none !important;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-bottom: 1px solid currentColor !important;
+      border-left: 1px solid currentColor !important;
+      top: 50%;
+      right: 1.8rem;
+      transform: translateY(-50%) rotate(-45deg);
+      margin: 0 !important;
+      transition: transform var(--transition);
+    }
   }
-
-
 
   .choices__inner {
     background-color: var(--color-bg-input);
@@ -62,6 +79,22 @@
         background: rgba(255, 151, 29, 0.22);
         color: var(--color-accent);
       }
+    }
+  }
+
+  &.mod-send-form {
+    .choices__inner,
+    .choices__list--dropdown {
+      background-color: var(--color-purple-light);
+    }
+
+    .choices__inner {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .choices__list--dropdown .choices__item.is-highlighted {
+      background: rgba(255, 151, 29, 0.2);
+      color: var(--color-accent);
     }
   }
 }

@@ -1,0 +1,7 @@
+mixin file(name, size)
+  a.file(href="/" download)&attributes(attributes)
+    .file__name-wrapper
+      span.file__name= name
+      span.file__size= size
+    span.file__icon-wrapper
+      +icon-mono("dwnload")(class="file__icon" width="16" height="16")

@@ -1,0 +1,52 @@
+-
+  let files = [
+    {
+      name: "Брошюра",
+      size: "pdf, 19,5 МБ"
+    },
+    {
+      name: "Каталог",
+      size: "pdf, 19,5 МБ"
+    },
+    {
+      name: "Прайс-лист",
+      size: "xls, 7,57 МБ"
+    },
+  ]
+
+  let rows = [
+    {
+      rowName: "Инструкции и спецификации",
+      files: ["Инструкция", "Спецификация"]
+    },
+    {
+      rowName: "Изображения",
+      files: ["Детальное изображение 1", "Детальное изображение 2", "Детальное изображение 3", "Детальное изображение 4", "Детальное изображение 5", "Детальное изображение 6"]
+    },
+    {
+      rowName: "Чертежи",
+      files: ["Чертеж 1", "Чертеж 2", "Чертеж 3"]
+    },
+  ]
+
+section.section-indent.top-offset.files
+  .site-container.grid-container
+    .grid-container__block
+    .grid-container__block
+      h1.files__heading.site-heading.section-heading-offset Материалы <br> для скачивания
+      .files__container.file__container
+        for item in files
+          +file(item.name, item.size)
+      label.files__select-warpper.select-wrapper.custom-select
+        select(name="equipment-type" class="select js-custom-select js-files-select")
+          option(value="Выберите модель оборудования" placeholder) Выберите модель оборудования
+          option(value="Eco control") Eco control
+          option(value="second") second
+      .files__content
+        for item in rows
+          .files__content-row
+            h2.files__content-heading= item.rowName
+            .files__content-files
+              for file in item.files
+                .files__content-file-wrapper
+                  +file(file, "Скачать")(class="mod-transparent")

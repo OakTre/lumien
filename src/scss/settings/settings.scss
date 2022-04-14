@@ -9,7 +9,7 @@ html {
   line-height: 1.2;
 
   @include mq(custom, min, 1999) {
-    font-size: 11px;
+    font-size: 10.5px;
   }
 
   @include mq(custom, max, 1536) {

@@ -8,6 +8,7 @@ export default () => {
     paused: true,
     reversed: true
   });
+  const layer = document.querySelector(".menu_layer");
 
   gsap.set(".menu", {autoAlpha: 0});
   gsap.set(".menu_layer", {autoAlpha: 0});
@@ -28,6 +29,11 @@ export default () => {
   });
 
   closeBtn.addEventListener("click", ()=>{
+    timeline.reverse();
+    enableScroll();
+  });
+
+  layer.addEventListener("click", ()=>{
     timeline.reverse();
     enableScroll();
   });

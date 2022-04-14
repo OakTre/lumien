@@ -14,12 +14,16 @@
 
 
     &:nth-child(5) {
-      grid-column: 4 span;
+      grid-column: 3 span;
     }
+
+    &:nth-child(3) {
+      grid-column: 3 span;
+    }
+
 
     &:nth-child(1),
     &:nth-child(2),
-    &:nth-child(3),
     &:nth-child(4) {
       grid-column: 2 span;
     }
@@ -31,8 +35,7 @@
 
   &__legend-height {
     display: block;
-    height: 6.8rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 
   &__small-legend {

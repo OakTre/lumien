@@ -1,0 +1,115 @@
+.file {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3rem 2.8rem;
+  background-color: var(--color-bg-input);
+  border-radius: 1rem;
+  grid-column: 3 span;
+
+  &:hover {
+    .file__name {
+      color: var(--color-accent);
+    }
+
+    .file__icon-wrapper {
+      background-color: var(--color-accent);
+    }
+
+    .file__icon {
+      fill: var(--color-white);
+    }
+  }
+
+  &:focus {
+    .file__name {
+      color: var(--color-accent);
+    }
+
+    .file__icon-wrapper {
+      background-color: var(--color-accent);
+    }
+
+    .file__icon {
+      fill: var(--color-white);
+    }
+  }
+
+  &__name-wrapper {
+    max-width: 80%;
+  }
+
+  &__size {
+    display: block;
+    font: var(--font-body-XS);
+    color: var(--border-color);
+  }
+
+  &__name {
+    font: var(--font-body-M);
+    transition: color var(--transition);
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5.4rem;
+    height: 5.4rem;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    transition: background-color var(--transition);
+  }
+
+  &__icon {
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    transition: fill var(--transition);
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: var(--grid-offset);
+  }
+
+  &.mod-transparent {
+    background-color: transparent;
+    padding: 0;
+    justify-content: stretch;
+    align-items: stretch;
+    grid-column: unset;
+
+    .file__name-wrapper {
+      order: 2;
+      max-width: 100%;
+    }
+
+    .file__icon-wrapper {
+      order: 1;
+      margin-right: 2.4rem;
+      background-color: var(--color-bg-input);
+    }
+
+    &:hover {
+      .file__icon-wrapper {
+        background-color: var(--color-accent);
+      }
+
+      .file__icon {
+        fill: var(--color-white);
+      }
+    }
+
+    &:focus {
+      .file__icon-wrapper {
+        background-color: var(--color-accent);
+      }
+
+      .file__icon {
+        fill: var(--color-white);
+      }
+    }
+  }
+}

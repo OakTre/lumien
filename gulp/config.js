@@ -12,6 +12,7 @@ const config = {
     iconsMono: `${srcPath}/assets/icons/mono`,
     iconsMulti: `${srcPath}/assets/icons/multi`,
     include: `${srcPath}/assets/include`,
+    backendJs: `${srcPath}/assets/js`,
     pug: `${srcPath}/pug`,
   },
 
@@ -23,6 +24,7 @@ const config = {
     fonts: `${destPath}/assets/fonts`,
     favicon: `${destPath}/assets/favicon`,
     include: `${destPath}/assets/include`,
+    backendJs: `${destPath}/assets/js`,
     images: `${destPath}/images`,
   },
 

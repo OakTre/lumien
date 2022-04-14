@@ -16,11 +16,16 @@ const includeBuild = () => (
     .pipe(gulp.dest(config.dest.include))
 );
 
-export const assetsBuild = gulp.parallel(fontsBuild, faviconBuild, includeBuild);
+const jsBackendBuild = () => (
+  gulp.src(`${config.src.backendJs}/**/*`)
+    .pipe(gulp.dest(config.dest.backendJs))
+);
+
+export const assetsBuild = gulp.parallel(fontsBuild, faviconBuild, includeBuild, jsBackendBuild);
 
 export const assetsWatch = () => {
   gulp.watch(`${config.src.fonts}/**/*`, fontsBuild);
   gulp.watch(`${config.src.favicon}/**/*`, faviconBuild);
   gulp.watch(`${config.src.include}/**/*`, includeBuild);
-
+  gulp.watch(`${config.src.backendJs}/**/*`, jsBackendBuild);
 };
