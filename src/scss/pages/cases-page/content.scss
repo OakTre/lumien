@@ -1,0 +1,24 @@
+.cases-page {
+  &__content-item {
+    grid-column: 4 span;
+  }
+
+  &__content {
+    gap: 3.6rem var(--grid-offset);
+  }
+
+  &__nav {
+    gap: var(--grid-offset);
+    margin-bottom: 5rem;
+  }
+
+  &__nav-item {
+    grid-column: 3 span;
+  }
+
+  &__more-btn {
+    width: 100%;
+    margin-top: 10rem;
+    padding: 3.8rem;
+  }
+}

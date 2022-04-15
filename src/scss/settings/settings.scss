@@ -142,6 +142,12 @@ input:focus {
   &:active {
     transform: scale(0.99);
   }
+
+  &.mod-transparent {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+  }
 }
 
 .input-reset {
