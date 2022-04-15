@@ -15,6 +15,9 @@ import introSlider from './modules/introSlider';
 import initAccordion from './modules/initAccordion';
 import contactsMap from './modules/contactsMap';
 import search from './modules/search';
+import casesSlider from './modules/casesSlider';
+import suitableModelsSlider from './modules/suitableModelsSlider';
+import cartImgsSlider from './modules/cartImgsSlider';
 
 window.onload = () => {
   closePreloadre();
@@ -34,4 +37,7 @@ documenReady(() => {
   initAccordion();
   contactsMap();
   search();
+  casesSlider();
+  suitableModelsSlider();
+  cartImgsSlider();
 });

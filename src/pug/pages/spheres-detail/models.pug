@@ -1,0 +1,27 @@
+section.section-indent.suitable-models
+  .site-container
+    .grid-container.suitable-models__container
+      .suitable-models__container-block
+      .suitable-models__container-block
+        h2.site-second-heading.suitable-models__heading Подходящие модели
+        .suitable-models__heading-wrapper
+          .suitable-models__slider-nav
+            label.suitable-models__label
+              input(type="radio" name="models" checked value="canvases" class="suitable-models__input visually-hidden")
+              span.suitable-models__label-name Экраны
+            label.suitable-models__label
+              input(type="radio" name="models" value="screen" class="suitable-models__input visually-hidden")
+              span.suitable-models__label-name Дисплеи
+            label.suitable-models__label
+              input(type="radio" name="models" value="furniture" class="suitable-models__input visually-hidden")
+              span.suitable-models__label-name Мебель
+          .slider-nav.suitable-models__nav
+            button.slider-nav__btn.button-reset.js-model-btn-prev
+              +icon-mono("shevron-left")(width="9" height="13" class="slider-nav__btn-icon")
+            button.slider-nav__btn.button-reset.js-model-btn-next
+              +icon-mono("shevron-right")(width="9" height="13" class="slider-nav__btn-icon")
+        .suitable-models__slider.swiper.js-suitable-models-slider
+          .swiper-wrapper
+            - for (let i = 0; i<6; i++)
+              .swiper-slide
+                +cart([{name: "Натяжные на раме"}], ["img1", "img2"], "Cinema Thin Bezel", "Натяжной экран c тонкой рамой толщиной 1 см", ["Ширина экрана(см) 178–354", "Угол обзора 160°"])

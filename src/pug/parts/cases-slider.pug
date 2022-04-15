@@ -1,0 +1,56 @@
+-
+  let cases_page_arr = [
+    {
+      img: "img1",
+      tag: "Домашние развлечения",
+      name: "Актовый зал дома молодёжи «Пулковец»",
+      loacatin: "г. Санкт-Петербург",
+      txt: "Функциональность и дизайн проекционных экранов Lumien помогает усовершенствовать обустройства современных баров и ресторанов"
+    },
+    {
+      img: "img2",
+      tag: "Домашние развлечения",
+      name: "Центр Здоровья Verba Mayr",
+      loacatin: "г. Санкт-Петербург",
+      txt: "Функциональность и дизайн проекционных экранов Lumien помогает усовершенствовать обустройства современных баров и ресторанов"
+    },
+    {
+      img: "img3",
+      tag: "Домашние развлечения",
+      name: "Школа №525 Московского района",
+      loacatin: "г. Санкт-Петербург",
+      txt: "Функциональность и дизайн проекционных экранов Lumien помогает усовершенствовать обустройства современных баров и ресторанов"
+    },
+    {
+      img: "img4",
+      tag: "Домашние развлечения",
+      name: "АНО «Корпоративная Академия Росатома»",
+      loacatin: "г. Санкт-Петербург",
+      txt: "Функциональность и дизайн проекционных экранов Lumien помогает усовершенствовать обустройства современных баров и ресторанов"
+    },
+    {
+      img: "img5",
+      tag: "Домашние развлечения",
+      name: "Морской государственный университет имени адмирала Г. И. Невельского",
+      loacatin: "г. Санкт-Петербург",
+      txt: "Функциональность и дизайн проекционных экранов Lumien помогает усовершенствовать обустройства современных баров и ресторанов"
+    }
+  ]
+
+section.section-indent.cases-slider
+  .site-container
+    .grid-container.cases-slider__container
+      .cases-slider__container-block
+      .cases-slider__container-block
+        .cases-slider__heading-wrapper
+          h2.site-second-heading.cases-slider__heading Реализованные кейсы
+          .slider-nav.cases-slider__nav
+            button.slider-nav__btn.button-reset.js-cases-btn-prev
+              +icon-mono("shevron-left")(width="9" height="13" class="slider-nav__btn-icon")
+            button.slider-nav__btn.button-reset.js-cases-btn-next
+              +icon-mono("shevron-right")(width="9" height="13" class="slider-nav__btn-icon")
+    .cases-slider__slider.swiper.js-cases-slider
+      .swiper-wrapper
+        for item in cases_page_arr
+          .swiper-slide
+            +cases(item.img, item.tag, item.name, item.location, item.txt)
