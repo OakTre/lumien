@@ -2,16 +2,10 @@ section.contacts-map
   .site-container.grid-container
     .grid-container__block
     .grid-container__block
-      .contacts-map__nav
-        label.contacts-map__label
-          input(type="radio" name="country" value="rus" checked class="visually-hidden js-map-country")
-          span.contacts-map__label-heading Россия
-        label.contacts-map__label
-          input(type="radio" name="country" value="bel" class="visually-hidden js-map-country")
-          span.contacts-map__label-heading Беларусь
-        label.contacts-map__label
-          input(type="radio" name="country" value="kz" class="visually-hidden js-map-country")
-          span.contacts-map__label-heading Казахстан
+      .contacts-map__nav.content-btn__nav
+        +content-btn("Россия", "country", "rus", "js-map-country", "true")
+        +content-btn("Беларусь", "country", "bel", "js-map-country")
+        +content-btn("Казахстан", "country", "kz", "js-map-country")
   .contacts-map__inner
     .contacts-map__map.js-map
     .site-container.grid-container.contacts-map__container

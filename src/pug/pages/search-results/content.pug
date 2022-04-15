@@ -1,0 +1,19 @@
+section.section-indent.top-offset.search-results
+  .site-container.grid-container
+    .grid-container__block
+    .grid-container__block
+      h1.search-results__heading.site-heading.section-heading-offset Что вам интересно?
+  .site-container.grid-container.search-results__container
+    .search-results__container-block
+      form.search-results__form
+        .search-results__form-inner
+          label.search-results__input-label
+            +icon-mono("search")(class="search-results__input-label-icon" width="22" height="22")
+            input(type="text" class="input search-results__input" placeholder="Задайте свой вопрос..." name="q")
+          button.button-reset.search-results__form-btn(type="submit") Найти
+        .search-results__form-labels
+          +content-btn("Каталог", "type", "catalog", "", "checked")
+          +content-btn("Кейсы", "type", "cases", "",)
+          +content-btn("Новости", "type", "news", "",)
+
+    .search-results__container-block

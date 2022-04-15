@@ -101,6 +101,7 @@
       height: 0.2rem;
       background-color: var(--color-rgba-white-07);
       content: "";
+      transition: background-color var(--transition);
     }
 
     &::after {
@@ -109,6 +110,20 @@
 
     &::before {
       transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:hover {
+      &::before,
+      &::after {
+        background-color: var(--color-accent);
+      }
+    }
+
+    &:focus {
+      &::before,
+      &::after {
+        background-color: var(--color-accent);
+      }
     }
   }
 

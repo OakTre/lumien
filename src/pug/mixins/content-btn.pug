@@ -1,0 +1,5 @@
+mixin content-btn(name, inputName, val, inputClass, checked)
+  - let isChecked = checked ? "checked" : null
+  label.content-btn__label&attributes(attributes)
+    input(type="radio" name=inputName value=val checked=isChecked class="visually-hidden" class=inputClass)
+    span.content-btn__label-heading= name

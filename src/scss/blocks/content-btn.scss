@@ -1,0 +1,30 @@
+.content-btn {
+  &__label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 3rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    input {
+      &:checked {
+        ~span {
+          background: linear-gradient(180deg, #F2BCAF 0%, #B8ADF1 100%);
+          color: var(--color-white);
+        }
+      }
+    }
+  }
+
+  &__label-heading {
+    display: block;
+    padding: 2rem 6.7rem;
+    border-radius: 2rem;
+    background-color: var(--color-bg-input);
+    color: rgba($color: #000000, $alpha: 0.3);
+    font: var(--font-title-4);
+  }
+}

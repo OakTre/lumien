@@ -10,8 +10,9 @@
 6. [Сервисное обслуживание](https://oaktre.github.io/lumien/build/service.html)
 7. [Вопросы и ответы](https://oaktre.github.io/lumien/build/faq.html)
 8. [Материалы для скачивания](https://oaktre.github.io/lumien/build/files.html)
-9. [Политика конфиденциальности](https://oaktre.github.io/lumien/build/policy.html)
-10. [404](https://oaktre.github.io/lumien/build/404.html)
+9. [Поисковая выдача](https://oaktre.github.io/lumien/build/search-results.html)
+10. [Политика конфиденциальности](https://oaktre.github.io/lumien/build/policy.html)
+11. [404](https://oaktre.github.io/lumien/build/404.html)
 
 
 
