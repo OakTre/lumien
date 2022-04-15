@@ -138,6 +138,7 @@ input:focus {
   color: var(--color-white);
   text-transform: uppercase;
   cursor: pointer;
+  transition: border-color var(--transition), background-color var(--transition), color var(--transition);
 
   &:active {
     transform: scale(0.99);
@@ -147,6 +148,12 @@ input:focus {
     background-color: transparent;
     border: 1px solid var(--border-color);
     color: var(--text-color);
+
+    &:hover {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+      border-color: var(--color-accent);
+    }
   }
 }
 

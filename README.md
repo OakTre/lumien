@@ -11,9 +11,10 @@
 7. [Вопросы и ответы](https://oaktre.github.io/lumien/build/faq.html)
 8. [Материалы для скачивания](https://oaktre.github.io/lumien/build/files.html)
 9. [Наши кейсы](https://oaktre.github.io/lumien/build/cases-page.html)
-10. [Поисковая выдача](https://oaktre.github.io/lumien/build/search-results.html)
-11. [Политика конфиденциальности](https://oaktre.github.io/lumien/build/policy.html)
-12. [404](https://oaktre.github.io/lumien/build/404.html)
+10. [Новости разводящая](https://oaktre.github.io/lumien/build/news.html)
+11. [Поисковая выдача](https://oaktre.github.io/lumien/build/search-results.html)
+12. [Политика конфиденциальности](https://oaktre.github.io/lumien/build/policy.html)
+13. [404](https://oaktre.github.io/lumien/build/404.html)
 
 
 

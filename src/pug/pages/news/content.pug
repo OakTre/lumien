@@ -1,0 +1,30 @@
+section.news-page.section-indent.top-offset
+  .site-container
+    .grid-container
+      .grid-container__block
+      .grid-container__block
+        h1.site-heading.section-heading-offset.news-page__heading Наши новости
+    .news-page__main-news
+      a.news-page-cart.mod-big-news(href="/")
+        .news-page-cart__img-wrapper
+          img(data-src=`images/news/cart-img-main.jpg` src="#" alt="Экраны на рамe Lumien для крупных инсталляций – безграничные возможности" class="news-page-cart__img lazy")
+        .news-page-cart__content
+          .news-page-cart__tags
+            span.news-page-cart__tag Проекционные экраны
+          h3.news-page-cart__heading Экраны на рамe Lumien для крупных инсталляций – безграничные возможности
+          span.news-page-cart__date 09.03.2021
+          p.news-page-cart__txt Большие экраны на раме представлены моделями Lumien Cinema Premium и Lumien Cinema Velvet Premium
+  .site-container.news-page__content
+    ul.news-page__List
+      - for (let i = 0; i<6; i++)
+        li.news-page__item
+          a.news-page-cart(href="/")
+            .news-page-cart__img-wrapper
+              img(data-src=`images/news/cart-img${i}.jpg` src="#" alt="Lumien Master Fold – незаменимое решение для арендного бизнеса" class="news-page-cart__img lazy")
+            .news-page-cart__content
+              .news-page-cart__tags
+                span.news-page-cart__tag Проекционные экраны
+              h3.news-page-cart__heading Lumien Master Fold – незаменимое решение для арендного бизнеса
+              span.news-page-cart__date 01.02.2021
+              p.news-page-cart__txt Большие экраны на раме представлены моделями Lumien Cinema Premium и Lumien Cinema Velvet Premium
+    button.button-reset.button.mod-transparent.news-page__btn Показать ещё

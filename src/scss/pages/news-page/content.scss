@@ -1,0 +1,25 @@
+.news-page {
+  &__List {
+    width: 100%;
+    margin-bottom: 7rem;
+  }
+
+  &__item {
+    width: 100%;
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border-color);
+
+    &:nth-child(1) {
+      border-top: 1px solid var(--border-color);
+    }
+  }
+
+  &__main-news {
+    margin-bottom: 7rem;
+    width: 100%;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}
