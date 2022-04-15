@@ -62,4 +62,17 @@
   &__input {
     border-radius: 1rem 0 0 1rem;
   }
+
+  &__container {
+    margin-bottom: 10rem;
+  }
+
+  &__legend {
+    font: var(--font-title-4);
+    margin-bottom: 5rem;
+  }
+
+  &__results-item {
+    grid-column: 4 span;
+  }
 }

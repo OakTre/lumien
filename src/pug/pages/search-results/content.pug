@@ -1,3 +1,28 @@
+-
+  let cases_arr = [
+    {
+      img: "img1",
+      tag: "Домашние развлечения",
+      name: "Актовый зал дома молодёжи «Пулковец»",
+      loacatin: "г. Санкт-Петербург",
+      txt: "Функциональность и дизайн проекционных экранов Lumien помогает усовершенствовать обустройства современных баров и ресторанов"
+    },
+    {
+      img: "img2",
+      tag: "Домашние развлечения",
+      name: "Центр Здоровья Verba Mayr",
+      loacatin: "г. Санкт-Петербург",
+      txt: "Функциональность и дизайн проекционных экранов Lumien помогает усовершенствовать обустройства современных баров и ресторанов"
+    },
+    {
+      img: "img3",
+      tag: "Домашние развлечения",
+      name: "Школа №525 Московского района",
+      loacatin: "г. Санкт-Петербург",
+      txt: "Функциональность и дизайн проекционных экранов Lumien помогает усовершенствовать обустройства современных баров и ресторанов"
+    },
+  ]
+
 section.section-indent.top-offset.search-results
   .site-container.grid-container
     .grid-container__block
@@ -15,5 +40,13 @@ section.section-indent.top-offset.search-results
           +content-btn("Каталог", "type", "catalog", "", "checked")
           +content-btn("Кейсы", "type", "cases", "",)
           +content-btn("Новости", "type", "news", "",)
-
     .search-results__container-block
+  .site-container.search-results__results
+    h3.search-results__legend По вашему запросу найдено 3 кейса
+    .search-results__results-container.grid-container
+      for item in cases_arr
+        .search-results__results-item
+          +cases(item.img, item.tag, item.name, item.loacatin, item.txt)
+
+      .search-results__results-item
+      .search-results__results-item
