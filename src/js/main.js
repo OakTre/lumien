@@ -16,9 +16,10 @@ import initAccordion from './modules/initAccordion';
 import contactsMap from './modules/contactsMap';
 import search from './modules/search';
 import casesSlider from './modules/casesSlider';
+import sliderEquipment from './modules/sliderEquipment';
 import suitableModelsSlider from './modules/suitableModelsSlider';
 import cartImgsSlider from './modules/cartImgsSlider';
-import spheresDetailSlider from './modules/spheresDetailSlider';
+import detailSlider from './modules/detailSlider';
 import tabs from './modules/tabs.js';
 
 window.onload = () => {
@@ -40,8 +41,9 @@ documenReady(() => {
   contactsMap();
   search();
   casesSlider();
+  sliderEquipment();
   suitableModelsSlider();
   cartImgsSlider();
-  spheresDetailSlider();
+  detailSlider();
   tabs();
 });

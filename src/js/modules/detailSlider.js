@@ -5,7 +5,7 @@ import Swiper, {
 Swiper.use([Navigation]);
 
 export default () => {
-  let sliderSpheres = new Swiper(".spheres-detail-slider__slider", {
+  let sliderSpheres = new Swiper(".detail-slider__slider", {
     slidesPerView: 'auto',
     spaceBetween: 20,
     centeredSlides: true,

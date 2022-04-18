@@ -1,0 +1,16 @@
+section.section-indent.detail-slider
+  .site-container.grid-container.detail-slider__container
+    .detail-slider__container-block
+    .detail-slider__container-block
+      .slider-nav.detail-slider__nav
+        button.slider-nav__btn.button-reset.js-detail-btn-prev
+          +icon-mono("shevron-left")(width="9" height="13" class="slider-nav__btn-icon")
+        button.slider-nav__btn.button-reset.js-detail-btn-next
+          +icon-mono("shevron-right")(width="9" height="13" class="slider-nav__btn-icon")
+      .detail-slider__wrapper
+        .swiper.detail-slider__slider
+          .swiper-wrapper
+            - for (let i = 0; i<3; i++)
+              .swiper-slide.detail-slider__slide
+                img(data-src=`images/spheres-detail-slider/img${i}.jpg` src="#" alt="" class="detail-slider__img lazy")
+    .detail-slider__container-block

@@ -1,0 +1,28 @@
+-
+  let equpment_page_arr = [
+    {
+      imgs: ["img1", "img2"],
+      tags: [{name: "Новинка", new: true}],
+      name: "Master Recessed Control",
+      txt: "Электроприводные экраны, встраиваемые в потолок",
+      feats: ["Ширина экрана(см) 215–362", "Угол обзора 160°"]
+    },
+    {
+      imgs: ["img2", "img1"],
+      tags: [{name: "Натяжные на раме"}],
+      name: "Cinema Home",
+      txt: "Натяжные экраны на раме для домашнего кинотеатра.",
+      feats: ["Ширина экрана(см) 193-370", "Угол обзора 160°"]
+    },
+  ]
+section.section-indent.slider-equipment
+  .site-container
+    .grid-container.slider-equipment__container
+      .slider-equipment__container-block
+      .slider-equipment__container-block
+        h2.site-second-heading.slider-equipment__heading Установленное оборудование
+        .slider-equipment__slider.swiper.js-slider-equipment
+          .swiper-wrapper
+            for item in equpment_page_arr
+              .swiper-slide
+                +cart(item.tags, item.imgs, item.name, item.txt, item.feats)

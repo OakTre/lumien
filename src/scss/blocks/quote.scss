@@ -1,0 +1,32 @@
+.quote {
+  background-color: var(--color-bg-input);
+  border-radius: 2rem;
+  padding: 3.5rem 12.4rem 4rem 13.7rem;
+  max-width: 78.8rem;
+  margin: 7rem 0;
+
+  p {
+    position: relative;
+    font: 400 2.8rem/3.9rem var(--main-ff);
+    margin: 0;
+
+    &::before {
+      position: absolute;
+      top: 1rem;
+      left: -6rem;
+      width: 4.2rem;
+      height: 2.3rem;
+      background-image: url(../images/quote.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: "";
+    }
+  }
+
+  figcaption {
+    margin-top: 6.3rem;
+    color: var(--color-accent);
+    font: var(--font-body-XS);
+  }
+}
