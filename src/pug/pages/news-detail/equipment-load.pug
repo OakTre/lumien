@@ -1,0 +1,29 @@
+-
+  let files = [
+    {
+      name: "Брошюра",
+      size: "pdf, 19,5 МБ"
+    },
+    {
+      name: "Каталог",
+      size: "pdf, 19,5 МБ"
+    },
+    {
+      name: "Прайс-лист",
+      size: "xls, 7,57 МБ"
+    },
+  ]
+
+
+section.section-indent.equipment-load
+  .site-container
+    .grid-container.equipment-load__container
+      .equipment-load__container-block
+      .equipment-load__container-block
+        .equipment-load__heading-wrapper
+          h2.site-second-heading.equipment-load__heading Материалы для скачивания
+          a(href="/" class="equipment-load__link") Перейти на страницу товара
+
+        .equipment-load__files-container.file__container
+          for item in files
+            +file(item.name, item.size)

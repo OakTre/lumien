@@ -1,0 +1,5 @@
+mixin news-cart(img, date, txt)
+  a.news__item.news-card.lazy(href="/" data-bg=`images/news-slider/${img}.jpg` data-bg-fallback=`images/news-slider/${img}.jpg`)
+    span.news-card__tag._category Проекционные экраны
+    span.news-card__tag= date
+    p.news-card__heading= txt

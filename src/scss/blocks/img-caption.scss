@@ -1,0 +1,20 @@
+.img-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5rem 0 7rem;
+
+  img {
+    margin: 0 !important;
+  }
+
+  figcaption {
+    display: block;
+    text-align: center;
+    font: var(--font-body-S);
+    color: rgba($color: #626262, $alpha: 0.5);
+    margin-top: 2rem;
+    max-width: 56.6rem;
+  }
+}

@@ -1,0 +1,61 @@
+-
+  let table_arr = [
+    "4:3",
+    "16:9",
+    "16:10"
+  ]
+
+section.section-indent.table-model.js-tabs-container
+  .site-container.grid-container
+    .grid-container__block
+    .grid-container__block.table-model__container
+      .table-model__container-block
+        h2.site-second-heading.table-model__heading Таблица моделей
+        .table-model__nav.content-btn__nav
+          +content-btn("Формат 4:3", "format", "4:3", "js-tab", "true")(class="table-model__nav-btn")
+          +content-btn("Формат 16:9", "format", "16:9", "js-tab")(class="table-model__nav-btn")
+          +content-btn("Формат 16:10", "format", "16:10", "js-tab")(class="table-model__nav-btn")
+        for item in table_arr
+          .table-model__table-wrapper.js-tab-content(data-content=item)
+            table.table-model__table
+              caption.visually-hidden Таблица моделей
+              thead.table-model__table-heading
+                tr.table-model__tr
+                  th.table-model__th.table-model__td Код продукта
+                  th.table-model__th.table-model__td Общий <br> размер,см
+                  th.table-model__th.table-model__td Рабочая <br> область, см
+                  th.table-model__th.table-model__td Диагональ рабочей <br> области, см/дюйм
+                  th.table-model__th.table-model__td Полотно
+                  th.table-model__th.table-model__td Розничная цена
+              tbody.table-model__table-body
+                tr.table-model__tr.table-model__tr-body
+                  td.table-model__td.table-model__td-body LMF 100101
+                  td.table-model__td.table-model__td-body 168x219
+                  td.table-model__td.table-model__td-body 152x203
+                  td.table-model__td.table-model__td-body 254/100"
+                  td.table-model__td.table-model__td-body Matte White
+                  td.table-model__td.table-model__td-body $885
+                tr.table-model__tr.table-model__tr-body
+                  td.table-model__td.table-model__td-body LMF 100101
+                  td.table-model__td.table-model__td-body 168x219
+                  td.table-model__td.table-model__td-body 152x203
+                  td.table-model__td.table-model__td-body 254/100"
+                  td.table-model__td.table-model__td-body Matte White
+                  td.table-model__td.table-model__td-body $885
+                tr.table-model__tr.table-model__tr-body
+                  td.table-model__td.table-model__td-body LMF 100101
+                  td.table-model__td.table-model__td-body 168x219
+                  td.table-model__td.table-model__td-body 152x203
+                  td.table-model__td.table-model__td-body 254/100"
+                  td.table-model__td.table-model__td-body Matte White+ Rear Projection
+                  td.table-model__td.table-model__td-body $885
+                tr.table-model__tr.table-model__tr-body
+                  td.table-model__td.table-model__td-body LMF 100101
+                  td.table-model__td.table-model__td-body 168x219
+                  td.table-model__td.table-model__td-body 152x203
+                  td.table-model__td.table-model__td-body 254/100"
+                  td.table-model__td.table-model__td-body Matte White
+                  td.table-model__td.table-model__td-body $885
+
+
+      .table-model__container-block

@@ -3,22 +3,21 @@
 ## Ссылки
 
 1. [Главная](https://oaktre.github.io/lumien/build/)
-2. [Общий каталог](https://oaktre.github.io/lumien/build/common-catalog.html)
-3. [Сферы применения](https://oaktre.github.io/lumien/build/spheres.html)
-4. [Сферы применения - детальная](https://oaktre.github.io/lumien/build/spheres-detail.html)
-5. [Как выбрать экран](https://oaktre.github.io/lumien/build/how-choose-screen.html)
-6. [Контакты](https://oaktre.github.io/lumien/build/contacts.html)
-7. [Сервисное обслуживание](https://oaktre.github.io/lumien/build/service.html)
-8. [Вопросы и ответы](https://oaktre.github.io/lumien/build/faq.html)
-9. [Материалы для скачивания](https://oaktre.github.io/lumien/build/files.html)
-10. [Наши кейсы](https://oaktre.github.io/lumien/build/cases-page.html)
-11. [Наши кейсы - детальная](https://oaktre.github.io/lumien/build/case-detail.html)
-12. [Новости разводящая](https://oaktre.github.io/lumien/build/news.html)
+2. [Сферы применения](https://oaktre.github.io/lumien/build/spheres.html)
+3. [Сферы применения - детальная](https://oaktre.github.io/lumien/build/spheres-detail.html)
+4. [Наши кейсы](https://oaktre.github.io/lumien/build/cases-page.html)
+5. [Наши кейсы - детальная](https://oaktre.github.io/lumien/build/case-detail.html)
+6. [Новости разводящая](https://oaktre.github.io/lumien/build/news.html)
+7. [Новости - детальная](https://oaktre.github.io/lumien/build/news-detail.html)
+8. [Общий каталог](https://oaktre.github.io/lumien/build/common-catalog.html)
+9. [Как выбрать экран](https://oaktre.github.io/lumien/build/how-choose-screen.html)
+10. [Сервисное обслуживание](https://oaktre.github.io/lumien/build/service.html)
+11. [Вопросы и ответы](https://oaktre.github.io/lumien/build/faq.html)
+12. [Материалы для скачивания](https://oaktre.github.io/lumien/build/files.html)
 13. [Поисковая выдача](https://oaktre.github.io/lumien/build/search-results.html)
-14. [Политика конфиденциальности](https://oaktre.github.io/lumien/build/policy.html)
-15. [404](https://oaktre.github.io/lumien/build/404.html)
-
-
+14. [Контакты](https://oaktre.github.io/lumien/build/contacts.html)
+15. [Политика конфиденциальности](https://oaktre.github.io/lumien/build/policy.html)
+16. [404](https://oaktre.github.io/lumien/build/404.html)
 
 
 ## Список команд
