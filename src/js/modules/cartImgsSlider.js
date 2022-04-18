@@ -12,7 +12,8 @@ export default () => {
       slidesPerView: 1,
       spaceBetween: 0,
       pagination: {
-        el: '.swiper-pagination',
+        el: "<div class='cart__img-pagination swiper-pagination'></div>",
+        type: 'bullets',
       },
     });
   });

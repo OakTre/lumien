@@ -28,6 +28,7 @@
     height: 1.3rem;
     stroke: var(--color-dark);
     stroke-width: 2;
+    transition: stroke var(--transition);
   }
 
   &__btn_transparent {

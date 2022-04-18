@@ -1,4 +1,4 @@
-section.section-indent.suitable-models
+section.section-indent.suitable-models.js-tabs-container
   .site-container
     .grid-container.suitable-models__container
       .suitable-models__container-block
@@ -7,21 +7,35 @@ section.section-indent.suitable-models
         .suitable-models__heading-wrapper
           .suitable-models__slider-nav
             label.suitable-models__label
-              input(type="radio" name="models" checked value="canvases" class="suitable-models__input visually-hidden")
+              input(type="radio" name="models" checked value="canvases" class="suitable-models__input visually-hidden js-tab")
               span.suitable-models__label-name Экраны
             label.suitable-models__label
-              input(type="radio" name="models" value="screen" class="suitable-models__input visually-hidden")
+              input(type="radio" name="models" value="screen" class="suitable-models__input visually-hidden js-tab")
               span.suitable-models__label-name Дисплеи
             label.suitable-models__label
-              input(type="radio" name="models" value="furniture" class="suitable-models__input visually-hidden")
+              input(type="radio" name="models" value="furniture" class="suitable-models__input visually-hidden js-tab")
               span.suitable-models__label-name Мебель
           .slider-nav.suitable-models__nav
             button.slider-nav__btn.button-reset.js-model-btn-prev
               +icon-mono("shevron-left")(width="9" height="13" class="slider-nav__btn-icon")
             button.slider-nav__btn.button-reset.js-model-btn-next
               +icon-mono("shevron-right")(width="9" height="13" class="slider-nav__btn-icon")
-        .suitable-models__slider.swiper.js-suitable-models-slider
-          .swiper-wrapper
-            - for (let i = 0; i<6; i++)
-              .swiper-slide
-                +cart([{name: "Натяжные на раме"}], ["img1", "img2"], "Cinema Thin Bezel", "Натяжной экран c тонкой рамой толщиной 1 см", ["Ширина экрана(см) 178–354", "Угол обзора 160°"])
+  .site-container
+    .suitable-models__models-container.js-tab-content(data-content="canvases")
+      .suitable-models__slider.swiper.js-suitable-models-slider
+        .swiper-wrapper
+          - for (let i = 0; i<6; i++)
+            .swiper-slide
+              +cart([{name: "Натяжные на раме"}], ["img1", "img2"], "Cinema Thin Bezel", "Натяжной экран c тонкой рамой толщиной 1 см", ["Ширина экрана(см) 178–354", "Угол обзора 160°"])
+    .suitable-models__models-container.js-tab-content(data-content="screen")
+          .suitable-models__slider.swiper.js-suitable-models-slider
+            .swiper-wrapper
+              - for (let i = 0; i<6; i++)
+                .swiper-slide
+                  +cart(null, ["img-screen1", "img-screen2", "img-screen3"], "LMPxx02ELRU", "Экономичный моторизованный экран для крепления на стену или потолок", ["Диагональ экрана 65 дюймов"])
+    .suitable-models__models-container.js-tab-content(data-content="furniture")
+      .suitable-models__slider.swiper.js-suitable-models-slider
+        .swiper-wrapper
+          - for (let i = 0; i<6; i++)
+            .swiper-slide
+              +cart(null, ["img-table1", "img-table2", "img-table3"], "Проекционный столик Galant", "На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм", ["Нижняя полка 72-109", "Верхняя полка 89-125"])

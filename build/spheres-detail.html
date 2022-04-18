@@ -207,7 +207,61 @@
             </div>
           </div>
         </section>
-        <section class="section-indent suitable-models">
+        <section class="section-indent spheres-detail-about">
+          <div class="site-container grid-container spheres-detail-about__container">
+            <div class="spheres-detail-about__container-block"></div>
+            <div class="spheres-detail-about__container-block spheres-detail-about__content">
+              <div class="spheres-detail-about__content-block">
+                <div class="spheres-detail-about__content-wrapper">
+                  <p class="spheres-detail-about__content-heding">Кафе, бары, рестораны&nbsp;&mdash; места для общения и&nbsp;совместного досуга людей</p>
+                  <p class="spheres-detail-about__content-text">В&nbsp;модельном ряду Lumien можно найти решение для зала любого размера и&nbsp;выбрать подходящий способ инсталляции&nbsp;&mdash; настенный, потолочный, встроенный или мобильный.</p>
+                  <p class="spheres-detail-about__content-text">Благодаря современному лаконичному дизайну экраны Lumien легко впишутся в&nbsp;интерьер, а&nbsp;современные проекционные полотна обеспечат высококачественную картинку.</p><a class="spheres-detail-about__content-link" href="/">Подходящие модели</a>
+                </div>
+              </div>
+              <div class="spheres-detail-about__content-block">
+                <div class="spheres-detail-about__item"><img class="spheres-detail-about__item-img" src="images/spheres-item1.jpg" alt="">
+                  <p>Проведение спортивных трансляций</p>
+                </div>
+                <div class="spheres-detail-about__item"><img class="spheres-detail-about__item-img" src="images/spheres-item2.jpg" alt="">
+                  <p>Просмотр презентаций и мероприятий на праздниках</p>
+                </div>
+                <div class="spheres-detail-about__item"><img class="spheres-detail-about__item-img" src="images/spheres-item1.jpg" alt="">
+                  <p>Показ фильмов</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-indent spheres-detail-slider">
+          <div class="site-container grid-container spheres-detail-slider__container">
+            <div class="spheres-detail-slider__container-block"></div>
+            <div class="spheres-detail-slider__container-block">
+              <div class="slider-nav spheres-detail-slider__nav">
+                <button class="slider-nav__btn button-reset js-detail-btn-prev">
+                  <svg class="icon icon-shevron-left slider-nav__btn-icon" width="9" height="13">
+                    <use xlink:href="images/sprites/sprite-mono.svg#shevron-left"></use>
+                  </svg>
+                </button>
+                <button class="slider-nav__btn button-reset js-detail-btn-next">
+                  <svg class="icon icon-shevron-right slider-nav__btn-icon" width="9" height="13">
+                    <use xlink:href="images/sprites/sprite-mono.svg#shevron-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="spheres-detail-slider__wrapper">
+                <div class="swiper spheres-detail-slider__slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide spheres-detail-slider__slide"><img class="spheres-detail-slider__img lazy" data-src="images/spheres-detail-slider/img0.jpg" src="#" alt=""></div>
+                    <div class="swiper-slide spheres-detail-slider__slide"><img class="spheres-detail-slider__img lazy" data-src="images/spheres-detail-slider/img1.jpg" src="#" alt=""></div>
+                    <div class="swiper-slide spheres-detail-slider__slide"><img class="spheres-detail-slider__img lazy" data-src="images/spheres-detail-slider/img2.jpg" src="#" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="spheres-detail-slider__container-block"></div>
+          </div>
+        </section>
+        <section class="section-indent suitable-models js-tabs-container">
           <div class="site-container">
             <div class="grid-container suitable-models__container">
               <div class="suitable-models__container-block"></div>
@@ -216,13 +270,13 @@
                 <div class="suitable-models__heading-wrapper">
                   <div class="suitable-models__slider-nav">
                     <label class="suitable-models__label">
-                      <input class="suitable-models__input visually-hidden" type="radio" name="models" checked value="canvases"><span class="suitable-models__label-name">Экраны</span>
+                      <input class="suitable-models__input visually-hidden js-tab" type="radio" name="models" checked value="canvases"><span class="suitable-models__label-name">Экраны</span>
                     </label>
                     <label class="suitable-models__label">
-                      <input class="suitable-models__input visually-hidden" type="radio" name="models" value="screen"><span class="suitable-models__label-name">Дисплеи</span>
+                      <input class="suitable-models__input visually-hidden js-tab" type="radio" name="models" value="screen"><span class="suitable-models__label-name">Дисплеи</span>
                     </label>
                     <label class="suitable-models__label">
-                      <input class="suitable-models__input visually-hidden" type="radio" name="models" value="furniture"><span class="suitable-models__label-name">Мебель</span>
+                      <input class="suitable-models__input visually-hidden js-tab" type="radio" name="models" value="furniture"><span class="suitable-models__label-name">Мебель</span>
                     </label>
                   </div>
                   <div class="slider-nav suitable-models__nav">
@@ -238,122 +292,378 @@
                     </button>
                   </div>
                 </div>
-                <div class="suitable-models__slider swiper js-suitable-models-slider">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a class="cart" href="/">
-                        <div class="cart__top"><span class="cart__tag null">Натяжные на раме</span>
-                        </div>
-                        <div class="cart__middle">
-                          <div class="swiper cart__img-slider js-cart-img-slider">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide"><img class="cart__img" src="images/cart/img1.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
-                              <div class="swiper-slide"><img class="cart__img" src="images/cart/img2.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
-                            </div>
+              </div>
+            </div>
+          </div>
+          <div class="site-container">
+            <div class="suitable-models__models-container js-tab-content" data-content="canvases">
+              <div class="suitable-models__slider swiper js-suitable-models-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top"><span class="cart__tag null">Натяжные на раме</span>
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img1.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img2.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
                           </div>
-                          <div class="cart__img-pagination swiper-pagination"></div>
                         </div>
-                        <div class="cart__bottom">
-                          <h4 class="cart__name">Cinema Thin Bezel</h4>
-                          <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
-                          <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
-                          </div>
-                        </div></a>
-                    </div>
-                    <div class="swiper-slide"><a class="cart" href="/">
-                        <div class="cart__top"><span class="cart__tag null">Натяжные на раме</span>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Cinema Thin Bezel</h4>
+                        <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
                         </div>
-                        <div class="cart__middle">
-                          <div class="swiper cart__img-slider js-cart-img-slider">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide"><img class="cart__img" src="images/cart/img1.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
-                              <div class="swiper-slide"><img class="cart__img" src="images/cart/img2.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
-                            </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top"><span class="cart__tag null">Натяжные на раме</span>
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img1.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img2.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
                           </div>
-                          <div class="cart__img-pagination swiper-pagination"></div>
                         </div>
-                        <div class="cart__bottom">
-                          <h4 class="cart__name">Cinema Thin Bezel</h4>
-                          <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
-                          <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
-                          </div>
-                        </div></a>
-                    </div>
-                    <div class="swiper-slide"><a class="cart" href="/">
-                        <div class="cart__top"><span class="cart__tag null">Натяжные на раме</span>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Cinema Thin Bezel</h4>
+                        <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
                         </div>
-                        <div class="cart__middle">
-                          <div class="swiper cart__img-slider js-cart-img-slider">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide"><img class="cart__img" src="images/cart/img1.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
-                              <div class="swiper-slide"><img class="cart__img" src="images/cart/img2.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
-                            </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top"><span class="cart__tag null">Натяжные на раме</span>
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img1.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img2.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
                           </div>
-                          <div class="cart__img-pagination swiper-pagination"></div>
                         </div>
-                        <div class="cart__bottom">
-                          <h4 class="cart__name">Cinema Thin Bezel</h4>
-                          <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
-                          <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
-                          </div>
-                        </div></a>
-                    </div>
-                    <div class="swiper-slide"><a class="cart" href="/">
-                        <div class="cart__top"><span class="cart__tag null">Натяжные на раме</span>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Cinema Thin Bezel</h4>
+                        <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
                         </div>
-                        <div class="cart__middle">
-                          <div class="swiper cart__img-slider js-cart-img-slider">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide"><img class="cart__img" src="images/cart/img1.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
-                              <div class="swiper-slide"><img class="cart__img" src="images/cart/img2.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
-                            </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top"><span class="cart__tag null">Натяжные на раме</span>
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img1.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img2.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
                           </div>
-                          <div class="cart__img-pagination swiper-pagination"></div>
                         </div>
-                        <div class="cart__bottom">
-                          <h4 class="cart__name">Cinema Thin Bezel</h4>
-                          <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
-                          <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
-                          </div>
-                        </div></a>
-                    </div>
-                    <div class="swiper-slide"><a class="cart" href="/">
-                        <div class="cart__top"><span class="cart__tag null">Натяжные на раме</span>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Cinema Thin Bezel</h4>
+                        <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
                         </div>
-                        <div class="cart__middle">
-                          <div class="swiper cart__img-slider js-cart-img-slider">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide"><img class="cart__img" src="images/cart/img1.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
-                              <div class="swiper-slide"><img class="cart__img" src="images/cart/img2.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
-                            </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top"><span class="cart__tag null">Натяжные на раме</span>
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img1.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img2.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
                           </div>
-                          <div class="cart__img-pagination swiper-pagination"></div>
                         </div>
-                        <div class="cart__bottom">
-                          <h4 class="cart__name">Cinema Thin Bezel</h4>
-                          <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
-                          <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
-                          </div>
-                        </div></a>
-                    </div>
-                    <div class="swiper-slide"><a class="cart" href="/">
-                        <div class="cart__top"><span class="cart__tag null">Натяжные на раме</span>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Cinema Thin Bezel</h4>
+                        <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
                         </div>
-                        <div class="cart__middle">
-                          <div class="swiper cart__img-slider js-cart-img-slider">
-                            <div class="swiper-wrapper">
-                              <div class="swiper-slide"><img class="cart__img" src="images/cart/img1.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
-                              <div class="swiper-slide"><img class="cart__img" src="images/cart/img2.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
-                            </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top"><span class="cart__tag null">Натяжные на раме</span>
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img1.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img2.png" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
                           </div>
-                          <div class="cart__img-pagination swiper-pagination"></div>
                         </div>
-                        <div class="cart__bottom">
-                          <h4 class="cart__name">Cinema Thin Bezel</h4>
-                          <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
-                          <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Cinema Thin Bezel</h4>
+                        <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
+                        </div>
+                      </div></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="suitable-models__models-container js-tab-content" data-content="screen">
+              <div class="suitable-models__slider swiper js-suitable-models-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top">
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen1.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen2.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen3.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
                           </div>
-                        </div></a>
-                    </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">LMPxx02ELRU</h4>
+                        <p class="cart__txt">Экономичный моторизованный экран для крепления на стену или потолок</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Диагональ экрана 65 дюймов</span>
+                        </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top">
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen1.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen2.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen3.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">LMPxx02ELRU</h4>
+                        <p class="cart__txt">Экономичный моторизованный экран для крепления на стену или потолок</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Диагональ экрана 65 дюймов</span>
+                        </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top">
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen1.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen2.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen3.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">LMPxx02ELRU</h4>
+                        <p class="cart__txt">Экономичный моторизованный экран для крепления на стену или потолок</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Диагональ экрана 65 дюймов</span>
+                        </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top">
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen1.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen2.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen3.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">LMPxx02ELRU</h4>
+                        <p class="cart__txt">Экономичный моторизованный экран для крепления на стену или потолок</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Диагональ экрана 65 дюймов</span>
+                        </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top">
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen1.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen2.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen3.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">LMPxx02ELRU</h4>
+                        <p class="cart__txt">Экономичный моторизованный экран для крепления на стену или потолок</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Диагональ экрана 65 дюймов</span>
+                        </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top">
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen1.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen2.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-screen3.png" alt="Экономичный моторизованный экран для крепления на стену или потолок"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">LMPxx02ELRU</h4>
+                        <p class="cart__txt">Экономичный моторизованный экран для крепления на стену или потолок</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Диагональ экрана 65 дюймов</span>
+                        </div>
+                      </div></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="suitable-models__models-container js-tab-content" data-content="furniture">
+              <div class="suitable-models__slider swiper js-suitable-models-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top">
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table1.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table2.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table3.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Проекционный столик Galant</h4>
+                        <p class="cart__txt">На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Нижняя полка 72-109</span><span class="cart__feautures-item">Верхняя полка 89-125</span>
+                        </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top">
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table1.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table2.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table3.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Проекционный столик Galant</h4>
+                        <p class="cart__txt">На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Нижняя полка 72-109</span><span class="cart__feautures-item">Верхняя полка 89-125</span>
+                        </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top">
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table1.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table2.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table3.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Проекционный столик Galant</h4>
+                        <p class="cart__txt">На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Нижняя полка 72-109</span><span class="cart__feautures-item">Верхняя полка 89-125</span>
+                        </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top">
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table1.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table2.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table3.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Проекционный столик Galant</h4>
+                        <p class="cart__txt">На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Нижняя полка 72-109</span><span class="cart__feautures-item">Верхняя полка 89-125</span>
+                        </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top">
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table1.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table2.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table3.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Проекционный столик Galant</h4>
+                        <p class="cart__txt">На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Нижняя полка 72-109</span><span class="cart__feautures-item">Верхняя полка 89-125</span>
+                        </div>
+                      </div></a>
+                  </div>
+                  <div class="swiper-slide"><a class="cart" href="/">
+                      <div class="cart__top">
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table1.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table2.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                            <div class="swiper-slide"><img class="cart__img" src="images/cart/img-table3.png" alt="На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Проекционный столик Galant</h4>
+                        <p class="cart__txt">На колесах для использования на конференциях, симпозиумах, в выставочных инсталляцияхм</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Нижняя полка 72-109</span><span class="cart__feautures-item">Верхняя полка 89-125</span>
+                        </div>
+                      </div></a>
                   </div>
                 </div>
               </div>

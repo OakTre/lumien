@@ -1,0 +1,70 @@
+.spheres-detail-about {
+  &__container-block {
+    &:nth-child(1) {
+      grid-column: 1 span;
+    }
+
+    &:nth-child(2) {
+      grid-column: 11 span;
+      display: grid;
+      grid-template-columns: repeat(11, 1fr);
+      gap: var(--grid-offset);
+    }
+  }
+
+  &__content-heding {
+    font: var(--font-title-2);
+    margin-bottom: 3rem;
+  }
+
+  &__content-wrapper {
+    max-width: 70.5rem;
+  }
+
+  &__content-block {
+    &:nth-child(1) {
+      grid-column: 6 span;
+    }
+
+    &:nth-child(2) {
+      grid-column: 5 span;
+    }
+  }
+
+  &__content-text {
+    font: var(--font-body-S);
+    margin-bottom: 2rem;
+  }
+
+  &__content-link {
+    font: var(--font-body-M);
+    color: var(--color-accent);
+
+    &:hover {
+      color: var(--color-dark);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+
+    p {
+      font: var(--font-body-M);
+    }
+  }
+
+  &__item-img {
+    display: block;
+    width: 9.2rem;
+    height: 9.2rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 3rem;
+  }
+}

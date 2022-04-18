@@ -5,27 +5,32 @@ import Swiper, {
 Swiper.use([Navigation]);
 
 export default () => {
-  let slidersuitableModels = new Swiper(".js-suitable-models-slider", {
-    slidesPerView: 4,
-    spaceBetween: 40,
-    allowTouchMove: false,
-    navigation: {
-      nextEl: '.js-model-btn-next',
-      prevEl: '.js-model-btn-prev',
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 10
+  const sliders = Array.from(document.querySelectorAll(".js-suitable-models-slider"));
+
+  sliders.forEach(slider => {
+    let slidersuitableModels = new Swiper(slider, {
+      slidesPerView: 4,
+      spaceBetween: 40,
+      allowTouchMove: false,
+      navigation: {
+        nextEl: '.js-model-btn-next',
+        prevEl: '.js-model-btn-prev',
       },
-      767: {
-        slidesPerView: 3,
-        spaceBetween: 30
-      },
-      1200: {
-        slidesPerView: 4,
-        spaceBetween: 40
-      },
-    }
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+        767: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 40
+        },
+      }
+    });
   });
+
 }
