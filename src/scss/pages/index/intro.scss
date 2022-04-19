@@ -3,7 +3,7 @@
   background-color: var(--color-dark);
   margin-bottom: 13rem;
   color: var(--color-white);
-  padding-top: 9rem;
+  padding-top: 11rem;
   position: relative;
   z-index: 3;
   overflow: hidden;
@@ -51,9 +51,25 @@
   user-select: none;
 
   &__slider-wrapper {
+    position: relative;
     min-width: 0;
     width: 100%;
     height: 100%;
+  }
+
+  &__slider-nav {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+
+    .slider-nav__btn {
+      background-color: transparent;
+      border-color: var(--color-rgba-white-07);
+    }
+
+    .slider-nav__btn-icon {
+      stroke: var(--color-rgba-white-07);
+    }
   }
 
   &__block {
@@ -73,6 +89,7 @@
   &__heading {
     font: var(--font-title-1);
     display: block;
+    letter-spacing: -0.02em;
 
     .line {
       overflow: hidden;
@@ -224,7 +241,7 @@
       color: var(--color-white);
 
       &::after {
-        animation: slide-progress 5s cubic-bezier(.3,0,.3,1) forwards;
+        animation: slide-progress 8s cubic-bezier(.3,0,.3,1) forwards;
       }
 
       &::before {

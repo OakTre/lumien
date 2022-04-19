@@ -18,11 +18,15 @@ export default () => {
   const imgs = Array.from(document.querySelectorAll(".intro-content__img"));
   const layers = Array.from(document.querySelectorAll(".intro__layer-slide"));
   const sliderheadings = Array.from(document.querySelectorAll(".intro-content__heading"));
+  const sliderTexts = Array.from(document.querySelectorAll(".js-intro-content-anim"));
   const timeline = gsap.timeline();
   let spltHeadingsArr = [];
 
-  sliderheadings.forEach(heading=>{
-    let splitedText = new SplitText(heading, {type: 'lines, chars', linesClass: "line"});
+  sliderheadings.forEach(heading => {
+    let splitedText = new SplitText(heading, {
+      type: 'lines, chars',
+      linesClass: "line"
+    });
 
     spltHeadingsArr.push(splitedText);
   });
@@ -34,6 +38,10 @@ export default () => {
     allowTouchMove: false,
     spaceBetween: 30,
     watchSlidesProgress: true,
+    navigation: {
+      nextEl: '.js-intro-btn-next',
+      prevEl: '.js-intro-btn-prev',
+    },
   });
 
   let sliderIntro = new Swiper(".intro-content-slider", {
@@ -41,11 +49,11 @@ export default () => {
     spaceBetween: 0,
     allowTouchMove: false,
     effect: 'fade',
-		fadeEffect: {
-		  crossFade: true,
-		},
+    fadeEffect: {
+      crossFade: true,
+    },
     autoplay: {
-      delay: 5000,
+      delay: 8000,
       disableOnInteraction: false,
     },
   });
@@ -54,22 +62,23 @@ export default () => {
   sliderIntro.controller.control = sliderIntroNav;
 
   sliderIntro.on('slideChange', function (swiper) {
-    imgs.forEach(img=>{img.classList.remove("mod-show")});
+    imgs.forEach(img => {
+      img.classList.remove("mod-show")
+    });
     imgs[swiper.activeIndex].classList.add("mod-show");
 
-    layers.forEach(layer=>{layer.classList.remove("mod-show")});
+    layers.forEach(layer => {
+      layer.classList.remove("mod-show")
+    });
     layers[swiper.activeIndex].classList.add("mod-show");
 
-    sliderheadings.forEach((heading, index)=>{
-
-      // console.log("Текущий индекс: " + swiper.realIndex);
+    sliderheadings.forEach((heading, index) => {
 
       if (index === swiper.realIndex) {
         timeline
           .fromTo(spltHeadingsArr[swiper.realIndex].chars, {
             yPercent: 100,
-          },
-          {
+          }, {
             yPercent: 0,
             duration: 0.4,
             ease: "none",
@@ -80,8 +89,7 @@ export default () => {
         timeline
           .fromTo(spltHeadingsArr[swiper.realIndex - 1].chars, {
             yPercent: 0,
-          },
-          {
+          }, {
             yPercent: -120,
             duration: 0.4,
             ease: "none",
@@ -104,6 +112,58 @@ export default () => {
       // }
 
     });
+
+    sliderTexts.forEach((text, index) => {
+      let desrText = text.querySelector("p");
+      let btnText = text.querySelector(".intro-content__btn-text");
+      let circle = text.querySelector(".intro-content__btn-outer-circle");
+      let icon = text.querySelector(".intro-content__btn-icon");
+
+      if (index === swiper.realIndex) {
+        timeline
+          .fromTo(desrText, {
+            yPercent: 10,
+            opacity: 0
+          }, {
+            yPercent: 0,
+            opacity: 1,
+            duration: 0.4,
+            ease: "none",
+          })
+          .fromTo(btnText, {
+            yPercent: 10,
+            opacity: 0
+          }, {
+            yPercent: 0,
+            opacity: 1,
+            duration: 0.4,
+            ease: "none",
+            clearProps: "all"
+          }, "-=0.4")
+          .fromTo(circle, {
+            yPercent: -50,
+            xPercent: -50,
+            scale: 0.8,
+            opacity: 0
+          }, {
+            yPercent: -50,
+            xPercent: -50,
+            scale: 1,
+            opacity: 1,
+            duration: 0.4,
+            ease: "none",
+          }, "-=0.6")
+          .fromTo(icon, {
+            opacity: 0
+          }, {
+            opacity: 1,
+            duration: 0.4,
+            ease: "none",
+            clearProps: "all"
+          }, "-=0.6");
+      }
+    });
+
   });
 
   // setTimeout(() => {
@@ -112,13 +172,13 @@ export default () => {
   // }, 3000);
 
   // document.addEventListener("visibilitychange", function() {
-	// 	if (document.visibilityState === 'visible') {
+  // 	if (document.visibilityState === 'visible') {
   //     document.querySelector(".intro-slider-nav .swiper-slide-active").classList.remove("swiper-paused");
   //     sliderIntro.autoplay.start();
-	// 	} else {
+  // 	} else {
   //     document.querySelector(".intro-slider-nav .swiper-slide-active").classList.add("swiper-paused");
   //     sliderIntro.autoplay.stop();
-	// 	}
-	// });
+  // 	}
+  // });
 
 };

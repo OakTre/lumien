@@ -1,5 +1,5 @@
 .header {
-  padding-top: 1.6rem;
+  padding-top: 2.1rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -15,6 +15,14 @@
   &.logo-hidden {
     .logo {
       display: none;
+    }
+  }
+
+  &.is-front-page {
+    .header__btn {
+      padding: 0;
+      background-color: transparent;
+      border-radius: 0;
     }
   }
 
@@ -107,6 +115,7 @@
     padding: 0.8rem 1rem;
     border-radius: 2.5rem;
     text-transform: none;
+    margin-left: auto;
   }
 
   &__search-btn {

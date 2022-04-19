@@ -37,6 +37,11 @@ section.intro
                 .intro-slider-nav__item.swiper-slide= item.slug
       .intro-content__block
         .intro-content__slider-wrapper
+          .slider-nav.intro-content__slider-nav
+            button.slider-nav__btn.button-reset.js-intro-btn-prev
+              +icon-mono("shevron-left")(width="9" height="13" class="slider-nav__btn-icon")
+            button.slider-nav__btn.button-reset.js-intro-btn-next
+              +icon-mono("shevron-right")(width="9" height="13" class="slider-nav__btn-icon")
           .intro-content-slider.swiper
             .swiper-wrapper
               for item in intro_arr

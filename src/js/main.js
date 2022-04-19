@@ -21,6 +21,7 @@ import suitableModelsSlider from './modules/suitableModelsSlider';
 import cartImgsSlider from './modules/cartImgsSlider';
 import detailSlider from './modules/detailSlider';
 import tabs from './modules/tabs.js';
+import sectionAnimation from './modules/sectionAnimation';
 
 window.onload = () => {
   closePreloadre();
@@ -46,4 +47,5 @@ documenReady(() => {
   cartImgsSlider();
   detailSlider();
   tabs();
+  sectionAnimation();
 });
