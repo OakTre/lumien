@@ -22,6 +22,7 @@ import cartImgsSlider from './modules/cartImgsSlider';
 import detailSlider from './modules/detailSlider';
 import tabs from './modules/tabs.js';
 import sectionAnimation from './modules/sectionAnimation';
+import fixedHeader from './modules/fixedHeader.js'
 
 window.onload = () => {
   closePreloadre();
@@ -48,4 +49,5 @@ documenReady(() => {
   detailSlider();
   tabs();
   sectionAnimation();
+  fixedHeader();
 });

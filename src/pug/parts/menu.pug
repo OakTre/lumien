@@ -1,11 +1,29 @@
 -
   let arr = [
-    "Каталог",
-    "Кейсы",
-    "О компании",
-    "Дилерам",
-    "Новости",
-    "Контакты",
+    {
+      name: "Каталог",
+      link: "/common-catalog.html"
+    },
+    {
+      name: "Кейсы",
+      link: "/cases-page.html"
+    },
+    {
+      name: "О компании",
+      link: "/"
+    },
+    {
+      name: "Дилерам",
+      link: "/"
+    },
+    {
+      name: "Новости",
+      link: "/news.html"
+    },
+    {
+      name: "Контакты",
+      link: "/contacts.html"
+    }
   ]
 
   let arr2 = [
@@ -24,12 +42,30 @@
   ]
 
   let arr3 = [
-    "Как выбрать экран",
-    "Материалы для скачивания",
-    "Сервисное обслуживание",
-    "Глоссарий",
-    "FAQ",
-    "Регистрация изделий",
+    {
+      name: "Как выбрать экран",
+      link: "/how-choose-screen.html"
+    },
+    {
+      name: "Материалы для скачивания",
+      link: "/files.html"
+    },
+    {
+      name: "Сервисное обслуживание",
+      link: "/service.html"
+    },
+    {
+      name: "Глоссарий",
+      link: "/"
+    },
+    {
+      name: "FAQ",
+      link: "/faq.html"
+    },
+    {
+      name: "Регистрация изделий",
+      link: "/"
+    }
   ]
 
 .menu
@@ -46,20 +82,20 @@
             ul.menu__nav-list
               for item in arr
                 li.menu__nav-item
-                  a.menu__nav-link.menu__legend(href="/")= item
+                  a.menu__nav-link.menu__legend(href=item.link)= item.name
           .menu__nav-container.menu__nav_grid-container
             nav.menu__nav
               a(href="/" class="menu__legend menu__nav-legend") Сферы применения
               ul.menu__nav-grid-list
                 for item in arr2
                   li.menu__nav-item-small
-                    a.menu__nav-link.menu__legend-small(href="/")= item
+                    a.menu__nav-link.menu__legend-small(href="/spheres-detail.html")= item
             nav.menu__nav
               a(href="/" class="menu__legend menu__nav-legend") Клиентам
               ul.menu__nav-grid-list
                 for item in arr3
                   li.menu__nav-item-small
-                    a.menu__nav-link.menu__legend-small(href="/")= item
+                    a.menu__nav-link.menu__legend-small(href=item.link)= item.name
         .menu__download-links-wrapper
           a.menu__download-link(href="/" download)
             | Брошюра

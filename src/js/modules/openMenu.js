@@ -2,7 +2,7 @@ import gsap from 'gsap';
 import { disableScroll, enableScroll } from '../helpers/disableScroll';
 
 export default () => {
-  const openBtn = document.querySelector(".js-open-menu-btn");
+  const openBtns = document.querySelectorAll(".js-open-menu-btn");
   const closeBtn = document.querySelector(".js-close-menu-btn");
   const timeline = gsap.timeline({
     paused: true,
@@ -23,9 +23,11 @@ export default () => {
     .to(".menu__block", {opacity: 1, y: 0, duration: 0.2})
     .to("._bottom-line", {xPercent: 0}, "-=0.1");
 
-  openBtn.addEventListener("click", ()=>{
-    timeline.play();
-    disableScroll();
+  openBtns.forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      timeline.play();
+      disableScroll();
+    });
   });
 
   closeBtn.addEventListener("click", ()=>{
