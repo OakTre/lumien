@@ -12,12 +12,12 @@
       img: "",
       text: "Профессиональная панель последнего поколения, поддерживающая технологию мультитач применима для <span>развлекательных площадок</span>, <span>образования</span>, <span>корпоративных событий</span>,<span>госсектора</span>, <span>VR</span>"
     },
-    {
-      name: "Мебель",
-      slug: "Мебель",
-      img: "images/index-slider/img2.png",
-      text: "Профессиональная мебель последнего поколения, поддерживающая технологию мультитач применима для <span>развлекательных площадок</span>, <span>образования</span>, <span>корпоративных событий</span>,<span>госсектора</span>, <span>VR</span>"
-    }
+    //- {
+    //-   name: "Мебель",
+    //-   slug: "Мебель",
+    //-   img: "images/index-slider/img2.png",
+    //-   text: "Профессиональная мебель последнего поколения, поддерживающая технологию мультитач применима для <span>развлекательных площадок</span>, <span>образования</span>, <span>корпоративных событий</span>,<span>госсектора</span>, <span>VR</span>"
+    //- }
   ]
 
 section.intro
@@ -41,8 +41,8 @@ section.intro
             .swiper-wrapper
               for item in intro_arr
                 .swiper-slide
-                  span.intro-content__heading(data-name=item.slug)!= item.name
-                  .intro-content__btn-wrapper
+                  span.intro-content__heading.js-intro-splitted(data-name=item.slug)!= item.name
+                  .intro-content__btn-wrapper.js-intro-content-anim
                     p!= item.text
                     a.intro-content__btn(href="/")
                       span.intro-content__btn-circle-wrapper

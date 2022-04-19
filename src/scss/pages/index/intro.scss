@@ -73,6 +73,10 @@
   &__heading {
     font: var(--font-title-1);
     display: block;
+
+    .line {
+      overflow: hidden;
+    }
   }
 
   &__btn-wrapper {
@@ -171,7 +175,7 @@
     bottom: 0;
     z-index: -1;
     transform: translateY(0);
-    transition: transform 800ms;
+    transition: transform 1300ms;
     width: 133rem;
     height: 57.7rem;
 
@@ -220,7 +224,11 @@
       color: var(--color-white);
 
       &::after {
-        animation: slide-progress 3s cubic-bezier(.3,0,.3,1) forwards;
+        animation: slide-progress 5s cubic-bezier(.3,0,.3,1) forwards;
+      }
+
+      &::before {
+        max-width: 19.7rem;
       }
     }
 
@@ -238,9 +246,11 @@
       position: absolute;
       top: 50%;
       left: calc(100% - 26.7rem);
-      width: 19.7rem;
+      max-width: 0;
+      width: 100%;
       height: 0.1rem;
       background-color: #5A5A5A;
+      transition: max-width 400ms;
       content: "";
     }
 

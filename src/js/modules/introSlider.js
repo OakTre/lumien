@@ -9,9 +9,24 @@ import Swiper, {
 
 Swiper.use([Navigation, Pagination, EffectFade, Autoplay, Thumbs, Controller]);
 
+import gsap from 'gsap';
+import SplitText from '../../assets/js/gsap-bonus/SplitText';
+
+gsap.registerPlugin([SplitText]);
+
 export default () => {
   const imgs = Array.from(document.querySelectorAll(".intro-content__img"));
   const layers = Array.from(document.querySelectorAll(".intro__layer-slide"));
+  const sliderheadings = Array.from(document.querySelectorAll(".intro-content__heading"));
+  const timeline = gsap.timeline();
+  let spltHeadingsArr = [];
+
+  sliderheadings.forEach(heading=>{
+    let splitedText = new SplitText(heading, {type: 'lines, chars', linesClass: "line"});
+
+    spltHeadingsArr.push(splitedText);
+  });
+
 
   let sliderIntroNav = new Swiper(".intro-slider-nav", {
     slidesPerView: 1,
@@ -30,7 +45,7 @@ export default () => {
 		  crossFade: true,
 		},
     autoplay: {
-      delay: 3000,
+      delay: 5000,
       disableOnInteraction: false,
     },
   });
@@ -44,6 +59,51 @@ export default () => {
 
     layers.forEach(layer=>{layer.classList.remove("mod-show")});
     layers[swiper.activeIndex].classList.add("mod-show");
+
+    sliderheadings.forEach((heading, index)=>{
+
+      // console.log("Текущий индекс: " + swiper.realIndex);
+
+      if (index === swiper.realIndex) {
+        timeline
+          .fromTo(spltHeadingsArr[swiper.realIndex].chars, {
+            yPercent: 100,
+          },
+          {
+            yPercent: 0,
+            duration: 0.4,
+            ease: "none",
+          }, "+=0.6");
+      }
+
+      if (index === swiper.realIndex - 1) {
+        timeline
+          .fromTo(spltHeadingsArr[swiper.realIndex - 1].chars, {
+            yPercent: 0,
+          },
+          {
+            yPercent: -120,
+            duration: 0.4,
+            ease: "none",
+          });
+      }
+
+
+      // if (swiper.realIndex - 1 === -1) {
+      //   console.log(spltHeadingsArr[spltHeadingsArr.length - 1]);
+
+      //   timeline
+      //     .fromTo(spltHeadingsArr[spltHeadingsArr.length - 1].chars, {
+      //       yPercent: 0,
+      //     },
+      //     {
+      //       yPercent: -120,
+      //       duration: 0.4,
+      //       ease: "none",
+      //     });
+      // }
+
+    });
   });
 
   // setTimeout(() => {
@@ -60,4 +120,5 @@ export default () => {
   //     sliderIntro.autoplay.stop();
 	// 	}
 	// });
+
 };

@@ -3,6 +3,10 @@
       margin-bottom: 10.5rem;
     }
 
+    .grid-container__block {
+      min-width: 0;
+    }
+
     &__item {
       width: 24.9rem;
     }
