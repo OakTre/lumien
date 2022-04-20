@@ -12,12 +12,23 @@
     }
   }
 
+  @include mq(sm) {
+    flex-direction: column;
+  }
+
   &__img-wrapper {
     width: 43.9rem;
     height:  31.2rem;
     margin-right: 5.5rem;
     border-radius: 2rem;
     overflow: hidden;
+
+    @include mq(sm) {
+      width: 100%;
+      height: 24.5rem;
+      margin: 0;
+      margin-bottom: 2rem;
+    }
   }
 
   &__img {
@@ -39,6 +50,10 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
+
+    @include mq(sm) {
+      margin-bottom: 2rem,;
+    }
   }
 
   &__tag {
@@ -48,6 +63,10 @@
     border-radius: 2rem;
     font: var(--font-body-S);
     color: var(--text-color);
+
+    @include mq(sm) {
+      font: var(--font-body-XXS);
+    }
   }
 
   &__heading {
@@ -55,6 +74,11 @@
     font: var(--font-title-4);
     max-width: 71.9rem;
     margin-bottom: 2.5rem;
+
+    @include mq(sm) {
+      font: var(--font-title-mobile-4-bold);
+      margin-bottom: 2rem;
+    }
   }
 
   &__date {
@@ -62,12 +86,20 @@
     margin-bottom: 1rem;
     font: var(--font-body-S);
     color: rgba($color: #626262, $alpha: 0.5);
+
+    @include mq(sm) {
+      font: var(--font-body-XXS);
+    }
   }
 
   &__txt {
     max-width: 58.1rem;
     font: var(--font-body-S);
     color: var(--text-color);
+
+    @include mq(sm) {
+      font: var(--font-body-XS);
+    }
   }
 
   &.mod-big-news {
@@ -79,12 +111,30 @@
     overflow: hidden;
     border-radius: 2.5rem;
 
+    @include mq(md) {
+      height: 60rem;
+    }
+
+    @include mq(sm) {
+      height: auto;
+      width: 100%;
+      display: flex;
+      padding: 0;
+      border-radius: 0;
+    }
+
     .news-page-cart__img-wrapper {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+
+      @include mq(sm) {
+        position: static;
+        width: 100%;
+        height: 24.5rem;
+      }
     }
 
     .news-page-cart__content {
@@ -96,24 +146,45 @@
     .news-page-cart__tag {
       background-color: var(--color-white);
       border-color: var(--color-white);
+
+      @include mq(sm) {
+        background-color: transparent;
+        border-color: var(--border-color);
+      }
     }
 
     .news-page-cart__heading {
       font: var(--font-title-3);
       max-width: 74.9rem;
+
+      @include mq(sm) {
+        font: var(--font-title-mobile-4-bold);
+      }
     }
 
     .news-page-cart__txt {
       font: var(--font-body-M);
+
+      @include mq(sm) {
+        font: var(--font-body-XS);
+      }
     }
 
     .news-page-cart__heading,
     .news-page-cart__txt {
       color: var(--color-white);
+
+      @include mq(sm) {
+        color: var(--color-dark);
+      }
     }
 
     .news-page-cart__date {
       color: rgba($color: #fff, $alpha: 0.5);
+
+      @include mq(sm) {
+        color: var(--color-dark);
+      }
     }
 
     &:hover {

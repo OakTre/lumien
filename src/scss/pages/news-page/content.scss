@@ -2,6 +2,10 @@
   &__List {
     width: 100%;
     margin-bottom: 7rem;
+
+    @include mq(sm) {
+      margin-bottom: 6rem;
+    }
   }
 
   &__item {
@@ -12,14 +16,36 @@
     &:nth-child(1) {
       border-top: 1px solid var(--border-color);
     }
+
+    @include mq(sm) {
+      border: none;
+      padding: 0;
+      padding-bottom: 4rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      &:nth-child(1) {
+        border: none;
+      }
+    }
   }
 
   &__main-news {
     margin-bottom: 7rem;
     width: 100%;
+
+    @include mq(sm) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__btn {
     width: 100%;
+
+    @include mq(sm) {
+      padding: 2.6rem;
+    }
   }
 }
