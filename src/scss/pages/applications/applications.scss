@@ -1,9 +1,31 @@
 .applications {
   &__content {
     gap: 4rem var(--grid-offset);
+
+    @include mq(sm) {
+      gap: 1.5rem 0;
+    }
   }
 
   &__content-item {
     grid-column: 4 span;
+
+    @include mq(lg) {
+      grid-column: 6 span;
+    }
+
+    @include mq(md) {
+      grid-column: 12 span;
+    }
+  }
+
+  &__heading {
+    @include mq(md) {
+      font: var(--font-title-2);
+    }
+
+    @include mq(sm) {
+      font: var(--font-title-3);
+    }
   }
 }
