@@ -3,8 +3,21 @@
   padding: 9.4rem 0 3.4rem;
   color: var(--color-white);
 
+  @include mq(sm) {
+    padding: 5rem 0 6rem;
+  }
+
   &__container {
     margin-bottom: 12.4rem;
+
+    @include mq(lg) {
+      gap: 5rem var(--grid-offset);
+    }
+
+    @include mq(sm) {
+      gap: 5rem 0;
+      margin-bottom: 5rem;
+    }
   }
 
   &__block {
@@ -27,15 +40,48 @@
     &:nth-child(4) {
       grid-column: 2 span;
     }
+
+    @include mq(lg) {
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        grid-column: 3 span;
+      }
+
+      &:nth-child(1) {
+        grid-column: 12 span;
+      }
+    }
+
+    @include mq(sm) {
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        display: none;
+      }
+
+      &:nth-child(5) {
+        grid-column: 12 span;
+      }
+    }
   }
 
   &__legend {
     font: var(--font-title-4-semibold);
+
+    @include mq(sm) {
+      display: none;
+    }
   }
 
   &__legend-height {
     display: block;
     margin-bottom: 2.5rem;
+
+    @include mq(sm) {
+      display: none;
+    }
   }
 
   &__small-legend {
@@ -86,6 +132,23 @@
       font: var(--font-body-XS);
       margin-right: 8rem;
     }
+
+    @include mq(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 5rem;
+
+      p, a {
+        margin: 0;
+        margin-bottom: 2rem;
+      }
+
+      a {
+        &:nth-last-of-type(1) {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 
   &__copyright-link {
@@ -129,6 +192,11 @@
     width: 2.4rem;
     height: 2.4rem;
     cursor: pointer;
+
+    @include mq(sm) {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 
   &__form-btn-icon {
@@ -151,6 +219,14 @@
     &::placeholder {
       font: var(--font-body-M);
       color: rgba(255, 255, 255, 0.7);
+
+      @include mq(sm) {
+        font: var(--font-body-S);
+      }
+    }
+
+    @include mq(sm) {
+      font: var(--font-body-S);
     }
   }
 
@@ -170,17 +246,35 @@
     padding-bottom: 7rem;
     margin-bottom: 9rem;
     border-bottom: 1px solid var(--color-rgba-white-05);
+
+    @include mq(sm) {
+      padding-bottom: 5rem;
+      margin-bottom: 5rem;
+    }
   }
 
   &__subscribe-heading {
     color: var(--color-white);
     font: var(--font-title-2);
+
+    @include mq(lg) {
+      max-width: 70%;
+    }
+
+    @include mq(lg) {
+      max-width: 100%;
+      font: var(--font-title-mobile-3);
+    }
   }
 
   &__subscribe-content {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     gap: var(--grid-offset);
+
+    @include mq(sm) {
+      gap: 3rem 0;
+    }
   }
 
   &__subscribe-content-block {
@@ -190,6 +284,10 @@
 
     &:nth-child(2) {
       grid-column: 3 span;
+    }
+
+    @include mq(lg) {
+      grid-column: 10 span !important;
     }
   }
 }

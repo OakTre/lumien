@@ -3,15 +3,35 @@
   padding: 10.9rem 0 12.9rem;
   color: var(--color-white);
 
+  @include mq(lg) {
+    padding: 9rem 0 10rem;
+  }
+
+  @include mq(sm) {
+    padding: 8rem 0;
+  }
+
   &__heading {
     max-width: 56.7rem;
     margin-bottom: 5rem;
+
+    @include mq(lg) {
+      max-width: 100%;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__content {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     column-gap: var(--grid-offset);
+
+    @include mq(lg) {
+      gap: 3rem 0;
+    }
   }
 
   &__content-block {
@@ -22,6 +42,10 @@
 
     &:nth-child(2) {
       grid-column: 3 span;
+    }
+
+    @include mq(lg) {
+      grid-column: 10 span !important;
     }
   }
 
@@ -58,6 +82,11 @@
       margin-right: 2rem;
       content: "";
     }
+
+    @include mq(sm) {
+      font: var(--font-title-mobile-4);
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -83,6 +112,10 @@
       color: red;
       font: var(--font-body-XS);
     }
+
+    @include mq(sm) {
+      margin-bottom: 1rem;
+    }
   }
 
   &__textarea-label {
@@ -104,6 +137,14 @@
     &::placeholder {
       font: var(--font-body-M);
       color: rgba(255, 255, 255, 0.7);
+
+      @include mq(sm) {
+        font: var(--font-body-S);
+      }
+    }
+
+    @include mq(sm) {
+      font: var(--font-body-S);
     }
   }
 
@@ -127,6 +168,11 @@
     display: block;
     cursor: pointer;
     margin-bottom: 4.9rem;
+
+    @include mq(sm) {
+      margin-top: 1.3rem;
+      margin-bottom: 3rem;
+    }
 
     input:checked {
       ~p {
@@ -169,6 +215,10 @@
         transform: translateY(-50%);
         opacity: 0;
         content: "";
+      }
+
+      @include mq(sm) {
+        font: var(--font-body-XXS);
       }
     }
 

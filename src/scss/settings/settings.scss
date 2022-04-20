@@ -19,6 +19,26 @@ html {
   @include mq(custom, max, 1366) {
     font-size: 8px;
   }
+
+  @include mq(lg) {
+    font-size: 7.5px;
+  }
+
+  @include mq(sm) {
+    font-size: 10px;
+  }
+
+  @include mq(custom, max, 360) {
+    font-size: 9px;
+  }
+
+  @include mq(custom, max, 320) {
+    font-size: 8px;
+  }
+
+  @include mq(custom, max, 300) {
+    font-size: 7px;
+  }
 }
 
 body {
@@ -66,6 +86,16 @@ a {
 
   @include mq(custom, min, 1999) {
     max-width: 1900px;
+  }
+
+  @include mq(lg) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include mq(sm) {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -159,6 +189,10 @@ input:focus {
       border-color: var(--color-accent);
     }
   }
+
+  @include mq(sm) {
+    padding: 2.8rem;
+  }
 }
 
 .input-reset {
@@ -172,20 +206,47 @@ input:focus {
   opacity: 0.6;
 }
 
+.logo {
+  @include mq(sm) {
+    max-width: 11.3rem;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
 .site-heading {
   font: var(--font-title-1);
+
+  @include mq(sm) {
+    font: var(--font-title-3);
+  }
 }
 
 .section-indent {
   margin-bottom: 15rem;
+
+  @include mq(sm) {
+    margin-bottom: 8rem;
+  }
 }
 
 .site-first-heading {
   font: var(--font-title-1);
+
+  @include mq(sm) {
+    font: var(--font-title-3);
+  }
 }
 
 .site-second-heading {
   font: var(--font-title-2);
+
+  @include mq(sm) {
+    font: var(--font-title-4);
+  }
 }
 
 .disable-scroll {
@@ -199,6 +260,10 @@ input:focus {
 
 .top-offset {
   padding-top: 13.6rem;
+
+  @include mq(sm) {
+    padding-top: 10rem;
+  }
 }
 
 .section-heading-offset {
@@ -285,5 +350,17 @@ input:focus {
 .js-animated-heading {
   .line {
     overflow: hidden;
+  }
+}
+
+.mobile-hidden {
+  @include mq(sm) {
+    display: none;
+  }
+}
+
+.descktop-hidden {
+  @include mq(sm, min) {
+    display: none;
   }
 }

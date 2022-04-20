@@ -38,10 +38,6 @@ export default () => {
     allowTouchMove: false,
     spaceBetween: 30,
     watchSlidesProgress: true,
-    navigation: {
-      nextEl: '.js-intro-btn-next',
-      prevEl: '.js-intro-btn-prev',
-    },
   });
 
   let sliderIntro = new Swiper(".intro-content-slider", {
@@ -55,6 +51,10 @@ export default () => {
     autoplay: {
       delay: 8000,
       disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.js-intro-btn-next',
+      prevEl: '.js-intro-btn-prev',
     },
   });
 

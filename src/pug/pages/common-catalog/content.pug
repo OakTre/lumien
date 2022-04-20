@@ -1,7 +1,7 @@
 -
   let catalog_arr = [
     {
-      name: "С электроприводом",
+      name: "С электро&shy;приводом",
       text: "Широкий выбор экранов с выдвижением полотна при помощи электропривода. Проекционные экраны Lumien оснащены долговечным и тихим мотором и могут быть установлены как на стену, так и на потолок.",
       count: "8"
     },
@@ -51,5 +51,6 @@ section.section-indent.common-catalog.top-offset
     for item, index in catalog_arr
       .common-catalog__item
         +catalog-item(item.name, item.text, `img${index}`, item.count)
-  button.button-reset.button.common-catalog__show-more-btn
-    | смотреть все экраны
+  .site-container
+    button.button-reset.button.common-catalog__show-more-btn
+      | смотреть все экраны

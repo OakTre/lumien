@@ -1,7 +1,7 @@
 -
   let catalog_more_arr = [
     {
-      name: "Интерактивные дисплеи",
+      name: "Интерактив&shy;ные дисплеи",
       text: "Профессиональные дисплеи последнего поколения, поддерживающие технологию мультитач (до 20 касаний), обладающие огромным количеством функций и потрясающим качеством изображения. Современное решение для бизнеса и образования.",
       img: "img2",
       count: "3"
@@ -24,4 +24,3 @@ section.catalog-more.section-indent
       for item in catalog_more_arr
         .catalog-more__item
           +catalog-item(item.name, item.text, item.img, item.count)(class="catalog-cart_catalog-more")
-      .catalog-more__item

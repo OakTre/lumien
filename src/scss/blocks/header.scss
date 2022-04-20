@@ -7,6 +7,10 @@
   z-index: 9;
   width: 100%;
 
+  @include mq(sm) {
+    padding: 1.5rem 0;
+  }
+
   --default-color: var(--color-white);
 
   &.is-dark {
@@ -160,6 +164,20 @@
         margin-left: auto;
       }
     }
+
+    @include mq(sm) {
+      width: 3.1rem;
+      margin-right: 1.2rem;
+
+      span {
+        width: 100%;
+
+        &:last-child {
+          margin: 0;
+          width: 70%;
+        }
+      }
+    }
   }
 
   &__btn {
@@ -170,6 +188,11 @@
 
     @include mq(lg) {
       margin-left: 0;
+    }
+
+    @include mq(sm) {
+      padding: 1rem 1.5rem;
+      font: var(--font-body-XS);
     }
   }
 

@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Каталог | Lumien</title>
-    <link rel="stylesheet" href="./css/style.min.css?v=0.0.0.8">
+    <link rel="stylesheet" href="./css/style.min.css?v=0.0.0.9">
   </head>
   <body>
     <div class="preloder">
@@ -26,7 +26,7 @@
     <div class="menu">
       <div class="menu_layer"></div>
       <div class="menu__container fix-blocks">
-        <div class="site-container grid-container">
+        <div class="site-container grid-container menu__container-grid-container">
           <div class="menu__block"><a class="logo menu__logo" href="/">
               <svg class="icon icon-logo logo__icon" width="161" height="22">
                 <use xlink:href="images/sprites/sprite-multi.svg#logo"></use>
@@ -210,7 +210,7 @@
           </div>
           <div class="header__block"><a class="header__link header__page-link" href="/">	ENG</a><a class="header__link header__page-link" href="tel:+74957975775">	+7 495 797-57-75</a>
             <button class="button-reset header__menu-btn js-open-menu-btn _mobile"><span></span><span></span><span></span></button>
-            <button class="button-reset button header__btn">	Оставить заявку</button>
+            <button class="button-reset button header__btn"><span class="mobile-hidden">Оставить заявку</span><span class="descktop-hidden">Заявка</span></button>
           </div>
         </div>
       </header>
@@ -224,8 +224,8 @@
           </div>
           <div class="site-container common-catalog__container grid-container">
             <div class="common-catalog__item"><a class="catalog-cart" href="/">
-                <h3 class="catalog-cart__heading">С электроприводом</h3>
-                <p class="catalog-cart__txt">Широкий выбор экранов с выдвижением полотна при помощи электропривода. Проекционные экраны Lumien оснащены долговечным и тихим мотором и могут быть установлены как на стену, так и на потолок.</p><span class="catalog-cart__link">Смотреть модели (8)</span><img class="catalog-cart__img lazy" data-src="images/catalog-cart/img0.png" src="#" alt="С электроприводом"/></a>
+                <h3 class="catalog-cart__heading">С электро&shy;приводом</h3>
+                <p class="catalog-cart__txt">Широкий выбор экранов с выдвижением полотна при помощи электропривода. Проекционные экраны Lumien оснащены долговечным и тихим мотором и могут быть установлены как на стену, так и на потолок.</p><span class="catalog-cart__link">Смотреть модели (8)</span><img class="catalog-cart__img lazy" data-src="images/catalog-cart/img0.png" src="#" alt="С электро&amp;shy;приводом"/></a>
             </div>
             <div class="common-catalog__item"><a class="catalog-cart" href="/">
                 <h3 class="catalog-cart__heading">Для крупных инсталляций</h3>
@@ -256,7 +256,9 @@
                 <p class="catalog-cart__txt">Выберите дополнительный аксессуар для дистанционного управления электроприводными проекционными экранами Lumien</p><span class="catalog-cart__link">Смотреть модели (3)</span><img class="catalog-cart__img lazy" data-src="images/catalog-cart/img7.png" src="#" alt="Аксессуары"/></a>
             </div>
           </div>
-          <button class="button-reset button common-catalog__show-more-btn">смотреть все экраны</button>
+          <div class="site-container">
+            <button class="button-reset button common-catalog__show-more-btn">смотреть все экраны</button>
+          </div>
         </section>
         <section class="catalog-more section-indent">
           <div class="site-container">
@@ -268,14 +270,13 @@
             </div>
             <div class="catalog-more__container grid-container">
               <div class="catalog-more__item"><a class="catalog-cart catalog-cart_catalog-more" href="/">
-                  <h3 class="catalog-cart__heading">Интерактивные дисплеи</h3>
-                  <p class="catalog-cart__txt">Профессиональные дисплеи последнего поколения, поддерживающие технологию мультитач (до 20 касаний), обладающие огромным количеством функций и потрясающим качеством изображения. Современное решение для бизнеса и образования.</p><span class="catalog-cart__link">Смотреть модели (3)</span><img class="catalog-cart__img lazy" data-src="images/catalog-cart/img2.png" src="#" alt="Интерактивные дисплеи"/></a>
+                  <h3 class="catalog-cart__heading">Интерактив&shy;ные дисплеи</h3>
+                  <p class="catalog-cart__txt">Профессиональные дисплеи последнего поколения, поддерживающие технологию мультитач (до 20 касаний), обладающие огромным количеством функций и потрясающим качеством изображения. Современное решение для бизнеса и образования.</p><span class="catalog-cart__link">Смотреть модели (3)</span><img class="catalog-cart__img lazy" data-src="images/catalog-cart/img2.png" src="#" alt="Интерактив&amp;shy;ные дисплеи"/></a>
               </div>
               <div class="catalog-more__item"><a class="catalog-cart catalog-cart_catalog-more" href="/">
                   <h3 class="catalog-cart__heading">Мебель</h3>
                   <p class="catalog-cart__txt">Презентационная мебель Lumien представлена тремя моделями проекционных столиков, которые отличаются высоким качеством, надёжностью и сбалансированной ценой. Благодаря этим преимуществам, они могут широко использоваться при решении различных задач в сфере бизнеса и образования.</p><span class="catalog-cart__link">Смотреть модели (3)</span><img class="catalog-cart__img lazy" data-src="images/catalog-cart/img2.png" src="#" alt="Мебель"/></a>
               </div>
-              <div class="catalog-more__item"></div>
             </div>
           </div>
         </section>
@@ -321,7 +322,7 @@
                 <p class="footer__subscribe-heading">Подписывайтесь на наши новости и события</p>
               </div>
               <div class="footer__subscribe-content-block">
-                <div class="footer__form">
+                <form class="footer__form">
                   <label class="footer__form-label">
                     <input class="footer__input" placeholder="Введите ваш email" name="email" type="email">
                     <button class="button-reset footer__form-btn" type="submit">
@@ -330,7 +331,7 @@
                       </svg>
                     </button>
                   </label>
-                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -394,6 +395,6 @@
       </footer>
     </div>
   </body>
-  <script src="js/main.js?v=0.0.0.8"></script>
-  <script src="assets/js/backend.js?v=0.0.0.8"></script>
+  <script src="js/main.js?v=0.0.0.9"></script>
+  <script src="assets/js/backend.js?v=0.0.0.9"></script>
 </html>

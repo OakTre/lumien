@@ -53,6 +53,12 @@
     min-height: 0;
     height: 5.8rem;
     border-radius: 1rem;
+
+    @include mq(sm) {
+      font: var(--font-body-S);
+      display: flex;
+      align-items: center;
+    }
   }
 
   .choices__list--single {

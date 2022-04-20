@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Детальная кейсы | Lumien</title>
-    <link rel="stylesheet" href="./css/style.min.css?v=0.0.0.8">
+    <link rel="stylesheet" href="./css/style.min.css?v=0.0.0.9">
   </head>
   <body>
     <div class="preloder">
@@ -26,7 +26,7 @@
     <div class="menu">
       <div class="menu_layer"></div>
       <div class="menu__container fix-blocks">
-        <div class="site-container grid-container">
+        <div class="site-container grid-container menu__container-grid-container">
           <div class="menu__block"><a class="logo menu__logo" href="/">
               <svg class="icon icon-logo logo__icon" width="161" height="22">
                 <use xlink:href="images/sprites/sprite-multi.svg#logo"></use>
@@ -210,7 +210,7 @@
           </div>
           <div class="header__block"><a class="header__link header__page-link" href="/">	ENG</a><a class="header__link header__page-link" href="tel:+74957975775">	+7 495 797-57-75</a>
             <button class="button-reset header__menu-btn js-open-menu-btn _mobile"><span></span><span></span><span></span></button>
-            <button class="button-reset button header__btn">	Оставить заявку</button>
+            <button class="button-reset button header__btn"><span class="mobile-hidden">Оставить заявку</span><span class="descktop-hidden">Заявка</span></button>
           </div>
         </div>
       </header>
@@ -446,7 +446,7 @@
                 <p class="footer__subscribe-heading">Подписывайтесь на наши новости и события</p>
               </div>
               <div class="footer__subscribe-content-block">
-                <div class="footer__form">
+                <form class="footer__form">
                   <label class="footer__form-label">
                     <input class="footer__input" placeholder="Введите ваш email" name="email" type="email">
                     <button class="button-reset footer__form-btn" type="submit">
@@ -455,7 +455,7 @@
                       </svg>
                     </button>
                   </label>
-                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -519,6 +519,6 @@
       </footer>
     </div>
   </body>
-  <script src="js/main.js?v=0.0.0.8"></script>
-  <script src="assets/js/backend.js?v=0.0.0.8"></script>
+  <script src="js/main.js?v=0.0.0.9"></script>
+  <script src="assets/js/backend.js?v=0.0.0.9"></script>
 </html>
