@@ -220,6 +220,10 @@ input:focus {
 .site-heading {
   font: var(--font-title-1);
 
+  @include mq(md) {
+    font: var(--font-title-2);
+  }
+
   @include mq(sm) {
     font: var(--font-title-3);
   }

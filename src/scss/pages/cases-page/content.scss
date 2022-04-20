@@ -1,24 +1,53 @@
 .cases-page {
   &__content-item {
     grid-column: 4 span;
+
+    @include mq(md) {
+      grid-column: 6 span;
+    }
+
+    @include mq(sm) {
+      grid-column: 12 span;
+    }
   }
 
   &__content {
     gap: 3.6rem var(--grid-offset);
+
+    @include mq(sm) {
+      gap: 1.5rem 0;
+    }
   }
 
   &__nav {
     gap: var(--grid-offset);
     margin-bottom: 5rem;
+
+    @include mq(sm) {
+      gap: 1rem 0;
+    }
   }
 
   &__nav-item {
     grid-column: 3 span;
+
+    @include mq(md) {
+      grid-column: 6 span;
+    }
+
+    @include mq(sm) {
+      grid-column: 12 span;
+    }
   }
 
   &__more-btn {
     width: 100%;
     margin-top: 10rem;
     padding: 3.8rem;
+
+    @include mq(sm) {
+      padding: 2.6rem;
+      margin-top: 4rem;
+    }
   }
 }

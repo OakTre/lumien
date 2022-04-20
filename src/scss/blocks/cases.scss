@@ -9,6 +9,14 @@
     width: 100%;
     height: 34rem;
     overflow: hidden;
+
+    @include mq(md) {
+      height: 26rem;
+    }
+
+    @include mq(sm) {
+      height: 22.6rem;
+    }
   }
 
   &__img {
@@ -25,6 +33,15 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include mq(md) {
+      padding: 2.5rem 3rem;
+    }
+
+    @include mq(sm) {
+      padding: 3.2rem 3rem;
+      min-height: 0;
+    }
   }
 
   &__tags {
@@ -32,6 +49,11 @@
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 2rem;
+
+    @include mq(sm) {
+      margin-bottom: 1.7rem;
+      gap: 0.5rem;
+    }
   }
 
   &__tag {
@@ -41,12 +63,23 @@
     border: 1px solid var(--border-color);
     color: var(--text-color);
     font: var(--font-body-S);
+
+    @include mq(sm) {
+      font: var(--font-body-XXS);
+    }
   }
 
   &__heading {
     font: var(--font-title-4);
     margin-bottom: 1rem;
     transition: color var(--transition);
+
+    @include mq(sm) {
+      font: var(--font-title-mobile-4);
+      font-weight: 700;
+      line-height: 2.6rem;
+      margin-bottom: 3.5rem;
+    }
   }
 
   &__location {
@@ -55,11 +88,19 @@
     color: rgba($color: #626262, $alpha: 0.5);
     margin-bottom: 1rem;
     margin-top: auto;
+
+    @include mq(sm) {
+      font: var(--font-body-XS);
+    }
   }
 
   &__txt {
     font: var(--font-body-S);
     color: var(--text-color);
+
+    @include mq(sm) {
+      font: var(--font-body-XS);
+    }
   }
 
   &:hover {
