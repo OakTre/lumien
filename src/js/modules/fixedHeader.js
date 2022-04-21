@@ -12,4 +12,8 @@ export default () => {
       pageHeader.classList.remove("is-fixed");
     }
   });
+
+  if (window.scrollY >= pageHeader.offsetHeight) {
+    pageHeader.classList.add("is-fixed");
+  }
 };

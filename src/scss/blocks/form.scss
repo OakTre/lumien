@@ -239,9 +239,17 @@
     gap: var(--grid-offset);
     margin-bottom: 1.3rem;
 
+    @include mq(sm) {
+      gap: 1rem 0;
+    }
+
     .form__label {
       grid-column: 5 span;
       margin: 0;
+
+      @include mq(sm) {
+        grid-column: 10 span;
+      }
     }
 
     .form__textarea-label {
@@ -266,24 +274,48 @@
     &:nth-child(2) {
       grid-column: 2 span;
     }
+
+    @include mq(lg) {
+      grid-column: 12 span !important;
+    }
   }
 
   &__heading-wrapper {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5rem;
 
     p {
       max-width: 38.3rem;
       font: var(--font-body-M);
+
+      @include mq(sm) {
+        font: var(--font-body-S);
+      }
     }
 
     .contacts-us__heading {
       max-width: 56.6rem;
+      margin: 0;
+
+      @include mq(sm) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    @include mq(sm) {
+      flex-direction: column;
+      justify-content: stretch;
+      margin-bottom: 3rem;
     }
   }
 
   &__form-btn {
     padding: 3.8rem 11.3rem;
+
+    @include mq(sm) {
+      padding: 2.8rem;
+    }
   }
 
   &__tel {
@@ -295,5 +327,10 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: 4rem;
+
+    @include mq(sm) {
+      font: var(--font-body-M);
+      margin-top: 2rem;
+    }
   }
 }

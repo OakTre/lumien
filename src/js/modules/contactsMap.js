@@ -86,17 +86,32 @@ export default () => {
 
         contactsMap.geoObjects.add(housesCollection);
 
-        // сдвигаем ценрт карты от блока
-        let pixelCenter = contactsMap.getGlobalPixelCenter(center);
+        if (window.matchMedia("(min-width: 992px)").matches) {
+          // сдвигаем ценрт карты от блока
+          let pixelCenter = contactsMap.getGlobalPixelCenter(center);
 
-        pixelCenter = [
-          pixelCenter[0] - 400,
-          pixelCenter[1] - 100
-        ];
+          pixelCenter = [
+            pixelCenter[0] - 400,
+            pixelCenter[1] - 100
+          ];
 
-        let geoCenter = contactsMap.options.get('projection').fromGlobalPixels(pixelCenter, contactsMap.getZoom());
+          let geoCenter = contactsMap.options.get('projection').fromGlobalPixels(pixelCenter, contactsMap.getZoom());
 
-        contactsMap.setCenter(geoCenter);
+          contactsMap.setCenter(geoCenter);
+        } else {
+          // сдвигаем ценрт карты от блока
+          let pixelCenter = contactsMap.getGlobalPixelCenter(center);
+
+          pixelCenter = [
+            pixelCenter[0] - 0,
+            pixelCenter[1] - 0
+          ];
+
+          let geoCenter = contactsMap.options.get('projection').fromGlobalPixels(pixelCenter, contactsMap.getZoom());
+
+          contactsMap.setCenter(geoCenter);
+        }
+
       }
 
       // инициализируем карту

@@ -5,6 +5,10 @@
     cursor: pointer;
     margin-right: 3rem;
 
+    @include mq(sm) {
+      margin-right: 1.5rem;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -26,5 +30,11 @@
     background-color: var(--color-bg-input);
     color: rgba($color: #000000, $alpha: 0.3);
     font: var(--font-title-4);
+
+    @include mq(sm) {
+      padding: 1.7rem 2.4rem;
+      border-radius: 1rem;
+      font: var(--font-title-mobile);
+    }
   }
 }

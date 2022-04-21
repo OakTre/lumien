@@ -4,5 +4,10 @@
     margin-bottom: 5rem;
     font-size: 2.8rem;
     line-height: 3.9rem;
+
+    @include mq(sm) {
+      font: var(--font-body-M);
+      margin-bottom: 3rem;
+    }
   }
 }
