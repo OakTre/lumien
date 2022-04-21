@@ -7,6 +7,10 @@
     &:nth-child(2) {
       grid-column: 11 span;
     }
+
+    @include mq(lg) {
+      grid-column: 12 span !important;
+    }
   }
 
   &__heading-wrapper {
@@ -14,5 +18,21 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 5rem;
+
+    @include mq(sm) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__nav {
+    display: none !important;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  .cases {
+    height: 100%;
   }
 }

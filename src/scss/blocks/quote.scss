@@ -10,6 +10,10 @@
     font: 400 2.8rem/3.9rem var(--main-ff);
     margin: 0;
 
+    @include mq(sm) {
+      font: 400 2rem/2.8rem var(--second-ff) !important;
+    }
+
     &::before {
       position: absolute;
       top: 1rem;
@@ -28,5 +32,18 @@
     margin-top: 3rem;
     color: var(--color-accent);
     font: var(--font-body-XS);
+  }
+
+  @include mq(sm) {
+    padding: 3.5rem 1.5rem;
+    padding-top: 9.3rem;
+    margin: 6rem 0 8rem;
+
+    p {
+      &::before {
+        top: -6rem;
+        left: 0;
+      }
+    }
   }
 }

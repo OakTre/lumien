@@ -9,12 +9,12 @@ export default () => {
     slidesPerView: 1.1,
     spaceBetween: 10,
     breakpoints: {
-      320: {
-        slidesPerView: 1.1,
-        spaceBetween: 10
+      280: {
+        slidesPerView: 1.3,
+        spaceBetween: 30
       },
       767: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 20
       },
       1200: {
