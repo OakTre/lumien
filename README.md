@@ -16,8 +16,9 @@
 12. [Материалы для скачивания](https://oaktre.github.io/lumien/build/files.html)
 13. [Поисковая выдача](https://oaktre.github.io/lumien/build/search-results.html)
 14. [Контакты](https://oaktre.github.io/lumien/build/contacts.html)
-15. [Политика конфиденциальности](https://oaktre.github.io/lumien/build/policy.html)
-16. [404](https://oaktre.github.io/lumien/build/404.html)
+15. [Глоссарий](https://oaktre.github.io/lumien/build/glossary.html)
+16. [Политика конфиденциальности](https://oaktre.github.io/lumien/build/policy.html)
+17. [404](https://oaktre.github.io/lumien/build/404.html)
 
 
 ## Список команд
