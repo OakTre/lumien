@@ -23,6 +23,7 @@ import detailSlider from './modules/detailSlider';
 import tabs from './modules/tabs.js';
 import sectionAnimation from './modules/sectionAnimation';
 import fixedHeader from './modules/fixedHeader.js'
+import anchorLInks from './modules/anchorLInks.js'
 
 window.onload = () => {
   closePreloadre();
@@ -50,4 +51,5 @@ documenReady(() => {
   tabs();
   sectionAnimation();
   fixedHeader();
+  anchorLInks();
 });

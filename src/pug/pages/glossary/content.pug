@@ -1,0 +1,110 @@
+-
+  let arr_ru = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'э', 'ю', 'я']
+  let arr_en = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+  let glossary_items = [
+    {
+      name: "В",
+      accordions: [
+        "Внешняя засветка",
+      ]
+    },
+    {
+      name: "Г",
+      accordions: [
+        "Горячее пятно",
+      ]
+    },
+    {
+      name: "К",
+      accordions: [
+        "Контраст",
+        "Коррекция трапецеидальных искажений ",
+        "Коэффициент усиления",
+      ]
+    },
+    {
+      name: "Л",
+      accordions: [
+        "Люкс",
+      ]
+    },
+  ]
+
+  let glossary_items_eng = [
+    {
+      name: "А",
+      accordions: [
+        "Aspect Ratio",
+        "Active 3D",
+        "ANSI-люмен"
+      ]
+    },
+    {
+      name: "В",
+      accordions: [
+        "Black drop",
+      ]
+    },
+    {
+      name: "E",
+      accordions: [
+        "Edge Blending",
+        "Extra Drop",
+      ]
+    },
+    {
+      name: "F",
+      accordions: [
+        "Fiberglass Matte White",
+      ]
+    },
+  ]
+
+section.section-indent.top-offset.glossary
+  .site-container
+    .grid-container
+      .grid-container__block
+      .grid-container__block
+        h1.glossary__heading.site-heading.section-heading-offset Глоссарий
+  .site-container
+    .glossary__container
+      .glossary__container-row
+        for item in arr_ru
+          a.glossary__container-item(href="#test")= item
+      .glossary__container-row
+        for item in arr_en
+          a.glossary__container-item(href="/")= item
+    .grid-container
+      .grid-container__block
+      .grid-container__block.glossary__content-container
+        .glossary__content-container-item
+          for item in glossary_items
+            .glossary__item
+              .glossary__item-name= item.name
+              for accordion in item.accordions
+                .glossary__item-accordion
+                  button.glossary__item-accordion-btn.button-reset.js-drop-menu-btn
+                    span.glossary__item-accordion-btn-name= accordion
+                    span.glossary__item-accordion-btn-icon
+                  .drop-menu-container.js-drop-menu-container
+                    .glossary__item-accordion-body.drop-menu.js-drop-menu
+                      p
+                        | Это соотношение ширины и высоты изображения.
+                        | Наиболее распространённые форматы — видео (4:3),
+                        | HDTV (16:9), широкий (16:10), Cinemascope (2.35:1) и квадратный (1:1).
+        .glossary__content-container-item
+          for item, index in glossary_items_eng
+            - let isFirst = index == 2 ? "test" : null
+            .glossary__item(id=isFirst)
+              .glossary__item-name= item.name
+              for accordion in item.accordions
+                .glossary__item-accordion
+                  button.glossary__item-accordion-btn.button-reset.js-drop-menu-btn
+                    span.glossary__item-accordion-btn-name= accordion
+                    span.glossary__item-accordion-btn-icon
+                  .drop-menu-container.js-drop-menu-container
+                    .glossary__item-accordion-body.drop-menu.js-drop-menu
+                      p
+                        | Это соотношение ширины и высоты изображения.
+                        | Наиболее распространённые форматы — видео (4:3),
+                        | HDTV (16:9), широкий (16:10), Cinemascope (2.35:1) и квадратный (1:1).
