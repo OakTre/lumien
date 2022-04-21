@@ -6,9 +6,34 @@
   padding-bottom: 3rem;
   height: 100vh;
 
+  @include mq(lg) {
+    height: 74.1rem;
+  }
+
+  @include mq(sm) {
+    height: 61.1rem;
+  }
+
+
   &__legend {
     font: var(--font-title-2);
     max-width: 29.3rem;
+
+    @include mq(lg) {
+      max-width: 100%;
+      font: var(--font-body-M);
+      margin-bottom: 4rem;
+    }
+
+    @include mq(sm) {
+      font: var(--font-body-S);
+    }
+  }
+
+  &__container {
+    @include mq(lg) {
+      display: block;
+    }
   }
 
   &__container-block {
@@ -27,6 +52,10 @@
 
   &__heading {
     margin-bottom: 5rem;
+
+    @include mq(sm) {
+      margin-bottom: 3.6rem;
+    }
   }
 
   &__text {
@@ -46,5 +75,17 @@
       content: "";
     }
 
+    @include mq(md) {
+      font: var(--font-body-M);
+    }
+
+    @include mq(sm) {
+      font: var(--font-body-S);
+      padding-left: 7.4rem;
+
+      &::before {
+        width: 6.4rem;
+      }
+    }
   }
 }

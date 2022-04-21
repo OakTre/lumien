@@ -17,9 +17,10 @@ export default () => {
         prevEl: '.js-model-btn-prev',
       },
       breakpoints: {
-        320: {
+        280: {
           slidesPerView: 2,
-          spaceBetween: 10
+          spaceBetween: 10,
+          allowTouchMove: true,
         },
         767: {
           slidesPerView: 3,
@@ -27,7 +28,8 @@ export default () => {
         },
         1200: {
           slidesPerView: 4,
-          spaceBetween: 40
+          spaceBetween: 40,
+          allowTouchMove: false,
         },
       }
     });

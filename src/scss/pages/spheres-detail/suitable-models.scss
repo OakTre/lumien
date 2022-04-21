@@ -1,4 +1,10 @@
 .suitable-models {
+  &__container {
+    @include mq(lg) {
+      display: block;
+    }
+  }
+
   &__container-block {
     min-width: 0;
 
@@ -16,10 +22,18 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 7rem;
+
+    @include mq(sm) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__heading {
     margin-bottom: 5rem;
+
+    @include mq(md) {
+      margin-bottom: 3.5rem;
+    }
   }
 
   &__label {
@@ -49,6 +63,12 @@
     overflow: hidden;
   }
 
+  &__nav {
+    @include mq(md) {
+      display: none;
+    }
+  }
+
   &__slider-nav {
     display: flex;
     align-items: center;
@@ -73,6 +93,10 @@
       background-color: #F0F0F0;
       transform: translateY(-50%);
       content: "";
+    }
+
+    @include mq(md) {
+      padding: 1.5rem 2rem;
     }
   }
 
