@@ -3,11 +3,23 @@
     font: var(--font-body-M);
     margin-bottom: 5rem;
     max-width: 83.5rem;
+
+    @include mq(sm) {
+      max-width: 100%;
+      font: var(--font-body-S);
+    }
   }
 
   &__heading {
     font: var(--font-title-4);
     margin-bottom: 3rem;
+
+    @include mq(sm) {
+      font: var(--font-title-mobile-4);
+      line-height: 2.6rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+    }
   }
 
   &__container {
@@ -16,12 +28,20 @@
         display: grid;
         grid-template-columns: 8fr 2fr;
         gap: var(--grid-offset);
+
+        @include mq(lg) {
+          display: block;
+        }
       }
     }
   }
 
   &__list {
     margin-bottom: 6.4rem;
+
+    @include mq(sm) {
+      margin-bottom: 5rem;
+    }
 
     li {
       position: relative;
@@ -45,6 +65,20 @@
         border-radius: 50%;
         content: "";
       }
+
+      @include mq(sm) {
+        font: var(--font-body-XS);
+        margin-bottom: 1.3rem;
+      }
     }
+  }
+}
+
+.how-choose-screen__intro {
+  background-color: var(--color-bg-input);
+
+  @include mq(md) {
+    background-size: 130%;
+    background-position: center bottom;
   }
 }
