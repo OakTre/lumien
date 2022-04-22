@@ -50,17 +50,23 @@
   }
 
   &__img-pagination {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // margin-bottom: 2.2rem;
+    position: static;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
 
-    // span {
-    //   width: 0.5rem;
-    //   height: 0.5rem;
-    //   background-color: var(--color-dark);
-    //   border-radius: 50%;
-    // }
+    .swiper-pagination-bullet {
+      width: 0.6rem;
+      height: 0.6rem;
+      background: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.38);
+      opacity: 1;
+
+      &.swiper-pagination-bullet-active {
+        background-color: var(--color-dark);
+      }
+    }
   }
 
   &__name {
