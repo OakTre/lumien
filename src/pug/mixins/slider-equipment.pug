@@ -1,12 +1,15 @@
 mixin slider-equipment(name, arr)
-  section.section-indent.slider-equipment
+  section.section-indent.slider-equipment&attributes(attributes)
     .site-container
       .grid-container.slider-equipment__container
         .slider-equipment__container-block
         .slider-equipment__container-block
           h2.site-second-heading.slider-equipment__heading!= name
+      .grid-container.slider-equipment__container-type2
+        .slider-equipment__container-block
+        .slider-equipment__container-block
           .slider-equipment__slider.swiper.js-slider-equipment
             .swiper-wrapper
               for item in arr
                 .swiper-slide
-                  +cart(item.tags, item.imgs, item.name, item.txt, item.feats)
+                  +cart(item.tags, item.imgs, item.name, item.txt, item.feats, item.button)

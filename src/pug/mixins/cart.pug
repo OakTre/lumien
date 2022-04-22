@@ -1,20 +1,44 @@
-mixin cart(tags, imgs, name, txt, feats)
-  a.cart(href="/")&attributes(attributes)
-    .cart__top
+mixin cart(tags, imgs, name, txt, feats, btn)
+  if (btn)
+    .cart&attributes(attributes)
       if (tags)
-        for tag in tags
-          - let newClass = tag.new ? "_new" : null
-          span.cart__tag(class=`${newClass}`)= tag.name
-    .cart__middle
-      .swiper.cart__img-slider.js-cart-img-slider
-        .swiper-wrapper
-          for img in imgs
-            .swiper-slide
-              img.cart__img.lazy(data-src=`images/cart/${img}.png` src="#" alt=txt)
-      .cart__img-pagination.swiper-pagination
-    .cart__bottom
-      h4.cart__name= name
-      p.cart__txt= txt
-      .cart__feautures
-        for feature in feats
-          span.cart__feautures-item= feature
+        .cart__top
+          for tag in tags
+            - let newClass = tag.new ? "_new" : null
+            span.cart__tag(class=`${newClass}`)= tag.name
+      a.cart__middle(href="/")
+        .swiper.cart__img-slider.js-cart-img-slider
+          .swiper-wrapper
+            for img in imgs
+              .swiper-slide
+                img.cart__img.lazy(data-src=`images/cart/${img}.png` src="#" alt=txt)
+        .cart__img-pagination.swiper-pagination
+      .cart__bottom
+        h4.cart__name= name
+        p.cart__txt= txt
+        if (feats)
+          .cart__feautures
+            for feature in feats
+              span.cart__feautures-item= feature
+        button.button-reset.cart__btn Добавить в заявку
+  else
+    a.cart(href="/")&attributes(attributes)
+      if (tags)
+        .cart__top
+          for tag in tags
+            - let newClass = tag.new ? "_new" : null
+            span.cart__tag(class=`${newClass}`)= tag.name
+      .cart__middle
+        .swiper.cart__img-slider.js-cart-img-slider
+          .swiper-wrapper
+            for img in imgs
+              .swiper-slide
+                img.cart__img.lazy(data-src=`images/cart/${img}.png` src="#" alt=txt)
+        .cart__img-pagination.swiper-pagination
+      .cart__bottom
+        h4.cart__name= name
+        p.cart__txt= txt
+        if (feats)
+          .cart__feautures
+            for feature in feats
+              span.cart__feautures-item= feature

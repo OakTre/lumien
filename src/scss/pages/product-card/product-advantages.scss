@@ -1,0 +1,108 @@
+.product-advantages {
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-offset);
+    align-items: center;
+    margin-bottom: 15rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(2) {
+      .product-advantages__img-wrapper {
+        background: linear-gradient(232.16deg, #FF971D -1.15%, rgba(255, 138, 0, 0) 78.36%);
+      }
+
+      .product-advantages__item-img {
+        left: 0;
+        bottom: 0;
+        width: 78.9rem;
+        height: auto;
+      }
+    }
+
+    &:nth-child(3) {
+      .product-advantages__img-wrapper {
+        background: linear-gradient(238.91deg, #5653D4 -12.3%, rgba(86, 83, 212, 0) 110.24%);
+      }
+
+      .product-advantages__item-img {
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 56.6rem;
+        height: auto;
+      }
+    }
+
+    &:nth-child(4) {
+      .product-advantages__item-img {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 53.6rem;
+        height: auto;
+      }
+    }
+
+    &:nth-child(2n) {
+      .product-advantages__item-left-block {
+        order: 2;
+      }
+
+      .product-advantages__item-right-block {
+        order: 1;
+      }
+    }
+  }
+
+  &__item-left-block {
+    grid-column: 7 span;
+  }
+
+  &__item-right-block {
+    grid-column: 5 span;
+    justify-self: center;
+  }
+
+  &__img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 58rem;
+    border-radius: 2rem;
+    background: linear-gradient(242.62deg, #DBE9A3 9.42%, #D2E7EB 56.52%);
+    overflow: hidden;
+  }
+
+  &__item-img {
+    position: absolute;
+    display: block;
+    object-fit: cover;
+  }
+
+  &__item-content {
+    max-width: 44.8rem;
+  }
+
+  &__item-tag {
+    display: inline-block;
+    font: var(--font-body-S);
+    padding: 0.1rem 0.4rem;
+    border-radius: 2rem;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    margin-bottom: 1rem;
+  }
+
+  &__item-heading {
+    font: var(--font-title-2);
+    margin-bottom: 1.2rem;
+  }
+
+  &__item-text {
+    color: var(--text-color);
+    font: var(--font-body-M);
+  }
+}

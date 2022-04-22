@@ -1,0 +1,113 @@
+-
+  let product_info_arr = [
+    {
+      name: "Полотно экрана",
+      text: "Проекционное полотно экрана по бокам натянуто, что делает поверхность более плоской."
+    },
+    {
+      name: "Триггерная система",
+      text: "Триггерная система обеспечивает связь между проектором и экраном (опционально)."
+    },
+    {
+      name: "Удобство использования",
+      text: "Треугольная алюминиевая планка в нижней части при сворачивании экрана убирается в корпус и придаёт инсталляции аккуратный внешний вид"
+    },
+    {
+      name: "Система управления",
+      text: "В комплект входит два вида систем дистанционного управления - RF/ IR"
+    },
+    {
+      name: "Система натяжения",
+      text: "Идеальная система натяжения обеспечивает абсолютно плоскую поверхность экрана, позволяя проецировать любые изображения при любых условиях инсталляции."
+    },
+    {
+      name: "Корпус экрана",
+      text: "Алюминиевый корпус отличается легкостью и привлекательным дизайном."
+    },
+    {
+      name: "Вид полотна",
+      text: "Выпускается с тремя видами полотен — белыми Matte White и акустически прозрачными High Contrast Sound и Matte White Sound."
+    },
+    {
+      name: "Высота просмотра",
+      text: "Верхняя черная кайма обеспечивает идеальную высоту просмотра - размер определяется высотой экрана."
+    },
+    {
+      name: "Цветовое решение",
+      text: "Корпус имеет два цвета — стандартный белый и уникальный титаниум, который обогащается новыми оттенками в зависимости от окружающего интерьера и придаёт изысканности любому интерьеру."
+    }
+  ]
+
+  let files = [
+    {
+      name: "Инструкции",
+      size: "pdf, 19,5 МБ"
+    },
+    {
+      name: "Инструкции",
+      size: "pdf, 19,5 МБ"
+    }
+  ]
+
+  let files2 = [
+    {
+      name: "Детальное изобажение 1",
+      size: "pdf, 19,5 МБ"
+    },
+    {
+      name: "Детальное изобажение 2",
+      size: "pdf, 19,5 МБ"
+    },
+    {
+      name: "Детальное изобажение 3",
+      size: "pdf, 19,5 МБ"
+    }
+  ]
+
+
+section.section-indent.product-info.js-tabs-container
+  .site-container
+    .product-info__container.grid-container
+      .product-info__container-block
+      .product-info__container-block
+        .suitable-models__slider-nav.product-info__nav
+          label.suitable-models__label.product-info__nav-label
+            input(type="radio" name="info" checked value="descr" class="suitable-models__input visually-hidden js-tab")
+            span.suitable-models__label-name Описание
+          label.suitable-models__label.product-info__nav-label
+            input(type="radio" name="info" value="feautures" class="suitable-models__input visually-hidden js-tab")
+            span.suitable-models__label-name Особенности
+          label.suitable-models__label.product-info__nav-label
+            input(type="radio" name="info" value="files" class="suitable-models__input visually-hidden js-tab")
+            span.suitable-models__label-name Материалы для скачивания
+        .product-info__content
+          .product-info__content-item.js-tab-content(data-content="descr")
+            .product-info__content-item-block.mod-descr
+              p
+                | Lumien Cinema Tensioned Control - электроприводные экраны с системой натяжения по бокам. Обладая абсолютно плоской поверхностью, эти экраныпредназначены для тех, для кого качество картинки имеет решающее значение. Сinema Tensioned Control с изображением кинематографического уровня — идеальный выбор для настоящих киноманов.
+            .product-info__content-item-block.mod-descr
+              h3.product-info__content-legend Сферы применения:
+              .product-info__content-tags
+                span.product-info__content-tag Домашние развлечения
+                span.product-info__content-tag Бары и рестораны
+                span.product-info__content-tag Корпоративный рынок
+
+          .product-info__content-item.mod-feautures.js-tab-content(data-content="feautures")
+            for item in product_info_arr
+              .product-info__content-card
+                h3.product-info__content-legend= item.name
+                p= item.text
+
+          .product-info__content-item.js-tab-content(data-content="files")
+            .product-info__content-item-block.mod-files
+              h3.product-info__content-legend Инструкции и спецификации
+              .product-info__content-files-container
+                for file in files
+                  .product-info__content-file-wrapper
+                    +file(file.name, "Скачать")(class="mod-transparent")
+            .product-info__content-item-block.mod-files
+              h3.product-info__content-legend Для печати
+              .product-info__content-files-container
+                for file in files2
+                  .product-info__content-file-wrapper
+                    +file(file.name, "Скачать")(class="mod-transparent")

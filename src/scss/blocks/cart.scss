@@ -1,5 +1,6 @@
 .cart {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
 
   &__top {
@@ -26,6 +27,10 @@
       color: var(--color-white);
       border-color: var(--color-accent);
     }
+  }
+
+  &__bottom {
+    flex-grow: 1;
   }
 
   &__img {
@@ -70,24 +75,27 @@
   }
 
   &__txt {
-    margin-bottom: 1.7rem;
     font: var(--font-body-S);
     color: var(--text-color);
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 
     @include mq(sm) {
       font: var(--font-body-XXS);
-      margin-bottom: 1.9rem;
     }
   }
 
   &__feautures {
     display: flex;
     justify-content: space-between;
+    margin-top: 1.7rem;
+
+    @include mq(sm) {
+      margin-top: 1.9rem;
+    }
   }
 
   &__feautures-item {
@@ -102,9 +110,27 @@
     }
   }
 
+  &__btn {
+    font: var(--font-btn);
+    padding: 1.4rem 2.9rem;
+    width: 100%;
+    background-color: var(--color-accent);
+    border-radius: 10rem;
+    color: var(--color-white);
+    margin-top: 2.3rem;
+    transition: transform var(--transition);
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:active {
+      transform: scale(0.99);
+    }
+  }
+
   &.mod-search {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
 
     .cart__top {
       width: 100%;

@@ -1,0 +1,40 @@
+-
+  let arr_product = [
+    {
+      name: "Характеристики",
+      text: "Эти экраны предназначены для тех, для кого качество картинки имеет решающее значение. Сinema Tensioned Control с изображением кинематографического уровня — идеальный выбор для настоящих киноманов.",
+      tag: "Домашние развлечения"
+    },
+    {
+      name: "Корпус экрана",
+      text: "Отсутствие острых углов и плавные линии делают корпус обтекаемым.",
+      tag: "Домашние развлечения"
+    },
+    {
+      name: "Удобство использования",
+      text: "Треугольная алюминиевая планка в нижней части полотна убирается в корпус",
+      tag: "Домашние развлечения"
+    },
+    {
+      name: "Система натяжения",
+      text: "Натяжение по бокам обеспечивает идеальную ровность полотна. Совместимы с короткофокусной и ультракороткофокусной проекцией.",
+      tag: "Домашние развлечения"
+    },
+  ]
+
+section.product-advantages.section-indent
+  .site-container.product-advantages
+    ul.product-advantages__list
+      for item, index in arr_product
+        li.product-advantages__item
+          .product-advantages__item-left-block
+            .product-advantages__img-wrapper
+              if (index === 0)
+              else
+                img(src=`images/product-card/advantages-img${index}.png` alt="" class="product-advantages__item-img")
+
+          .product-advantages__item-right-block
+            .product-advantages__item-content
+              span.product-advantages__item-tag= item.tag
+              h4.product-advantages__item-heading= item.name
+              p.product-advantages__item-text= item.text

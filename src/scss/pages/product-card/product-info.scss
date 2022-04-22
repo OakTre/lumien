@@ -1,0 +1,119 @@
+.product-info {
+  &__container {
+    background-color: var(--color-bg-input);
+    border-radius: 2rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  &__container-block {
+    &:nth-child(1) {
+      grid-column: 1 span;
+    }
+
+    &:nth-child(2) {
+      grid-column: 11 span;
+    }
+  }
+
+  &__nav-label {
+    input:checked {
+      ~.suitable-models__label-name {
+        background-color: var(--color-white) !important;
+      }
+    }
+
+    .suitable-models__label-name {
+      padding: 2rem 5rem;
+      font: var(--font-title-4);
+    }
+  }
+
+  &__content-item {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 4rem var(--grid-offset);
+
+    &:not(.mod-show) {
+      display: none !important;
+    }
+
+    p {
+      max-width: 59.4rem;
+      font: var(--font-body-M);
+      color: var(--text-color);
+    }
+
+    &.mod-feautures {
+      display: flex;
+      flex-wrap: wrap;
+      grid-template-columns: none;
+      gap: var(--grid-offset);
+    }
+  }
+
+  &__content-item-block {
+    &.mod-descr {
+      &:nth-child(1) {
+        grid-column: 6 span;
+      }
+
+      &:nth-child(2) {
+        grid-column: 5 span;
+      }
+    }
+
+    &.mod-files {
+      grid-column: 11 span;
+    }
+  }
+
+  &__content {
+    padding-top: 5rem;
+  }
+
+  &__content-files-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--grid-offset);
+  }
+
+  &__content-file-wrapper {
+    width: calc(33.3% - 4rem);
+  }
+
+  &__content-legend {
+    font: var(--font-title-4);
+    margin-bottom: 2rem;
+  }
+
+  &__content-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 47rem;
+  }
+
+  &__content-tag {
+    font: var(--font-body-S);
+    padding: 0.1rem 0.5rem;
+    border-radius: 2rem;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+  }
+
+  &__content-card {
+    width: calc(33.3% - 4rem);
+    padding: 3rem;
+    border-radius: 2rem;
+    background-color: var(--color-white);
+
+    .product-info__content-legend {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font: var(--font-body-S);
+    }
+  }
+}

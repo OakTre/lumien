@@ -1,0 +1,37 @@
+-
+  let edge_arr = [
+    "Стильный дизайн",
+    "Бесшумный мотор",
+    "Боковое натяжение полотна",
+    "Дистанционное управдление в комплекте",
+    "Совместимы с короткофокусными и ультракороткофокусными проектами",
+  ]
+
+  let edge_arr2 = [
+    "Увеличение верхней черной каймы",
+    "Изготовление размера под заказ",
+    "Окрашивание корпуса/рамы в любой цвет",
+    "Изогнутая рама",
+  ]
+
+section.edge.section-indent
+  .site-container.edge__container.grid-container
+    .edge__container-block
+    .edge__container-block
+      h2.site-second-heading.edge__heading Преимущества
+      ul.edge__list
+        for item, index in edge_arr
+          li.edge__item
+            img.edge__item-img(src=`images/product-card/edge-img${index}.svg` alt="")
+            p= item
+
+section.edge.section-indent
+  .site-container.edge__container.grid-container
+    .edge__container-block
+    .edge__container-block
+      h2.site-second-heading.edge__heading Возможность кастомизации модели
+      ul.edge__list
+        for item, index in edge_arr2
+          li.edge__item
+            img.edge__item-img(src=`images/product-card/edge2-img${index}.png` alt="")
+            p= item
