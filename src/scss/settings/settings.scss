@@ -120,6 +120,10 @@ a {
   flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
+
+  &.overflow-visible {
+    overflow: visible;
+  }
 }
 
 .page-main {

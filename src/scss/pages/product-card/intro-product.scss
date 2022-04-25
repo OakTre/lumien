@@ -1,9 +1,15 @@
 .intro-product {
+  &__container {
+    align-items: flex-start;
+  }
+
   &__block {
     min-width: 0;
 
     &:nth-child(1) {
       grid-column: 7 span;
+      position: sticky;
+      top: 9rem;
     }
 
     &:nth-child(2) {
