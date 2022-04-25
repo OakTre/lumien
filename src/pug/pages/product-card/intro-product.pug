@@ -1,0 +1,127 @@
+-
+  let details = [
+    {
+      labelName: "Соотношение сторон",
+      selectName: "Выберите формат",
+      tooltip: true
+    },
+    {
+      labelName: "Тип полотна",
+      selectName: "Выберите формат",
+      tooltip: true
+    },
+    {
+      labelName: "Размер рабочей области, см",
+      selectName: "Выберите размер",
+    },
+    {
+      labelName: "Диагональ",
+      selectName: "Выберите размер",
+    }
+  ]
+
+  let carachteristics = [
+    {
+      name: "Соотношение сторон",
+      value: "1:1"
+    },
+    {
+      name: "Код продукта",
+      value: "LEC–100101"
+    },
+    {
+      name: "Вес, кг",
+      value: "5"
+    },
+    {
+      name: "Доступные цвета",
+      value: "2"
+    },
+    {
+      name: "Общий размер, см",
+      value: "180x180"
+    },
+    {
+      name: "Рабочая область, см",
+      value: "174x174"
+    },
+    {
+      name: "Диагональ рабочей области, дюймы",
+      value: "97"
+    },
+    {
+      name: "Габариты корпуса, см",
+      value: "82х82х2000"
+    },
+  ]
+
+section.section-indent.intro-product
+  .site-container.intro-product__container.grid-container
+    .intro-product__block
+      .intro-product__slider.swiper.js-product-intro-slider
+        .swiper-wrapper
+          .swiper-slide
+            img.intro-product__slider-img.lazy(data-src="images/intro-product/slide1.jpg" src="#" alt="")
+          .swiper-slide
+            img.intro-product__slider-img.lazy(data-src="images/intro-product/slide2.jpg" src="#" alt="")
+          .swiper-slide
+            img.intro-product__slider-img.lazy(data-src="images/intro-product/slide3.jpg" src="#" alt="")
+          .swiper-slide
+            img.intro-product__slider-img.lazy(data-src="images/intro-product/slide3.jpg" src="#" alt="")
+
+      .intro-product__slider-thumb.swiper.js-product-intro-thumb-slider
+        .swiper-wrapper
+          .swiper-slide
+            img.intro-product__slider-thumb-img.lazy(data-src="images/intro-product/slide1.jpg" src="#" alt="")
+          .swiper-slide
+            img.intro-product__slider-thumb-img.lazy(data-src="images/intro-product/slide2.jpg" src="#" alt="")
+          .swiper-slide
+            img.intro-product__slider-thumb-img.lazy(data-src="images/intro-product/slide3.jpg" src="#" alt="")
+          .swiper-slide
+            img.intro-product__slider-thumb-img.lazy(data-src="images/intro-product/slide3.jpg" src="#" alt="")
+    .intro-product__block
+      .tag__container.intro-product__tag-container
+        span.tag Электропривод
+      h2.intro-product__heading Cinema Tensioned Control
+      p.intro-product__txt Электроприводной экран с системой натяжения по бокам
+      .product-details
+        .product-details__top
+          for item in details
+            .product-details__item
+              p.product-details__label-name
+                span= item.labelName
+                if (item.tooltip)
+                  button.tooltip.button-reset(arila-label="Открыть подсказку")
+                    +icon-multi("warning")(width="16" height="16" class="tooltip__icon")
+                    span.tooltip__text-wrapper
+                      span.tooltip__text
+                        | Lorem ipsum dolor sit amet consectetur.
+              .product-details__select.select-wrapper.custom-select
+                select(name="equipment-type" class="select js-custom-select")
+                  option(value=item.selectName placeholder)= item.selectName
+                  option(value="second") second
+                  option(value="third") third
+        .product-details__bottom
+          .product-details__colors-wrapper
+            p.product-details__label-name Цвет корпуса
+            .product-details__colors
+              label.product-details__color-label(style="color: white")
+                input(type="radio" name="color" checked value="white" class="visually-hidden")
+                sppan.product-details__color-circle
+                sppan.product-details__color-name Белый
+              label.product-details__color-label(style="color: #737373")
+                input(type="radio" name="color" value="grey" class="visually-hidden")
+                sppan.product-details__color-circle
+                sppan.product-details__color-name Серый
+          .product-details__price-wrapper
+            p.product-details__price от 15 000 ₽
+            button.button.button-reset.product-details__btn оставить заявку
+      h3.intro-product__legend.site-second-heading Характеристики
+      p.intro-product__txt Для определения характеристик необходимо заполнить все параметры
+      table.product-characteristics
+        tbody
+          for item in carachteristics
+            tr.product-characteristics__row
+              td.product-characteristics__item= item.name
+              td.product-characteristics__item= item.value
+      button.button.button-reset.mod-transparent.product-characteristics__show-more-btn Показать ещё

@@ -24,7 +24,6 @@ export default function catalogCardsSliders() {
 
       const instance = new Swiper(container, {
         watchOverflow: true,
-
         speed: 500,
         longSwipesRatio: 0.25,
         allowTouchMove: primaryInput === 'touch' ? true : false,
@@ -75,6 +74,8 @@ export default function catalogCardsSliders() {
       });
     });
   };
+
+  window.lumien_API.initializeCatalogCardsSliders = initializeCatalogCardsSliders;
 
   initializeCatalogCardsSliders();
 }

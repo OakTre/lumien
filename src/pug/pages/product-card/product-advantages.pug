@@ -31,7 +31,7 @@ section.product-advantages.section-indent
             .product-advantages__img-wrapper
               if (index === 0)
               else
-                img(src=`images/product-card/advantages-img${index}.png` alt="" class="product-advantages__item-img")
+                img(data-src=`images/product-card/advantages-img${index}.png` src="#" alt="" class="product-advantages__item-img lazy")
 
           .product-advantages__item-right-block
             .product-advantages__item-content

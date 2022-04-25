@@ -22,14 +22,17 @@ import cartImgsSlider from './modules/cartImgsSlider';
 import detailSlider from './modules/detailSlider';
 import tabs from './modules/tabs.js';
 import sectionAnimation from './modules/sectionAnimation';
-import fixedHeader from './modules/fixedHeader.js'
-import anchorLInks from './modules/anchorLInks.js'
+import fixedHeader from './modules/fixedHeader.js';
+import anchorLInks from './modules/anchorLInks.js';
+import productIntroSlider from './modules/productIntroSlider.js';
 
 window.onload = () => {
   closePreloadre();
 };
 
 documenReady(() => {
+  window.lumien_API = {};
+
   lazyIMages();
   validation();
   inputmask();
@@ -46,10 +49,13 @@ documenReady(() => {
   casesSlider();
   sliderEquipment();
   suitableModelsSlider();
-  cartImgsSlider();
   detailSlider();
   tabs();
   sectionAnimation();
   fixedHeader();
   anchorLInks();
+  productIntroSlider();
+
+  // always last
+  cartImgsSlider();
 });

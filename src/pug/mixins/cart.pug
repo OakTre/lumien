@@ -20,7 +20,7 @@ mixin cart(tags, imgs, name, txt, feats, btn)
           .cart__feautures
             for feature in feats
               span.cart__feautures-item= feature
-        button.button-reset.cart__btn Добавить в заявку
+        button.button-reset.button.cart__btn Добавить в заявку
   else
     a.cart(href="/")&attributes(attributes)
       if (tags)

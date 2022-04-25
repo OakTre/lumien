@@ -56,6 +56,22 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
+
+  &.lazy {
+    &.loaded {
+      animation: opacityLazy 0.2s linear;
+    }
+  }
+
+  @keyframes opacityLazy {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 a {
@@ -168,11 +184,18 @@ input:focus {
   font: var(--font-btn);
   background-color: var(--color-accent);
   border-radius: 10rem;
-  padding: 3.8rem;
+  padding: 3.6rem;
   color: var(--color-white);
   text-transform: uppercase;
+  border: 0.1rem solid var(--color-accent);
   cursor: pointer;
   transition: border-color var(--transition), background-color var(--transition), color var(--transition);
+
+  &:hover {
+    background-color: var(--color-white);
+    border-color: var(--border-color);
+    color: var(--text-color);
+  }
 
   &:active {
     transform: scale(0.99);
