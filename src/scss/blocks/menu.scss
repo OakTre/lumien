@@ -24,22 +24,41 @@
 
     @include mq(lg) {
       padding: 7rem 0 3.7rem;
+      height: 100%;
+    }
+
+    @include mq(sm) {
+      padding: 4rem 0 3rem;
     }
   }
 
   &__container-grid-container {
     @include mq(lg) {
       gap: 5rem var(--grid-offset);
+      height: 100%;
+    }
+
+    @include mq(lg) {
+      gap: 3rem 0;
+      height: auto;
     }
   }
 
   &__block {
     &:nth-child(1) {
       grid-column: 2 span;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     &:nth-child(2) {
       grid-column: 8 span;
+
+      @include mq(lg) {
+        overflow: auto;
+        height: 100%;
+      }
     }
 
 
@@ -53,11 +72,11 @@
       }
 
       &:nth-child(2) {
-        grid-column: 10 span;
+        grid-column: 12 span;
       }
 
       &:nth-child(3) {
-        grid-column: 2 span;
+        display: none;
       }
     }
   }
@@ -83,10 +102,18 @@
       height: 1px;
       background-color: #5C5C5C;
     }
+
+    @include mq(sm) {
+      gap: 1rem 0;
+    }
   }
 
   &__legend {
     font: var(--font-body-L);
+
+    @include mq(sm) {
+      font: var(--font-title-mobile);
+    }
   }
 
   &__legend-small {
@@ -106,12 +133,20 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem var(--grid-offset);
+
+    @include mq(md) {
+      display: none;
+    }
   }
 
   &__nav {
     margin-bottom: 8rem;
 
     &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+
+    @include mq(md) {
       margin-bottom: 0;
     }
   }
@@ -147,6 +182,18 @@
         stroke: var(--color-accent);
       }
     }
+
+    @include mq(lg) {
+      display: none;
+    }
+
+    &._mobile {
+      display: none;
+
+      @include mq(lg) {
+        display: flex;
+      }
+    }
   }
 
   &__close-btn-icon {
@@ -162,6 +209,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @include mq(sm) {
+      gap: 1rem;
+      justify-content: stretch;
+      flex-wrap: wrap;
+    }
   }
 
   &__download-link {
@@ -180,6 +233,11 @@
         stroke: var(--color-accent);
       }
     }
+
+    @include mq(sm) {
+      margin: 0;
+      font: var(--font-body-XS);
+    }
   }
 
   &__download-icon-wrapper {
@@ -191,6 +249,13 @@
     border-radius: 50%;
     border: 1px solid var(--color-white);
     margin-left: 2rem;
+
+    @include mq(sm) {
+      margin-left: 1rem;
+
+      width: 3.2rem;
+      height: 3.2rem;
+    }
   }
 
   &__download-link-icon {

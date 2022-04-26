@@ -31,6 +31,7 @@
   }
 
   &__container-block {
+
     &:nth-child(1),
     &:nth-child(3) {
       grid-column: 2 span;
@@ -43,6 +44,14 @@
 
   &__form {
     width: 100%;
+
+    &.mod-menu-search {
+      margin-bottom: 4rem;
+
+      .search__from-input {
+        padding-left: 2rem;
+      }
+    }
   }
 
   &__input-label {
@@ -81,6 +90,26 @@
     fill: var(--color-rgba-white-07);
   }
 
+  &__form-submit-btn {
+    position: absolute;
+    top: 50%;
+    right: 1.8rem;
+    transform: translateY(-50%);
+    display: block;
+    width: 2.2rem;
+    height: 2.2rem;
+    cursor: pointer;
+    z-index: 2;
+
+    .icon {
+      position: static;
+      top: auto;
+      left: auto;
+      transform: none;
+      pointer-events: none;
+    }
+  }
+
   &__close-btn {
     position: absolute;
     top: 50%;
@@ -113,6 +142,7 @@
     }
 
     &:hover {
+
       &::before,
       &::after {
         background-color: var(--color-accent);
@@ -120,6 +150,7 @@
     }
 
     &:focus {
+
       &::before,
       &::after {
         background-color: var(--color-accent);
@@ -142,6 +173,7 @@
   }
 
   &__content-block {
+
     &:nth-child(1),
     &:nth-child(3) {
       grid-column: 1 span;

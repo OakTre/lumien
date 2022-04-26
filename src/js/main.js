@@ -25,10 +25,14 @@ import sectionAnimation from './modules/sectionAnimation';
 import fixedHeader from './modules/fixedHeader.js';
 import anchorLInks from './modules/anchorLInks.js';
 import productIntroSlider from './modules/productIntroSlider.js';
+import animatedBlocks from './modules/animatedBlocks.js';
+import smoothscroll from 'smoothscroll-polyfill';
 
-window.onload = () => {
+smoothscroll.polyfill();
+
+window.addEventListener("load", ()=>{
   closePreloadre();
-};
+});
 
 documenReady(() => {
   window.lumien_API = {};
@@ -55,6 +59,7 @@ documenReady(() => {
   fixedHeader();
   anchorLInks();
   productIntroSlider();
+  animatedBlocks();
 
   // always last
   cartImgsSlider();

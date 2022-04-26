@@ -8,7 +8,7 @@ section.contacts-us
             h2.site-heading.contacts-us__heading.js-animated-heading Обращение в сервис
             p
               | Пожалуйста, заполните, все поля приведённой формы. После получения сообщения наши специалисты обязательно свяжутся с вами для обсуждения деталей.
-          form.contacts-us__form.form(data-need-validation)
+          form.contacts-us__form.form.js-anim-fade-out(data-need-validation)
             .form__grid-inner
               label.form__label
                 input(type="text" class="form__input input-reset" name="name" placeholder="Выберите тип оборудования" data-parsley-required)
@@ -46,7 +46,7 @@ section.contacts-us
               p
                 | Заполните форму обратной связи или свяжитесь с нами по телефону
               a(href="tel:+74957975775" class="contacts-us-big__tel") +7 495 797-57-75
-          form.contacts-us__form.form(data-need-validation)
+          form.contacts-us__form.form.js-anim-fade-out(data-need-validation)
             .form__grid-inner
               label.form__label
                 input(type="text" class="form__input input-reset" name="name" placeholder="Имя" data-parsley-required)
@@ -76,7 +76,7 @@ section.contacts-us
               p
                 | Заполните форму обратной связи или свяжитесь с нами по телефону
               a(href="tel:+74957975775" class="contacts-us-big__tel") +7 495 797-57-75
-          form.contacts-us__form.form(data-need-validation)
+          form.contacts-us__form.form.js-anim-fade-out(data-need-validation)
             .form__grid-inner
               label.form__label
                 input(type="text" class="form__input input-reset" name="name" placeholder="Имя" data-parsley-required)
@@ -112,7 +112,7 @@ section.contacts-us
             |	info@auvix.ru
 
         .contacts-us__content-block
-          form.contacts-us__form.form(data-need-validation)
+          form.contacts-us__form.form.js-anim-fade-out(data-need-validation)
             label.form__label.select-wrapper.mod-send-form.custom-select
               select(name="equipment-type" class="select js-custom-select")
                 option(value="Выберите модель оборудования" placeholder) Выберите тип оборудования

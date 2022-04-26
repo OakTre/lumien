@@ -13,7 +13,7 @@ export default () => {
       prevEl: '.js-news-btn-prev',
     },
     breakpoints: {
-      320: {
+      280: {
         slidesPerView: 1.1,
         spaceBetween: 10
       },

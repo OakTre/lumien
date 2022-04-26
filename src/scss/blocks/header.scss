@@ -20,6 +20,10 @@
   &.logo-hidden {
     .logo {
       display: none;
+
+      @include mq(lg) {
+        display: block;
+      }
     }
   }
 

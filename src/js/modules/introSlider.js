@@ -38,6 +38,18 @@ export default () => {
     allowTouchMove: false,
     spaceBetween: 30,
     watchSlidesProgress: true,
+    breakpoints: {
+      280: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        direction: 'horizontal',
+      },
+      1200: {
+        slidesPerView: 1,
+        direction: 'vertical',
+        spaceBetween: 30,
+      },
+    },
   });
 
   let sliderIntro = new Swiper(".intro-content-slider", {

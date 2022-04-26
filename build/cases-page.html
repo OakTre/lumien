@@ -30,8 +30,24 @@
           <div class="menu__block"><a class="logo menu__logo" href="/">
               <svg class="icon icon-logo logo__icon" width="161" height="22">
                 <use xlink:href="images/sprites/sprite-multi.svg#logo"></use>
-              </svg></a></div>
+              </svg></a>
+            <button class="button-reset menu__close-btn _mobile js-close-menu-btn">
+              <svg class="icon icon-cross menu__close-btn-icon" width="13" height="13">
+                <use xlink:href="images/sprites/sprite-mono.svg#cross"></use>
+              </svg>
+            </button>
+          </div>
           <div class="menu__block">
+            <form class="search__form mod-menu-search">
+              <div class="search__input-label">
+                <input class="search__from-input" type="text" name="q" placeholder="Найти..">
+                <button class="button-reset search__form-submit-btn" type="submit">
+                  <svg class="icon icon-search search__input-icon" width="22" height="22">
+                    <use xlink:href="images/sprites/sprite-mono.svg#search"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
             <div class="menu__block-inner"><span class="_bottom-line"></span>
               <nav class="menu__nav menu__nav_grid-container">
                 <ul class="menu__nav-list">
@@ -110,7 +126,7 @@
                 <svg class="icon icon-search search__input-icon" width="22" height="22">
                   <use xlink:href="images/sprites/sprite-mono.svg#search"></use>
                 </svg>
-                <input class="search__from-input" type="text" name="q" placeholder="Найти..">
+                <input class="search__from-input js-search-input" type="text" name="q" placeholder="Найти..">
                 <button class="button-reset search__close-btn js-search-close-btn" type="button" aria-label="Закрыть поиск"></button>
               </label>
             </form>
@@ -328,7 +344,7 @@
                 <h2 class="site-heading contacts-us__heading js-animated-heading">	Связаться с нами</h2><a class="contacts-us__link" href="tel:+74957975775">	+7 495 797-57-75</a><a class="contacts-us__link _colored" href="mailto:info@auvix.ru">	info@auvix.ru</a>
               </div>
               <div class="contacts-us__content-block">
-                <form class="contacts-us__form form" data-need-validation>
+                <form class="contacts-us__form form js-anim-fade-out" data-need-validation>
                   <label class="form__label select-wrapper mod-send-form custom-select">
                     <select class="select js-custom-select" name="equipment-type">
                       <option value="Выберите модель оборудования" placeholder>Выберите тип оборудования</option>

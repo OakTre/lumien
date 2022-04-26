@@ -75,7 +75,14 @@
       .menu__block
         a.logo.menu__logo(href="/")
           +icon-multi("logo")(width="161" height="22" class="logo__icon")
+        button.button-reset.menu__close-btn._mobile.js-close-menu-btn
+          +icon-mono("cross")(class="menu__close-btn-icon" width="13" height="13")
       .menu__block
+        form.search__form.mod-menu-search
+          .search__input-label
+            input(type="text" name="q" class="search__from-input" placeholder="Найти..")
+            button(type="submit" class="button-reset search__form-submit-btn")
+              +icon-mono("search")(width="22" height="22" class="search__input-icon")
         .menu__block-inner
           span._bottom-line
           nav.menu__nav.menu__nav_grid-container

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // поиск в хедере
   let timerDelay;
-  const searchInput = document.querySelector(".search__from-input");
+  const searchInput = document.querySelector(".js-search-input");
   const searchForm = document.querySelector(".search__form");
   const searchContent = document.querySelector(".search__content");
   const searchContentOk = document.querySelector(".search__content-wrapper");

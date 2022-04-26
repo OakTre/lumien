@@ -30,8 +30,24 @@
           <div class="menu__block"><a class="logo menu__logo" href="/">
               <svg class="icon icon-logo logo__icon" width="161" height="22">
                 <use xlink:href="images/sprites/sprite-multi.svg#logo"></use>
-              </svg></a></div>
+              </svg></a>
+            <button class="button-reset menu__close-btn _mobile js-close-menu-btn">
+              <svg class="icon icon-cross menu__close-btn-icon" width="13" height="13">
+                <use xlink:href="images/sprites/sprite-mono.svg#cross"></use>
+              </svg>
+            </button>
+          </div>
           <div class="menu__block">
+            <form class="search__form mod-menu-search">
+              <div class="search__input-label">
+                <input class="search__from-input" type="text" name="q" placeholder="Найти..">
+                <button class="button-reset search__form-submit-btn" type="submit">
+                  <svg class="icon icon-search search__input-icon" width="22" height="22">
+                    <use xlink:href="images/sprites/sprite-mono.svg#search"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
             <div class="menu__block-inner"><span class="_bottom-line"></span>
               <nav class="menu__nav menu__nav_grid-container">
                 <ul class="menu__nav-list">
@@ -110,7 +126,7 @@
                 <svg class="icon icon-search search__input-icon" width="22" height="22">
                   <use xlink:href="images/sprites/sprite-mono.svg#search"></use>
                 </svg>
-                <input class="search__from-input" type="text" name="q" placeholder="Найти..">
+                <input class="search__from-input js-search-input" type="text" name="q" placeholder="Найти..">
                 <button class="button-reset search__close-btn js-search-close-btn" type="button" aria-label="Закрыть поиск"></button>
               </label>
             </form>
@@ -229,8 +245,8 @@
                 <div class="intro-slider-nav__wrapper">
                   <div class="intro-slider-nav swiper">
                     <div class="swiper-wrapper">
-                      <div class="intro-slider-nav__item swiper-slide">Дисплеи</div>
-                      <div class="intro-slider-nav__item swiper-slide">Экраны</div>
+                      <div class="intro-slider-nav__item swiper-slide">Дисплеи<span class="_mobile-lines"></span></div>
+                      <div class="intro-slider-nav__item swiper-slide">Экраны<span class="_mobile-lines"></span></div>
                     </div>
                   </div>
                 </div>
@@ -274,7 +290,7 @@
             </div><img class="intro-content__img mod-show" src="images/index-slider/img1.png" alt=""><img class="intro-content__img" src="images/index-slider/img2.png" alt=""><img class="intro-content__img" src="images/index-slider/img2.png" alt="">
           </div>
         </section>
-        <section class="equipment-filter">
+        <section class="equipment-filter js-anim-fade-out">
           <div class="site-container equipment-filter__container grid-container">
             <div class="grid-container__block"></div>
             <div class="grid-container__block equipment-filter__content">
@@ -324,7 +340,7 @@
                   <h2 class="site-first-heading section-catalog__headiong js-animated-heading">Каталог продукции</h2>
                 </div>
                 <div class="section-catalog__heading-content-block">
-                  <p class="section-catalog__heading-text">Lumien предлагает широкий выбор высококачественного оборудования для визуализации: интерактивные панели, проекционные экраны и&nbsp;презентационная мебель. Продукция Lumien подвергается строгому контролю на&nbsp;всех этапах производства</p>
+                  <p class="section-catalog__heading-text js-anim-fade-out">Lumien предлагает широкий выбор высококачественного оборудования для визуализации: интерактивные панели, проекционные экраны и&nbsp;презентационная мебель. Продукция Lumien подвергается строгому контролю на&nbsp;всех этапах производства</p>
                 </div>
               </div>
             </div>
@@ -341,7 +357,9 @@
                     <div class="spheres__content-info-block"><span class="site-second-heading spheres__second-heading js-animated-heading">Сферы <br> применения</span></div>
                     <div class="spheres__content-info-block">
                       <h2 class="site-first-heading spheres__first-heading">Домашние развлечения</h2>
-                      <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      <div class="spheres__txt-wrapper">
+                        <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -353,7 +371,9 @@
                     <div class="spheres__content-info-block"><span class="site-second-heading spheres__second-heading js-animated-heading">Сферы <br> применения</span></div>
                     <div class="spheres__content-info-block">
                       <h2 class="site-first-heading spheres__first-heading">Бары и рестораны</h2>
-                      <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      <div class="spheres__txt-wrapper">
+                        <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -365,7 +385,9 @@
                     <div class="spheres__content-info-block"><span class="site-second-heading spheres__second-heading js-animated-heading">Сферы <br> применения</span></div>
                     <div class="spheres__content-info-block">
                       <h2 class="site-first-heading spheres__first-heading">Музеи и выставки</h2>
-                      <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      <div class="spheres__txt-wrapper">
+                        <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -377,7 +399,9 @@
                     <div class="spheres__content-info-block"><span class="site-second-heading spheres__second-heading js-animated-heading">Сферы <br> применения</span></div>
                     <div class="spheres__content-info-block">
                       <h2 class="site-first-heading spheres__first-heading">Образование</h2>
-                      <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      <div class="spheres__txt-wrapper">
+                        <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -389,7 +413,9 @@
                     <div class="spheres__content-info-block"><span class="site-second-heading spheres__second-heading js-animated-heading">Сферы <br> применения</span></div>
                     <div class="spheres__content-info-block">
                       <h2 class="site-first-heading spheres__first-heading">VR</h2>
-                      <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      <div class="spheres__txt-wrapper">
+                        <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -401,7 +427,9 @@
                     <div class="spheres__content-info-block"><span class="site-second-heading spheres__second-heading js-animated-heading">Сферы <br> применения</span></div>
                     <div class="spheres__content-info-block">
                       <h2 class="site-first-heading spheres__first-heading">Госсектор</h2>
-                      <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      <div class="spheres__txt-wrapper">
+                        <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -413,7 +441,9 @@
                     <div class="spheres__content-info-block"><span class="site-second-heading spheres__second-heading js-animated-heading">Сферы <br> применения</span></div>
                     <div class="spheres__content-info-block">
                       <h2 class="site-first-heading spheres__first-heading">Развлекательные площадки</h2>
-                      <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      <div class="spheres__txt-wrapper">
+                        <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -425,7 +455,9 @@
                     <div class="spheres__content-info-block"><span class="site-second-heading spheres__second-heading js-animated-heading">Сферы <br> применения</span></div>
                     <div class="spheres__content-info-block">
                       <h2 class="site-first-heading spheres__first-heading">Корпоративные события</h2>
-                      <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      <div class="spheres__txt-wrapper">
+                        <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -437,7 +469,9 @@
                     <div class="spheres__content-info-block"><span class="site-second-heading spheres__second-heading js-animated-heading">Сферы <br> применения</span></div>
                     <div class="spheres__content-info-block">
                       <h2 class="site-first-heading spheres__first-heading">Корпоративные события</h2>
-                      <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      <div class="spheres__txt-wrapper">
+                        <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -449,7 +483,9 @@
                     <div class="spheres__content-info-block"><span class="site-second-heading spheres__second-heading js-animated-heading">Сферы <br> применения</span></div>
                     <div class="spheres__content-info-block">
                       <h2 class="site-first-heading spheres__first-heading">Корпоративные события</h2>
-                      <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      <div class="spheres__txt-wrapper">
+                        <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -461,7 +497,9 @@
                     <div class="spheres__content-info-block"><span class="site-second-heading spheres__second-heading js-animated-heading">Сферы <br> применения</span></div>
                     <div class="spheres__content-info-block">
                       <h2 class="site-first-heading spheres__first-heading">Корпоративные события</h2>
-                      <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      <div class="spheres__txt-wrapper">
+                        <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -473,7 +511,9 @@
                     <div class="spheres__content-info-block"><span class="site-second-heading spheres__second-heading js-animated-heading">Сферы <br> применения</span></div>
                     <div class="spheres__content-info-block">
                       <h2 class="site-first-heading spheres__first-heading">Корпоративные события</h2>
-                      <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      <div class="spheres__txt-wrapper">
+                        <p class="spheres__txt">Стильные проекционные экраны Lumien предлагают уникальные решения премиального качества для оснащения домашних кинотеатров</p><a class="spheres__link" href="/">Подробнее</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -593,7 +633,7 @@
               </div>
             </div>
           </div>
-          <div class="site-container">
+          <div class="site-container js-anim-fade-out">
             <div class="news__list swiper news-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide"><a class="news__item news-card lazy" href="/" data-bg="images/news-slider/img0.jpg" data-bg-fallback="images/news-slider/img0.jpg"><span class="news-card__tag _category">Проекционные экраны</span><span class="news-card__tag">16.02.2022</span>
@@ -623,7 +663,7 @@
                 <h2 class="site-heading contacts-us__heading js-animated-heading">	Связаться с нами</h2><a class="contacts-us__link" href="tel:+74957975775">	+7 495 797-57-75</a><a class="contacts-us__link _colored" href="mailto:info@auvix.ru">	info@auvix.ru</a>
               </div>
               <div class="contacts-us__content-block">
-                <form class="contacts-us__form form" data-need-validation>
+                <form class="contacts-us__form form js-anim-fade-out" data-need-validation>
                   <label class="form__label select-wrapper mod-send-form custom-select">
                     <select class="select js-custom-select" name="equipment-type">
                       <option value="Выберите модель оборудования" placeholder>Выберите тип оборудования</option>

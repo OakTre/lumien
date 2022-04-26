@@ -3,7 +3,7 @@ import { disableScroll, enableScroll } from '../helpers/disableScroll';
 
 export default () => {
   const openBtns = document.querySelectorAll(".js-open-menu-btn");
-  const closeBtn = document.querySelector(".js-close-menu-btn");
+  const closeBtns = document.querySelectorAll(".js-close-menu-btn");
   const timeline = gsap.timeline({
     paused: true,
     reversed: true
@@ -30,9 +30,11 @@ export default () => {
     });
   });
 
-  closeBtn.addEventListener("click", ()=>{
-    timeline.reverse();
-    enableScroll();
+  closeBtns.forEach((closeBtn)=>{
+    closeBtn.addEventListener("click", ()=>{
+      timeline.reverse();
+      enableScroll();
+    });
   });
 
   layer.addEventListener("click", ()=>{

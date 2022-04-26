@@ -10,7 +10,7 @@ mixin news-slider(heading, slides)
               +icon-mono("shevron-left")(width="9" height="13" class="slider-nav__btn-icon")
             button.slider-nav__btn.button-reset.js-news-btn-next
               +icon-mono("shevron-right")(width="9" height="13" class="slider-nav__btn-icon")
-    .site-container
+    .site-container.js-anim-fade-out
       .news__list.swiper.news-slider
         .swiper-wrapper
           for item in slides
