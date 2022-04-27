@@ -164,6 +164,7 @@ export default () => {
             opacity: 1,
             duration: 0.4,
             ease: "none",
+            clearProps: "all"
           }, "-=0.6")
           .fromTo(icon, {
             opacity: 0
