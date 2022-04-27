@@ -49,7 +49,7 @@
     text-align: left;
 
     @include mq(sm) {
-      font: var(--font-title-mobile-4-bold);
+      font: 700 2rem/2.6rem var(--second-ff);
     }
   }
 
@@ -63,6 +63,7 @@
     border-radius: 50%;
     border: 1px solid var(--border-color);
     transition: border-color var(--transition), transform var(--transition);
+    flex-shrink: 0;
 
     span {
       display: block;
@@ -325,6 +326,10 @@
       font: var(--font-body-S);
       margin-bottom: 1rem;
       color: var(--text-color);
+
+      @include mq(sm) {
+        font: var(--font-body-XS);
+      }
 
       &:last-child {
         margin-bottom: 0;
