@@ -420,3 +420,19 @@ input:focus {
   transition: opacity .4s,visibility .4s,transform .4s ease-out;
   transform: translateY(0);
 }
+
+.show-more-btn {
+  ._hidden {
+    display: none;
+  }
+
+  &.is-active {
+    ._hidden {
+      display: inline;
+    }
+
+    ._shown {
+      display: none;
+    }
+  }
+}

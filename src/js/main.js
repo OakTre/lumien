@@ -27,6 +27,7 @@ import anchorLInks from './modules/anchorLInks.js';
 import productIntroSlider from './modules/productIntroSlider.js';
 import animatedBlocks from './modules/animatedBlocks.js';
 import smoothscroll from 'smoothscroll-polyfill';
+import showMoreBtns from './modules/showMoreBtns.js';
 
 smoothscroll.polyfill();
 
@@ -60,6 +61,7 @@ documenReady(() => {
   anchorLInks();
   productIntroSlider();
   animatedBlocks();
+  showMoreBtns();
 
   // always last
   cartImgsSlider();

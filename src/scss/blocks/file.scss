@@ -7,6 +7,11 @@
   border-radius: 1rem;
   grid-column: 3 span;
 
+  @include mq(sm) {
+    grid-column: 10 span;
+    padding: 0.8rem 2rem;
+  }
+
   &:hover {
     .file__name {
       color: var(--color-accent);
@@ -37,17 +42,35 @@
 
   &__name-wrapper {
     max-width: 80%;
+
+    @include mq(sm) {
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-grow: 1;
+      margin-right: 1.5rem;
+    }
   }
 
   &__size {
     display: block;
     font: var(--font-body-XS);
     color: var(--border-color);
+
+    @include mq(sm) {
+      font: var(--font-body-XXS);
+    }
   }
 
   &__name {
     font: var(--font-body-M);
     transition: color var(--transition);
+
+    @include mq(sm) {
+      font: var(--font-body-S);
+      font-weight: 500;
+    }
   }
 
   &__icon-wrapper {
@@ -59,6 +82,11 @@
     background-color: var(--color-white);
     border-radius: 50%;
     transition: background-color var(--transition);
+
+    @include mq(sm) {
+      width: 4.2rem;
+      height: 4.2rem;
+    }
   }
 
   &__icon {
@@ -72,6 +100,11 @@
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     gap: var(--grid-offset);
+
+    @include mq(sm) {
+      grid-template-columns: repeat(10, 1fr);
+      gap: 1rem 0;
+    }
   }
 
   &.mod-transparent {
@@ -81,15 +114,39 @@
     align-items: stretch;
     grid-column: unset;
 
+    @include mq(sm) {
+      display: flex;
+    }
+
     .file__name-wrapper {
       order: 2;
       max-width: 100%;
+
+      @include mq(sm) {
+        flex-grow: 1;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
 
     .file__icon-wrapper {
       order: 1;
       margin-right: 2.4rem;
       background-color: var(--color-bg-input);
+
+      @include mq(sm) {
+        width: 3.6rem;
+        height: 3.6rem;
+        margin-right: 2rem;
+      }
+    }
+
+    .file__size {
+      @include mq(sm) {
+        color: var(--color-accent);
+      }
     }
 
     &:hover {

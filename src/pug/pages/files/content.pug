@@ -25,7 +25,7 @@
     },
     {
       rowName: "Чертежи",
-      files: ["Чертеж 1", "Чертеж 2", "Чертеж 3"]
+      files: ["Чертеж 1", "Чертеж 2", "Чертеж 3", "Чертеж 4", "Чертеж 4"]
     },
   ]
 
@@ -44,9 +44,12 @@ section.section-indent.top-offset.files
           option(value="second") second
       .files__content
         for item in rows
-          .files__content-row
+          .files__content-row.js-show-more-btn-parent
             h2.files__content-heading= item.rowName
             .files__content-files
               for file in item.files
-                .files__content-file-wrapper
+                .files__content-file-wrapper.js-show-more-elmnts
                   +file(file, "Скачать")(class="mod-transparent")
+            button.js-show-more-btn.show-more-btn.button-reset.files__mobile-btn
+              span._shown Показать все
+              span._hidden Скрыть
