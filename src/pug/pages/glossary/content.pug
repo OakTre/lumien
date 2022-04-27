@@ -67,13 +67,14 @@ section.section-indent.top-offset.glossary
       .grid-container__block
         h1.glossary__heading.site-heading.section-heading-offset Глоссарий
   .site-container
-    .glossary__container
-      .glossary__container-row
-        for item in arr_ru
-          a.glossary__container-item(href="#test")= item
-      .glossary__container-row
-        for item in arr_en
-          a.glossary__container-item(href="/")= item
+    .glossary__letters-wrapper
+      .glossary__container
+        .glossary__container-row
+          for item in arr_ru
+            a.glossary__container-item(href="#test")= item
+        .glossary__container-row
+          for item in arr_en
+            a.glossary__container-item(href="/")= item
     .grid-container
       .grid-container__block
       .grid-container__block.glossary__content-container

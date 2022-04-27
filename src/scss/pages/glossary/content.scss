@@ -1,9 +1,30 @@
 .glossary {
+  &__letters-wrapper {
+    @include mq(lg) {
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        height: 0;
+      }
+    }
+  }
+
   &__container {
     margin-bottom: 10rem;
     padding: 3.8rem 11.9rem;
     background-color: var(--color-bg-input);
     border-radius: 2rem;
+
+    @include mq(lg) {
+      padding: 3.2rem;
+      width: 140rem;
+      margin-bottom: 8rem;
+    }
+
+    @include mq(sm) {
+      padding: 2.5rem 1.5rem;
+      margin-bottom: 5rem;
+    }
   }
 
   &__container-row {
@@ -14,6 +35,13 @@
       padding-bottom: 3rem;
       margin-bottom: 3rem;
       border-bottom: 1px solid var(--border-color);
+    }
+
+    @include mq(sm) {
+      &:nth-child(1) {
+        padding-bottom: 2.5rem;
+        margin-bottom: 2.5rem;
+      }
     }
   }
 
@@ -63,6 +91,14 @@
 
   &__content-container-item {
     grid-column: 5 span;
+
+    @include mq(sm) {
+      grid-column: 10 span;
+
+      &:nth-child(1) {
+        margin-bottom: 4rem;
+      }
+    }
   }
 
   &__item {
@@ -71,6 +107,10 @@
 
     &:nth-last-of-type(1) {
       margin-bottom: 0;
+    }
+
+    @include mq(sm) {
+      max-width: 100%;
     }
   }
 
@@ -148,6 +188,10 @@
     p {
       padding-left: 2rem;
       font: var(--font-body-XS);
+
+      @include mq(sm) {
+        padding-left: 0;
+      }
     }
   }
 }
