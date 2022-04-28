@@ -6,11 +6,56 @@ import Swiper, {
   Thumbs,
   FreeMode
 } from 'swiper/swiper-bundle';
+import gsap from 'gsap'
+import {
+  ScrollTrigger
+} from "gsap/dist/ScrollTrigger";
+import SplitText from '../../assets/js/gsap-bonus/SplitText';
+import {
+  CSSRulePlugin
+} from "gsap/dist/CSSRulePlugin";
 
 Swiper.use([Navigation, Pagination, Controller, Thumbs, EffectFade, FreeMode]);
+gsap.registerPlugin(SplitText, ScrollTrigger, CSSRulePlugin);
 
 export default () => {
   if (window.matchMedia("(min-width: 767px)").matches) {
+    const spheresTxtWrapper = document.querySelector(".spheres__txt-wrapper");
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".spheres",
+        start: "top center",
+      }
+    });
+    const timeline2 = gsap.timeline();
+    const spherseHeadings = Array.from(document.querySelectorAll(".spheres__first-heading"));
+    let headingArrs = [];
+
+    spherseHeadings.forEach((heading) => {
+      let splitedText = new SplitText(heading, {
+        type: 'lines, chars',
+        linesClass: "line"
+      });
+
+      headingArrs.push(splitedText);
+    });
+
+    gsap.set(spheresTxtWrapper, {
+      y: "5rem",
+      opacity: 0
+    });
+    gsap.set(".spheres__txt-wrapper ._line", {xPercent: -100})
+
+    timeline
+      .to(spheresTxtWrapper, {
+        y: 0,
+        opacity: 1,
+        duration: 0.3,
+        ease: "power3.out",
+        clearProps: "all"
+      })
+      .to(".spheres__txt-wrapper ._line", {xPercent: 0, duration: 0.8, ease: "power3.out", clearProps: "all"})
+
     const slides = Array.from(document.querySelectorAll(".spheres__nav-item"));
     const activeBorder = document.querySelector("._active-border");
 
@@ -26,7 +71,7 @@ export default () => {
                 let offsetWidth = slide.querySelector("span").offsetWidth;
                 console.log(activeBorder);
 
-                activeBorder.style.width = offsetWidth + 10 + "px";
+                activeBorder.style.width = offsetWidth + 12 + "px";
               }, 150);
             }
           });
@@ -37,10 +82,10 @@ export default () => {
     let sliderSpheres = new Swiper(".spheres__slider", {
       effect: 'fade',
       fadeEffect: {
-        crossFade: true,
+        crossFade: false,
       },
       allowTouchMove: false,
-      speed: 100,
+      speed: 300,
       thumbs: {
         swiper: sliderThumb,
         slideThumbActiveClass: "swiper-slide-thumb-active",
@@ -60,13 +105,47 @@ export default () => {
         if (index === swiper.activeIndex) {
           let offsetWidth = slide.querySelector("span").offsetWidth;
 
-          activeBorder.style.width = offsetWidth + 10 + "px";
+          activeBorder.style.width = offsetWidth + 12 + "px";
         }
       });
+
+
+      spherseHeadings.forEach((heading, index) => {
+        if (index === swiper.realIndex) {
+          const text = heading.closest(".spheres__content-info-block").querySelector(".spheres__txt-wrapper");
+
+          timeline2
+            .fromTo(headingArrs[swiper.realIndex].chars, {
+              yPercent: 100,
+            }, {
+              yPercent: 0,
+              duration: 0.3,
+              ease: "none",
+            }, "-=0.3")
+            .fromTo(text, {
+              opacity: 0,
+              y: "3rem"
+            }, {
+              opacity: 1,
+              y: 0,
+              duration: 0.3,
+              ease: "none",
+            }, "+=0.3");
+        }
+
+        if (index === swiper.realIndex - 1) {
+
+          timeline
+            .fromTo(headingArrs[swiper.realIndex - 1].chars, {
+              yPercent: 0,
+            }, {
+              yPercent: -120,
+              duration: 0.3,
+              ease: "none",
+            }, "-=0.3");
+        }
+      });
+
     });
-  }
-
-
-  // sliderSpheres.controller.control = sliderThumb;
-  // sliderThumb.controller.control = sliderSpheres;
+  };
 };

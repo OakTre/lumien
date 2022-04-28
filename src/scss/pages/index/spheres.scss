@@ -92,27 +92,36 @@
 
   &__first-heading {
     margin-bottom: 5rem;
+
+    .line {
+      overflow: hidden;
+    }
   }
 
   &__txt-wrapper {
+    overflow: hidden;
+
     @include mq(md) {
       align-self: flex-end;
     }
   }
 
   &__txt {
+    position: relative;
+    padding-left: 13.4rem;
     display: flex;
     align-items: flex-start;
     color: var(--color-white);
     max-width: 54rem;
 
-    &::before {
-      transform: translateY(1rem);
+    ._line {
+      position: absolute;
+      top: 1rem;
+      left: 0;
       width: 10.7rem;
       height: 0.1rem;
       background-color: var(--color-white);
       opacity: 0.5;
-      margin-right: 2.7rem;
       flex-shrink: 0;
       content: "";
     }
@@ -160,7 +169,7 @@
     position: relative;
     flex-grow: 1;
     margin: 0 2.7rem;
-    padding: 1rem 0.5rem;
+    padding: 1rem 0.6rem;
     overflow: hidden;
     display: flex;
     align-items: flex-start;
@@ -176,7 +185,7 @@
     ._active-border {
       position: absolute;
       top: 50%;
-      left: -0.5rem;
+      left: -0.6rem;
       width: 104%;
       height: 104%;
       transform: translateY(-50%);
