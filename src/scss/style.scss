@@ -53,8 +53,15 @@
   --transition: 200ms;
 }
 
+
 @import "./helpers/**/*";
 @import './vendor/**/*';
 @import "./settings/**/*";
 @import "./blocks/**/*";
 @import './pages/**/*';
+
+@include mq(sm) {
+  :root {
+    --font-title-3: 700 3.4rem/110% var(--second-ff);
+  }
+}

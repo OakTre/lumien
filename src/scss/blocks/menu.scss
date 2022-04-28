@@ -40,16 +40,18 @@
 
     @include mq(lg) {
       gap: 3rem 0;
-      height: auto;
     }
   }
 
   &__block {
     &:nth-child(1) {
       grid-column: 2 span;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+
+      @include mq(sm) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
 
     &:nth-child(2) {
@@ -189,6 +191,8 @@
 
     &._mobile {
       display: none;
+      width: 4rem;
+      height: 4rem;
 
       @include mq(lg) {
         display: flex;
@@ -213,7 +217,8 @@
     @include mq(sm) {
       gap: 1rem;
       justify-content: stretch;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 

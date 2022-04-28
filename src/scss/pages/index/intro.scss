@@ -44,7 +44,7 @@
     }
 
     &:nth-child(3) {
-      background-image: url(../images/index-slider/first-slide-bg.png);
+      background-image: url(../images/index-slider/first-slide-bg33.png);
     }
 
     &.mod-show {
@@ -285,6 +285,26 @@
     width: 130rem;
     height: 46.7rem;
 
+    &.is-furniture {
+      mix-blend-mode: darken;
+      height: 56rem;
+      width: auto;
+      left: 20rem;
+
+      @include mq(custom, max, 1366) {
+        height: 40rem;
+      }
+
+      @include mq(lg) {
+        height: 27rem;
+      }
+
+      @include mq(sm) {
+        left: 5rem;
+        height: 20rem;
+      }
+    }
+
     &:not(.mod-show) {
       transform: translateY(100%);
     }
@@ -348,11 +368,11 @@
     ._mobile-lines {
       position: relative;
       display: none;
-      width: 100%;
       height: 1px;
       background-color: #5A5A5A;
-      margin-left: 2rem;
+      margin-left: 1rem;
       transition: max-width var(--transition);
+      transition: width 200ms;
 
       &::before {
         position: absolute;
@@ -366,7 +386,7 @@
       }
     }
 
-    &.swiper-slide-active {
+    &.swiper-slide-thumb-active {
       color: var(--color-white);
 
       &::after {
@@ -378,7 +398,7 @@
       }
 
       ._mobile-lines {
-        max-width: 6.8rem;
+        width: 6.8rem;
 
         &::before {
           animation: slide-progress-mobile 8s cubic-bezier(.3,0,.3,1) forwards;
@@ -421,7 +441,7 @@
     @include mq(lg) {
       display: inline-flex;
       align-items: center;
-      width: 18rem;
+      width: auto;
 
       &::after,
       &::before {

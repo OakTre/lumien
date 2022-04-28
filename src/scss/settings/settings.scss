@@ -196,9 +196,8 @@ input:focus {
   transition: border-color var(--transition), background-color var(--transition), color var(--transition);
 
   &:hover {
-    background-color: var(--color-white);
-    border-color: var(--border-color);
-    color: var(--text-color);
+    background-color: #ffb053;
+    border-color: #ffb053;
   }
 
   &:active {

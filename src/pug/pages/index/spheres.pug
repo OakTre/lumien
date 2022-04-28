@@ -19,12 +19,21 @@ section.section-indent.spheres
     .swiper-wrapper
       for item, index in nav_arr1
         - let second = index == 1 ? 'img2' : 'img1'
-        .spheres__slide-item.swiper-slide(style=`background-image: url(images/spheres-slider/${second}.jpg)`)
+        .spheres__slide-item.swiper-slide.lazy(data-bg=`images/spheres-slider/${second}.jpg` data-bg-fallback=`images/spheres-slider/${second}.jpg`)
           .site-container.grid-container.spheres__container
             .grid-container__block
             .grid-container__block.spheres__content-info
               .spheres__content-info-block
                 span.site-second-heading.spheres__second-heading.js-animated-heading Сферы <br> применения
+                if (index === 0)
+                  .tag__container.spheres__tag-container
+                    a.tag.spheres__tag(href="/spheres-detail.html") Домашние развлечения
+                    a.tag.spheres__tag(href="/spheres-detail.html") Образования
+                    a.tag.spheres__tag(href="/spheres-detail.html") Музеи и выставки
+                    a.tag.spheres__tag(href="/spheres-detail.html") Бары и рестораны
+                    a.tag.spheres__tag(href="/spheres-detail.html") Госсектор
+                    a.tag.spheres__tag(href="/spheres-detail.html") Кинотеатры
+                    a.tag.spheres__tag(href="/spheres.html") + еще 6
               .spheres__content-info-block
                 h2.site-first-heading.spheres__first-heading= item
                 .spheres__txt-wrapper
@@ -36,9 +45,12 @@ section.section-indent.spheres
     .site-container
       button.slider-nav__btn.slider-nav__btn_transparent.spheres__nav-btn.button-reset.js-spheres-btn-prev
         +icon-mono("shevron-left")(width="9" height="13" class="slider-nav__btn-icon")
-      .swiper.spheres__nav
-        .swiper-wrapper
-          for item in nav_arr1
-            .spheres__nav-item.swiper-slide= item
+      .spheres__nav-wrapper
+        .swiper.spheres__nav
+          span._active-border
+          .swiper-wrapper
+            for item in nav_arr1
+              .spheres__nav-item.swiper-slide
+                span= item
       button.slider-nav__btn.slider-nav__btn_transparent.spheres__nav-btn.button-reset.js-spheres-btn-next
         +icon-mono("shevron-right")(width="9" height="13" class="slider-nav__btn-icon")

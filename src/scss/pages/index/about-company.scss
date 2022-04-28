@@ -18,6 +18,7 @@
   }
 
   &__content-block {
+    position: relative;
     &:nth-child(1) {
       grid-column: 2 span;
     }
@@ -91,6 +92,18 @@
       font-size: 1.4rem;
       line-height: 1.9rem;
     }
+  }
+
+  &__content-bg-layer {
+    position: absolute;
+    top: -15rem;
+    right: 0;
+    z-index: -1;
+    width: 77.4rem;
+    height: 71.5rem;
+    display: block;
+    object-fit: cover;
+    flex-shrink: 0;
   }
 
   &__content-info {

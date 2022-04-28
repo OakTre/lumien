@@ -31,7 +31,6 @@ export default () => {
     spltHeadingsArr.push(splitedText);
   });
 
-
   let sliderIntroNav = new Swiper(".intro-slider-nav", {
     slidesPerView: 1,
     direction: 'vertical',
@@ -41,7 +40,7 @@ export default () => {
     breakpoints: {
       280: {
         slidesPerView: 'auto',
-        spaceBetween: 20,
+        spaceBetween: 10,
         direction: 'horizontal',
       },
       1200: {
@@ -60,18 +59,21 @@ export default () => {
     fadeEffect: {
       crossFade: true,
     },
-    autoplay: {
-      delay: 8000,
-      disableOnInteraction: false,
+    thumbs: {
+      swiper: sliderIntroNav,
     },
     navigation: {
       nextEl: '.js-intro-btn-next',
       prevEl: '.js-intro-btn-prev',
     },
+    autoplay: {
+      delay: 8000,
+      disableOnInteraction: false,
+    },
   });
 
-  sliderIntroNav.controller.control = sliderIntro;
-  sliderIntro.controller.control = sliderIntroNav;
+  // sliderIntroNav.controller.control = sliderIntro;
+  // sliderIntro.controller.control = sliderIntroNav;
 
   sliderIntro.on('slideChange', function (swiper) {
     imgs.forEach(img => {
@@ -153,13 +155,9 @@ export default () => {
             clearProps: "all"
           }, "-=0.4")
           .fromTo(circle, {
-            yPercent: -50,
-            xPercent: -50,
             scale: 0.8,
             opacity: 0
           }, {
-            yPercent: -50,
-            xPercent: -50,
             scale: 1,
             opacity: 1,
             duration: 0.4,
