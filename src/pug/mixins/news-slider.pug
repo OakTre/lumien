@@ -4,7 +4,9 @@ mixin news-slider(heading, slides)
       .grid-container__block
       .grid-container__block
         .news__heading-wrapper
-          h2.site-second-heading.news__heading.js-animated-heading!= heading
+          .news__heading-link-wrapper
+            h2.site-second-heading.news__heading.js-animated-heading!= heading
+            a.news__heading-link(href="/") все новости
           .slider-nav
             button.slider-nav__btn.button-reset.js-news-btn-prev
               +icon-mono("shevron-left")(width="9" height="13" class="slider-nav__btn-icon")

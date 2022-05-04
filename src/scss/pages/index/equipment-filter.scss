@@ -5,6 +5,16 @@
     margin-bottom: 8rem;
   }
 
+  &__heading {
+    br {
+      display: none;
+
+      @include mq(sm) {
+        display: block;
+      }
+    }
+  }
+
   &__content {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -84,6 +94,7 @@
     margin-right: 5.1rem;
     font: var(--font-btn);
     cursor: pointer;
+    text-transform: uppercase;
 
     @include mq(sm) {
       order: 2;

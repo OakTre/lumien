@@ -16,6 +16,32 @@
     }
   }
 
+  &__heading-link-wrapper {
+    display: flex;
+    align-items: center;
+
+    @include mq(sm) {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__heading-link {
+    display: inline-block;
+    font: var(--font-body-S);
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-left: 1.5rem;
+
+    @include mq(sm) {
+      font: var(--font-body-XS);
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__list {
     display: flex;
     overflow: visible;
@@ -66,6 +92,11 @@
       background-color: var(--color-white);
       color: var(--text-color);
       margin-bottom: 0;
+      font: var(--font-body-S);
+
+      @include mq(sm) {
+        font: var(--font-body-XS);
+      }
     }
   }
 

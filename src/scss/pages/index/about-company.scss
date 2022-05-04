@@ -40,7 +40,7 @@
   &__list {
     @include mq(md) {
       display: flex;
-      align-items: center;
+      align-items: stretch;
       margin-bottom: 4rem;
     }
   }

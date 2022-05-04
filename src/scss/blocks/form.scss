@@ -15,12 +15,20 @@
     max-width: 56.7rem;
     margin-bottom: 5rem;
 
+    br {
+      display: none;
+    }
+
     @include mq(lg) {
       max-width: 100%;
     }
 
     @include mq(sm) {
       margin-bottom: 3rem;
+
+      br {
+        display: block;
+      }
     }
   }
 
@@ -62,6 +70,14 @@
       margin-bottom: 0;
     }
 
+    &:hover {
+      color: var(--color-accent);
+
+      &::before {
+        background-color: var(--color-accent);
+      }
+    }
+
     &._colored {
       background: var(--main-gradient);
       -webkit-background-clip: text;
@@ -73,6 +89,13 @@
         visibility: hidden;
         pointer-events: none;
       }
+
+      &:hover {
+        background: var(--color-accent);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
 
     &::before {
@@ -80,6 +103,7 @@
       height: 0.1rem;
       background-color: var(--color-rgba-white-05);
       margin-right: 2rem;
+      transition: var(--transition);
       content: "";
     }
 

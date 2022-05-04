@@ -28,11 +28,21 @@
   }
 
   &.is-front-page {
+    --default-color: var(--color-rgba-white-05);
+
     .header__btn {
       padding: 0;
       background-color: transparent;
       border-radius: 0;
       border: none;
+      color: var(--color-rgba-white-05);
+
+      @include mq(sm) {
+        border: 1px solid var(--default-color);
+        border-radius: 2.5rem;
+        padding: 1rem 1.5rem;
+        margin-left: 1rem;
+      }
 
       &:hover,
       &:focus {
@@ -55,7 +65,14 @@
         color: var(--color-dark);
       }
     }
+
     box-shadow: 0 0 10px rgba($color: #1E1E1E, $alpha: 0.5);
+
+    .header__btn {
+      background-color: var(--color-accent);
+      color: var(--color-white) !important;
+      border-color: var(--color-accent);
+    }
   }
 
 	&__logo {

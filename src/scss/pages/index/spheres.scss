@@ -17,10 +17,6 @@
       display: block;
       margin-bottom: 2rem;
       font: var(--font-title-4);
-
-      br {
-        display: none;
-      }
     }
 
     @include mq(sm) {
@@ -142,6 +138,11 @@
     font: var(--font-body-S);
     color: var(--color-accent);
     text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
 
     @include mq(sm) {
       margin-left: 10.4rem;

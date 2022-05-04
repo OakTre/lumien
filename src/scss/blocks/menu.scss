@@ -217,8 +217,6 @@
     @include mq(sm) {
       gap: 1rem;
       justify-content: stretch;
-      flex-direction: column;
-      align-items: flex-start;
     }
   }
 

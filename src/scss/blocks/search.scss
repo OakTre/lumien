@@ -47,9 +47,18 @@
 
     &.mod-menu-search {
       margin-bottom: 4rem;
+      display: none;
+
+      @include mq(sm) {
+        display: block;
+      }
 
       .search__from-input {
         padding-left: 2rem;
+      }
+
+      .search__input-icon {
+        fill: #828282;
       }
     }
   }

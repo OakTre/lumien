@@ -24,6 +24,11 @@
 
   &__heading-text {
     font: var(--font-body-S);
+    max-width: 54rem;
+
+    @include mq(sm) {
+      max-width: 100%;
+    }
   }
 
   &__heading-content-block {
@@ -258,6 +263,20 @@
     margin: 0 auto;
     margin-top: 5rem;
     display: inline-block;
+
+    ._desctop {
+      @include mq(sm) {
+        display: none;
+      }
+    }
+
+    ._mobile {
+      display: none;
+
+      @include mq(sm) {
+        display: inline;
+      }
+    }
 
     @include mq(sm) {
       margin: 3rem auto 0 auto;
