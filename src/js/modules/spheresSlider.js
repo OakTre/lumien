@@ -21,6 +21,9 @@ gsap.registerPlugin(SplitText, ScrollTrigger, CSSRulePlugin);
 export default () => {
   if (window.matchMedia("(min-width: 767px)").matches) {
     const spheresTxtWrapper = document.querySelector(".spheres__txt-wrapper");
+
+    if (!spheresTxtWrapper) return;
+
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".spheres",
@@ -69,7 +72,6 @@ export default () => {
             if (index === swiper.activeIndex) {
               setTimeout(() => {
                 let offsetWidth = slide.querySelector("span").offsetWidth;
-                console.log(activeBorder);
 
                 activeBorder.style.width = offsetWidth + 12 + "px";
               }, 150);

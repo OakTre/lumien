@@ -3,6 +3,7 @@
     font: var(--font-body-M);
     margin-bottom: 5rem;
     max-width: 83.5rem;
+    color: var(--color-darken);
 
     @include mq(sm) {
       max-width: 100%;

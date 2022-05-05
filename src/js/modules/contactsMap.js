@@ -25,7 +25,10 @@ export default () => {
 
   const countryBtns = Array.from(document.querySelectorAll(".js-map-country"));
   const map = document.querySelector(".js-map");
-  const url = '/assets/include/countries.json';
+
+  if (!map) return;
+
+  const url = map.dataset.url;
   const heading = document.querySelector(".js-heading");
   const text = document.querySelector(".js-text");
   let response;

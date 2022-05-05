@@ -121,6 +121,7 @@
     width: 26.9rem;
     height: 28.8rem;
     object-fit: cover;
+    mix-blend-mode: darken;
 
     @include mq(lg) {
       width: 18.9rem;

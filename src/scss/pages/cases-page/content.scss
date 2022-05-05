@@ -11,6 +11,12 @@
     }
   }
 
+  &__select-warpper {
+    .choices__inner {
+      color: var(--text-color);
+    }
+  }
+
   &__content {
     gap: 3.6rem var(--grid-offset);
 

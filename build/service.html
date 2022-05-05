@@ -278,8 +278,12 @@
                 </div>
                 <form class="contacts-us__form form js-anim-fade-out" data-need-validation>
                   <div class="form__grid-inner">
-                    <label class="form__label">
-                      <input class="form__input input-reset" type="text" name="name" placeholder="Выберите тип оборудования" data-parsley-required>
+                    <label class="form__label select-wrapper mod-send-form custom-select">
+                      <select class="select js-custom-select" name="equipment-type">
+                        <option value="Выберите модель оборудования" placeholder>Выберите тип оборудования</option>
+                        <option value="first">first</option>
+                        <option value="second">second</option>
+                      </select>
                     </label>
                     <label class="form__label">
                       <input class="form__input input-reset" type="text" name="part-number" placeholder="Парт-номер" data-parsley-required>

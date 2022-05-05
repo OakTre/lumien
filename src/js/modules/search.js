@@ -20,7 +20,6 @@ export default () => {
 
   gsap.set(searchContainer, {autoAlpha: 0});
   gsap.set(searchForm, {yPercent: -150});
-  // gsap.set(searchContent, {autoAlpha: 0});
 
   timeline
     .to(header, {autoAlpha: 0, ease: "power4.out"}, "-=0.8")
@@ -73,6 +72,3 @@ export default () => {
     }, 1000);
   });
 };
-
-// searchContainer.classList.add("is-active");
-// searchContainer.classList.remove("is-active");

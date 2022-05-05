@@ -10,8 +10,11 @@ section.contacts-us
               | Пожалуйста, заполните, все поля приведённой формы. После получения сообщения наши специалисты обязательно свяжутся с вами для обсуждения деталей.
           form.contacts-us__form.form.js-anim-fade-out(data-need-validation)
             .form__grid-inner
-              label.form__label
-                input(type="text" class="form__input input-reset" name="name" placeholder="Выберите тип оборудования" data-parsley-required)
+              label.form__label.select-wrapper.mod-send-form.custom-select
+                select(name="equipment-type" class="select js-custom-select")
+                  option(value="Выберите модель оборудования" placeholder) Выберите тип оборудования
+                  option(value="first") first
+                  option(value="second") second
               label.form__label
                 input(type="text" class="form__input input-reset" name="part-number" placeholder="Парт-номер" data-parsley-required)
               label.form__label
