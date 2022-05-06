@@ -58,17 +58,9 @@ img {
   vertical-align: middle;
 
   &.lazy {
+    opacity: 0;
+    transition: opacity 300ms;
     &.loaded {
-      animation: opacityLazy 0.2s linear;
-    }
-  }
-
-  @keyframes opacityLazy {
-    from {
-      opacity: 0;
-    }
-
-    to {
       opacity: 1;
     }
   }
