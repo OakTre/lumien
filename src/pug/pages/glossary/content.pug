@@ -70,11 +70,13 @@ section.section-indent.top-offset.glossary
     .glossary__letters-wrapper
       .glossary__container
         .glossary__container-row
-          for item in arr_ru
-            a.glossary__container-item(href="#test")= item
+          for item, index in arr_ru
+            - let isEmpty = index === 4 ? "is-empty" : false
+            a.glossary__container-item(href="#test" class=isEmpty)= item
         .glossary__container-row
-          for item in arr_en
-            a.glossary__container-item(href="/")= item
+          for item, index in arr_en
+            - let isEmpty = index === 4 ? "is-empty" : false
+            a.glossary__container-item(href="#test" class=isEmpty)= item
     .grid-container
       .grid-container__block
       .grid-container__block.glossary__content-container

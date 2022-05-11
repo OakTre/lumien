@@ -65,13 +65,18 @@
       color: var(--color-accent);
     }
 
+    &.is-empty {
+      color: rgba($color: #000000, $alpha: 0.2);
+      pointer-events: none;
+    }
+
     &::after {
       position: absolute;
       top: 50%;
       right: 0;
       width: 1px;
       height: 1.5rem;
-      background-color: var(--border-color);
+      background-color: rgba($color: #000000, $alpha: 0.1);
       transform: translateY(-50%);
       content: "";
     }

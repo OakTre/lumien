@@ -30,6 +30,8 @@ section.product-advantages.section-indent
           .product-advantages__item-left-block
             .product-advantages__img-wrapper
               if (index === 0)
+                .product-advantages__video.js-play-video(data-video-url="https://www.youtube.com/watch?v=WsDyRAPFBC8")
+                  img(src="images/news/cart-img-main.jpg" alt="")
               else
                 img(data-src=`images/product-card/advantages-img${index}.png` src="#" alt="" class="product-advantages__item-img lazy")
 

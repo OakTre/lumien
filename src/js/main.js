@@ -31,6 +31,7 @@ import showMoreBtns from './modules/showMoreBtns.js';
 import aboutSectionAnim from './modules/aboutSectionAnim';
 import faqBtn from './modules/faqBtn.js';
 import playVideo from './modules/playVideo.js';
+import glossaryLetters from './modules/glossaryLetters.js';
 
 smoothscroll.polyfill();
 
@@ -68,6 +69,7 @@ documenReady(() => {
   aboutSectionAnim();
   faqBtn();
   playVideo();
+  glossaryLetters();
 
   // always last
   cartImgsSlider();
