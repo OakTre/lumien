@@ -84,6 +84,16 @@
 
   &__item-content {
     max-width: 44.8rem;
+
+    h5, h4, h3, h6 {
+      font: var(--font-title-2);
+      margin-bottom: 1.2rem;
+    }
+
+    p {
+      color: var(--text-color);
+      font: var(--font-body-M);
+    }
   }
 
   &__item-tag {
@@ -94,15 +104,5 @@
     border: 1px solid var(--border-color);
     color: var(--text-color);
     margin-bottom: 1rem;
-  }
-
-  &__item-heading {
-    font: var(--font-title-2);
-    margin-bottom: 1.2rem;
-  }
-
-  &__item-text {
-    color: var(--text-color);
-    font: var(--font-body-M);
   }
 }

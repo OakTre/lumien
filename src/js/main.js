@@ -30,6 +30,7 @@ import smoothscroll from 'smoothscroll-polyfill';
 import showMoreBtns from './modules/showMoreBtns.js';
 import aboutSectionAnim from './modules/aboutSectionAnim';
 import faqBtn from './modules/faqBtn.js';
+import playVideo from './modules/playVideo.js';
 
 smoothscroll.polyfill();
 
@@ -66,6 +67,7 @@ documenReady(() => {
   showMoreBtns();
   aboutSectionAnim();
   faqBtn();
+  playVideo();
 
   // always last
   cartImgsSlider();

@@ -35,87 +35,87 @@ export default () => {
   let placemark;
   let contactsMap;
 
+  function init() {
+    let zoom = 16;
+    let center = [55.811513, 37.624723];
+
+    contactsMap = new ymaps.Map(
+      map, {
+      center: center,
+      zoom: zoom,
+      controls: [],
+    }, {
+      searchControlProvider: "yandex#search",
+    }
+    )
+
+    let housesCollection = new ymaps.GeoObjectCollection(null, {
+      hideIconOnBalloonOpen: false,
+    });
+
+    // contactsMap.behaviors.disable('scrollZoom');
+    // contactsMap.behaviors.disable('drag');
+
+    // проходимся по бз и подставляем иконки на карту
+    response.forEach((city) => {
+      let marActive = `<a data-img="" href="" class="contacts-map__marker"><img src="images/map-logo.svg"></a>`
+
+      let infoCoordinates = [
+        [55.70, 37.30],
+        [55.80, 37.40]
+      ];
+
+      placemark = new ymaps.Placemark(
+        city.coords, {}, {
+        iconLayout: ymaps.templateLayoutFactory.createClass(marActive),
+        zIndex: 700,
+        zIndexHover: 700,
+        zIndexActive: 700,
+        iconShape: {
+          type: "Rectangle",
+          coordinates: [
+            [55.70, 37.30],
+            [55.80, 37.40]
+          ],
+        },
+      });
+
+      housesCollection.add(placemark);
+    });
+
+    contactsMap.geoObjects.add(housesCollection);
+
+    if (window.matchMedia("(min-width: 992px)").matches) {
+      // сдвигаем ценрт карты от блока
+      let pixelCenter = contactsMap.getGlobalPixelCenter(center);
+
+      pixelCenter = [
+        pixelCenter[0] - 400,
+        pixelCenter[1] - 100
+      ];
+
+      let geoCenter = contactsMap.options.get('projection').fromGlobalPixels(pixelCenter, contactsMap.getZoom());
+
+      contactsMap.setCenter(geoCenter);
+    } else {
+      // сдвигаем ценрт карты от блока
+      let pixelCenter = contactsMap.getGlobalPixelCenter(center);
+
+      pixelCenter = [
+        pixelCenter[0] - 0,
+        pixelCenter[1] - 0
+      ];
+
+      let geoCenter = contactsMap.options.get('projection').fromGlobalPixels(pixelCenter, contactsMap.getZoom());
+
+      contactsMap.setCenter(geoCenter);
+    }
+
+  }
+
   sendRequest("GET", url)
     .then(data => {
       response = data;
-
-      function init() {
-        let zoom = 16;
-        let center = [55.811513, 37.624723];
-
-        contactsMap = new ymaps.Map(
-          map, {
-            center: center,
-            zoom: zoom,
-            controls: [],
-          }, {
-            searchControlProvider: "yandex#search",
-          }
-        )
-
-        let housesCollection = new ymaps.GeoObjectCollection(null, {
-          hideIconOnBalloonOpen: false,
-        });
-
-        // contactsMap.behaviors.disable('scrollZoom');
-        // contactsMap.behaviors.disable('drag');
-
-        // проходимся по бз и подставляем иконки на карту
-        response.forEach((city) => {
-          let marActive = `<a data-img="" href="" class="contacts-map__marker"><img src="images/map-logo.svg"></a>`
-
-          let infoCoordinates = [
-            [55.70, 37.30],
-            [55.80, 37.40]
-          ];
-
-          placemark = new ymaps.Placemark(
-            city.coords, {}, {
-              iconLayout: ymaps.templateLayoutFactory.createClass(marActive),
-              zIndex: 700,
-              zIndexHover: 700,
-              zIndexActive: 700,
-              iconShape: {
-                type: "Rectangle",
-                coordinates: [
-                  [55.70, 37.30],
-                  [55.80, 37.40]
-                ],
-              },
-            });
-
-          housesCollection.add(placemark);
-        });
-
-        contactsMap.geoObjects.add(housesCollection);
-
-        if (window.matchMedia("(min-width: 992px)").matches) {
-          // сдвигаем ценрт карты от блока
-          let pixelCenter = contactsMap.getGlobalPixelCenter(center);
-
-          pixelCenter = [
-            pixelCenter[0] - 400,
-            pixelCenter[1] - 100
-          ];
-
-          let geoCenter = contactsMap.options.get('projection').fromGlobalPixels(pixelCenter, contactsMap.getZoom());
-
-          contactsMap.setCenter(geoCenter);
-        } else {
-          // сдвигаем ценрт карты от блока
-          let pixelCenter = contactsMap.getGlobalPixelCenter(center);
-
-          pixelCenter = [
-            pixelCenter[0] - 0,
-            pixelCenter[1] - 0
-          ];
-
-          let geoCenter = contactsMap.options.get('projection').fromGlobalPixels(pixelCenter, contactsMap.getZoom());
-
-          contactsMap.setCenter(geoCenter);
-        }
-
-      }
 
       // инициализируем карту
       ymaps.ready(init);

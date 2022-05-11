@@ -38,6 +38,20 @@
     padding: 3.8rem 6.3rem;
     margin: 7rem auto 0;
 
+    ._mobile {
+      display: none;
+    }
+
+    @include mq(sm) {
+      ._descktop {
+        display: none;
+      }
+
+      ._mobile {
+        display: inline;
+      }
+    }
+
     @include mq(md) {
       margin: 7rem 0;
       width: 100%;

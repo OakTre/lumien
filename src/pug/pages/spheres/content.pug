@@ -62,8 +62,8 @@ section.applications.section-indent.top-offset
             .applications-cart__img-wrapper
               img(src=`images/applications-cart/img${index}.jpg` alt=item.name class="applications-cart__img")
             .applications-cart__inner
-              h3.applications-cart__heading!= item.name
-              p.applications-cart__text!= item.text
+              h3!= item.name
+              p!= item.text
               span.applications-cart__icon
       button.button-reset.button.show-more-btn.applications__btn.js-mobile-btn
         span._hidden Скрыть
