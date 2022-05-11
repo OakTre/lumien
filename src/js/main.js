@@ -29,6 +29,7 @@ import animatedBlocks from './modules/animatedBlocks.js';
 import smoothscroll from 'smoothscroll-polyfill';
 import showMoreBtns from './modules/showMoreBtns.js';
 import aboutSectionAnim from './modules/aboutSectionAnim';
+import faqBtn from './modules/faqBtn.js';
 
 smoothscroll.polyfill();
 
@@ -64,6 +65,7 @@ documenReady(() => {
   animatedBlocks();
   showMoreBtns();
   aboutSectionAnim();
+  faqBtn();
 
   // always last
   cartImgsSlider();

@@ -177,7 +177,7 @@ section.section-indent.how-choose-screen-content
                   p
                     | Полотна для экранов Lumien выпускаются на основе текстиля, стекловолокна и винила. Полотно на тканевой основе благодаря прочной основе обеспечивает ровную, исключающую искажения изображений, поверхность. Полотно на основе стекловолокна выпускаются плотными и усиленными, и их не нужно натягивать со всех сторон. Полотна на основе винила могут растягиваться, обеспечивая необходимую плоскость полотна для качественного изображения. Все проекционные полотна Lumien экологически безопасны, полностью удовлетворяют требованиям пожарной безопасности, устойчивы к образованию плесени и просты в уходе (проекционные полотна можно мыть).
                 h3.how-choose-screen-content__heading.accordion__body-heading Виды проекционных полотен
-                .accordion__body-canvases-list
+                .accordion__body-canvases-list.js-mobile-list
                   for item in canvases_arr
                     .accordion__body-canvases-item.accordion__body-shiled
                       h3.accordion__body-shiled-heading= item.name
@@ -186,4 +186,7 @@ section.section-indent.how-choose-screen-content
                         ul.accordion__body-shiled-list
                           for feat in item.feautures
                             li.accordion__body-shiled-item= feat
+                  button.button-reset.button.mod-transparent.js-mobile-btn.show-more-btn.accordion__body-canvases-mobile-btn
+                    span._hidden Скрыть
+                    span._shown Показать ещё
       .how-choose-screen-content__container-block

@@ -70,7 +70,6 @@
   }
 
   &__link {
-    margin-right: 2rem;
     color: var(--color-accent);
 
     @include mq(sm) {
@@ -109,8 +108,11 @@
   }
 
   &__links {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 7rem;
     margin-bottom: 2rem;
+    gap: 2rem;
 
     @include mq(sm) {
       margin-top: 3rem;

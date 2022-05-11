@@ -17,7 +17,7 @@ section.section-indent.faq
       .faq__content-block
         p.faq__txt
           | Здесь вы найдёте ответы на наиболее часто встречающиеся вопросы по проекционным экранам. Если вы не нашли ответа на свой вопрос, вы можете задать нам его через форму, приведённую внизу страницы.
-        ul.accordion-list
+        ul.accordion-list.js-mobile-list
           for item in faq_arr
             li.accordion
               button.accordion__btn.button-reset.js-drop-menu-btn
@@ -36,6 +36,8 @@ section.section-indent.faq
                       li Проекционное полотно представляет собой ровную, туго натянутую поверхность, что создает оптимальные условия для показа изображения. Стены не всегда имеют идеальное выравнивание.
                     p
                       | Если вы покупаете проектор для профессиональных презентаций или домашнего кинотеатра, то целесообразно приобрести и проекционной экран, т.к. идеальное изображение вы сможете получить только на нем.
-
+        button.button.faq__mobile-btn.mod-transparent.button-reset.show-more-btn.js-mobile-btn
+          span._shown Показать ещё
+          span._hidden Скрыть
 
       .faq__content-block

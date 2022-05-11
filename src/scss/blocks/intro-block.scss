@@ -10,6 +10,12 @@
     }
   }
 
+  &__heading {
+    @include mq(sm) {
+      max-width: 90%;
+    }
+  }
+
   @include mq(sm) {
     height: 35.5rem;
   }

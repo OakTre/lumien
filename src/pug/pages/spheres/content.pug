@@ -55,7 +55,7 @@ section.applications.section-indent.top-offset
       .grid-container__block
       .grid-container__block
         h1.applications__heading.section-heading-offset.site-heading Сферы применения
-    .site-container.applications__content.grid-container
+    .site-container.applications__content.grid-container.js-mobile-list
       for item, index in applications_arr
         .applications__content-item
           a.applications-cart(href="/spheres-detail.html")
@@ -65,3 +65,6 @@ section.applications.section-indent.top-offset
               h3.applications-cart__heading!= item.name
               p.applications-cart__text!= item.text
               span.applications-cart__icon
+      button.button-reset.button.show-more-btn.applications__btn.js-mobile-btn
+        span._hidden Скрыть
+        span._shown Показать еще

@@ -6,10 +6,6 @@
     .news-page-cart__heading {
       color: var(--color-accent);
     }
-
-    .news-page-cart__img {
-      transform: scale(1.1);
-    }
   }
 
   @include mq(sm) {
@@ -74,6 +70,7 @@
     font: var(--font-title-4);
     max-width: 71.9rem;
     margin-bottom: 2.5rem;
+    transition: color var(--transition);
 
     @include mq(sm) {
       font: var(--font-title-mobile-4-bold);
@@ -183,7 +180,7 @@
       color: rgba($color: #fff, $alpha: 0.5);
 
       @include mq(sm) {
-        color: var(--color-dark);
+        color: rgba($color: #626262, $alpha: 0.5);
       }
     }
 

@@ -43,7 +43,9 @@ section.section-indent.cases-slider
       .cases-slider__container-block
       .cases-slider__container-block
         .cases-slider__heading-wrapper
-          h2.site-second-heading.cases-slider__heading Реализованные кейсы
+          .news__heading-link-wrapper
+            h2.site-second-heading.cases-slider__heading Кейсы
+            a.news__heading-link(href="/") все кейсы
           .slider-nav.cases-slider__nav
             button.slider-nav__btn.button-reset.js-cases-btn-prev
               +icon-mono("shevron-left")(width="9" height="13" class="slider-nav__btn-icon")
@@ -53,4 +55,4 @@ section.section-indent.cases-slider
       .swiper-wrapper
         for item in cases_page_arr
           .swiper-slide
-            +cases(item.img, item.tag, item.name, item.location, item.txt)
+            +cases(item.img, item.tag, item.name, item.loacatin, item.txt)

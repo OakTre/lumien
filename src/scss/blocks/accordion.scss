@@ -305,6 +305,14 @@
     grid-template-columns: repeat(8, 1fr);
     gap: var(--grid-offset);
     margin-top: 5rem;
+
+    &.is-active {
+      .accordion__body-canvases-item {
+        &:nth-child(n + 4) {
+          display: block;
+        }
+      }
+    }
   }
 
   &__body-canvases-item {
@@ -315,6 +323,10 @@
     @include mq(sm) {
       grid-column: 12 span;
       min-height: auto;
+
+      &:nth-child(n + 4) {
+        display: none;
+      }
     }
   }
 
@@ -350,6 +362,15 @@
         border-radius: 50%;
         content: "";
       }
+    }
+  }
+
+  &__body-canvases-mobile-btn {
+    display: none;
+
+    @include mq(sm) {
+      display: block;
+      grid-column: 12 span;
     }
   }
 }

@@ -1,6 +1,7 @@
 .detail-slider {
   &__container-block {
     position: relative;
+    min-width: 0;
 
     &:nth-child(1),
     &:nth-child(3) {

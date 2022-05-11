@@ -30,4 +30,33 @@
       margin-bottom: 5.6rem;
     }
   }
+
+  &__mobile-btn {
+    display: none;
+    width: 100%;
+    padding: 2.6rem;
+
+    @include mq(sm) {
+      display: block;
+      margin-top: 2.5rem;
+    }
+  }
+
+  .accordion-list {
+    @include mq(sm) {
+      .accordion {
+        &:nth-child(n + 5) {
+          display: none;
+        }
+      }
+
+      &.is-active {
+        .accordion {
+          &:nth-child(n + 4) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
 }

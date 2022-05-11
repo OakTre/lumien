@@ -25,7 +25,9 @@
   }
 
   &__nav {
-    display: none !important;
+    @include mq(sm) {
+      display: none !important;
+    }
   }
 
   .swiper-slide {

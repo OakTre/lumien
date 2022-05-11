@@ -4,6 +4,14 @@
 
     @include mq(sm) {
       gap: 1.5rem 0;
+
+      &.is-active {
+        .applications__content-item {
+          &:nth-child(n + 8) {
+            display: block;
+          }
+        }
+      }
     }
   }
 
@@ -17,6 +25,12 @@
     @include mq(md) {
       grid-column: 12 span;
     }
+
+    @include mq(sm) {
+      &:nth-child(n + 8) {
+        display: none ;
+      }
+    }
   }
 
   &__heading {
@@ -26,6 +40,18 @@
 
     @include mq(sm) {
       font: var(--font-title-3);
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    margin-top: 3rem;
+    display: none;
+    grid-column: 12 span;
+    padding: 2.6rem 4.3rem;
+
+    @include mq(sm) {
+      display: block;
     }
   }
 }

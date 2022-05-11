@@ -172,7 +172,7 @@
     margin-bottom: 3rem;
 
     @include mq(sm) {
-      font: 400 2rem/2.8rem var(--main-ff);
+      font: 400 2rem/2.8rem var(--main-ff) !important;
     }
   }
 
