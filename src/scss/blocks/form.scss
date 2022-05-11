@@ -202,14 +202,15 @@
     }
 
     input:checked {
-      ~p {
+      ~span {
         &::after {
           opacity: 1;
         }
       }
     }
 
-    p {
+    span {
+      display: inline-block;
       position: relative;
       font: var(--font-body-XS);
       font-family: var(--second-ff);

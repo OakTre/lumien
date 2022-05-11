@@ -48,11 +48,11 @@ export default () => {
 			if (btn.className.includes('mod-open')) {
 				onClose(btn, menuContainerElements[i], contentBtnHide, contentBtnOpen);
 			} else {
-				if (!btn.className.includes('js-drop-menu-leave-open')) {
-					linksTitleElements.map((elem, idx) => {
-						onClose(elem, menuContainerElements[idx], contentBtnHide, contentBtnOpen);
-					});
-				}
+				// if (!btn.className.includes('js-drop-menu-leave-open')) {
+				// 	linksTitleElements.map((elem, idx) => {
+				// 		onClose(elem, menuContainerElements[idx], contentBtnHide, contentBtnOpen);
+				// 	});
+				// }
 				onOpen(btn, menuContainerElements[i], menuElements[i], contentBtnHide, contentBtnOpen);
 			}
 		}

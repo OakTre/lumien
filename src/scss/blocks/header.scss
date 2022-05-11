@@ -52,7 +52,7 @@
   }
 
   &.is-fixed {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(44px);
     --default-color: var(--color-dark);
 
@@ -68,10 +68,12 @@
 
     box-shadow: 0 0 10px rgba($color: #1E1E1E, $alpha: 0.5);
 
-    .header__btn {
-      background-color: var(--color-accent);
-      color: var(--color-white) !important;
-      border-color: var(--color-accent);
+    @include mq(sm) {
+      .header__btn {
+        background-color: var(--color-accent);
+        color: var(--color-white) !important;
+        border-color: var(--color-accent);
+      }
     }
   }
 
