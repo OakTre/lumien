@@ -35,4 +35,8 @@ export default () => {
       }
     });
   })
+
+  window.lumien_API.refreshScollTrigger = () => {
+    ScrollTrigger.refresh();
+  }
 };

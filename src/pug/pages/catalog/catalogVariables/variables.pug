@@ -1,0 +1,261 @@
+-
+  let catalogCarts = [
+    {
+      imgs: ["img1", "img2"],
+      tags: [{name: "Новинка", new: true}, {name: "Электропривод"}],
+      name: "Eco Control",
+      txt: "Экономичный моторизованный экран для крепления на стену или потолок",
+      feats: ["Ширина экрана(см) 171–300", "Угол обзора 160°"]
+    },
+    {
+      imgs: ["img2", "img1"],
+      tags: [{name: "Натяжные на раме"}, {name: "Лидер продаж", sale: true}],
+      name: "Cinema Thin Bezel",
+      txt: "Натяжной экран c тонкой рамой толщиной 1 см",
+      feats: ["Ширина экрана(см) 178–354", "Угол обзора 160°"]
+    },
+    {
+      imgs: ["img2", "img1"],
+      tags: [{name: "Натяжные на раме"}],
+      name: "Cinema Control",
+      txt: "Экран для домашнего кинотеатра с электроприводом",
+      feats: ["Ширина экрана(см) 177–352", "Угол обзора 160°"]
+    },
+    {
+      imgs: ["img2", "img1"],
+      tags: [{name: "Натяжные на раме"}],
+      name: "Master Wire Control",
+      txt: "Электроприводные экраны на прочных стальных тросах, которые могут опускать экран до 5 метров",
+      feats: ["Ширина экрана(см) до 4000", "Угол обзора 160°"]
+    },
+    {
+      imgs: ["img2", "img1"],
+      tags: [{name: "Натяжные на раме"}],
+      name: "Master Wire Control",
+      txt: "Электроприводные экраны на прочных стальных тросах, которые могут опускать экран до 5 метров",
+      feats: ["Ширина экрана(см) до 4000", "Угол обзора 160°"]
+    },
+    {
+      imgs: ["img2", "img1"],
+      tags: [{name: "Натяжные на раме"}],
+      name: "Master Wire Control",
+      txt: "Электроприводные экраны на прочных стальных тросах, которые могут опускать экран до 5 метров",
+      feats: ["Ширина экрана(см) до 4000", "Угол обзора 160°"]
+    },
+    {
+      imgs: ["img2", "img1"],
+      tags: [{name: "Натяжные на раме"}],
+      name: "Master Wire Control",
+      txt: "Электроприводные экраны на прочных стальных тросах, которые могут опускать экран до 5 метров",
+      feats: ["Ширина экрана(см) до 4000", "Угол обзора 160°"]
+    },
+    {
+      imgs: ["img2", "img1"],
+      tags: [{name: "Натяжные на раме"}],
+      name: "Master Wire Control",
+      txt: "Электроприводные экраны на прочных стальных тросах, которые могут опускать экран до 5 метров",
+      feats: ["Ширина экрана(см) до 4000", "Угол обзора 160°"]
+    },
+    {
+      imgs: ["img2", "img1"],
+      tags: [{name: "Натяжные на раме"}],
+      name: "Master Wire Control",
+      txt: "Электроприводные экраны на прочных стальных тросах, которые могут опускать экран до 5 метров",
+      feats: ["Ширина экрана(см) до 4000", "Угол обзора 160°"]
+    },
+  ]
+
+  let catalogInpts = [
+    {
+      name: "Тип экрана",
+      inpts: [
+        {
+          name: "Все",
+          slug: "all"
+        },
+        {
+          name: "Мобильный на штативе",
+          slug: "mobile"
+        },
+        {
+          name: "Натяжной на раме",
+          slug: "rama"
+        },
+        {
+          name: "С функцией отражения внешней засветки",
+          slug: "light"
+        },
+        {
+          name: "C электроприводом",
+          slug: "privod"
+        },
+        {
+          name: "Встраиваемые",
+          slug: "embedded"
+        },
+        {
+          name: "Рулонные ручные",
+          slug: "custom"
+        },
+        {
+          name: "Для крупных инсталляций",
+          slug: "big"
+        }
+      ]
+    },
+    {
+      name: "Соотношение сторон",
+      inpts: [
+        {
+          name: "Все",
+          slug: "all"
+        },
+        {
+          name: "1:1",
+          slug: "1:1"
+        },
+        {
+          name: "2:35:1",
+          slug: "2:35:1"
+        },
+        {
+          name: "4:3",
+          slug: "4:3"
+        },
+        {
+          name: "16:9",
+          slug: "16:9"
+        },
+        {
+          name: "16:10",
+          slug: "16:10"
+        }
+      ]
+    },
+    {
+      name: "Размер рабочей области",
+      img: true
+    },
+    {
+      name: "Тип полотна",
+      tooltip: true,
+      inpts: [
+        {
+          name: "Все",
+          slug: "all"
+        },
+        {
+          name: "Matte White",
+          slug: "Matte White",
+        },
+        {
+          name: "Matte White Sound",
+          slug: "Matte White Sound"
+        },
+        {
+          name: "Matte White FiberGlass",
+          slug: "Matte White FiberGlass"
+        },
+        {
+          name: "High Contrast",
+          slug: "High Contrast"
+        },
+        {
+          name: "High Contrast Sound",
+          slug: "High Contrast Sound"
+        },
+        {
+          name: "Rear Projection",
+          slug: "Rear Projection"
+        },
+        {
+          name: "Front +Rear Projection",
+          slug: "Front +Rear Projection"
+        },
+        {
+          name: "Radiance 0.8",
+          slug: "Radiance 0.8"
+        }
+      ]
+    },
+  ]
+
+  let top_filter = [
+    {
+      name: "Eco",
+      descr: "15 товаров",
+      img: "top-filter-icon1"
+    },
+    {
+      name: "Cinema",
+      descr: "15 товаров",
+      img: "top-filter-icon2"
+    },
+    {
+      name: "Master",
+      descr: "10 товаров",
+      img: "top-filter-icon3"
+    },
+    {
+      name: "Radiance",
+      descr: "10 товаров",
+      img: "top-filter-icon4"
+    },
+    {
+      name: "Radiance",
+      descr: "10 товаров",
+      img: "top-filter-icon5"
+    },
+    {
+      name: "Аксессуары",
+      descr: "10 товаров",
+      img: "top-filter-icon6"
+    },
+  ]
+
+  let ategories = [
+    {
+      name: "Домашние развлечения",
+      slug: "cat"
+    },
+    {
+      name: "Музеи и выставки",
+      slug: "cat"
+    },
+    {
+      name: "Бары и рестораны",
+      slug: "cat"
+    },
+    {
+      name: "Образование",
+      slug: "cat"
+    },
+    {
+      name: "Образование",
+      slug: "cat"
+    },
+    {
+      name: "VR",
+      slug: "cat"
+    },
+    {
+      name: "Госсектор",
+      slug: "cat"
+    },
+    {
+      name: "Развлекательные площадки",
+      slug: "cat"
+    },
+    {
+      name: "Кинотеатр",
+      slug: "cat"
+    },
+    {
+      name: "Стадионы и арены",
+      slug: "cat"
+    },
+    {
+      name: "Актовые залы",
+      slug: "cat"
+    }
+  ]

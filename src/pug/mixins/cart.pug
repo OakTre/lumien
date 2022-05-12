@@ -4,8 +4,9 @@ mixin cart(tags, imgs, name, txt, feats, btn)
       if (tags)
         .cart__top
           for tag in tags
-            - let newClass = tag.new ? "_new" : null
-            span.cart__tag(class=`${newClass}`)= tag.name
+            - let newClass = tag.new ? "_new" : false
+            - let saleClass = tag.sale ? "_sale" : false
+            span.cart__tag(class=newClass class=saleClass)= tag.name
       a.cart__middle(href="/")
         .swiper.cart__img-slider.js-cart-img-slider
           .swiper-wrapper
@@ -26,8 +27,9 @@ mixin cart(tags, imgs, name, txt, feats, btn)
       if (tags)
         .cart__top
           for tag in tags
-            - let newClass = tag.new ? "_new" : null
-            span.cart__tag(class=`${newClass}`)= tag.name
+            - let newClass = tag.new ? "_new" : false
+            - let saleClass = tag.sale ? "_sale" : false
+            span.cart__tag(class=newClass class=saleClass)= tag.name
       .cart__middle
         .swiper.cart__img-slider.js-cart-img-slider
           .swiper-wrapper

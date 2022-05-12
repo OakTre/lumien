@@ -16,4 +16,8 @@ export default () => {
   const lazyLoadInstance = new LazyLoad({
     elements_selector: '.lazy',
   });
+
+  window.lumien_API.updateLazyLoad = () => {
+    lazyLoadInstance.update();
+  }
 };

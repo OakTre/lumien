@@ -1,0 +1,35 @@
+section.section-indent.catalog-inner
+  .site-container.grid-container
+    .grid-container__block
+      form.side-filter(action="")
+        for item in catalogInpts
+          if item.img
+            .side-filter__block
+              p.side-filter__legend= item.name
+              .side-filter__size
+                input(type="text" class="side-filter__size-input" name="centimeter" placeholder="См")
+                input(type="text" class="side-filter__size-input" name="inch" placeholder="Дюйм")
+                input(type="text" class="side-filter__size-input" name="centimeter" placeholder="См")
+          else
+            .side-filter__block
+              p.side-filter__legend= item.name
+              for inpt in item.inpts
+                .side-filter__block-list
+                  label.side-filter__label
+                    input(type="checkbox" class="visually-hidden" name=inpt.slug value=inpt.name)
+                    span.side-filter__label-name= inpt.name
+                    if item.tooltip
+                      span.tooltip.side-filter__label-tooltip.button-reset(arila-label="Открыть подсказку")
+                        +icon-multi("warning")(width="16" height="16" class="tooltip__icon")
+                        span.tooltip__text-wrapper
+                          span.tooltip__text
+                            | Универсальное полотно с белой матовой поверхностью на текстильной основе с покрытием ПВХ
+    .grid-container__block
+      ul.catalog-inner__List
+        for item, index in catalogCarts
+          li.catalog-inner__item
+            +cart(item.tags, item.imgs, item.name, item.txt, item.feats, null)
+      button.button-reset.button.mod-transparent.catalog-inner__btn
+        | Показать ещё
+      p.catalog-inner__text
+        | Экраны LUMIEN - качественные экраны для бизнеса, образования и домашнего кинотеатра.Они изготовлены с учётом современных достижений AV индустрии и всецело соответствуют предъявляемым к ним функциональным требованиям

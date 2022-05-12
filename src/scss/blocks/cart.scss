@@ -27,6 +27,12 @@
       color: var(--color-white);
       border-color: var(--color-accent);
     }
+
+    &._sale {
+      background-color: var(--color-purple);
+      color: var(--color-white);
+      border-color: var(--color-purple);
+    }
   }
 
   &__bottom {
@@ -73,6 +79,10 @@
     font: var(--font-title-4);
     margin-bottom: 1.5rem;
     transition: color var(--transition);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 
     @include mq(sm) {
       margin-bottom: 0.5rem;

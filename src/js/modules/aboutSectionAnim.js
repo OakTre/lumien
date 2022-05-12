@@ -2,13 +2,9 @@ import gsap from "gsap";
 import {
   ScrollTrigger
 } from "gsap/dist/ScrollTrigger";
-import SplitText from '../../assets/js/gsap-bonus/SplitText';
 
 export default () => {
-  // let splitedText = new SplitText(".about-company__num", {
-  //   type: 'lines, chars',
-  //   linesClass: "line"
-  // });
+  if (!document.querySelector(".about-company__num")) return;
 
   gsap.set(".about-company__num", {
     yPercent: 150

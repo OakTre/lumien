@@ -1,0 +1,47 @@
+.catalog-intro {
+  &__heading {
+    margin-bottom: 5rem;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.2rem;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    font: var(--font-body-S);
+    color: rgba($color: #000000, $alpha: 0.5);
+    transition: color var(--transition);
+
+    &:hover {
+      color: var(--color-dark);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &::after {
+      width: 11rem;
+      height: 0.1rem;
+      margin-left: 2.2rem;
+      background-color: var(--color-dark);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition);
+      content: "";
+    }
+
+    &.is-active {
+      color: var(--color-dark);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}

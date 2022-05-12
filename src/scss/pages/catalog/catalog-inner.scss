@@ -1,0 +1,89 @@
+.catalog-inner {
+  &__btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 7rem;
+  }
+
+  &__text {
+    font: var(--font-body-S);
+  }
+
+  &__List {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 5rem var(--grid-offset);
+    margin-bottom: 5rem;
+  }
+
+  &__item {
+    grid-column: 3 span;
+
+    .cart {
+      padding: 2rem;
+    }
+
+    .cart__feautures,
+    .cart__txt {
+      max-width: 80%;
+
+      @include mq(sm) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__item-help {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    padding: 5rem;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: conic-gradient(from 129.58deg at 13.2% 89.45%, #FF1D89 0deg, #FEF28A 31.02deg, #FF971D 258.75deg, #FF1D89 360deg);
+      opacity: 0.3;
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 21.3rem;
+      height: 40.4rem;
+      background-image: url(../images/catalog/help-question.svg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  &__item-help-legend {
+    font: var(--font-title-3);
+    margin-bottom: 3rem;
+  }
+
+  &__item-help-txt {
+    font: var(--font-body-S);
+    margin-bottom: 2rem;
+  }
+
+  &__item-help-more {
+    text-transform: uppercase;
+    margin-top: auto;
+    font: var(--font-body-S);
+  }
+}

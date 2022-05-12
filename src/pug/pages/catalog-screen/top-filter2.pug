@@ -1,0 +1,6 @@
+form.catalog-top-filter-categories(action="")
+  for item, index in ategories
+    label.catalog-top-filter-categories__label
+      input(type="checkbox" name=`${item.slug}${index}` value=item.name class="visually-hidden")
+      span.catalog-top-filter-categories__name= item.name
+      span.catalog-top-filter-categories__close

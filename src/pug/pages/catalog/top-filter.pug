@@ -1,0 +1,12 @@
+form.catalog-top-filter.js-catalog-top-filter-slider.swiper(action="")
+  .swiper-wrapper
+    for item, index in top_filter
+      - let isActive = index === 0 ? "is-active" : false
+
+      label.catalog-top-filter__label.swiper-slide(class=isActive)
+        input(type="radio" class="visually-hidden" name="types" value=item.name)
+        span.catalog-top-filter__item-wrapper
+          span.catalog-top-filter__item-name= item.name
+          span.catalog-top-filter__item-descr= item.descr
+        span.catalog-top-filter__item-icon
+          +icon-multi(item.img)(width="55" height="42")
