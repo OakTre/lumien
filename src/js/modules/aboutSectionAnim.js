@@ -10,23 +10,44 @@ export default () => {
   //   linesClass: "line"
   // });
 
-  // gsap.set(splitedText.chars, {
-  //   yPercent: 200
-  // });
+  gsap.set(".about-company__num", {
+    yPercent: 150
+  });
 
-  // ScrollTrigger.create({
-  //   trigger: ".about-company",
-  //   onEnter: function () {
-  //     gsap.to(splitedText.chars, {
-  //       yPercent: 0,
-  //       duration: 0.6
-  //     })
-  //   },
-  //   onEnterBack: function () {
+  gsap.set(".about-company__txt", {
+    yPercent: 150
+  });
 
-  //   },
-  //   onLeave: function () {
+  gsap.set(".about-company__img", {
+    yPercent: 70,
+    opacity: 0
+  });
 
-  //   }
-  // });
+  ScrollTrigger.create({
+    trigger: ".about-company",
+    start: "top 70%",
+    onEnter: function () {
+      gsap.to(".about-company__num", {
+        yPercent: 0,
+        duration: 0.3
+      });
+
+      gsap.to(".about-company__txt", {
+        yPercent: 0,
+        duration: 0.3
+      });
+
+      gsap.to(".about-company__img", {
+        yPercent: 0,
+        opacity: 1,
+        duration: 0.3
+      });
+    },
+    onEnterBack: function () {
+
+    },
+    onLeave: function () {
+
+    }
+  });
 };
