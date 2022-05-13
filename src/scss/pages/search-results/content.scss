@@ -2,10 +2,18 @@
   &__container-block {
     &:nth-child(1) {
       grid-column: 8 span;
+
+      @include mq(md) {
+        grid-column: 12 span;
+      }
     }
 
     &:nth-child(2) {
       grid-column: 4 span;
+
+      @include mq(md) {
+        grid-column: 12 span;
+      }
     }
   }
 
@@ -34,6 +42,10 @@
     width: 3rem;
     height: 3rem;
     fill: var(--border-color);
+
+    @include mq(sm) {
+      display: none;
+    }
   }
 
   &__form-btn {
@@ -57,14 +69,31 @@
       background-color: var(--color-accent);
       color: var(--color-white);
     }
+
+    @include mq(sm) {
+      font: var(--font-body-S);
+    }
   }
 
   &__input {
     border-radius: 1rem 0 0 1rem;
+
+    @include mq(sm) {
+      font: var(--font-body-S);
+      padding: 1.8rem;
+
+      &::placeholder {
+        font: var(--font-body-S);
+      }
+    }
   }
 
   &__container {
     margin-bottom: 10rem;
+
+    @include mq(sm) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__legend {
@@ -72,7 +101,41 @@
     margin-bottom: 5rem;
   }
 
+  &__results-container {
+    @include mq(md) {
+      gap: var(--grid-offset);
+    }
+  }
+
   &__results-item {
     grid-column: 4 span;
+
+    @include mq(md) {
+      grid-column: 6 span;
+    }
+
+    @include mq(sm) {
+      grid-column: 12 span;
+    }
+  }
+
+  &__form-labels {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    .content-btn__label {
+      flex-shrink: 0;
+      margin: 0;
+    }
+
+    @include mq(sm) {
+      gap: 0 1.5rem;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 }
