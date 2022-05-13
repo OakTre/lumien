@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 5rem;
+  overflow: hidden;
 
   &__label {
     position: relative;
@@ -12,9 +13,14 @@
     padding: 4rem;
     border-radius: 2rem;
     background-color: var(--color-bg-input);
-    min-width: 24.8rem;
+    width: 24.8rem;
     cursor: pointer;
     overflow: hidden;
+
+    @include mq(sm) {
+      padding: 2.5rem;
+      width: 23.3rem;
+    }
 
     --color-item: var(--text-color);
 

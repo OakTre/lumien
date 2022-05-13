@@ -180,4 +180,27 @@
       transform: translate(-50%, -50%);
     }
   }
+
+  &__reset-btn {
+    margin-top: 7rem;
+    font: var(--font-body-XS);
+    color: var(--border-color);
+    transition: color var(--transition);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+
+    &:active {
+      color: #e4861c;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    padding: 2.1rem;
+    margin-top: 7.2rem;
+  }
 }

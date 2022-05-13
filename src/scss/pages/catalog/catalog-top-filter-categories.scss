@@ -4,6 +4,10 @@
   gap: 1.8rem 3rem;
   margin-bottom: 5rem;
 
+  @include mq(lg) {
+    display: none;
+  }
+
   &__label {
     position: relative;
     flex-shrink: 0;
@@ -68,5 +72,45 @@
     &::after {
       transform: translate(-50%, -50%) rotate(45deg);
     }
+  }
+}
+
+
+.catalog-filter-mobile-btn {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.2rem;
+  font: var(--font-body-S);
+  font-weight: 500;
+  background-color: var(--color-bg-input);
+  border-radius: 1rem;
+  width: 100%;
+  margin-bottom: 6rem;
+  color: #000;
+
+  @include mq(lg) {
+    display: flex;
+  }
+
+  &__icon-wrapper {
+    width: 4.2rem;
+    height: 4.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--color-white);
+  }
+
+  &__icon {
+    display: block;
+    fill: var(--color-accent);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &:active {
+    background-color: #efeded;
   }
 }

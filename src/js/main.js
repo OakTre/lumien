@@ -34,6 +34,8 @@ import playVideo from './modules/playVideo.js';
 import glossaryLetters from './modules/glossaryLetters.js';
 import catalogTopFilterSlider from './modules/catalogTopFilterSlider.js';
 import breadcrumbsCostil from './modules/breadcrumbsCostil.js';
+import initModal from './modules/initModal.js';
+import clearFilter from './modules/clearFilter.js';
 
 smoothscroll.polyfill();
 
@@ -74,6 +76,8 @@ documenReady(() => {
   glossaryLetters();
   catalogTopFilterSlider();
   breadcrumbsCostil();
+  initModal();
+  clearFilter();
 
   // always last
   cartImgsSlider();

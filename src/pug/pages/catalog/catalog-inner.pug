@@ -1,7 +1,7 @@
 section.section-indent.catalog-inner
   .site-container.grid-container
     .grid-container__block
-      form.side-filter(action="")
+      form.side-filter.js-filter-form-descktop(action="")
         for item in catalogInpts
           if item.img
             .side-filter__block
@@ -24,6 +24,7 @@ section.section-indent.catalog-inner
                         span.tooltip__text-wrapper
                           span.tooltip__text
                             | Универсальное полотно с белой матовой поверхностью на текстильной основе с покрытием ПВХ
+      button.button-reset.side-filter__reset-btn.js-clear-btn(data-form="desctop") Очистить фильтр
     .grid-container__block
       ul.catalog-inner__List
         for item, index in catalogCarts

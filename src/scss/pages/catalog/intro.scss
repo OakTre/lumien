@@ -3,11 +3,21 @@
     margin-bottom: 5rem;
   }
 
+  .grid-container__block {
+    min-width: 0;
+  }
+
   &__links {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 2.2rem;
+
+    @include mq(lg) {
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__link {
@@ -17,13 +27,16 @@
     color: rgba($color: #000000, $alpha: 0.5);
     transition: color var(--transition);
 
-    &:hover {
-      color: var(--color-dark);
+    @include mq(lg, min) {
+      &:hover {
+        color: var(--color-dark);
 
-      &::after {
-        opacity: 1;
+        &::after {
+          opacity: 1;
+        }
       }
     }
+
 
     &::after {
       width: 11rem;
@@ -34,6 +47,12 @@
       pointer-events: none;
       transition: opacity var(--transition);
       content: "";
+
+      @include mq(lg) {
+        opacity: 1;
+        width: 4.1rem;
+        margin-left: 1.5rem;
+      }
     }
 
     &.is-active {
@@ -41,6 +60,10 @@
 
       &::after {
         opacity: 1;
+      }
+
+      @include mq(lg) {
+        color: var(--color-accent);
       }
     }
   }

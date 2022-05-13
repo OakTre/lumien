@@ -1,3 +1,8 @@
+button.button-reset.catalog-filter-mobile-btn(data-path="filter")
+  span Фильтры
+  span.catalog-filter-mobile-btn__icon-wrapper
+    +icon-mono("filter")(class="catalog-filter-mobile-btn__icon")
+
 form.catalog-top-filter-categories(action="")
   for item, index in ategories
     label.catalog-top-filter-categories__label
