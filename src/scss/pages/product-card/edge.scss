@@ -1,4 +1,10 @@
 .edge {
+  &__container {
+    @include mq(lg) {
+      display: block;
+    }
+  }
+
   &__container-block {
     &:nth-child(1) {
       grid-column: 1 span;
@@ -13,6 +19,14 @@
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     gap: 7rem var(--grid-offset);
+
+    @include mq(md) {
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    @include mq(md) {
+      gap: 4rem 1rem;
+    }
   }
 
   &__item {
@@ -20,8 +34,23 @@
     display: flex;
     align-items: center;
 
+    @include mq(md) {
+      grid-column: 4 span;
+    }
+
+    @include mq(sm) {
+      grid-column: 6 span;
+      flex-direction: column;
+    }
+
     p {
       font: var(--font-body-M);
+
+      @include mq(sm) {
+        font: var(--font-body-S);
+        text-align: center;
+        max-width: 80%;
+      }
     }
   }
 
@@ -36,5 +65,10 @@
     border-radius: 50%;
     object-fit: cover;
     margin-right: 2rem;
+
+    @include mq(sm) {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
   }
 }

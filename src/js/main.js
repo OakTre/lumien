@@ -33,6 +33,7 @@ import faqBtn from './modules/faqBtn.js';
 import playVideo from './modules/playVideo.js';
 import glossaryLetters from './modules/glossaryLetters.js';
 import catalogTopFilterSlider from './modules/catalogTopFilterSlider.js';
+import breadcrumbsCostil from './modules/breadcrumbsCostil.js';
 
 smoothscroll.polyfill();
 
@@ -72,6 +73,7 @@ documenReady(() => {
   playVideo();
   glossaryLetters();
   catalogTopFilterSlider();
+  breadcrumbsCostil();
 
   // always last
   cartImgsSlider();

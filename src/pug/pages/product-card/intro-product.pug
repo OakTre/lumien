@@ -56,6 +56,11 @@
   ]
 
 section.section-indent.intro-product
+  .site-container.intro-product__mobile
+    .tag__container.intro-product__tag-container
+      span.tag Электропривод
+    h2.intro-product__heading Cinema Tensioned Control
+    p.intro-product__txt Электроприводной экран с системой натяжения по бокам
   .site-container.intro-product__container.grid-container
     .intro-product__block
       .intro-product__slider.swiper.js-product-intro-slider
@@ -68,6 +73,7 @@ section.section-indent.intro-product
             img.intro-product__slider-img.lazy(data-src="images/intro-product/slide3.jpg" src="#" alt="")
           .swiper-slide
             img.intro-product__slider-img.lazy(data-src="images/intro-product/slide3.jpg" src="#" alt="")
+        .js-product-intro-pagination.intro-product__slider-pagination
 
       .intro-product__slider-thumb.swiper.js-product-intro-thumb-slider
         .swiper-wrapper
@@ -80,10 +86,11 @@ section.section-indent.intro-product
           .swiper-slide
             img.intro-product__slider-thumb-img.lazy(data-src="images/intro-product/slide3.jpg" src="#" alt="")
     .intro-product__block
-      .tag__container.intro-product__tag-container
-        span.tag Электропривод
-      h2.intro-product__heading Cinema Tensioned Control
-      p.intro-product__txt Электроприводной экран с системой натяжения по бокам
+      .intro-product__descktop
+        .tag__container.intro-product__tag-container
+          span.tag Электропривод
+        h2.intro-product__heading Cinema Tensioned Control
+        p.intro-product__txt Электроприводной экран с системой натяжения по бокам
       .product-details
         .product-details__top
           for item in details

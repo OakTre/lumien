@@ -3,6 +3,32 @@
     align-items: flex-start;
   }
 
+  &__tag-container {
+    @include mq(sm) {
+      margin-bottom: 1.5rem;
+    }
+    .tag {
+      @include mq(sm) {
+        font: var(--font-body-XXS);
+
+      }
+    }
+  }
+
+  &__mobile {
+    display: none;
+
+    @include mq(sm) {
+      display: block;
+    }
+  }
+
+  &__descktop {
+    @include mq(sm) {
+      display: none;
+    }
+  }
+
   &__block {
     min-width: 0;
 
@@ -15,17 +41,35 @@
     &:nth-child(2) {
       grid-column: 5 span;
     }
+
+    @include mq(md) {
+      grid-column: 12 span !important;
+
+      &:nth-child(1) {
+        position: static;
+      }
+    }
   }
 
   &__heading {
     margin-bottom: 2rem;
     font: 700 5.6rem/120% var(--second-ff);
     letter-spacing: -0.02em;
+
+    @include mq(sm) {
+      font: 700 3.2rem/3.8rem var(--second-ff);
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__txt {
     color: var(--text-color);
     margin-bottom: 3rem;
+
+    @include mq(sm) {
+      font: var(--font-body-S);
+      margin-bottom: 4rem;
+    }
   }
 
   &__legend {
@@ -36,6 +80,15 @@
     width: 79.8rem;
     height: 51.8rem;
     margin-bottom: 5rem;
+
+    @include mq(lg) {
+      width: 100%;
+      height: auto;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__slider-img {
@@ -44,6 +97,17 @@
     object-fit: contain;
     mix-blend-mode: darken;
     isolation: isolate;
+
+    @include mq(lg) {
+      width: auto;
+      height: 42.8rem;
+      margin: 0 auto;
+      display: block;
+    }
+
+    @include mq(sm) {
+      height: 22.4rem;
+    }
   }
 
   &__slider-thumb {
@@ -58,6 +122,10 @@
         }
       }
     }
+
+    @include mq(md) {
+      display: none;
+    }
   }
 
   &__slider-thumb-img {
@@ -70,6 +138,32 @@
     isolation: isolate;
     transition: border-color var(--transition);
   }
+
+  &__slider-pagination {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+
+    .swiper-pagination-bullet {
+      display: block;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      border: 1px solid #000;
+      background-color: transparent;
+      opacity: 1;
+
+      &.swiper-pagination-bullet-active {
+        background-color: #000;
+      }
+    }
+  }
 }
 
 .product-details {
@@ -78,16 +172,29 @@
   background-color: var(--color-bg);
   margin-bottom: 5rem;
 
+  @include mq(sm) {
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+  }
+
   &__top {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem 2rem;
     margin-bottom: 3.7rem;
+
+    @include mq(sm) {
+      gap: 3rem 0;
+    }
   }
 
   &__item {
     display: block;
     grid-column: 2 span;
+
+    @include mq(sm) {
+      grid-column: 4 span;
+    }
   }
 
   &__label-name {
@@ -135,9 +242,19 @@
     display: flex;
     align-items: center;
 
+    @include mq(sm) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
     .product-details__label-name {
       margin: 0;
       margin-right: 3rem;
+
+      @include mq(sm) {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+      }
     }
   }
 
@@ -211,11 +328,30 @@
     margin-top: 5rem;
     padding-top: 4rem;
     border-top: 1px solid var(--border-color);
+
+    @include mq(lg) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    @include mq(sm) {
+      padding-top: 2rem;
+    }
   }
 
   &__price {
     font: var(--font-title-3);
     color: var(--border-color);
+
+    @include mq(lg) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include mq(sm) {
+      font: var(--font-title-4);
+      margin-bottom: 1.4rem;
+      align-self: center;
+    }
   }
 
   &__btn {

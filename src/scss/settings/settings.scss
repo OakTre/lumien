@@ -116,6 +116,10 @@ a {
 
   &.overflow-visible {
     overflow: visible;
+
+    @include mq(md) {
+      overflow: hidden;
+    }
   }
 }
 
