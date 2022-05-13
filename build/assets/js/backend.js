@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const searchContentOk = document.querySelector(".search__content-wrapper");
   const searchContentError = document.querySelector(".search__content-empty-results");
 
-  searchInput.addEventListener("keyup", ()=>{
+  searchInput.addEventListener("keyup", () => {
     clearTimeout(timerDelay);
 
     timerDelay = setTimeout(() => {
@@ -42,8 +42,38 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
 
   // отправка формы и перевод на страницу с результатами
-  searchForm.addEventListener("submit", (e)=>{
+  searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
   });
   // поиск в хедере END
+
+  // поиск в мобилке
+  let timerDelayMobile;
+  const searchInputMobile = document.querySelector(".js-search-input-mobile");
+  const searchResults = document.querySelector(".menu__search-results");
+  const hideWhenSearch = document.querySelector(".js-hide-when-search");
+
+  searchInputMobile.addEventListener("keyup", () => {
+    clearTimeout(timerDelayMobile);
+
+    timerDelayMobile = setTimeout(() => {
+
+      // показываем контент после подставновки результатов поиска
+      searchResults.classList.add("is-shown");
+      hideWhenSearch.style.display = "none";
+
+      // если нет результатов
+      // searchContentOk.classList.add("is-hidden");
+      // показываем заглушку
+      // searchContentError.classList.add("is-active");
+
+      // убираем контент если пустое поле ввода
+      if (searchInputMobile.value === "") {
+        searchResults.classList.remove("is-shown");
+        hideWhenSearch.style.display = "block";
+      }
+
+    }, 500);
+  });
+  // поиск в мобилке END
 });

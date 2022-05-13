@@ -14,7 +14,7 @@ export default () => {
   const searchContainer = document.querySelector(".search");
   const header = document.querySelector(".header");
   const searchForm = document.querySelector(".search__container");
-  const searchInput = document.querySelector(".search__from-input");
+  const searchInput = document.querySelector(".js-search-input");
   const searchContent = document.querySelector(".search__content");
   const layer = document.querySelector(".search__layer");
 

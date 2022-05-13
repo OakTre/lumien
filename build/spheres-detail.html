@@ -40,7 +40,7 @@
           <div class="menu__block">
             <form class="search__form mod-menu-search">
               <div class="search__input-label">
-                <input class="search__from-input" type="text" name="q" placeholder="Найти..">
+                <input class="search__from-input js-search-input-mobile" type="text" name="q" placeholder="Найти..">
                 <button class="button-reset search__form-submit-btn" type="submit">
                   <svg class="icon icon-search search__input-icon" width="22" height="22">
                     <use xlink:href="images/sprites/sprite-mono.svg#search"></use>
@@ -48,62 +48,177 @@
                 </button>
               </div>
             </form>
-            <div class="menu__block-inner"><span class="_bottom-line"></span>
-              <nav class="menu__nav menu__nav_grid-container">
-                <ul class="menu__nav-list">
-                  <li class="menu__nav-item"><a class="menu__nav-link menu__legend" href="/common-catalog.html">Каталог</a></li>
-                  <li class="menu__nav-item"><a class="menu__nav-link menu__legend" href="/cases-page.html">Кейсы</a></li>
-                  <li class="menu__nav-item"><a class="menu__nav-link menu__legend" href="/">О компании</a></li>
-                  <li class="menu__nav-item"><a class="menu__nav-link menu__legend" href="/">Дилерам</a></li>
-                  <li class="menu__nav-item"><a class="menu__nav-link menu__legend" href="/news.html">Новости</a></li>
-                  <li class="menu__nav-item"><a class="menu__nav-link menu__legend" href="/contacts.html">Контакты</a></li>
-                </ul>
-              </nav>
-              <div class="menu__nav-container menu__nav_grid-container">
-                <nav class="menu__nav"><a class="menu__legend menu__nav-legend" href="/">Сферы применения</a>
-                  <ul class="menu__nav-grid-list">
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Образование</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Гос.сектор</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Бизнес</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Кинотеатры</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Домашнее использование</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Стадионы и арены</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Музеи и выставки</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Актовые залы</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Бары и рестораны</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Гостиничый сектор</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">VR</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Развлекательные площадки</a></li>
-                  </ul>
-                </nav>
-                <nav class="menu__nav"><a class="menu__legend menu__nav-legend" href="/">Клиентам</a>
-                  <ul class="menu__nav-grid-list">
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/how-choose-screen.html">Как выбрать экран</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/files.html">Материалы для скачивания</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/service.html">Сервисное обслуживание</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/glossary.html">Глоссарий</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/faq.html">FAQ</a></li>
-                    <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/">Регистрация изделий</a></li>
-                  </ul>
-                </nav>
+            <div class="menu__search-results">
+              <div class="search__content-col">
+                <div class="search__content-row">
+                  <div class="search__content-heading-wrapper">
+                    <h3 class="search__content-heading">Каталог</h3><a class="search__content-link" href="/">все найденные</a>
+                  </div>
+                  <div class="menu__search-results-carts"><a class="cart" href="/">
+                      <div class="cart__top"><span class="cart__tag">Натяжные на раме</span>
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img lazy" data-src="images/cart/img1.png" src="#" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Cinema Thin Bezel</h4>
+                        <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
+                        </div>
+                      </div></a><a class="cart" href="/">
+                      <div class="cart__top"><span class="cart__tag">Натяжные на раме</span>
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img lazy" data-src="images/cart/img1.png" src="#" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Cinema Thin Bezel</h4>
+                        <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
+                        </div>
+                      </div></a><a class="cart" href="/">
+                      <div class="cart__top"><span class="cart__tag">Натяжные на раме</span>
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img lazy" data-src="images/cart/img1.png" src="#" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Cinema Thin Bezel</h4>
+                        <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
+                        </div>
+                      </div></a><a class="cart" href="/">
+                      <div class="cart__top"><span class="cart__tag">Натяжные на раме</span>
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img lazy" data-src="images/cart/img1.png" src="#" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Cinema Thin Bezel</h4>
+                        <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
+                        </div>
+                      </div></a><a class="cart" href="/">
+                      <div class="cart__top"><span class="cart__tag">Натяжные на раме</span>
+                      </div>
+                      <div class="cart__middle">
+                        <div class="swiper cart__img-slider js-cart-img-slider">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="cart__img lazy" data-src="images/cart/img1.png" src="#" alt="Натяжной экран c тонкой рамой толщиной 1 см"/></div>
+                          </div>
+                        </div>
+                        <div class="cart__img-pagination swiper-pagination"></div>
+                      </div>
+                      <div class="cart__bottom">
+                        <h4 class="cart__name">Cinema Thin Bezel</h4>
+                        <p class="cart__txt">Натяжной экран c тонкой рамой толщиной 1 см</p>
+                        <div class="cart__feautures"><span class="cart__feautures-item">Ширина экрана(см) 178–354</span><span class="cart__feautures-item">Угол обзора 160°</span>
+                        </div>
+                      </div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="search__content-col">
+                <div class="search__content-row">
+                  <div class="search__content-heading-wrapper">
+                    <h3 class="search__content-heading">Кейсы</h3><a class="search__content-link" href="/">все найденные</a>
+                  </div>
+                  <div class="search__content-cards-wrapper"><a class="search__content-card lazy" href="/" data-bg="images/search/img1.jpg" data-bg-fallback="images/search/img1.jpg">
+                      <p class="search__content-card-txt">Актовый зал дома молодёжи «Пулковец»</p></a><a class="search__content-card lazy" href="/" data-bg="images/search/img2.jpg" data-bg-fallback="images/search/img2.jpg">
+                      <p class="search__content-card-txt">Центр Здоровья Verba Mayr</p></a><a class="search__content-card lazy" href="/" data-bg="images/search/img2.jpg" data-bg-fallback="images/search/img2.jpg">
+                      <p class="search__content-card-txt">Центр Здоровья Verba Mayr</p></a><a class="search__content-card lazy" href="/" data-bg="images/search/img2.jpg" data-bg-fallback="images/search/img2.jpg">
+                      <p class="search__content-card-txt">Центр Здоровья Verba Mayr</p></a></div>
+                </div>
+                <div class="search__content-row">
+                  <div class="search__content-heading-wrapper">
+                    <h3 class="search__content-heading">Новости</h3><a class="search__content-link" href="/">смотреть все найденные</a>
+                  </div>
+                  <div class="search__content-cards-wrapper"><a class="search__content-card lazy" href="/" data-bg="images/search/img3.jpg" data-bg-fallback="images/search/img1.jpg">
+                      <p class="search__content-card-txt">Master Recessed Control – must have для корпоративного сектора..</p></a><a class="search__content-card lazy" href="/" data-bg="images/search/img4.jpg" data-bg-fallback="images/search/img2.jpg">
+                      <p class="search__content-card-txt">Lumien Radiance: отражение внешней засветки</p></a><a class="search__content-card lazy" href="/" data-bg="images/search/img4.jpg" data-bg-fallback="images/search/img2.jpg">
+                      <p class="search__content-card-txt">Lumien Radiance: отражение внешней засветки</p></a><a class="search__content-card lazy" href="/" data-bg="images/search/img4.jpg" data-bg-fallback="images/search/img2.jpg">
+                      <p class="search__content-card-txt">Lumien Radiance: отражение внешней засветки</p></a></div>
+                </div>
               </div>
             </div>
-            <div class="menu__download-links-wrapper"><a class="menu__download-link" href="/" download>Брошюра
-                <div class="menu__download-icon-wrapper">
-                  <svg class="icon icon-dwnld menu__download-link-icon" width="9" height="13">
-                    <use xlink:href="images/sprites/sprite-mono.svg#dwnld"></use>
-                  </svg>
-                </div></a><a class="menu__download-link" href="/" download>Прайс-лист
-                <div class="menu__download-icon-wrapper">
-                  <svg class="icon icon-dwnld menu__download-link-icon" width="9" height="13">
-                    <use xlink:href="images/sprites/sprite-mono.svg#dwnld"></use>
-                  </svg>
-                </div></a><a class="menu__download-link" href="/" download>Каталог
-                <div class="menu__download-icon-wrapper">
-                  <svg class="icon icon-dwnld menu__download-link-icon" width="9" height="13">
-                    <use xlink:href="images/sprites/sprite-mono.svg#dwnld"></use>
-                  </svg>
-                </div></a></div>
+            <div class="js-hide-when-search">
+              <div class="menu__block-inner"><span class="_bottom-line"></span>
+                <nav class="menu__nav menu__nav_grid-container">
+                  <ul class="menu__nav-list">
+                    <li class="menu__nav-item"><a class="menu__nav-link menu__legend" href="/common-catalog.html">Каталог</a></li>
+                    <li class="menu__nav-item"><a class="menu__nav-link menu__legend" href="/cases-page.html">Кейсы</a></li>
+                    <li class="menu__nav-item"><a class="menu__nav-link menu__legend" href="/">О компании</a></li>
+                    <li class="menu__nav-item"><a class="menu__nav-link menu__legend" href="/">Дилерам</a></li>
+                    <li class="menu__nav-item"><a class="menu__nav-link menu__legend" href="/news.html">Новости</a></li>
+                    <li class="menu__nav-item"><a class="menu__nav-link menu__legend" href="/contacts.html">Контакты</a></li>
+                  </ul>
+                </nav>
+                <div class="menu__nav-container menu__nav_grid-container">
+                  <nav class="menu__nav"><a class="menu__legend menu__nav-legend" href="/">Сферы применения</a>
+                    <ul class="menu__nav-grid-list">
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Образование</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Гос.сектор</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Бизнес</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Кинотеатры</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Домашнее использование</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Стадионы и арены</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Музеи и выставки</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Актовые залы</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Бары и рестораны</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Гостиничый сектор</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">VR</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/spheres-detail.html">Развлекательные площадки</a></li>
+                    </ul>
+                  </nav>
+                  <nav class="menu__nav"><a class="menu__legend menu__nav-legend" href="/">Клиентам</a>
+                    <ul class="menu__nav-grid-list">
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/how-choose-screen.html">Как выбрать экран</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/files.html">Материалы для скачивания</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/service.html">Сервисное обслуживание</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/glossary.html">Глоссарий</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/faq.html">FAQ</a></li>
+                      <li class="menu__nav-item-small"><a class="menu__nav-link menu__legend-small" href="/">Регистрация изделий</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="menu__download-links-wrapper"><a class="menu__download-link" href="/" download>Брошюра
+                  <div class="menu__download-icon-wrapper">
+                    <svg class="icon icon-dwnld menu__download-link-icon" width="9" height="13">
+                      <use xlink:href="images/sprites/sprite-mono.svg#dwnld"></use>
+                    </svg>
+                  </div></a><a class="menu__download-link" href="/" download>Прайс-лист
+                  <div class="menu__download-icon-wrapper">
+                    <svg class="icon icon-dwnld menu__download-link-icon" width="9" height="13">
+                      <use xlink:href="images/sprites/sprite-mono.svg#dwnld"></use>
+                    </svg>
+                  </div></a><a class="menu__download-link" href="/" download>Каталог
+                  <div class="menu__download-icon-wrapper">
+                    <svg class="icon icon-dwnld menu__download-link-icon" width="9" height="13">
+                      <use xlink:href="images/sprites/sprite-mono.svg#dwnld"></use>
+                    </svg>
+                  </div></a></div>
+            </div>
           </div>
           <div class="menu__block">
             <button class="button-reset menu__close-btn js-close-menu-btn">

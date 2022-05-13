@@ -80,42 +80,82 @@
       .menu__block
         form.search__form.mod-menu-search
           .search__input-label
-            input(type="text" name="q" class="search__from-input" placeholder="Найти..")
+            input(type="text" name="q" class="search__from-input js-search-input-mobile" placeholder="Найти..")
             button(type="submit" class="button-reset search__form-submit-btn")
               +icon-mono("search")(width="22" height="22" class="search__input-icon")
-        .menu__block-inner
-          span._bottom-line
-          nav.menu__nav.menu__nav_grid-container
-            ul.menu__nav-list
-              for item in arr
-                li.menu__nav-item
-                  a.menu__nav-link.menu__legend(href=item.link)= item.name
-          .menu__nav-container.menu__nav_grid-container
-            nav.menu__nav
-              a(href="/" class="menu__legend menu__nav-legend") Сферы применения
-              ul.menu__nav-grid-list
-                for item in arr2
-                  li.menu__nav-item-small
-                    a.menu__nav-link.menu__legend-small(href="/spheres-detail.html")= item
-            nav.menu__nav
-              a(href="/" class="menu__legend menu__nav-legend") Клиентам
-              ul.menu__nav-grid-list
-                for item in arr3
-                  li.menu__nav-item-small
-                    a.menu__nav-link.menu__legend-small(href=item.link)= item.name
-        .menu__download-links-wrapper
-          a.menu__download-link(href="/" download)
-            | Брошюра
-            .menu__download-icon-wrapper
-              +icon-mono("dwnld")(class="menu__download-link-icon" width="9" height="13")
-          a.menu__download-link(href="/" download)
-            | Прайс-лист
-            .menu__download-icon-wrapper
-              +icon-mono("dwnld")(class="menu__download-link-icon" width="9" height="13")
-          a.menu__download-link(href="/" download)
-            | Каталог
-            .menu__download-icon-wrapper
-              +icon-mono("dwnld")(class="menu__download-link-icon" width="9" height="13")
+        .menu__search-results
+          .search__content-col
+            .search__content-row
+              .search__content-heading-wrapper
+                h3.search__content-heading Каталог
+                a.search__content-link(href="/") все найденные
+              .menu__search-results-carts
+                +cart([{name: "Натяжные на раме"}], ["img1"], "Cinema Thin Bezel", "Натяжной экран c тонкой рамой толщиной 1 см", ["Ширина экрана(см) 178–354", "Угол обзора 160°"])
+                +cart([{name: "Натяжные на раме"}], ["img1"], "Cinema Thin Bezel", "Натяжной экран c тонкой рамой толщиной 1 см", ["Ширина экрана(см) 178–354", "Угол обзора 160°"])
+                +cart([{name: "Натяжные на раме"}], ["img1"], "Cinema Thin Bezel", "Натяжной экран c тонкой рамой толщиной 1 см", ["Ширина экрана(см) 178–354", "Угол обзора 160°"])
+                +cart([{name: "Натяжные на раме"}], ["img1"], "Cinema Thin Bezel", "Натяжной экран c тонкой рамой толщиной 1 см", ["Ширина экрана(см) 178–354", "Угол обзора 160°"])
+                +cart([{name: "Натяжные на раме"}], ["img1"], "Cinema Thin Bezel", "Натяжной экран c тонкой рамой толщиной 1 см", ["Ширина экрана(см) 178–354", "Угол обзора 160°"])
+          .search__content-col
+            .search__content-row
+              .search__content-heading-wrapper
+                h3.search__content-heading Кейсы
+                a.search__content-link(href="/") все найденные
+              .search__content-cards-wrapper
+                a.search__content-card(href="/" class="lazy" data-bg="images/search/img1.jpg" data-bg-fallback="images/search/img1.jpg")
+                  p.search__content-card-txt Актовый зал дома молодёжи «Пулковец»
+                a.search__content-card(href="/" class="lazy" data-bg="images/search/img2.jpg" data-bg-fallback="images/search/img2.jpg")
+                  p.search__content-card-txt Центр Здоровья Verba Mayr
+                a.search__content-card(href="/" class="lazy" data-bg="images/search/img2.jpg" data-bg-fallback="images/search/img2.jpg")
+                  p.search__content-card-txt Центр Здоровья Verba Mayr
+                a.search__content-card(href="/" class="lazy" data-bg="images/search/img2.jpg" data-bg-fallback="images/search/img2.jpg")
+                  p.search__content-card-txt Центр Здоровья Verba Mayr
+            .search__content-row
+              .search__content-heading-wrapper
+                h3.search__content-heading Новости
+                a.search__content-link(href="/") смотреть все найденные
+              .search__content-cards-wrapper
+                a.search__content-card(href="/" class="lazy" data-bg="images/search/img3.jpg" data-bg-fallback="images/search/img1.jpg")
+                  p.search__content-card-txt Master Recessed Control – must have для корпоративного сектора..
+                a.search__content-card(href="/" class="lazy" data-bg="images/search/img4.jpg" data-bg-fallback="images/search/img2.jpg")
+                  p.search__content-card-txt Lumien Radiance: отражение внешней засветки
+                a.search__content-card(href="/" class="lazy" data-bg="images/search/img4.jpg" data-bg-fallback="images/search/img2.jpg")
+                  p.search__content-card-txt Lumien Radiance: отражение внешней засветки
+                a.search__content-card(href="/" class="lazy" data-bg="images/search/img4.jpg" data-bg-fallback="images/search/img2.jpg")
+                  p.search__content-card-txt Lumien Radiance: отражение внешней засветки
+        .js-hide-when-search
+          .menu__block-inner
+            span._bottom-line
+            nav.menu__nav.menu__nav_grid-container
+              ul.menu__nav-list
+                for item in arr
+                  li.menu__nav-item
+                    a.menu__nav-link.menu__legend(href=item.link)= item.name
+            .menu__nav-container.menu__nav_grid-container
+              nav.menu__nav
+                a(href="/" class="menu__legend menu__nav-legend") Сферы применения
+                ul.menu__nav-grid-list
+                  for item in arr2
+                    li.menu__nav-item-small
+                      a.menu__nav-link.menu__legend-small(href="/spheres-detail.html")= item
+              nav.menu__nav
+                a(href="/" class="menu__legend menu__nav-legend") Клиентам
+                ul.menu__nav-grid-list
+                  for item in arr3
+                    li.menu__nav-item-small
+                      a.menu__nav-link.menu__legend-small(href=item.link)= item.name
+          .menu__download-links-wrapper
+            a.menu__download-link(href="/" download)
+              | Брошюра
+              .menu__download-icon-wrapper
+                +icon-mono("dwnld")(class="menu__download-link-icon" width="9" height="13")
+            a.menu__download-link(href="/" download)
+              | Прайс-лист
+              .menu__download-icon-wrapper
+                +icon-mono("dwnld")(class="menu__download-link-icon" width="9" height="13")
+            a.menu__download-link(href="/" download)
+              | Каталог
+              .menu__download-icon-wrapper
+                +icon-mono("dwnld")(class="menu__download-link-icon" width="9" height="13")
       .menu__block
         button.button-reset.menu__close-btn.js-close-menu-btn
           +icon-mono("cross")(class="menu__close-btn-icon" width="13" height="13")
