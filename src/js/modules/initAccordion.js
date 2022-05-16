@@ -1,60 +1,48 @@
-// добавить классы:
-// .js-drop-menu-btn - на кнопку открытия
-// data-drop-menu-open - на кнопку открытия, если нужно, чтоб изначально меню было раскрыто
-// .js-drop-menu-leave-open - на кнопку открытия, если НЕ нужно автозакрывание неактивных
-// .drop-menu-container.js-drop-menu-container - обернуть меню в этот класс (для max-height = 0)
-// drop-menu.js-drop-menu - на само меню
-//  если меняющийся текст кнопки:
-// .js-drop-menu-btn-content-hide.mod-show - текст кнопки, когда меню скрыто
-// .js-drop-menu-btn-content-open - текст кнопки, когда меню открыто
+import gsap from "gsap";
 
 export default () => {
-	const linksTitleElements = Array.from(document.querySelectorAll('.js-drop-menu-btn'));
-	const menuContainerElements = Array.from(document.querySelectorAll('.js-drop-menu-container'));
-	const menuElements = Array.from(document.querySelectorAll('.js-drop-menu'));
+  const accordions = gsap.utils.toArray(".accordion");
+  const btns = gsap.utils.toArray(".js-drop-menu-btn");
+  const animations = [];
 
-	const onClose = (btnElem, menuContainerElem, contentBtnHide, contentBtnOpen) => {
-		btnElem.classList.remove('mod-open');
-		menuContainerElem.classList.remove('mod-open');
-		menuContainerElem.style.maxHeight = 0;
+  accordions.forEach(accordion => createAnimation(accordion));
 
-		if (contentBtnHide && contentBtnOpen) {
-			contentBtnHide.classList.add('mod-show');
-			contentBtnOpen.classList.remove('mod-show');
-		}
-	}
+  btns.forEach(btn => {
+    btn.addEventListener("click", () => toggleAnimation(btn));
+  });
 
-	const onOpen = (btnElem, menuContainerElem, menuElem, contentBtnHide, contentBtnOpen) => {
-		btnElem.classList.add('mod-open');
-		menuContainerElem.classList.add('mod-open');
-		const heightContent = menuElem.clientHeight;
-		menuContainerElem.style.maxHeight = `${heightContent}px`;
+  function toggleAnimation(btn) {
+    // Save the current state of the clicked animation
+    const selectedReversedState = btn.animation.reversed();
 
-		if (contentBtnHide && contentBtnOpen) {
-			contentBtnHide.classList.remove('mod-show');
-			contentBtnOpen.classList.add('mod-show');
-		}
-	}
+    // Reverse all animations
+    // animations.forEach(animation => animation.reverse());
 
-	linksTitleElements.forEach((btn, i) => {
-		if (btn.hasAttribute('data-drop-menu-open')) {
-			onOpen(btn, menuContainerElements[i], menuElements[i]);
-		}
+    // Set the reversed state of the clicked accordion element to the opposite of what it was before
+    btn.animation.reversed(!selectedReversedState);
+  }
 
-		const contentBtnHide = btn.querySelector('.js-drop-menu-btn-content-hide');
-		const contentBtnOpen = btn.querySelector('.js-drop-menu-btn-content-open');
+  function createAnimation(element) {
+    const accordionBtn = element.querySelector(".js-drop-menu-btn");
+    const accordionBodywrapper = element.querySelector(".js-drop-menu-container");
 
-		btn.onclick = () => {
-			if (btn.className.includes('mod-open')) {
-				onClose(btn, menuContainerElements[i], contentBtnHide, contentBtnOpen);
-			} else {
-				// if (!btn.className.includes('js-drop-menu-leave-open')) {
-				// 	linksTitleElements.map((elem, idx) => {
-				// 		onClose(elem, menuContainerElements[idx], contentBtnHide, contentBtnOpen);
-				// 	});
-				// }
-				onOpen(btn, menuContainerElements[i], menuElements[i], contentBtnHide, contentBtnOpen);
-			}
-		}
-	})
+    gsap.set(accordionBodywrapper, { height: "auto" });
+
+    const anima = gsap.from(accordionBodywrapper, {
+      height: 0,
+      duration: 0.2,
+      ease: "none",
+      clearProps: "all",
+      reversed: true,
+      onStart: () => {
+        accordionBtn.classList.add("is-active");
+      },
+      onReverseComplete: () => {
+        accordionBtn.classList.remove("is-active");
+      }
+    });
+
+    accordionBtn.animation = anima;
+    animations.push(anima);
+  }
 }

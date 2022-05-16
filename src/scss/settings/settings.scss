@@ -312,9 +312,9 @@ input:focus {
 }
 
 .drop-menu-container {
-  max-height: 0;
+  // max-height: 0;
   overflow: hidden;
-  transition: max-height var(--transition);
+  // transition: max-height var(--transition);
 }
 
 .site-content {
