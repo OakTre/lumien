@@ -36,6 +36,7 @@ import catalogTopFilterSlider from './modules/catalogTopFilterSlider.js';
 import breadcrumbsCostil from './modules/breadcrumbsCostil.js';
 import initModal from './modules/initModal.js';
 import clearFilter from './modules/clearFilter.js';
+import spheresMobileTabs from './modules/spheresMobileTabs.js';
 
 smoothscroll.polyfill();
 
@@ -78,6 +79,7 @@ documenReady(() => {
   breadcrumbsCostil();
   initModal();
   clearFilter();
+  spheresMobileTabs();
 
   // always last
   cartImgsSlider();

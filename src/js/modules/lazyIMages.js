@@ -18,6 +18,7 @@ export default () => {
   });
 
   window.lumien_API.updateLazyLoad = () => {
+    lazyLoadInstance.restoreAll();
     lazyLoadInstance.update();
   }
 };

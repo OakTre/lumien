@@ -20,7 +20,7 @@ gsap.registerPlugin(SplitText, ScrollTrigger, CSSRulePlugin);
 
 export default () => {
   if (window.matchMedia("(min-width: 767px)").matches) {
-    const spheresTxtWrapper = document.querySelector(".spheres__txt-wrapper");
+    const spheresTxtWrapper = document.querySelector(".js-text-spheres-wrapper");
 
     if (!spheresTxtWrapper) return;
 
@@ -47,7 +47,7 @@ export default () => {
       y: "5rem",
       opacity: 0
     });
-    gsap.set(".spheres__txt-wrapper ._line", {xPercent: -100})
+    gsap.set(".js-text-spheres-wrapper ._line", {xPercent: -100})
 
     timeline
       .to(spheresTxtWrapper, {
@@ -57,7 +57,7 @@ export default () => {
         ease: "power3.out",
         clearProps: "all"
       })
-      .to(".spheres__txt-wrapper ._line", {xPercent: 0, duration: 0.8, ease: "power3.out", clearProps: "all"})
+      .to(".js-text-spheres-wrapper ._line", {xPercent: 0, duration: 0.8, ease: "power3.out", clearProps: "all"})
 
     const slides = Array.from(document.querySelectorAll(".spheres__nav-item"));
     const activeBorder = document.querySelector("._active-border");
@@ -103,18 +103,9 @@ export default () => {
         sliderThumb.slideTo(swiper.activeIndex + swiper.thumbs.swiper.activeIndex - swiper.thumbs.swiper.activeIndex);
       };
 
-      slides.forEach((slide, index) => {
-        if (index === swiper.activeIndex) {
-          let offsetWidth = slide.querySelector("span").offsetWidth;
-
-          activeBorder.style.width = offsetWidth + 12 + "px";
-        }
-      });
-
-
       spherseHeadings.forEach((heading, index) => {
         if (index === swiper.realIndex) {
-          const text = heading.closest(".spheres__content-info-block").querySelector(".spheres__txt-wrapper");
+          const text = heading.closest(".spheres__content-info-block").querySelector(".js-text-spheres-wrapper");
 
           timeline2
             .fromTo(headingArrs[swiper.realIndex].chars, {
@@ -145,6 +136,15 @@ export default () => {
               duration: 0.3,
               ease: "none",
             }, "-=0.3");
+        }
+      });
+
+
+      slides.forEach((slide, index) => {
+        if (index === swiper.activeIndex) {
+          let offsetWidth = slide.querySelector("span").offsetWidth;
+
+          activeBorder.style.width = offsetWidth + 12 + "px";
         }
       });
 
