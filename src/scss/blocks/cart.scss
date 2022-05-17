@@ -86,7 +86,6 @@
     overflow: hidden;
 
     @include mq(sm) {
-      margin-bottom: 0.5rem;
       font: var(--font-title-mobile);
     }
   }
