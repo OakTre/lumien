@@ -163,7 +163,7 @@
     },
   ]
 
-.modal__container.modal-filter.js-modal-pet(data-target="filter")
+.modal__container.modal-filter(data-target="filter")
   .modal__content.site-container
     .modal-filter__top
       button.button-reset.modal-close.modal-filter__back
@@ -175,12 +175,21 @@
       form.side-filter.js-filter-form-mobile(action="")
         for item in catalogInpts3
           if item.img
-            .side-filter__block
+            .side-filter__block.js-sizes-parent
+              .side-filter__error
+                .side-filter__error-inner
+                  span.side-filter__error-text
+                    | Данное значение отсутсвует, ближайшее к нему:
+                  .side-filter__error-suggestions
+                    button.button-reset.side-filter__error-item.js-sizes-btn(type="button" data-inches="[200, 200]")
+                      | 200:200
+                    button.button-reset.side-filter__error-item.js-sizes-btn(type="button" data-inches="[300, 300]")
+                      | 300:300
               p.side-filter__legend= item.name
               .side-filter__size
-                input(type="text" class="side-filter__size-input" name="centimeter" placeholder="См")
-                input(type="text" class="side-filter__size-input" name="inch" placeholder="Дюйм")
-                input(type="text" class="side-filter__size-input" name="centimeter" placeholder="См")
+                input(type="number" class="side-filter__size-input js-sizes-value" name="centimeter" placeholder="См")
+                input(type="number" class="side-filter__size-input" name="inch" placeholder="Дюйм")
+                input(type="number" class="side-filter__size-input js-sizes-value" name="centimeter" placeholder="См")
           else
             .side-filter__block
               p.side-filter__legend= item.name

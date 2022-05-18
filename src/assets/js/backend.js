@@ -76,4 +76,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }, 500);
   });
   // поиск в мобилке END
+
+  // фильтр каталога
+  // размер рабочей области
+  // если нет подходящих размеров
+  const sizeBtns = Array.from(document.querySelectorAll(".js-sizes-btn"));
+
+  sizeBtns.forEach(btn => {
+    btn.addEventListener("click", ()=> {
+      const values = JSON.parse(btn.dataset.inches);
+      const parent = btn.closest(".js-sizes-parent");
+      const errorConatiner = parent.querySelector(".side-filter__error");
+      const sizeValues = Array.from(parent.querySelectorAll(".js-sizes-value"));
+
+      for (const [index, item] of values.entries()) {
+        sizeValues[index].value = item;
+
+        errorConatiner.classList.add("is-hidden");
+      };
+    });
+  });
+  // фильтр каталога END
 });

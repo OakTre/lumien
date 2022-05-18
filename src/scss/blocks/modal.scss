@@ -144,4 +144,18 @@
       fill: var(--color-accent);
     }
   }
+
+  .side-filter {
+    &__error {
+      padding: 0;
+    }
+
+    &__error-inner {
+      position: absolute;
+      top: 45%;
+      left: 53%;
+      transform: translate(-50%, -50%);
+      margin-right: -50%;
+    }
+  }
 }

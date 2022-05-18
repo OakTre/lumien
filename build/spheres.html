@@ -543,7 +543,7 @@
       </footer>
     </div>
     <div class="modal">
-      <div class="modal__container modal-filter js-modal-pet" data-target="filter">
+      <div class="modal__container modal-filter" data-target="filter">
         <div class="modal__content site-container">
           <div class="modal-filter__top">
             <button class="button-reset modal-close modal-filter__back"><span class="modal-filter__back-icon"></span><span class="modal-filter__back-name">Фильтры</span></button>
@@ -689,12 +689,20 @@
                   </label>
                 </div>
               </div>
-              <div class="side-filter__block">
+              <div class="side-filter__block js-sizes-parent">
+                <div class="side-filter__error">
+                  <div class="side-filter__error-inner"><span class="side-filter__error-text">Данное значение отсутсвует, ближайшее к нему:</span>
+                    <div class="side-filter__error-suggestions">
+                      <button class="button-reset side-filter__error-item js-sizes-btn" type="button" data-inches="[200, 200]">200:200</button>
+                      <button class="button-reset side-filter__error-item js-sizes-btn" type="button" data-inches="[300, 300]">300:300</button>
+                    </div>
+                  </div>
+                </div>
                 <p class="side-filter__legend">Размер рабочей области</p>
                 <div class="side-filter__size">
-                  <input class="side-filter__size-input" type="text" name="centimeter" placeholder="См">
-                  <input class="side-filter__size-input" type="text" name="inch" placeholder="Дюйм">
-                  <input class="side-filter__size-input" type="text" name="centimeter" placeholder="См">
+                  <input class="side-filter__size-input js-sizes-value" type="number" name="centimeter" placeholder="См">
+                  <input class="side-filter__size-input" type="number" name="inch" placeholder="Дюйм">
+                  <input class="side-filter__size-input js-sizes-value" type="number" name="centimeter" placeholder="См">
                 </div>
               </div>
               <div class="side-filter__block">
