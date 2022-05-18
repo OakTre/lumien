@@ -97,4 +97,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   });
   // фильтр каталога END
+
+  // кнопка показакть\скрыть
+  const btns = Array.from(document.querySelectorAll(".js-btn-show-hide"));
+
+  btns.forEach( btn => {
+    btn.addEventListener("click", ()=> {
+      btn.classList.toggle("is-active");
+
+      btn.closest(".js-btn-show-hide-parent").querySelector(".side-filter__block-list").classList.toggle("is-active");
+    });
+  });
+
+  // кнопка показакть\скрыть END
 });

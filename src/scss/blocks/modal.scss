@@ -94,6 +94,23 @@
 }
 
 .modal-filter {
+
+  .side-filter__block-list {
+    .side-filter__label {
+      &:nth-child(n + 5) {
+        display: none;
+      }
+    }
+
+    &.is-active {
+      .side-filter__label {
+        &:nth-child(n + 5) {
+          display: block;
+        }
+      }
+    }
+  }
+
   &__top {
     display: flex;
     align-items: center;
@@ -157,5 +174,9 @@
       transform: translate(-50%, -50%);
       margin-right: -50%;
     }
+  }
+
+  .side-filter__label {
+    margin-bottom: 0.8rem;
   }
 }

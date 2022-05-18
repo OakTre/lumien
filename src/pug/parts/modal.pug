@@ -2,6 +2,7 @@
   let catalogInpts3 = [
     {
       name: "Сферы применения",
+      morebtn: true,
       inpts: [
         {
           name: "Все",
@@ -51,6 +52,7 @@
     },
     {
       name: "Тип экрана",
+      morebtn: true,
       inpts: [
         {
           name: "Все",
@@ -191,10 +193,10 @@
                 input(type="number" class="side-filter__size-input" name="inch" placeholder="Дюйм")
                 input(type="number" class="side-filter__size-input js-sizes-value" name="centimeter" placeholder="См")
           else
-            .side-filter__block
+            .side-filter__block.js-btn-show-hide-parent
               p.side-filter__legend= item.name
-              for inpt in item.inpts
-                .side-filter__block-list
+              .side-filter__block-list
+                for inpt in item.inpts
                   label.side-filter__label
                     input(type="checkbox" class="visually-hidden" name=inpt.slug value=inpt.name)
                     span.side-filter__label-name= inpt.name
@@ -204,4 +206,8 @@
                         span.tooltip__text-wrapper
                           span.tooltip__text
                             | Универсальное полотно с белой матовой поверхностью на текстильной основе с покрытием ПВХ
+              if item.morebtn
+                button.button-reset.side-filter__more-btn.show-more-btn.js-btn-show-hide(type="button")
+                  span._shown ПОКАЗАТЬ ЕЩЕ
+                  span._hidden скрыть
         button.button-reset.button.side-filter__btn ПРИМЕНИТЬ ФИЛЬТР
