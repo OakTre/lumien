@@ -1,0 +1,16 @@
+.diller {
+  &__text {
+    font: 400 2.8rem/4rem var(--main-ff);
+    max-width: 78.5rem;
+
+    @include mq(sm) {
+      font: var(--font-body-S);
+    }
+  }
+
+  &__form {
+    .contacts-us__heading {
+      max-width: 100%;
+    }
+  }
+}
