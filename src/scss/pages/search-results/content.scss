@@ -102,9 +102,7 @@
   }
 
   &__results-container {
-    @include mq(md) {
-      gap: var(--grid-offset);
-    }
+    gap: var(--grid-offset);
   }
 
   &__results-item {

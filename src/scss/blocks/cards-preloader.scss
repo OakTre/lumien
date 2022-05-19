@@ -1,0 +1,96 @@
+.cards-preloader {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+
+  --grey-2: #DDE2E5;
+  --grey-1: #F8F9FA;
+
+
+  .card-prealoder {
+    overflow: hidden;
+    grid-column: 4 span;
+
+    @include mq(md) {
+      grid-column: 6 span;
+    }
+
+    @include mq(sm) {
+      grid-column: 12 span;
+    }
+
+    &__heading,
+    &__text,
+    &__text2,
+    &__text3,
+    &__top {
+      animation-duration: 1.5s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-name: backgroundMovement;
+      animation-timing-function: linear;
+      background: var(--grey-2);
+      background: linear-gradient(267.58deg, var(--grey-2) 0%, var(--grey-1) 80%, var(--grey-2) 100%);
+      background-size: 200%;
+      display: inline-block;
+      width: 100%;
+    }
+
+    &__top {
+      height: 30rem;
+      border-radius: 1.2rem;
+
+      @include mq(sm) {
+        height: 22.6rem;
+      }
+    }
+
+    &__heading {
+      width: 80%;
+      height: 3rem;
+      border-radius: 1.2rem;
+      margin-top: 3.2rem;
+      margin-bottom: 5rem;
+
+      @include mq(sm) {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__text,
+    &__text2,
+    &__text3 {
+      height: 2rem;
+      border-radius: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__text {
+      width: 90%;
+    }
+
+    &__text2 {
+      width: 70%;
+    }
+
+    &__text3 {
+      width: 50%;
+      margin-bottom: 3rem;
+
+      @include mq(sm) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@keyframes backgroundMovement {
+  0% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: -100%;
+  }
+}
