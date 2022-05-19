@@ -5,7 +5,7 @@
   z-index: 50;
   width: 100%;
   height: 100%;
-  background-color: rgba($color: #DDDDE2, $alpha: 0.7);
+  background-color: rgba($color: #1E1E1E, $alpha: 0.6);
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--transition-time), visibility var(--transition-time);
@@ -178,5 +178,171 @@
 
   .side-filter__label {
     margin-bottom: 0.8rem;
+  }
+}
+
+
+.site-modal {
+  top: 50%;
+  left: 50%;
+  max-width: 121.6rem;
+  max-height: 71.8rem;
+  min-height: 71.8rem;
+  background-color: var(--color-purple);
+  border-radius: 2.5rem;
+  box-shadow: 0px 12px 102px rgba(0, 0, 0, 0.35);
+  transform: translate(-50%, -50%);
+  padding: 7rem;
+
+  @include mq(md) {
+    max-width: 90%;
+    min-height: auto;
+    max-height: 64rem;
+  }
+
+  @include mq(sm) {
+    padding: 2.4rem;
+  }
+
+  &__heading {
+    font: var(--font-title-3);
+    color: var(--color-white);
+    margin-bottom: 5rem;
+
+    @include mq(sm) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__forms {
+    width: 100%;
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+
+  &__from-ok {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+
+  &._callback {
+    max-width: 60rem;
+    height: 82rem;
+    max-height: 100%;
+    padding: 6rem 7rem;
+
+    @include mq(md) {
+      padding: 3.2rem 2.4rem;
+      max-width: 90%;
+      height: auto;
+      max-height: 90%;
+      min-height: 0;
+    }
+  }
+
+  &__form {
+    width: 100%;
+
+    .form__label {
+      margin-bottom: 2rem;
+    }
+
+    .form__agreement-label {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__form-btn {
+    padding: 3.2rem 5.3rem;
+
+    @include mq(sm) {
+      padding: 2.4rem;
+      width: 100%;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 1px solid var(--color-rgba-white-07);
+    cursor: pointer;
+    transition: background-color var(--transition);
+
+    &:hover {
+      background-color: var(--color-accent);
+    }
+
+    &:active {
+      // transform: scale(0.98);
+    }
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1.3rem;
+      height: 0.1rem;
+      background-color: var(--color-rgba-white-07);
+      transform: translate(-50%, -50%);
+      display: block;
+
+      &:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+
+    @include mq(sm) {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  &__succes-heading {
+    margin-bottom: 3rem;
+    color: var(--color-white);
+  }
+
+  &__text {
+    color: var(--color-white);
+    font: var(--font-title-4);
+    font-weight: 400;
+    margin-bottom: auto;
+    max-width: 73.4rem;
+
+    @include mq(sm) {
+      font: var(--font-body-S);
+    }
+  }
+
+  &__btn {
+    padding: 3.2rem 9.1rem;
+
+    @include mq(sm) {
+      padding: 2.4rem;
+      width: 100%;
+    }
   }
 }

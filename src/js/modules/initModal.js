@@ -7,4 +7,6 @@ export default () => {
     isClose: (modal) => {
     },
   });
+
+  window.lumien_API.modal = modal;
 };

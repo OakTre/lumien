@@ -15,6 +15,11 @@
     max-width: 56.7rem;
     margin-bottom: 5rem;
 
+    &.mod-full-grid {
+      grid-column: 12 span;
+      margin: 3rem 0;
+    }
+
     &.mod-small {
       font: 700 3.9rem/120% var(--second-ff);
     }
@@ -140,6 +145,28 @@
       z-index: 2;
       color: red;
       font: var(--font-body-XS);
+    }
+
+    &._required {
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 2rem;
+        z-index: 1;
+        font-size: 2rem;
+        line-height: 1;
+        color: var(--color-accent);
+        transform: translateY(-50%);
+        content: "*";
+      }
+
+      .form__input {
+        padding-left: 3.5rem;
+      }
+
+      .choices__inner {
+        padding-left: 3.5rem !important;
+      }
     }
 
     @include mq(sm) {

@@ -66,6 +66,7 @@
     .choices {
       &.is-open {
         .choices__inner {
+          border-color: rgba(255, 255, 255, 0.2);
           &::before {
             transform: translateY(-50%) rotate(-225deg);
           }
@@ -79,6 +80,11 @@
       border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
 
       background-color: transparent !important;
+
+      &:last-child {
+        margin-bottom: 0 !important;
+        border: none;
+      }
 
       @include mq(sm) {
         padding: 0 0 1rem 2.8rem !important;
@@ -129,7 +135,7 @@
     background-color: var(--color-bg-input);
     font: var(--font-body-M);
     padding: 1.5rem 2rem !important;
-    border: none;
+    border: 1px solid var(--color-purple-light);
     min-height: 0;
     height: 5.8rem;
     border-radius: 1rem;
@@ -152,9 +158,15 @@
   }
 
   .choices__list--dropdown {
+    z-index: 5;
     background-color: var(--color-bg-input);
-    border: none;
+    border: 1px solid var(--color-purple-light);
     border-radius: 0 0 1rem 1rem;
+    border-top: none;
+
+    &.is-active {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
 
     .choices__item {
       padding: 1rem 2rem;
@@ -172,6 +184,7 @@
     .choices__inner,
     .choices__list--dropdown {
       background-color: var(--color-purple-light);
+      color: var(--color-rgba-white-07);
     }
 
     .choices__inner {

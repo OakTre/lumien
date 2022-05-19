@@ -324,7 +324,7 @@
       </div>
     </div>
     <div class="page-wrapper">
-      <header class="header is-dark fix-blocks">
+      <header class="header is-dark fix-block">
         <div class="site-container header__container grid-container">
           <div class="header__block"><a class="logo header__logo" href="/">
               <svg class="icon icon-logo logo__icon" width="161" height="22">
@@ -341,7 +341,7 @@
           </div>
           <div class="header__block"><a class="header__link header__page-link" href="/">	ENG</a><a class="header__link header__page-link" href="tel:+74957975775">	+7 495 797-57-75</a>
             <button class="button-reset header__menu-btn js-open-menu-btn _mobile"><span></span><span></span><span></span></button>
-            <button class="button-reset button header__btn"><span class="mobile-hidden">Оставить заявку</span><span class="descktop-hidden">Заявка</span></button>
+            <button class="button-reset button header__btn" data-path="callback"><span class="mobile-hidden">Оставить заявку</span><span class="descktop-hidden">Заявка</span></button>
           </div>
         </div>
       </header>
@@ -1066,6 +1066,55 @@
                 </div>
               </div>
               <button class="button-reset button side-filter__btn">ПРИМЕНИТЬ ФИЛЬТР</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal__container site-modal" data-target="success">
+        <div class="modal__conten site-modal__content">
+          <button class="button-reset site-modal__close modal-close"><span></span><span></span></button>
+          <div class="site-modal__succes-heading site-heading">Ваша заявка успешно отправлена!</div>
+          <p class="site-modal__text">В ближайшее время с вами свяжется наш менеджер, что бы обсудить детали</p>
+          <button class="button site-modal__btn modal-close">отлично</button>
+        </div>
+      </div>
+      <div class="modal__container site-modal _callback" data-target="callback">
+        <div class="modal__conten site-modal__content">
+          <button class="button-reset site-modal__close modal-close"><span></span><span></span></button>
+          <div class="site-modal__from-ok is-hidden">
+            <div class="site-modal__heading">Ваша заявка успешно отправлена!</div>
+            <p class="site-modal__text">В ближайшее время с вами свяжется наш менеджер, что бы обсудить детали</p>
+            <button class="button site-modal__btn modal-close">отлично</button>
+          </div>
+          <div class="site-modal__forms">
+            <div class="site-modal__heading">Оставьте заявку</div>
+            <form class="site-modal__form" action="/">
+              <label class="form__label select-wrapper mod-send-form custom-select _required">
+                <select class="select js-custom-select" name="equipment-type" data-name="Выберите тип оборудования">
+                  <option value="Выберите модель оборудования" placeholder>Выберите тип оборудования</option>
+                  <option value="first">first</option>
+                  <option value="second">second</option>
+                </select>
+              </label>
+              <label class="form__label">
+                <input class="form__input input-reset" type="text" name="name" placeholder="Имя" data-parsley-required>
+              </label>
+              <label class="form__label">
+                <input class="form__input input-reset" type="text" name="second-name" placeholder="Фамилия" data-parsley-required>
+              </label>
+              <label class="form__label">
+                <input class="form__input input-reset" type="text" name="city" placeholder="Город" data-parsley-required>
+              </label>
+              <label class="form__label">
+                <input class="form__input input-reset" type="tel" name="tel" placeholder="+7 (999) 999-99-99" data-parsley-required data-parsley-phone>
+              </label>
+              <label class="form__label">
+                <input class="form__input input-reset" type="email" name="email" placeholder="Email" data-parsley-required>
+              </label>
+              <label class="form__agreement-label">
+                <input class="visually-hidden" type="checkbox" name="agreement" data-parsley-required><span>	Согласен на обработку персональных данных</span>
+              </label>
+              <button class="button-reset button form__btn site-modal__form-btn">	Отправить заявку</button>
             </form>
           </div>
         </div>

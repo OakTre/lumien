@@ -46,8 +46,6 @@ export default function initSelects() {
           const evt = document.createEvent('HTMLEvents');
           evt.initEvent('input', true, true);
           input.dispatchEvent(evt);
-
-          console.log(input.value);
         }
       }
 

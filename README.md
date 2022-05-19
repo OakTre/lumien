@@ -21,6 +21,9 @@
 17. [Глоссарий](https://oaktre.github.io/lumien/build/glossary.html)
 18. [Политика конфиденциальности](https://oaktre.github.io/lumien/build/policy.html)
 19. [404](https://oaktre.github.io/lumien/build/404.html)
+20. [Диллерам](https://oaktre.github.io/lumien/build/diller.html)
+21. [Регистрация оборудования](https://oaktre.github.io/lumien/build/registration.html)
+22. [Форма регистрации проекта](https://oaktre.github.io/lumien/build/reg-form.html)
 
 
 ## Список команд
