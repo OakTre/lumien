@@ -91,9 +91,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       for (const [index, item] of values.entries()) {
         sizeValues[index].value = item;
-
-        errorConatiner.classList.add("is-hidden");
       };
+
+      errorConatiner.classList.add("is-hidden");
     });
   });
   // фильтр каталога END

@@ -7,7 +7,7 @@ section.contacts-map
         +content-btn("Беларусь", "country", "bel", "js-map-country")
         +content-btn("Казахстан", "country", "kz", "js-map-country")
   .contacts-map__inner
-    .contacts-map__map.js-map(data-url="./assets/include/countries.json")
+    .contacts-map__map.js-map(data-url="./assets/include/countries.json" data-map-icon="images/map-logo.svg")
     .site-container.grid-container.contacts-map__container
       .grid-container__block
       .grid-container__block
@@ -15,8 +15,9 @@ section.contacts-map
           h2.contacts-map__content-heading.js-heading Официальный представитель LUMIEN в России
           p.contacts-map__content-text.js-text
             | г. Москва, Звездный бульвар, д. 21
-          a.contacts-map__link(href="mailto: info@auvix.ru") info@auvix.ru
-          a.contacts-map__link(href="www.auvix.ru" target="_blank") www.auvix.ru
+          .contacts-map__links
+            a.contacts-map__link(href="mailto: info@auvix.ru") info@auvix.ru
+            a.contacts-map__link(href="www.auvix.ru" target="_blank") www.auvix.ru
           .contacts-map__links
             a.contacts-map__link._tel(href="tel:+74957975775") +7 (495) 797-5775
             a.contacts-map__link._tel(href="tel:+79267975775") +7 (926) 797-5775

@@ -23,18 +23,6 @@ export default () => {
     });
   };
 
-  const countryBtns = Array.from(document.querySelectorAll(".js-map-country"));
-  const map = document.querySelector(".js-map");
-
-  if (!map) return;
-
-  const url = map.dataset.url;
-  const heading = document.querySelector(".js-heading");
-  const text = document.querySelector(".js-text");
-  let response;
-  let placemark;
-  let contactsMap;
-
   function init() {
     let zoom = 16;
     let center = [55.811513, 37.624723];
@@ -58,12 +46,7 @@ export default () => {
 
     // проходимся по бз и подставляем иконки на карту
     response.forEach((city) => {
-      let marActive = `<a data-img="" href="" class="contacts-map__marker"><img src="images/map-logo.svg"></a>`
-
-      let infoCoordinates = [
-        [55.70, 37.30],
-        [55.80, 37.40]
-      ];
+      let marActive = `<a data-img="" href="" class="contacts-map__marker"><img src="${icon}"></a>`;
 
       placemark = new ymaps.Placemark(
         city.coords, {}, {
@@ -86,32 +69,41 @@ export default () => {
     contactsMap.geoObjects.add(housesCollection);
 
     if (window.matchMedia("(min-width: 992px)").matches) {
-      // сдвигаем ценрт карты от блока
-      let pixelCenter = contactsMap.getGlobalPixelCenter(center);
-
-      pixelCenter = [
-        pixelCenter[0] - 400,
-        pixelCenter[1] - 100
-      ];
-
-      let geoCenter = contactsMap.options.get('projection').fromGlobalPixels(pixelCenter, contactsMap.getZoom());
-
-      contactsMap.setCenter(geoCenter);
+      setCenter(center, 400, 100);
     } else {
-      // сдвигаем ценрт карты от блока
-      let pixelCenter = contactsMap.getGlobalPixelCenter(center);
-
-      pixelCenter = [
-        pixelCenter[0] - 0,
-        pixelCenter[1] - 0
-      ];
-
-      let geoCenter = contactsMap.options.get('projection').fromGlobalPixels(pixelCenter, contactsMap.getZoom());
-
-      contactsMap.setCenter(geoCenter);
+      setCenter(center, 0, 0);
     }
+  };
 
-  }
+  function setCenter(mapCenter, val1, val2) {
+    // сдвигаем ценрт карты от блока
+    let pixelCenter = contactsMap.getGlobalPixelCenter(mapCenter);
+
+    pixelCenter = [
+      pixelCenter[0] - val1,
+      pixelCenter[1] - val2
+    ];
+
+    let geoCenter = contactsMap.options.get('projection').fromGlobalPixels(pixelCenter, contactsMap.getZoom());
+
+    contactsMap.setCenter(geoCenter);
+  };
+
+  const countryBtns = Array.from(document.querySelectorAll(".js-map-country"));
+  const map = document.querySelector(".js-map");
+
+  if (!map) return;
+
+  const url = map.dataset.url;
+  const icon = map.dataset.mapIcon;
+  const heading = document.querySelector(".js-heading");
+  const text = document.querySelector(".js-text");
+  const links = Array.from(document.querySelectorAll(".contacts-map__link:not(._tel)"));
+  const tels = Array.from(document.querySelectorAll(".contacts-map__link._tel"));
+  const reqs = Array.from(document.querySelectorAll(".contacts-map__requisites"));
+  let response;
+  let placemark;
+  let contactsMap;
 
   sendRequest("GET", url)
     .then(data => {
@@ -126,20 +118,37 @@ export default () => {
 
   countryBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-      sendRequest("GET", url)
-        .then(data => {
-          data.forEach(country => {
-            if (country.slug == btn.value) {
-              contactsMap.setCenter(country.coords);
+      for (const item of response) {
+        if (item.slug == btn.value) {
+          contactsMap.setCenter(item.coords);
+          const itemEmails = item.emails || ["info@auvix.ru", "www.auvix.ru"];
+          const itemTels = item.tels || ["+7 (495) 797-5775", "+7 (926) 797-5775"];
+          const itemFeautures = item.feautures || ["ООО «АУВИКС»", "ИНН/КПП 7708651718/771701001", "ОГРН 1077761595064"];
 
-              heading.innerHTML = country.title;
-              text.innerHTML = country.adress;
-            }
-          });
-        })
-        .catch(() => {
-          // ошибка запроса
-        });
+          heading.innerHTML = item.title;
+          text.innerHTML = item.adres;
+
+          for (const [index, email] of itemEmails.entries()) {
+            links[index].innerHTML = email;
+          };
+
+          for (const [index, tel] of itemTels.entries()) {
+            tels[index].innerHTML = tel;
+          };
+
+          for (const [index, req] of itemFeautures.entries()) {
+            reqs[index].innerHTML = req;
+          };
+
+          if (window.matchMedia("(min-width: 992px)").matches) {
+            setCenter(item.coords, 400, 100);
+          } else {
+            setCenter(item.coords, 0, 0);
+          };
+
+          return;
+        }
+      };
     });
   });
 };
