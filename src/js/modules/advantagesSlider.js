@@ -1,18 +1,26 @@
-import Swiper from 'swiper/swiper-bundle';
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin([ScrollTrigger]);
 
 export default () => {
-  let sliderNews = new Swiper(".advantages__slider", {
-    slidesPerView: 3.4,
-    spaceBetween: 168,
-    breakpoints: {
-      280: {
-        slidesPerView: 2.4,
-        spaceBetween: 20
-      },
-      1200: {
-        slidesPerView: 3.4,
-        spaceBetween: 168
-      },
-    }
-  });
+  const loader = document.querySelector('.loader--text');
+
+  const showDemo = () => {
+    gsap.utils.toArray('.js-section').forEach((section, index) => {
+      const w = section.querySelector('.js-section-wrapper');
+      const [x, xEnd] = [0, w.scrollWidth * -1];
+      gsap.fromTo(w, {  x  }, {
+        x: xEnd,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 60%",
+          scrub: 0.2
+        }
+      });
+    });
+  }
+
+  showDemo();
+
 }

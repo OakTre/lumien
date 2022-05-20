@@ -13,16 +13,14 @@
 
     &__item {
       width: 24.9rem;
+      flex-shrink: 0;
     }
 
     &__slider {
       min-width: 0;
-      overflow: visible;
-    }
-
-    &__slider-wrapper {
+      display: flex;
+      gap: 9rem;
       counter-reset: section;
-      overflow: visible;
     }
 
     &__item-top {
