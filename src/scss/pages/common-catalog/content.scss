@@ -1,11 +1,10 @@
 .common-catalog {
   &__heading {
     font: var(--font-title-1);
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 
     @include mq(lg) {
       font: var(--font-title-2);
-      margin-bottom: 7rem;
     }
 
     @include mq(sm) {
@@ -13,7 +12,15 @@
       line-height: 1;
       font-family: var(--second-ff);
       letter-spacing: -0.02em;
-      margin-bottom: 4.8rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .site-second-heading {
+    margin-bottom: 5rem;
+
+    @include mq(sm) {
+      margin-bottom: 3rem;
     }
   }
 
