@@ -108,6 +108,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
       btn.closest(".js-btn-show-hide-parent").querySelector(".side-filter__block-list").classList.toggle("is-active");
     });
   });
-
   // кнопка показакть\скрыть END
+
+  // каталог.фильтр. выбрать все
+  const chooseAllInput = Array.from(document.querySelectorAll(".js-choose-all"));
+
+  if (chooseAllInput.length) {
+    chooseAllInput.forEach(input => {
+      input.addEventListener("change", () => {
+        const parent = input.closest(".side-filter__block-list");
+        if (input.checked) {
+          parent.querySelectorAll("input").forEach(inpt => inpt.checked = true);
+        } else {
+          parent.querySelectorAll("input").forEach(inpt => inpt.checked = false);
+        }
+      });
+    });
+  }
+  // каталог.фильтр. выбрать все END
 });

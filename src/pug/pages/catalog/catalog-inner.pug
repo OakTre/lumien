@@ -22,17 +22,18 @@ section.section-indent.catalog-inner
           else
             .side-filter__block
               p.side-filter__legend= item.name
-              for inpt in item.inpts
                 .side-filter__block-list
-                  label.side-filter__label
-                    input(type="checkbox" class="visually-hidden" name=inpt.slug value=inpt.name)
-                    span.side-filter__label-name= inpt.name
-                    if item.tooltip
-                      span.tooltip.side-filter__label-tooltip.button-reset(arila-label="Открыть подсказку")
-                        +icon-multi("warning")(width="16" height="16" class="tooltip__icon")
-                        span.tooltip__text-wrapper
-                          span.tooltip__text
-                            | Универсальное полотно с белой матовой поверхностью на текстильной основе с покрытием ПВХ
+                  for inpt, index in item.inpts
+                    - let isfirstEl = index === 0 ? "js-choose-all" : false
+                      label.side-filter__label
+                        input(type="checkbox" class="visually-hidden" class=isfirstEl name=inpt.slug value=inpt.name)
+                        span.side-filter__label-name= inpt.name
+                        if item.tooltip
+                          span.tooltip.side-filter__label-tooltip.button-reset(arila-label="Открыть подсказку")
+                            +icon-multi("warning")(width="16" height="16" class="tooltip__icon")
+                            span.tooltip__text-wrapper
+                              span.tooltip__text
+                                | Универсальное полотно с белой матовой поверхностью на текстильной основе с покрытием ПВХ
       button.button-reset.side-filter__reset-btn.js-clear-btn(data-form="desctop") Очистить фильтр
     .grid-container__block
       ul.catalog-inner__List
