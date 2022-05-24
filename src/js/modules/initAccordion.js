@@ -1,9 +1,11 @@
 import gsap from "gsap";
 
 export default () => {
-  const accordions = gsap.utils.toArray(".accordion");
+  const accordions = gsap.utils.toArray(".accordion") || gsap.utils.toArray(".js-accordion");
   const btns = gsap.utils.toArray(".js-drop-menu-btn");
   const animations = [];
+
+  console.log(accordions);
 
   accordions.forEach(accordion => createAnimation(accordion));
 

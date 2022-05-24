@@ -85,7 +85,7 @@ section.section-indent.top-offset.glossary
             .glossary__item
               .glossary__item-name= item.name
               for accordion in item.accordions
-                .glossary__item-accordion
+                .glossary__item-accordion.accordion
                   button.glossary__item-accordion-btn.button-reset.js-drop-menu-btn
                     span.glossary__item-accordion-btn-name= accordion
                     span.glossary__item-accordion-btn-icon
@@ -101,7 +101,7 @@ section.section-indent.top-offset.glossary
             .glossary__item(id=isFirst)
               .glossary__item-name= item.name
               for accordion in item.accordions
-                .glossary__item-accordion
+                .glossary__item-accordion.accordion
                   button.glossary__item-accordion-btn.button-reset.js-drop-menu-btn
                     span.glossary__item-accordion-btn-name= accordion
                     span.glossary__item-accordion-btn-icon
