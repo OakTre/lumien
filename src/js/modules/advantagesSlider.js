@@ -14,13 +14,13 @@ export default () => {
         x: xEnd,
         scrollTrigger: {
           trigger: section,
-          start: "top 60%",
-          scrub: 0.2
+          start: "top center",
+          pin: ".advantages__container",
+          scrub: 0.2,
         }
       });
     });
   }
 
   showDemo();
-
-}
+};
