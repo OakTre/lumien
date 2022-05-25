@@ -5,8 +5,6 @@ export default () => {
   const btns = gsap.utils.toArray(".js-drop-menu-btn");
   const animations = [];
 
-  console.log(accordions);
-
   accordions.forEach(accordion => createAnimation(accordion));
 
   btns.forEach(btn => {
