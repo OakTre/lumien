@@ -149,6 +149,13 @@
 
   .choices__list--single {
     padding: 0;
+
+    .choices__item--selectable {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   }
 
   .choices__list--single {

@@ -42,9 +42,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // });
 
   // отправка формы и перевод на страницу с результатами
-  searchForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-  });
+  // searchForm.addEventListener("submit", (e) => {
+  //   e.preventDefault();
+  // });
   // поиск в хедере END
 
   // поиск в мобилке

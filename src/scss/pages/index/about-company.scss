@@ -55,7 +55,8 @@
 
     @include mq(md) {
       margin-bottom: 0;
-      margin-right: 3rem;
+      margin-right: 2.1rem;
+      overflow: visible;
 
       &:last-child {
         margin-right: 0;
