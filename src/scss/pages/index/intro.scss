@@ -150,23 +150,21 @@
     align-self: flex-end;
 
     .text-container {
-      p {
-        max-width: 45rem;
-        font: var(--font-body-S);
+      max-width: 45rem;
+      font: var(--font-body-S);
 
-        b, strong {
-          display: inline;
-          padding: 0 0.5rem;
-          line-height: 1.6;
-          border-radius: 3rem;
-          border: 1px solid var(--color-rgba-white-06);
+      b, strong {
+        display: inline;
+        padding: 0 0.5rem;
+        line-height: 1.6;
+        border-radius: 3rem;
+        border: 1px solid var(--color-rgba-white-06);
 
-          @include mq(sm) {
-            padding: 0;
-            line-height: inherit;
-            border-radius: 0;
-            border: none;
-          }
+        @include mq(sm) {
+          padding: 0;
+          line-height: inherit;
+          border-radius: 0;
+          border: none;
         }
       }
     }
