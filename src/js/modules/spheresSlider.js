@@ -144,8 +144,13 @@ export default () => {
         if (index === swiper.activeIndex) {
           let offsetWidth = slide.querySelector("span").offsetWidth;
 
+          activeBorder.style.left = -0.6 + "rem";
           activeBorder.style.width = offsetWidth + 12 + "px";
-        }
+        };
+
+        if (swiper.activeIndex === slides.length - 1) {
+          activeBorder.style.left = 17 + "px";
+        };
       });
 
     });
