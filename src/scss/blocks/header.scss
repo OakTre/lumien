@@ -11,10 +11,14 @@
     padding: 1.5rem 0;
   }
 
-  --default-color: var(--color-white);
+  --default-color: var(--color-dark);
 
   &.is-dark {
     --default-color: var(--color-dark);
+  }
+
+  &.is-white {
+    --default-color: var(--color-white);
   }
 
   &.logo-hidden {

@@ -5,7 +5,7 @@ export class Modal {
       isClose: () => { },
     }
     this.options = Object.assign(defaultOptions, options);
-    this.modal = document.querySelector('.modal');
+    this.modals = Array.from(document.querySelectorAll('.modal'));
     this.speed = false;
     this.animation = false;
     this.isOpen = false;
@@ -25,7 +25,7 @@ export class Modal {
 
 
   events() {
-    if (this.modal) {
+    if (this.modals.length) {
       document.addEventListener('click', function (e) {
         const clickedElement = e.target.closest('[data-path]');
         if (clickedElement) {
@@ -35,7 +35,7 @@ export class Modal {
           this.animation = animation ? animation : 'fade';
           this.speed = speed ? parseInt(speed) : 300;
           this.modalContainer = document.querySelector(`[data-target="${target}"]`);
-          this.open();
+          this.open(this.modalContainer.closest(".modal"));
           return;
         }
 
@@ -59,11 +59,13 @@ export class Modal {
 
       }.bind(this));
 
-      this.modal.addEventListener('click', function (e) {
-        if (!e.target.classList.contains('modal__container') && !e.target.closest('.modal__container') && this.isOpen) {
-          this.close();
-        }
-      }.bind(this));
+      this.modals.forEach((mdl)=>{
+        mdl.addEventListener('click', function (e) {
+          if (!e.target.classList.contains('modal__container') && !e.target.closest('.modal__container') && this.isOpen) {
+            this.close();
+          }
+        }.bind(this));
+      });
     }
   }
 
@@ -74,14 +76,14 @@ export class Modal {
     this.animation = animation ? animation : 'fade';
     this.speed = speed ? parseInt(speed) : 300;
     this.modalContainer = document.querySelector(`[data-target="${target}"]`);
-    this.open();
+    this.open(this.modalContainer.closest(".modal"));
   }
 
-  open() {
+  open(thisModal) {
     this.previousActiveElement = document.activeElement;
 
-    this.modal.style.setProperty('--transition-time', `${this.speed / 1000}s`);
-    this.modal.classList.add('is-open');
+    thisModal.style.setProperty('--transition-time', `${this.speed / 1000}s`);
+    thisModal.classList.add('is-open');
     this.disableScroll();
 
     this.modalContainer.classList.add('modal-open');
@@ -99,7 +101,9 @@ export class Modal {
     if (this.modalContainer) {
       this.modalContainer.classList.remove('animate-open');
       this.modalContainer.classList.remove(this.animation);
-      this.modal.classList.remove('is-open');
+      this.modals.forEach(mdl => {
+        mdl.classList.remove('is-open');
+      })
       this.modalContainer.classList.remove('modal-open');
 
       this.enableScroll();

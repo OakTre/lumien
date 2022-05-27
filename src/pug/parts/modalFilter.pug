@@ -1,0 +1,213 @@
+-
+  let catalogInpts3 = [
+    {
+      name: "Сферы применения",
+      morebtn: true,
+      inpts: [
+        {
+          name: "Все",
+          slug: "all"
+        },
+        {
+          name: "Домашние развлечения",
+          slug: "home"
+        },
+        {
+          name: "Музеи и выставки",
+          slug: "museums"
+        },
+        {
+          name: "Бары и рестораны",
+          slug: "bars"
+        },
+        {
+          name: "Образование",
+          slug: "education"
+        },
+        {
+          name: "VR",
+          slug: "VR"
+        },
+        {
+          name: "Госсектор",
+          slug: "publicSector"
+        },
+        {
+          name: "Развлекательные площадки",
+          slug: "fun"
+        },
+        {
+          name: "Кинотеатр",
+          slug: "cinema"
+        },
+        {
+          name: "Стадионы и арены",
+          slug: "arena"
+        },
+        {
+          name: "Актовые залы",
+          slug: "theatre"
+        }
+      ]
+    },
+    {
+      name: "Тип экрана",
+      morebtn: true,
+      inpts: [
+        {
+          name: "Все",
+          slug: "all"
+        },
+        {
+          name: "Мобильный на штативе",
+          slug: "mobile"
+        },
+        {
+          name: "Натяжной на раме",
+          slug: "rama"
+        },
+        {
+          name: "С функцией отражения внешней засветки",
+          slug: "light"
+        },
+        {
+          name: "C электроприводом",
+          slug: "privod"
+        },
+        {
+          name: "Встраиваемые",
+          slug: "embedded"
+        },
+        {
+          name: "Рулонные ручные",
+          slug: "custom"
+        },
+        {
+          name: "Для крупных инсталляций",
+          slug: "big"
+        }
+      ]
+    },
+    {
+      name: "Соотношение сторон",
+      inpts: [
+        {
+          name: "Все",
+          slug: "all"
+        },
+        {
+          name: "1:1",
+          slug: "1:1"
+        },
+        {
+          name: "2:35:1",
+          slug: "2:35:1"
+        },
+        {
+          name: "4:3",
+          slug: "4:3"
+        },
+        {
+          name: "16:9",
+          slug: "16:9"
+        },
+        {
+          name: "16:10",
+          slug: "16:10"
+        }
+      ]
+    },
+    {
+      name: "Размер рабочей области",
+      img: true
+    },
+    {
+      name: "Тип полотна",
+      tooltip: true,
+      inpts: [
+        {
+          name: "Все",
+          slug: "all"
+        },
+        {
+          name: "Matte White",
+          slug: "Matte White",
+        },
+        {
+          name: "Matte White Sound",
+          slug: "Matte White Sound"
+        },
+        {
+          name: "Matte White FiberGlass",
+          slug: "Matte White FiberGlass"
+        },
+        {
+          name: "High Contrast",
+          slug: "High Contrast"
+        },
+        {
+          name: "High Contrast Sound",
+          slug: "High Contrast Sound"
+        },
+        {
+          name: "Rear Projection",
+          slug: "Rear Projection"
+        },
+        {
+          name: "Front +Rear Projection",
+          slug: "Front +Rear Projection"
+        },
+        {
+          name: "Radiance 0.8",
+          slug: "Radiance 0.8"
+        }
+      ]
+    },
+  ]
+
+.modal__container.modal-filter(data-target="filter")
+  .modal__content.site-container
+    .modal-filter__top
+      button.button-reset.modal-close.modal-filter__back
+        span.modal-filter__back-icon
+        span.modal-filter__back-name Фильтры
+      button.button-reset.modal-filter__reset.js-clear-btn(data-form="mobile")
+        +icon-mono("trash")(class="modal-filter__reset-icon" width="20" height="20")
+    .modal-filter__body
+      form.side-filter.js-filter-form-mobile(action="")
+        for item in catalogInpts3
+          if item.img
+            .side-filter__block.js-sizes-parent
+              .side-filter__error
+                .side-filter__error-inner
+                  span.side-filter__error-text
+                    | Данное значение отсутсвует, ближайшее к нему:
+                  .side-filter__error-suggestions
+                    button.button-reset.side-filter__error-item.js-sizes-btn(type="button" data-inches="[200, 200]")
+                      | 200:200
+                    button.button-reset.side-filter__error-item.js-sizes-btn(type="button" data-inches="[300, 300]")
+                      | 300:300
+              p.side-filter__legend= item.name
+              .side-filter__size
+                input(type="number" class="side-filter__size-input js-sizes-value" name="centimeter" placeholder="См")
+                input(type="number" class="side-filter__size-input" name="inch" placeholder="Дюйм")
+                input(type="number" class="side-filter__size-input js-sizes-value" name="centimeter" placeholder="См")
+          else
+            .side-filter__block.js-btn-show-hide-parent
+              p.side-filter__legend= item.name
+              .side-filter__block-list
+                for inpt in item.inpts
+                  label.side-filter__label
+                    input(type="checkbox" class="visually-hidden" name=inpt.slug value=inpt.name)
+                    span.side-filter__label-name= inpt.name
+                    if item.tooltip
+                      span.tooltip.side-filter__label-tooltip.button-reset(arila-label="Открыть подсказку")
+                        +icon-multi("warning")(width="16" height="16" class="tooltip__icon")
+                        span.tooltip__text-wrapper
+                          span.tooltip__text
+                            | Универсальное полотно с белой матовой поверхностью на текстильной основе с покрытием ПВХ
+              if item.morebtn
+                button.button-reset.side-filter__more-btn.show-more-btn.js-btn-show-hide(type="button")
+                  span._shown ПОКАЗАТЬ ЕЩЕ
+                  span._hidden скрыть
+        button.button-reset.button.side-filter__btn ПРИМЕНИТЬ ФИЛЬТР

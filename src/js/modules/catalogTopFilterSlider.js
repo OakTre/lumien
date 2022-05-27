@@ -6,4 +6,8 @@ export default () => {
     touchMoveStopPropagation: true,
     spaceBetween: 20,
   });
+
+  window.lumien_API.initCatalogTopFilterSlider = () => {
+    catalogTopFilter.update();
+  };
 };
