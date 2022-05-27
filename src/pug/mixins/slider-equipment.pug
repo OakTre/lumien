@@ -4,7 +4,13 @@ mixin slider-equipment(name, arr)
       .grid-container.slider-equipment__container
         .slider-equipment__container-block
         .slider-equipment__container-block
-          h2.site-second-heading.slider-equipment__heading!= name
+          .slider-equipment__heading-wrapper
+            h2.site-second-heading.slider-equipment__heading!= name
+            .slider-nav
+              button.slider-nav__btn.button-reset.js-equipment-btn-prev
+                +icon-mono("shevron-left")(width="9" height="13" class="slider-nav__btn-icon")
+              button.slider-nav__btn.button-reset.js-equipment-btn-next
+                +icon-mono("shevron-right")(width="9" height="13" class="slider-nav__btn-icon")
       .grid-container.slider-equipment__container-type2
         .slider-equipment__container-block
         .slider-equipment__container-block

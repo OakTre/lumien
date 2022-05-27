@@ -24,7 +24,7 @@ section.section-indent.catalog-inner
               p.side-filter__legend= item.name
                 .side-filter__block-list
                   for inpt, index in item.inpts
-                    - let isfirstEl = index === 0 ? "js-choose-all" : false
+                    - let isfirstEl = index === 0 ? "js-choose-all" : "js-filter-input"
                       label.side-filter__label
                         input(type="checkbox" class="visually-hidden" class=isfirstEl name=inpt.slug value=inpt.name)
                         span.side-filter__label-name= inpt.name

@@ -111,19 +111,34 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // кнопка показакть\скрыть END
 
   // каталог.фильтр. выбрать все
-  const chooseAllInput = Array.from(document.querySelectorAll(".js-choose-all"));
+  // const chooseAllInput = Array.from(document.querySelectorAll(".js-choose-all"));
 
-  if (chooseAllInput.length) {
-    chooseAllInput.forEach(input => {
-      input.addEventListener("change", () => {
-        const parent = input.closest(".side-filter__block-list");
-        if (input.checked) {
-          parent.querySelectorAll("input").forEach(inpt => inpt.checked = true);
-        } else {
-          parent.querySelectorAll("input").forEach(inpt => inpt.checked = false);
-        }
-      });
-    });
-  }
+  // if (chooseAllInput.length) {
+  //   chooseAllInput.forEach(input => {
+  //     input.addEventListener("change", () => {
+  //       const parent = input.closest(".side-filter__block-list");
+  //       if (input.checked) {
+  //         parent.querySelectorAll("input").forEach(inpt => inpt.checked = true);
+  //       } else {
+  //         parent.querySelectorAll("input").forEach(inpt => inpt.checked = false);
+  //       }
+  //     });
+  //   });
+  // }
   // каталог.фильтр. выбрать все END
+
+  // каталог инпуты
+  const catalogInputs = Array.from(document.querySelectorAll(".js-filter-input"));
+  const clearInputBtn = document.querySelector(".js-clear-btn");
+
+  catalogInputs.forEach(inpt => {
+    inpt.addEventListener("change", ()=> {
+      if (inpt.checked === true) {
+        clearInputBtn.classList.add("is-active");
+
+        return;
+      };
+    });
+  });
+  // каталог инпуты END
 });

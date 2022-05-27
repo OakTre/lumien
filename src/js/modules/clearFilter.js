@@ -10,6 +10,7 @@ export default () => {
   clearBtn.forEach(btn => {
     btn.addEventListener("click", () => {
       const form =  btn.dataset.form;
+      btn.classList.remove("is-active");
 
       switch (form) {
         case "desctop":

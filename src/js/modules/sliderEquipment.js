@@ -14,6 +14,10 @@ export default () => {
     let sliderCases = new Swiper(slider, {
       slidesPerView: 1.1,
       spaceBetween: 10,
+      navigation: {
+        nextEl:  slider.closest(".slider-equipment").querySelector('.js-equipment-btn-next'),
+        prevEl: slider.closest(".slider-equipment").querySelector('.js-equipment-btn-prev'),
+      },
       breakpoints: {
         280: {
           slidesPerView: 1.3,

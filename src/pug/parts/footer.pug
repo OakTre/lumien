@@ -13,9 +13,9 @@ footer.footer
         .footer__subscribe-content-block
           p.footer__subscribe-heading Подписывайтесь на наши новости и события
         .footer__subscribe-content-block
-          form.footer__form
+          form.footer__form(data-need-validatio)
             label.footer__form-label
-              input.footer__input(placeholder="Введите ваш email" name="email" type="email")
+              input.footer__input(placeholder="Введите ваш email" name="email" type="email" data-parsley-required)
               button.button-reset.footer__form-btn(type="submit")
                 +icon-mono("send-email")(width="24" height="24" class="footer__form-btn-icon")
     .footer__container.grid-container

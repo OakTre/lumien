@@ -13,11 +13,18 @@
     }
   }
 
-  &__heading {
+  &__heading-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 7rem;
 
     @include mq(sm) {
       margin-bottom: 4rem;
+
+      .slider-nav {
+        display: none;
+      }
     }
   }
 

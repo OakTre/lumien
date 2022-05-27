@@ -597,7 +597,21 @@
             <div class="grid-container slider-equipment__container">
               <div class="slider-equipment__container-block"></div>
               <div class="slider-equipment__container-block">
-                <h2 class="site-second-heading slider-equipment__heading">Рекомендуемые модели</h2>
+                <div class="slider-equipment__heading-wrapper">
+                  <h2 class="site-second-heading slider-equipment__heading">Рекомендуемые модели</h2>
+                  <div class="slider-nav">
+                    <button class="slider-nav__btn button-reset js-equipment-btn-prev">
+                      <svg class="icon icon-shevron-left slider-nav__btn-icon" width="9" height="13">
+                        <use xlink:href="images/sprites/sprite-mono.svg#shevron-left"></use>
+                      </svg>
+                    </button>
+                    <button class="slider-nav__btn button-reset js-equipment-btn-next">
+                      <svg class="icon icon-shevron-right slider-nav__btn-icon" width="9" height="13">
+                        <use xlink:href="images/sprites/sprite-mono.svg#shevron-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="grid-container slider-equipment__container-type2">
@@ -735,9 +749,9 @@
                 <p class="footer__subscribe-heading">Подписывайтесь на наши новости и события</p>
               </div>
               <div class="footer__subscribe-content-block">
-                <form class="footer__form">
+                <form class="footer__form" data-need-validatio>
                   <label class="footer__form-label">
-                    <input class="footer__input" placeholder="Введите ваш email" name="email" type="email">
+                    <input class="footer__input" placeholder="Введите ваш email" name="email" type="email" data-parsley-required>
                     <button class="button-reset footer__form-btn" type="submit">
                       <svg class="icon icon-send-email footer__form-btn-icon" width="24" height="24">
                         <use xlink:href="images/sprites/sprite-mono.svg#send-email"></use>
