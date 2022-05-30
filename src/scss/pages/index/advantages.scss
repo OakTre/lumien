@@ -25,6 +25,13 @@
       display: flex;
       gap: 9rem;
       counter-reset: section;
+    }
+
+    &__slider-inner {
+      display: flex;
+      align-items: flex-start;
+      flex-shrink: 0;
+      gap: 9rem;
 
       @include mq(sm) {
         gap: 3.2rem;
