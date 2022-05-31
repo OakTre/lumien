@@ -962,7 +962,7 @@
                 <p class="footer__subscribe-heading">Подписывайтесь на наши новости и события</p>
               </div>
               <div class="footer__subscribe-content-block">
-                <form class="footer__form" data-need-validatio>
+                <form class="footer__form" data-need-validation name="subscribe">
                   <label class="footer__form-label">
                     <input class="footer__input" placeholder="Введите ваш email" name="email" type="email" data-parsley-required>
                     <button class="button-reset footer__form-btn" type="submit">
@@ -1043,6 +1043,22 @@
           <button class="button site-modal__btn modal-close">отлично</button>
         </div>
       </div>
+      <div class="modal__container site-modal" data-target="successEmail">
+        <div class="modal__conten site-modal__content">
+          <button class="button-reset site-modal__close modal-close"><span></span><span></span></button>
+          <div class="site-modal__succes-heading site-heading">Спасибо! Вы отправили заявку на нашу рассылку новостей.</div>
+          <p class="site-modal__text">Для завершения подписки проверьте Вашу почту</p>
+          <button class="button site-modal__btn modal-close">отлично</button>
+        </div>
+      </div>
+      <div class="modal__container site-modal _error-modal" data-target="errorModal">
+        <div class="modal__conten site-modal__content">
+          <button class="button-reset site-modal__close modal-close"><span></span><span></span></button>
+          <div class="site-modal__succes-heading site-heading">Извините, что-то пошло не так!</div>
+          <p class="site-modal__text">Повторите отправку формы или немного подождите</p>
+          <button class="button site-modal__btn modal-close">ПОВТОРИТЬ</button>
+        </div>
+      </div>
       <div class="modal__container site-modal _callback" data-target="callback">
         <div class="modal__conten site-modal__content">
           <button class="button-reset site-modal__close modal-close" type="button"><span></span><span></span></button>
@@ -1084,38 +1100,52 @@
           </div>
         </div>
       </div>
-      <div class="modal__container site-modal modal-product" data-target="product">
-        <form class="modal__conten site-modal__content">
+      <div class="modal__container site-modal _callback" data-target="callbackSuccess">
+        <div class="modal__conten site-modal__content">
           <button class="button-reset site-modal__close modal-close" type="button"><span></span><span></span></button>
-          <div class="modal-product__block">
+          <div class="site-modal__from-ok">
+            <div class="site-modal__heading">Ваша заявка успешно отправлена!</div>
+            <p class="site-modal__text">В ближайшее время с вами свяжется наш менеджер, что бы обсудить детали</p>
+            <button class="button site-modal__btn modal-close">отлично</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal__container site-modal modal-product" data-target="product">
+        <form class="modal__conten site-modal__content" data-need-validation>
+          <button class="button-reset site-modal__close modal-close" type="button"><span></span><span></span></button>
+          <div class="modal-product__block js-mobile-accordion">
             <div class="modal-product__heading">Добавьте аксессуары</div>
-            <ul class="modal-product__list">
-              <li class="modal-product__item">
-                <label class="modal-product__item-label"><img class="modal-product__item-img" src="images/cart/accessories-img1.png" alt=""><span class="modal-product__item-info-wrapper"><span class="modal-product__item-name">Master Wire Control</span><span class="modal-product__item-text">Электроприводные экраны на прочных стальных тросах, которые могут опускать экран до 5 метров</span>
-                    <input class="visually-hidden" type="checkbox" name="product1" value="product_value"><span class="modal-product__item-check">Оставить заявку вместе с  экраном</span></span></label>
-              </li>
-              <li class="modal-product__item">
-                <label class="modal-product__item-label"><img class="modal-product__item-img" src="images/cart/accessories-img1.png" alt=""><span class="modal-product__item-info-wrapper"><span class="modal-product__item-name">Master Wire Control</span><span class="modal-product__item-text">Электроприводные экраны на прочных стальных тросах, которые могут опускать экран до 5 метров</span>
-                    <input class="visually-hidden" type="checkbox" name="product1" value="product_value"><span class="modal-product__item-check">Оставить заявку вместе с  экраном</span></span></label>
-              </li>
-              <li class="modal-product__item">
-                <label class="modal-product__item-label"><img class="modal-product__item-img" src="images/cart/accessories-img1.png" alt=""><span class="modal-product__item-info-wrapper"><span class="modal-product__item-name">Master Wire Control</span><span class="modal-product__item-text">Электроприводные экраны на прочных стальных тросах, которые могут опускать экран до 5 метров</span>
-                    <input class="visually-hidden" type="checkbox" name="product1" value="product_value"><span class="modal-product__item-check">Оставить заявку вместе с  экраном</span></span></label>
-              </li>
-            </ul>
+            <div class="modal-product__heading _mobile">Заявка <br> на модель</div>
+            <button class="button-reset modal-product__mobile-legend js-drop-menu-mobile-btn" type="button"><span class="modal-product__mobile-legend-name" data-text="1">Добавьте аксессуары</span></button>
+            <div class="modal-product__list-mobile-wrapper js-drop-menu-mobile-container">
+              <ul class="modal-product__list">
+                <li class="modal-product__item">
+                  <label class="modal-product__item-label"><img class="modal-product__item-img" src="images/cart/accessories-img1.png" alt=""><span class="modal-product__item-info-wrapper"><span class="modal-product__item-name">Master Wire Control</span><span class="modal-product__item-text">Электроприводные экраны на прочных стальных тросах, которые могут опускать экран до 5 метров</span>
+                      <input class="visually-hidden" type="checkbox" name="product1" value="product_value"><span class="modal-product__item-check">Оставить заявку вместе с  экраном</span></span></label>
+                </li>
+                <li class="modal-product__item">
+                  <label class="modal-product__item-label"><img class="modal-product__item-img" src="images/cart/accessories-img1.png" alt=""><span class="modal-product__item-info-wrapper"><span class="modal-product__item-name">Master Wire Control</span><span class="modal-product__item-text">Электроприводные экраны на прочных стальных тросах, которые могут опускать экран до 5 метров</span>
+                      <input class="visually-hidden" type="checkbox" name="product1" value="product_value"><span class="modal-product__item-check">Оставить заявку вместе с  экраном</span></span></label>
+                </li>
+                <li class="modal-product__item">
+                  <label class="modal-product__item-label"><img class="modal-product__item-img" src="images/cart/accessories-img1.png" alt=""><span class="modal-product__item-info-wrapper"><span class="modal-product__item-name">Master Wire Control</span><span class="modal-product__item-text">Электроприводные экраны на прочных стальных тросах, которые могут опускать экран до 5 метров</span>
+                      <input class="visually-hidden" type="checkbox" name="product1" value="product_value"><span class="modal-product__item-check">Оставить заявку вместе с  экраном</span></span></label>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="modal-product__block">
             <div class="modal-product__heading">Заявка на модель</div>
             <label class="form__label select-wrapper mod-send-form custom-select">
-              <select class="select js-custom-select" name="equipment-type" data-name="Проекционные экраны">
-                <option value="Проекционные экраны" placeholder>Проекционные экраны</option>
+              <select class="select js-custom-select" name="equipment-type" data-parsley-required data-name="Проекционные экраны">
+                <option value="Проекционные экраны">Проекционные экраны</option>
                 <option value="first">first</option>
                 <option value="second">second</option>
               </select>
             </label>
             <label class="form__label select-wrapper mod-send-form custom-select mod-card-label" data-text="*  Код продукта LEC–100101">
-              <select class="select js-custom-select" name="equipment-type" data-name="Cinema Tensioned Control">
-                <option value="Выберите модель оборудования" placeholder>Cinema Tensioned Control</option>
+              <select class="select js-custom-select" name="equipment-type" data-parsley-required data-name="Cinema Tensioned Control">
+                <option value="Выберите модель оборудования">Cinema Tensioned Control</option>
                 <option value="first">first</option>
                 <option value="second">second</option>
               </select>
@@ -1130,7 +1160,7 @@
               <input class="form__input input-reset" type="text" name="city" placeholder="Город" data-parsley-required>
             </label>
             <label class="form__label">
-              <input class="form__input input-reset" type="tel" name="tel" placeholder="+7 (999) 999-99-99" data-parsley-required data-parsley-phone>
+              <input class="form__input input-reset js-phone-mask" type="tel" name="tel" placeholder="+7 (999) 999-99-99" data-parsley-required data-parsley-phone>
             </label>
             <label class="form__label">
               <input class="form__input input-reset" type="email" name="email" placeholder="Email" data-parsley-required>

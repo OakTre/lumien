@@ -70,6 +70,54 @@
       padding: 2.8rem;
     }
   }
+
+  &__links-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    margin-bottom: 10rem;
+
+    @include mq(md) {
+      gap: 1rem 3rem;
+      flex-wrap: wrap;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    font: 500 2rem/2.8rem var(--main-ff);
+
+    &:hover {
+      color: var(--color-accent);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:focus {
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      bottom: -0.5rem;
+      width: 100%;
+      height: 0.1rem;
+      background-color: currentColor;
+      opacity: 0;
+      transition: opacity var(--transition);
+      content: "";
+    }
+
+    @include mq(sm) {
+      font: var(--font-body-M-small);
+    }
+  }
 }
 
 .catalog-more {

@@ -9,3 +9,28 @@
       | В ближайшее время с вами свяжется наш менеджер, что бы обсудить детали
     button.button.site-modal__btn.modal-close
       | отлично
+
+.modal__container.site-modal(data-target="successEmail")
+  .modal__conten.site-modal__content
+    button.button-reset.site-modal__close.modal-close
+      span
+      span
+    .site-modal__succes-heading.site-heading
+      | Спасибо! Вы отправили заявку на нашу рассылку новостей.
+    p.site-modal__text
+      | Для завершения подписки проверьте Вашу почту
+    button.button.site-modal__btn.modal-close
+      | отлично
+
+
+.modal__container.site-modal._error-modal(data-target="errorModal")
+  .modal__conten.site-modal__content
+    button.button-reset.site-modal__close.modal-close
+      span
+      span
+    .site-modal__succes-heading.site-heading
+      | Извините, что-то пошло не так!
+    p.site-modal__text
+      | Повторите отправку формы или немного подождите
+    button.button.site-modal__btn.modal-close
+      | ПОВТОРИТЬ

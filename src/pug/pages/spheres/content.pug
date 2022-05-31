@@ -51,20 +51,24 @@
   ]
 
 section.applications.section-indent.top-offset
-    .site-container.grid-container
-      .grid-container__block
-      .grid-container__block
-        h1.applications__heading.section-heading-offset.site-heading Сферы применения
-    .site-container.applications__content.grid-container.js-mobile-list
-      for item, index in applications_arr
-        .applications__content-item
-          a.applications-cart(href="/spheres-detail.html")
-            .applications-cart__img-wrapper
-              img(src=`images/applications-cart/img${index}.jpg` alt=item.name class="applications-cart__img")
-            .applications-cart__inner
-              h3!= item.name
-              p!= item.text
-              span.applications-cart__icon
-      button.button-reset.button.show-more-btn.applications__btn.js-mobile-btn
-        span._hidden Скрыть
-        span._shown Показать еще
+  .site-container.grid-container
+    .grid-container__block
+    .grid-container__block
+      h1.applications__heading.section-heading-offset.site-heading Сферы применения
+  .site-container.applications__content.grid-container.js-mobile-list
+    for item, index in applications_arr
+      .applications__content-item
+        a.applications-cart(href="/spheres-detail.html")
+          .applications-cart__img-wrapper(style=`clip-path: url(#product-card-4628623${index});--overlay-color: rgba(0, 0, 0, 0.2);`)
+            img(src=`images/applications-cart/img${index}.jpg` alt=item.name class="applications-cart__img")
+            svg(height="0" width="0" preserveAspectRatio="none")
+              defs
+                clipPath(id=`product-card-4628623${index}`)
+                  rect(fill="#FFFFFF" rx="10" ry="10" x="0" y="0" width="100" height="100")
+          .applications-cart__inner
+            h3!= item.name
+            p!= item.text
+            span.applications-cart__icon
+    button.button-reset.button.show-more-btn.applications__btn.js-mobile-btn
+      span._hidden Скрыть
+      span._shown Показать еще

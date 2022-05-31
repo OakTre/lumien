@@ -14,6 +14,8 @@ export default function initSelects() {
 				allowHTML: true,
       });
 
+      window.lumien_API.equipmentSelects.push(slct)
+
       choices.push(slct);
     });
 

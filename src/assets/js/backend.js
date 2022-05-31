@@ -141,4 +141,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   });
   // каталог инпуты END
+
+  // открытие sucsess окна
+  const formSubscribe = document.querySelector("form[name=subscribe]");
+
+  if (formSubscribe) {
+    formSubscribe.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const input = formSubscribe.querySelector("input");
+      window.lumien_API.modal.onOpen("successEmail");
+      input.value = "";
+    });
+  };
+  // открытие sucsess окна end
 });

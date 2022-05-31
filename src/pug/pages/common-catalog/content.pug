@@ -47,8 +47,11 @@ section.section-indent.common-catalog.top-offset
     .grid-container__block
     .grid-container__block
       h1.common-catalog__heading Каталог
-      h2.site-second-heading Проекционные экраны
-  .site-container.common-catalog__container.grid-container
+      .common-catalog__links-wrapper
+        a.common-catalog__link(href="#canvases") Проекционные экраны
+        a.common-catalog__link(href="#screens") Интерактивные дисплеи
+        a.common-catalog__link(href="#furniture") Мебель презентационная
+  .site-container.common-catalog__container.grid-container(id="canvases")
     for item, index in catalog_arr
       .common-catalog__item
         +catalog-item(item.name, item.text, `img${index}`, item.count)

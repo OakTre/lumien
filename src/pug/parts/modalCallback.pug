@@ -33,3 +33,16 @@
             |	Согласен на обработку персональных данных
         button.button-reset.button.form__btn.site-modal__form-btn
           |	Отправить заявку
+
+
+.modal__container.site-modal._callback(data-target="callbackSuccess")
+  .modal__conten.site-modal__content
+    button.button-reset.site-modal__close.modal-close(type="button")
+      span
+      span
+    .site-modal__from-ok
+      .site-modal__heading Ваша заявка успешно отправлена!
+      p.site-modal__text
+        | В ближайшее время с вами свяжется наш менеджер, что бы обсудить детали
+      button.button.site-modal__btn.modal-close
+        | отлично

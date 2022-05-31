@@ -49,6 +49,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 3.6rem 2rem;
 
     @include mq(sm) {
       justify-content: stretch;
@@ -60,17 +61,14 @@
     display: block;
     width: 100%;
 
-    &:nth-child(1) {
-      margin-bottom: 3.6rem;
+    &.mod-small {
+      width: calc(50% - 2rem);
+    }
 
+    &:nth-child(1) {
       @include mq(sm) {
         margin-bottom: 0;
       }
-    }
-
-    &:nth-child(2),
-    &:nth-child(3) {
-      width: calc(50% - 2rem);
     }
 
     @include mq(sm) {

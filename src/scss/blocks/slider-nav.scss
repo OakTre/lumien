@@ -21,6 +21,10 @@
       border: none;
       pointer-events: none;
     }
+
+    &.swiper-button-lock {
+      display: none;
+    }
   }
 
   &__btn-icon {

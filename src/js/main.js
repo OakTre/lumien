@@ -37,6 +37,7 @@ import breadcrumbsCostil from './modules/breadcrumbsCostil.js';
 import initModal from './modules/initModal.js';
 import clearFilter from './modules/clearFilter.js';
 import spheresMobileTabs from './modules/spheresMobileTabs.js';
+import cartModalAccordion from './modules/cartModalAccordion.js';
 
 smoothscroll.polyfill();
 
@@ -45,7 +46,7 @@ window.addEventListener("load", ()=>{
 });
 
 documenReady(() => {
-  window.lumien_API = {};
+  window.lumien_API = {equipmentSelects: []};
 
   lazyIMages();
   validation();
@@ -80,6 +81,7 @@ documenReady(() => {
   initModal();
   clearFilter();
   spheresMobileTabs();
+  cartModalAccordion();
 
   // always last
   cartImgsSlider();
