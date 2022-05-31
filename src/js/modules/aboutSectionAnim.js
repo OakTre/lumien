@@ -4,7 +4,7 @@ import {
 } from "gsap/dist/ScrollTrigger";
 
 export default () => {
-  if (!document.querySelector(".about-company__num")) return;
+  if (!document.querySelector(".about-company__img")) return;
 
   gsap.set(".about-company__num", {
     yPercent: 150
