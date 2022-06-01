@@ -3,7 +3,7 @@
 ## Ссылки
 
 1. [Главная](https://oaktre.github.io/lumien/build/)
-2. [Страница о компании](https://oaktre.github.io/lumien/build/)
+2. [Страница о компании](https://oaktre.github.io/lumien/build/page-about.html)
 3. [Сферы применения](https://oaktre.github.io/lumien/build/spheres.html)
 4. [Сферы применения - детальная](https://oaktre.github.io/lumien/build/spheres-detail.html)
 5. [Наши кейсы](https://oaktre.github.io/lumien/build/cases-page.html)
