@@ -1,0 +1,34 @@
+-
+  let dates = []
+  let date = 2010
+  let num = 0
+
+  for (let i = 0; i<12; i++)
+    dates.push(date++)
+
+section.page-about-history
+  .site-container.page-about-history__container.grid-container
+    .grid-container__block
+    .grid-container__block
+      .page-about-history__heading-wrapper
+        h2.site-second-heading.page-about-history__heading Наша история
+        .slider-nav
+          button.slider-nav__btn.button-reset.js-about-btn-prev
+            +icon-mono("shevron-left")(width="9" height="13" class="slider-nav__btn-icon")
+          button.slider-nav__btn.button-reset.js-about-btn-next
+            +icon-mono("shevron-right")(width="9" height="13" class="slider-nav__btn-icon")
+      .page-about-history__date-slider-wrapper
+        .swiper.page-about-history__date-slider
+          .swiper-wrapper
+            for item, index in dates
+              - num++
+              .swiper-slide
+                .page-about-history__date-content(style=`background-image: url(../images/page-about/slider/${num}.jpg)`)
+                  span= item
+      .swiper.page-about-history__text-slider
+        .swiper-wrapper
+          for item in dates
+            .swiper-slide
+              .page-about-history__text-content
+                p
+                  | Выход Lumien на российский рынок. Серии Eco и Master #{item}
