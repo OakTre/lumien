@@ -51,7 +51,10 @@
           option(value="Проекционные экраны") Проекционные экраны
           option(value="first") first
           option(value="second") second
-      label.form__label.select-wrapper.mod-send-form.custom-select.mod-card-label(data-text="*  Код продукта LEC–100101")
+      label.form__label.select-wrapper.mod-send-form.custom-select.mod-card-label
+        span.modal-product__subheading
+          | * Код продукта
+          span LEC–100101
         select(name="equipment-type" class="select js-custom-select" data-parsley-required data-name="Cinema Tensioned Control")
           option(value="Выберите модель оборудования") Cinema Tensioned Control
           option(value="first") first
