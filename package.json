@@ -36,6 +36,7 @@
 		"@babel/preset-env": "^7.16.11",
 		"@babel/register": "^7.17.0",
 		"@zoxon/emitty": "^1.4.2",
+		"air-datepicker": "^3.2.0",
 		"babelify": "^10.0.0",
 		"browser-sync": "^2.27.7",
 		"browserify": "^17.0.0",

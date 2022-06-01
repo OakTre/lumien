@@ -134,6 +134,26 @@
     height: 5.8rem;
     margin-bottom: 2.5rem;
 
+    .air-datepicker-body--day-name {
+      color: var(--color-accent);
+
+      &:hover {
+        background: var(--color-purple-light);
+      }
+    }
+
+    .air-datepicker-cell.-selected- {
+      background: var(--color-purple-light) !important;
+    }
+
+    .air-datepicker-cell.-current- {
+      color: var(--color-accent) !important;
+    }
+
+    .air-datepicker-cell.-selected-.-current- {
+      color: var(--color-white) !important;
+    }
+
     &:nth-last-of-type(1) {
       margin-bottom: 1.3rem;
     }

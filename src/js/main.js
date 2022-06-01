@@ -38,6 +38,7 @@ import initModal from './modules/initModal.js';
 import clearFilter from './modules/clearFilter.js';
 import spheresMobileTabs from './modules/spheresMobileTabs.js';
 import cartModalAccordion from './modules/cartModalAccordion.js';
+import dateInput from './modules/dateInput.js';
 
 smoothscroll.polyfill();
 
@@ -82,6 +83,7 @@ documenReady(() => {
   clearFilter();
   spheresMobileTabs();
   cartModalAccordion();
+  dateInput();
 
   // always last
   cartImgsSlider();

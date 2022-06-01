@@ -203,7 +203,7 @@ section.contacts-us
               label.form__label._required
                 input(type="email" class="form__input input-reset" name="email" placeholder="Электронная почта контактного лица" data-parsley-required)
               label.form__label._required
-                input(type="text" class="form__input input-reset" name="inn" placeholder="ИНН" data-parsley-required)
+                input(type="text" class="form__input input-reset js-inn-input" name="inn" placeholder="ИНН" data-parsley-required)
               h2.site-heading.contacts-us__heading.mod-small.mod-full-grid Информация о проекте
               label.form__label._required
                 input(type="text" class="form__input input-reset" name="project-name" placeholder="Название проекта" data-parsley-required)
@@ -230,9 +230,9 @@ section.contacts-us
               label.form__label._required
                 input(type="text" class="form__input input-reset" name="product-list" placeholder="Список закупаемого оборудования" data-parsley-required)
               label.form__label._required
-                input(type="text" class="form__input input-reset" name="date" placeholder="Ожидаемая дата реализации" data-parsley-required)
+                input(type="text" class="form__input input-reset js-date-picker js-date-input" name="date" placeholder="Ожидаемая дата реализации" data-parsley-required)
               label.form__label._required
-                input(type="tel" class="form__input input-reset" name="project-summ" placeholder="Сумма проекта" data-parsley-required)
+                input(type="number" class="form__input input-reset" name="project-summ" placeholder="Сумма проекта" data-parsley-required)
               label.form__label.form__textarea-label
                 textarea(name="text" class="form__textarea" placeholder="Ваше сообщение")
             label.form__agreement-label
