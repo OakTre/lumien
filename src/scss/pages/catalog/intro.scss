@@ -37,6 +37,16 @@
       }
     }
 
+    @include mq(lg) {
+      &:last-child {
+
+        &::before,
+        &::after {
+          content: none;
+        }
+      }
+    }
+
 
     &::after {
       width: 11rem;
