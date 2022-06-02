@@ -93,7 +93,7 @@
     }
 
     @include mq(sm) {
-      gap: 2.5rem;
+      gap: 1.4rem;
     }
   }
 
@@ -122,7 +122,11 @@
     }
 
     @include mq(sm) {
-      width: calc(33.3% - 1.7rem);
+      width: calc(33.3% - 1.2rem);
+
+      .about-company__num {
+        font-size: 4.1rem;
+      }
     }
   }
 }
@@ -242,6 +246,10 @@
     cursor: pointer;
     margin: 5rem 0 7rem;
 
+    @include mq(sm) {
+      overflow: visible;
+    }
+
     &::before {
       position: absolute;
       top: 50%;
@@ -284,9 +292,29 @@
     }
 
     @include mq(sm) {
-      height: 21.6rem;
+      height: 23rem;
       border-radius: 1.2rem;
       margin: 2rem 0 6rem;
+    }
+  }
+
+  &__video-caption {
+    position: absolute;
+    top: 4.5rem;
+    left: 4.5rem;
+    color: var(--color-white);
+    max-width: 17.9rem;
+    font: var(--font-body-M);
+
+    @include mq(sm) {
+      font: var(--font-body-XXS);
+      top: auto;
+      left: 50%;
+      margin-right: -50%;
+      transform: translateX(-50%);
+      bottom: -1.9rem;
+      color: var(--text-color);
+      max-width: 90%;
     }
   }
 }
