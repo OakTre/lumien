@@ -417,10 +417,19 @@
         }
       }
     }
+
+    @include mq(sm) {
+      margin-bottom: 1rem;
+      line-height: 0.7;
+    }
   }
 
   .form__agreement-label {
     margin-bottom: 3rem;
+
+    @include mq(sm) {
+      margin-top: 0;
+    }
   }
 
   .modal__conten {

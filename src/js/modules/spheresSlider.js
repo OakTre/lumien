@@ -47,7 +47,7 @@ export default () => {
       y: "5rem",
       opacity: 0
     });
-    gsap.set(".js-text-spheres-wrapper ._line", {xPercent: -100})
+    gsap.set(".js-text-spheres-wrapper ._line", { xPercent: -100 })
 
     timeline
       .to(spheresTxtWrapper, {
@@ -57,10 +57,11 @@ export default () => {
         ease: "power3.out",
         clearProps: "all"
       })
-      .to(".js-text-spheres-wrapper ._line", {xPercent: 0, duration: 0.8, ease: "power3.out", clearProps: "all"})
+      .to(".js-text-spheres-wrapper ._line", { xPercent: 0, duration: 0.8, ease: "power3.out", clearProps: "all" })
 
     const slides = Array.from(document.querySelectorAll(".spheres__nav-item"));
     const activeBorder = document.querySelector("._active-border");
+    const sliderContainer = document.querySelector(".spheres__nav");
 
     let sliderThumb = new Swiper(".spheres__nav", {
       slidesPerView: 'auto',
@@ -98,6 +99,7 @@ export default () => {
       },
     });
 
+
     sliderSpheres.on('slideChange', function (swiper) {
       if (swiper.activeIndex !== swiper.thumbs.swiper.activeIndex) {
         sliderThumb.slideTo(swiper.activeIndex + swiper.thumbs.swiper.activeIndex - swiper.thumbs.swiper.activeIndex);
@@ -127,7 +129,6 @@ export default () => {
         }
 
         if (index === swiper.realIndex - 1) {
-
           timeline
             .fromTo(headingArrs[swiper.realIndex - 1].chars, {
               yPercent: 0,
@@ -139,7 +140,6 @@ export default () => {
         }
       });
 
-
       slides.forEach((slide, index) => {
         if (index === swiper.activeIndex) {
           let offsetWidth = slide.querySelector("span").offsetWidth;
@@ -149,7 +149,9 @@ export default () => {
         };
 
         if (swiper.activeIndex === slides.length - 1) {
-          activeBorder.style.left = 17 + "px";
+          let offsetWidth = sliderContainer.offsetWidth - slide.offsetWidth;
+
+          activeBorder.style.left = offsetWidth / 10 - 0.6 + "rem";
         };
       });
 

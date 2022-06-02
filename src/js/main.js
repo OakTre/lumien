@@ -43,12 +43,16 @@ import aboutPageHistorySlider from './modules/aboutPageHistorySlider.js';
 
 smoothscroll.polyfill();
 
-window.addEventListener("load", ()=>{
+window.addEventListener("load", () => {
   closePreloadre();
 });
 
 documenReady(() => {
-  window.lumien_API = {equipmentSelects: []};
+  window.lumien_API = { equipmentSelects: [] };
+
+  if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+  }
 
   lazyIMages();
   validation();
