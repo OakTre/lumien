@@ -37,7 +37,16 @@ section.page-about-history
                   span= item
       .swiper.page-about-history__text-slider
         .swiper-wrapper
-          for item in dates
+          for item, index in dates
+            if (index === 7)
+              - break
+            .swiper-slide
+              .page-about-history__text-content
+                p
+                  | Выход Lumien на российский рынок. Серии Eco и Master #{item}
+          for item, index in dates
+            if (index === 7)
+              - break
             .swiper-slide
               .page-about-history__text-content
                 p

@@ -45,4 +45,11 @@ export default () => {
       },
     },
   });
+
+  aboutSilder.on('slideChange', function (swiper) {
+    aboutSilderThumb.slideTo(swiper.activeIndex);
+  });
+
+  // aboutSilder.controller.control = aboutSilderThumb;
+  // aboutSilderThumb.controller.control = aboutSilder;
 }

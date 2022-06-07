@@ -222,6 +222,12 @@
         color: var(--color-accent);
       }
 
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
       &:nth-last-of-type(1) {
         margin-bottom: 0;
       }
