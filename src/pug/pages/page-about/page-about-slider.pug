@@ -2,6 +2,7 @@
   let dates = []
   let date = 2010
   let num = 0
+  let num2 = 0
 
   for (let i = 0; i<12; i++)
     dates.push(date++)
@@ -21,9 +22,18 @@ section.page-about-history
         .swiper.page-about-history__date-slider
           .swiper-wrapper
             for item, index in dates
+              if (index === 7)
+                - break
               - num++
               .swiper-slide
                 .page-about-history__date-content(style=`background-image: url(images/page-about/slider/${num}.jpg)`)
+                  span= item
+            for item, index in dates
+              if (index === 7)
+                - break
+              - num2++
+              .swiper-slide
+                .page-about-history__date-content(style=`background-image: url(images/page-about/slider/${num2}.jpg)`)
                   span= item
       .swiper.page-about-history__text-slider
         .swiper-wrapper

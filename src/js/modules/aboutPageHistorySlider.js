@@ -5,27 +5,11 @@ import Swiper, {
 Swiper.use([Navigation, Controller, Thumbs, Pagination, EffectFade]);
 
 export default () => {
-  let aboutSilderThumb = new Swiper(".page-about-history__text-slider", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    freeMode: true,
-    allowTouchMove: false,
-    loop: 'true',
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true,
-    },
-  });
-
   let aboutSilder = new Swiper(".page-about-history__date-slider", {
     slidesPerView: 'auto',
     spaceBetween: 25,
     watchSlidesProgress: true,
-    loop: 'true',
-    navigation: {
-      nextEl: '.js-about-btn-next',
-      prevEl: '.js-about-btn-prev',
-    },
+    freeMode: true,
     breakpoints: {
       280: {
         spaceBetween: 15
@@ -34,8 +18,31 @@ export default () => {
         spaceBetween: 25,
       },
     },
+  });
+
+  let aboutSilderThumb = new Swiper(".page-about-history__text-slider", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    watchSlidesProgress: true,
+    freeMode: true,
+    allowTouchMove: false,
+    navigation: {
+      nextEl: '.js-about-btn-next',
+      prevEl: '.js-about-btn-prev',
+    },
     thumbs: {
-      swiper: aboutSilderThumb,
+      swiper: aboutSilder,
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    on: {
+      slideChange: (swiper) => {
+        if (swiper.activeIndex !== swiper.thumbs.swiper.activeIndex) {
+          aboutSilder.slideTo(swiper.activeIndex + swiper.thumbs.swiper.activeIndex - swiper.thumbs.swiper.activeIndex);
+        };
+      },
     },
   });
 }

@@ -157,7 +157,8 @@
     margin-bottom: 3rem;
 
     b,
-    strong {
+    strong,
+    a {
       color: var(--color-accent);
     }
   }
@@ -216,7 +217,8 @@
       }
 
       b,
-      strong {
+      strong,
+      a {
         color: var(--color-accent);
       }
 
@@ -386,9 +388,19 @@
     .swiper-slide {
       display: flex;
       align-items: center;
-      width: 34.1rem;
-      height: 34.1rem;
+      width: 26.1rem;
+      height: 26.1rem;
       transition: all var(--transitionTime);
+      cursor: pointer;
+      user-select: none;
+
+      .page-about-history__date-content {
+        font-size: 6rem;
+
+        @include mq(sm) {
+          font-size: 4rem;
+        }
+      }
 
       @include mq(sm) {
         width: 16rem;
@@ -440,10 +452,27 @@
         }
       }
 
+      &.is-prev-element {
+        width: 20rem;
+        height: 20rem;
+
+        .page-about-history__date-content {
+          font-size: 4rem;
+        }
+
+        @include mq(sm) {
+          width: 8rem;
+          height: 8rem;
+
+          .page-about-history__date-content {
+            font-size: 3rem;
+          }
+        }
+      }
+
       &.swiper-slide-next {
         width: 26.1rem;
         height: 26.1rem;
-
 
         .page-about-history__date-content {
           font-size: 6rem;
@@ -457,6 +486,7 @@
             font-size: 3.5rem;
           }
         }
+
         +.swiper-slide {
           width: 20rem;
           height: 20rem;
@@ -717,5 +747,46 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+}
+
+.page-about-advantages {
+  .product-advantages__item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include mq(md) {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  .product-advantages__img-wrapper {
+    @include mq(md) {
+      height: 49.6rem;
+    }
+
+    @include mq(sm) {
+      height: 21.6rem;
+    }
+  }
+
+  .product-advantages__item-content {
+    color: var(--text-color);
+    font: var(--font-body-M);
+
+    h4 {
+      color: var(--color-dark);
+      margin-bottom: 3rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+
+      &:nth-last-of-type(1) {
+        margin-bottom: 0;
+      }
+    }
   }
 }
