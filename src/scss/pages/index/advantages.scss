@@ -35,6 +35,12 @@
 
       @include mq(sm) {
         gap: 3.2rem;
+        overflow: auto;
+        flex-shrink: inherit;
+
+        &::-webkit-scrollbar {
+          height: 0;
+        }
       }
     }
 

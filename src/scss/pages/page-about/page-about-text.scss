@@ -182,6 +182,13 @@
     border: 1px solid #ACACAC;
     color: var(--text-color);
     font: var(--font-body-S);
+    transition: all var(--transition);
+
+    &:hover {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+      border-color: var(--color-accent);
+    }
 
     @include mq(sm) {
       font: var(--font-body-XS);
@@ -601,6 +608,60 @@
 
                             .page-about-history__date-content {
                               font-size: 3rem;
+                            }
+                          }
+
+                          +.swiper-slide {
+                            width: 8rem;
+                            height: 8rem;
+
+                            .page-about-history__date-content {
+                              font-size: 2rem;
+                            }
+
+                            @include mq(sm) {
+                              width: 8rem;
+                              height: 8rem;
+
+                              .page-about-history__date-content {
+                                font-size: 3rem;
+                              }
+                            }
+
+                            +.swiper-slide {
+                              width: 8rem;
+                              height: 8rem;
+
+                              .page-about-history__date-content {
+                                font-size: 2rem;
+                              }
+
+                              @include mq(sm) {
+                                width: 8rem;
+                                height: 8rem;
+
+                                .page-about-history__date-content {
+                                  font-size: 3rem;
+                                }
+                              }
+
+                              +.swiper-slide {
+                                width: 8rem;
+                                height: 8rem;
+
+                                .page-about-history__date-content {
+                                  font-size: 2rem;
+                                }
+
+                                @include mq(sm) {
+                                  width: 8rem;
+                                  height: 8rem;
+
+                                  .page-about-history__date-content {
+                                    font-size: 3rem;
+                                  }
+                                }
+                              }
                             }
                           }
                         }

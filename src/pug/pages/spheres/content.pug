@@ -64,9 +64,10 @@ section.applications.section-indent.top-offset
             svg(height="0" width="0" preserveAspectRatio="none")
               defs
                 clipPath(id=`product-card-4628623${index}`)
-                  rect(fill="#FFFFFF" rx="10" ry="10" x="0" y="0" width="100" height="100")
+                  rect(fill="#FFFFFF" rx="25" ry="25" x="0" y="0" width="100" height="100")
           .applications-cart__inner
-            h3!= item.name
+            .applications-cart__inner-heading
+              h3!= item.name
             p!= item.text
             span.applications-cart__icon
     button.button-reset.button.show-more-btn.applications__btn.js-mobile-btn

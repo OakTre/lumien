@@ -6,7 +6,7 @@ gsap.registerPlugin([ScrollTrigger]);
 export default () => {
   const loader = document.querySelector('.loader--text');
 
-  const showDemo = () => {
+  if (window.matchMedia("(min-width: 765px)").matches) {
     gsap.utils.toArray('.js-section').forEach((section, index) => {
       const w = section.querySelector('.js-section-wrapper');
       const [x, xEnd] = [0, section.offsetWidth - w.offsetWidth];
@@ -22,5 +22,4 @@ export default () => {
     });
   }
 
-  showDemo();
 };

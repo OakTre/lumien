@@ -10,7 +10,7 @@ export default () => {
     spaceBetween: 0,
     freeMode: true,
     allowTouchMove: false,
-    watchSlidesProgress: true,
+    loop: 'true',
     effect: 'fade',
     fadeEffect: {
       crossFade: true,
@@ -20,6 +20,8 @@ export default () => {
   let aboutSilder = new Swiper(".page-about-history__date-slider", {
     slidesPerView: 'auto',
     spaceBetween: 25,
+    watchSlidesProgress: true,
+    loop: 'true',
     navigation: {
       nextEl: '.js-about-btn-next',
       prevEl: '.js-about-btn-prev',

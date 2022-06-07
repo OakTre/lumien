@@ -302,6 +302,16 @@
       }
     }
 
+    a {
+      display: inline-block;
+      padding: 0 0 0 0.4rem;
+      color: var(--color-accent);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     &.parsley-error {
       ~.parsley-errors-list {
         display: none;
