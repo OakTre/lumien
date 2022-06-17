@@ -13,12 +13,4 @@ export default () => {
     }).to(preloader, {
       autoAlpha: 0
     })
-    // .fromTo(intro, {
-    //   y: "2.5rem"
-    // }, {
-    //   y: 0,
-    //   duration: 0.5,
-    //   ease: "none",
-    //   clearProps: "all"
-    // }, "-=0.7");
 };
