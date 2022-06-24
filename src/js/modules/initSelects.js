@@ -60,5 +60,13 @@ export default function initSelects() {
         });
       });
     });
+
+    window.lumien_API.choises = choices;
+    window.lumien_API.reinitChoises = () => {
+      choices.forEach((slct) => {
+        slct.destroy();
+        slct.init();
+      });
+    }
   }
 };
