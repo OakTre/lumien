@@ -6,7 +6,7 @@ export default function initSelects() {
   const customSelectsWithSearch = Array.from(document.querySelectorAll('.js-custom-select-search'));
   const clearBtns = document.querySelectorAll(".js-choises-clear");
   let choices = [];
-  const choicesProduct = [];
+  let choicesProduct = [];
 
   if (customSelectsProducts.length) {
     customSelectsProducts.forEach(item => {
