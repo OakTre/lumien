@@ -88,7 +88,8 @@ export default function initSelects() {
     window.lumien_API.choisesProduct = choicesProduct;
     window.lumien_API.reinitChoisesProduct = () => {
       choicesProduct = [];
-      customSelectsProducts.forEach((slct) => {
+      const customSelectsProductsNew = Array.from(document.querySelectorAll('.js-custom-select-products'));
+      customSelectsProductsNew.forEach((slct) => {
         const slctProduct = new Choices(slct, {
           searchEnabled: false,
           itemSelectText: '',
