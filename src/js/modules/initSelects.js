@@ -2,9 +2,25 @@ import Choices from 'choices.js';
 
 export default function initSelects() {
   const customSelects = Array.from(document.querySelectorAll('.js-custom-select'));
+  const customSelectsProducts = Array.from(document.querySelectorAll('.js-custom-select-products'));
   const customSelectsWithSearch = Array.from(document.querySelectorAll('.js-custom-select-search'));
   const clearBtns = document.querySelectorAll(".js-choises-clear");
   let choices = [];
+  const choicesProduct = [];
+
+  if (customSelectsProducts.length) {
+    customSelectsProducts.forEach(item => {
+      const slctProduct = new Choices(item, {
+        searchEnabled: false,
+        itemSelectText: '',
+        shouldSort: false,
+        allowHTML: true,
+        renderSelectedChoices: 'always',
+      });
+
+      choicesProduct.push(slctProduct);
+    });
+  }
 
   if (customSelects.length) {
     customSelects.forEach((select) => {
@@ -67,6 +83,24 @@ export default function initSelects() {
         slct.destroy();
         slct.init();
       });
+    }
+
+    window.lumien_API.choisesProduct = choicesProduct;
+    window.lumien_API.reinitChoisesProduct = () => {
+      choicesProduct = [];
+      customSelectsProducts.forEach((slct) => {
+        const slctProduct = new Choices(slct, {
+          searchEnabled: false,
+          itemSelectText: '',
+          shouldSort: false,
+          allowHTML: true,
+          renderSelectedChoices: 'always',
+        });
+
+        choicesProduct.push(slctProduct);
+      });
+
+      window.lumien_API.choisesProduct = choicesProduct;
     }
   }
 };

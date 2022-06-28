@@ -98,13 +98,13 @@ section.section-indent.intro-product
               p.product-details__label-name
                 span= item.labelName
                 if (item.tooltip)
-                  button.tooltip.button-reset(arila-label="Открыть подсказку")
+                  button.tooltip.button-reset(aria-label="Открыть подсказку")
                     +icon-multi("warning")(width="16" height="16" class="tooltip__icon")
                     span.tooltip__text-wrapper
                       span.tooltip__text
                         | Lorem ipsum dolor sit amet consectetur.
               .product-details__select.select-wrapper.custom-select
-                select(name="equipment-type" class="select js-custom-select")
+                select(name="equipment-type" class="select js-custom-select-products")
                   option(value=item.selectName placeholder)= item.selectName
                   option(value="second") second
                   option(value="third") third
