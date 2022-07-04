@@ -387,6 +387,26 @@
   min-height: 0;
   overflow: hidden;
 
+  &.is-form {
+    max-width: 58.6rem;
+
+    @include mq(md, min) {
+      .modal-product__block:nth-of-type(1) {
+        display: none;
+      }
+    }
+
+    @include mq(md) {
+      ._mobile-heading-wrapper {
+        display: none;
+      }
+
+      .modal-product__heading._mobile {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   @include mq(md) {
     .site-modal__close {
       border-color: rgba($color: #000, $alpha: 0.4);
@@ -446,19 +466,19 @@
   &__block {
     padding: 5.2rem 6.8rem;
     width: 100%;
-    flex-shrink: 0;
 
     &:nth-of-type(1) {
       background-color: var(--color-white);
       max-width: 60.9rem;
       color: var(--color-dark);
       overflow: auto;
+      flex-shrink: 0;
     }
 
     &:nth-of-type(2) {
       background-color: var(--color-purple);
-      max-width: calc(100% - 60.9rem);
       color: var(--color-white);
+      flex-grow: 1;
     }
 
     @include mq(md) {
@@ -539,7 +559,7 @@
     }
 
     input:checked {
-      ~ span {
+      ~span {
         &::after {
           opacity: 1;
         }
