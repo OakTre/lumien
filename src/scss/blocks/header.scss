@@ -219,6 +219,12 @@
     text-transform: none;
     margin-left: auto;
 
+    &.mod-eng-btn {
+      @include mq(sm) {
+        margin-left: auto !important;
+      }
+    }
+
     @include mq(lg) {
       margin-left: 0;
     }

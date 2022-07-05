@@ -1,0 +1,17 @@
+header.header(class=headerClass class="fix-block")
+  .site-container.header__container.grid-container
+    .header__block
+      a.logo.header__logo(href="/")
+        +icon-multi("logo")(width="161" height="22" class="logo__icon")
+    .header__block
+      a.header__link(href="#catalog")
+        |	Каталог
+    .header__block
+      a.header__link(href="#spheres" class=(pageName === "applications" ? "_is-current" : false))
+        |	Сферы применения
+    .header__block
+      a.header__link.header__page-link(href="/")
+        |	RUS
+      a.button-reset.button.header__btn.mod-eng-btn(href="#form")
+        span.mobile-hidden Оставить заявку
+        span.descktop-hidden Заявка

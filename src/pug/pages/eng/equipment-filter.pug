@@ -1,0 +1,30 @@
+section.equipment-filter.js-anim-fade-out
+  .site-container.equipment-filter__container.grid-container
+    .grid-container__block
+    .grid-container__block.equipment-filter__content
+      .equipment-filter__content-block
+        h2.equipment-filter__heading.site-second-heading.js-animated-heading Оборудование <br> под ваши цели
+      .equipment-filter__content-block
+        form.equipment-filter__form.js-choises-parent
+          .equipment-filter__form-wrapper
+            label.equipment-filter__form-label.select-wrapper.custom-select
+              select(name="equipment-type" class="select js-equipment-select")
+                option(value="Выберите тип оборудования" placeholder) Выберите тип оборудования
+                option(value="second") second
+                option(value="third") third
+            label.equipment-filter__form-label.select-wrapper.custom-select.mod-small
+              select(name="equipment-format" class="select js-equipment-select")
+                option(value="Выберите формат" placeholder) Выберите формат
+                option(value="second") second
+                option(value="third") third
+            label.equipment-filter__form-label.select-wrapper.custom-select.mod-small
+              select(name="screen-type" class="select js-equipment-select")
+                option(value="Выбрать тип экрана" placeholder) Выбрать тип экрана
+                option(value="second") second
+                option(value="third") third
+          .equipment-filter__form-btns
+            button.button-reset(type="button" class="equipment-filter__form-btn-reset js-equipment-clear") сброс
+            button.button-reset(class="equipment-filter__form-btn-send button") смотреть
+
+
+

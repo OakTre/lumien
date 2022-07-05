@@ -1,0 +1,29 @@
+include ../data/config.pug
+include ../mixins/**/*.pug
+
+block variables
+
+- let overflowVisible = pageName === 'product-card' ? 'overflow-visible' : null;
+
+doctype html
+html(lang=siteLang)
+  head
+    include ../parts/head.pug
+  body(class=bodyClass)
+    include ../parts/preloder.pug
+    include ../parts/menu.pug
+    include ../parts/search.pug
+    .page-wrapper(class=overflowVisible)
+      block header
+        include ../pages/eng/header.pug
+
+      block content
+
+      block footer
+        include ../pages/eng/footer.pug
+    .modal
+      include ../parts/modal.pug
+
+  block scripts
+    script(src="js/main.js?v=" + siteVersion)
+    script(src="assets/js/backend.js?v=" + siteVersion)

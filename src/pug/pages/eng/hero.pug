@@ -1,0 +1,64 @@
+-
+  let intro_arr = [
+    {
+      name: "Интерактивные <br> дисплеи",
+      slug: "Дисплеи",
+      img: "images/index-slider/img1.png",
+      text: "Профессиональный дисплей последнего поколения, поддерживающая технологию мультитач применима для <a href=''>развлекательных площадок</a>, <a href=''>образования</a>, <a href=''>корпоративных событий</a>,<a href=''>госсектора</a>, <a href=''>VR</a>"
+    },
+    {
+      name: "Проекционные <br> экраны",
+      slug: "Экраны",
+      img: "",
+      text: "Профессиональная панель последнего поколения, поддерживающая технологию мультитач применима для <a href=''>развлекательных площадок</a>, <a href=''>образования</a>, <a href=''>корпоративных событий</a>,<a href=''>госсектора</a>, <a href=''>VR</a>"
+    },
+    {
+      name: "Мебель <br> презентационная",
+      slug: "Мебель",
+      img: "images/index-slider/img3.png",
+      text: "Профессиональная мебель последнего поколения, поддерживающая технологию мультитач применима для <a href=''>развлекательных площадок</a>, <a href=''>образования</a>, <a href=''>корпоративных событий</a>,<a href=''>госсектора</a>, <a href=''>VR</a>"
+    }
+  ]
+
+section.intro
+  .intro__layer-slide.mod-show
+    //- video(src="assets/include/vidBgOne.mp4" class="intro__layer-video" playsinline muted autoplay loop)
+  .intro__layer-slide
+    //- video(src="assets/include/vidBgTwo.mp4" class="intro__layer-video" playsinline muted autoplay loop)
+  .intro__layer-slide
+    //- video(src="assets/include/vidBgThree.mp4" class="intro__layer-video" playsinline muted autoplay loop)
+  .site-container.intro__container.grid-container
+    .grid-container__block
+      a.logo.header__logo(href="/")
+        +icon-multi("logo")(width="161" height="22" class="logo__icon")
+    .grid-container__block.intro-content
+      .intro-content__block
+        .intro-slider-nav__wrapper
+          .intro-slider-nav.swiper
+            .swiper-wrapper
+              for item in intro_arr
+                .intro-slider-nav__item.swiper-slide= item.slug
+                  span._mobile-lines
+      .intro-content__block
+        .intro-content__slider-wrapper
+          .slider-nav.intro-content__slider-nav
+            button.slider-nav__btn.button-reset.js-intro-btn-prev
+              +icon-mono("shevron-left")(width="9" height="13" class="slider-nav__btn-icon")
+            button.slider-nav__btn.button-reset.js-intro-btn-next
+              +icon-mono("shevron-right")(width="9" height="13" class="slider-nav__btn-icon")
+          .intro-content-slider.swiper
+            .swiper-wrapper
+              for item in intro_arr
+                .swiper-slide
+                  span.intro-content__heading.js-intro-splitted(data-name=item.slug)!= item.name
+                  .intro-content__btn-wrapper.js-intro-content-anim
+                    .text-container
+                      p!= item.text
+                    a.intro-content__btn(href="/")
+                      span.intro-content__btn-circle-wrapper
+                        span.intro-content__btn-outer-circle
+                        +icon-multi("tv-small")(class="intro-content__btn-icon" width="52" height="39")
+                      span.intro-content__btn-text смотреть модели
+    img(src="images/index-slider/img1.png" alt="" class="intro-content__img mod-show")
+    img(src="images/index-slider/img2.png" alt="" class="intro-content__img")
+    img(src="images/index-slider/img33.png" alt="" class="intro-content__img is-furniture")

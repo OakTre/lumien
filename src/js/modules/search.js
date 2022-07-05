@@ -2,6 +2,8 @@ import gsap from "gsap";
 import { disableScroll, enableScroll } from '../helpers/disableScroll';
 
 export default () => {
+  const searchBtn = document.querySelector(".js-search-btn");
+  if (!searchBtn) return;
   const timeline = gsap.timeline({
     paused: true,
     reversed: true
@@ -9,7 +11,6 @@ export default () => {
   const timeline2 = gsap.timeline({
     paused: true,
   });
-  const searchBtn = document.querySelector(".js-search-btn");
   const searchCloseBtn = document.querySelector(".js-search-close-btn");
   const searchContainer = document.querySelector(".search");
   const header = document.querySelector(".header");
