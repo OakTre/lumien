@@ -44,5 +44,9 @@
     @include mq(md) {
       margin-bottom: 2rem;
     }
+
+    @include mq(sm) {
+      display: none;
+    }
   }
 }

@@ -374,6 +374,10 @@
     width: 100%;
     margin-bottom: 2rem;
 
+    &.hidden {
+      display: none;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }

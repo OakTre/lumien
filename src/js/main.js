@@ -33,13 +33,13 @@ import faqBtn from './modules/faqBtn.js';
 import playVideo from './modules/playVideo.js';
 import glossaryLetters from './modules/glossaryLetters.js';
 import catalogTopFilterSlider from './modules/catalogTopFilterSlider.js';
-import breadcrumbsCostil from './modules/breadcrumbsCostil.js';
 import initModal from './modules/initModal.js';
 import clearFilter from './modules/clearFilter.js';
 import spheresMobileTabs from './modules/spheresMobileTabs.js';
 import cartModalAccordion from './modules/cartModalAccordion.js';
 import dateInput from './modules/dateInput.js';
 import aboutPageHistorySlider from './modules/aboutPageHistorySlider.js';
+import charactiristics from './modules/charactiristics';
 
 smoothscroll.polyfill();
 
@@ -83,13 +83,13 @@ documenReady(() => {
   playVideo();
   glossaryLetters();
   catalogTopFilterSlider();
-  breadcrumbsCostil();
   initModal();
   clearFilter();
   spheresMobileTabs();
   cartModalAccordion();
   dateInput();
   aboutPageHistorySlider();
+  charactiristics();
 
   // always last
   cartImgsSlider();
