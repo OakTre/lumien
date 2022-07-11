@@ -10,6 +10,9 @@ export default () => {
   });
   const layer = document.querySelector(".menu_layer");
 
+  if (!document.querySelector(".menu")) return;
+
+
   gsap.set(".menu", {autoAlpha: 0});
   gsap.set(".menu_layer", {autoAlpha: 0});
   gsap.set(".menu__container", {yPercent: -100});

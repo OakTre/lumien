@@ -72,7 +72,8 @@ section.section-indent.intro-product
           .swiper-slide
             img.intro-product__slider-img.lazy(data-src="images/intro-product/slide3.jpg" src="#" alt="")
           .swiper-slide
-            img.intro-product__slider-img.lazy(data-src="images/intro-product/slide3.jpg" src="#" alt="")
+            .intro-product__slider-video.js-play-video(data-video-url="https://www.youtube.com/watch?v=HNmmKCDxn7w")
+              img.intro-product__slider-img.lazy(data-src="images/intro-product/slide3.jpg" src="#" alt="")
         .js-product-intro-pagination.intro-product__slider-pagination
 
       .intro-product__slider-thumb.swiper.js-product-intro-thumb-slider
@@ -84,7 +85,8 @@ section.section-indent.intro-product
           .swiper-slide
             img.intro-product__slider-thumb-img.lazy(data-src="images/intro-product/slide3.jpg" src="#" alt="")
           .swiper-slide
-            img.intro-product__slider-thumb-img.lazy(data-src="images/intro-product/slide3.jpg" src="#" alt="")
+            .intro-product__slider-thumb-video
+              img.intro-product__slider-thumb-img.lazy(data-src="images/intro-product/slide3.jpg" src="#" alt="")
     .intro-product__block
       .intro-product__descktop
         .tag__container.intro-product__tag-container
@@ -127,6 +129,18 @@ section.section-indent.intro-product
       p.intro-product__txt Для определения характеристик необходимо заполнить все параметры
       table.product-characteristics(data-count="3")
         tbody
+          thead.product-characteristics__head
+            tr.product-characteristics__head-row
+              td.product-characteristics__head-item Характеристики оборудования:
+          for item in carachteristics
+            tr.product-characteristics__row
+              td.product-characteristics__item= item.name
+              td.product-characteristics__item= item.value
+      table.product-characteristics(data-count="4")
+        tbody
+          thead.product-characteristics__head
+            tr.product-characteristics__head-row
+              td.product-characteristics__head-item Характеристики дисплея:
           for item in carachteristics
             tr.product-characteristics__row
               td.product-characteristics__item= item.name

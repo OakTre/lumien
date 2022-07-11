@@ -136,6 +136,10 @@
     width: 100%;
     margin-top: 2.3rem;
     padding: 1.4rem 2.9rem;
+
+    @include mq(sm) {
+      padding: 1.4rem 1.2rem;
+    }
   }
 
   &.mod-search {

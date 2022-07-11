@@ -7,6 +7,7 @@
     @include mq(sm) {
       margin-bottom: 1.5rem;
     }
+
     .tag {
       @include mq(sm) {
         font: var(--font-body-XXS);
@@ -110,6 +111,42 @@
     }
   }
 
+  &__slider-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50.3%;
+      z-index: 20;
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      border-bottom-width: 16px;
+      border-top-width: 16px;
+      border-left: 28px solid var(--color-accent);
+      transform: translate(-50%, -50%);
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 15;
+      width: 7.7rem;
+      height: 7.7rem;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.79);
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.4);
+      content: '';
+    }
+  }
+
   &__slider-thumb {
     max-width: 49.1rem;
 
@@ -125,6 +162,41 @@
 
     @include mq(md) {
       display: none;
+    }
+  }
+
+  &__slider-thumb-video {
+    position: relative;
+    height: 14.9rem;
+    width: 100%;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 51.3%;
+      z-index: 20;
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      border-bottom-width: 7px;
+      border-top-width: 7px;
+      border-left: 15px solid var(--color-accent);
+      transform: translate(-50%, -50%);
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 15;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.79);
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.4);
+      content: '';
     }
   }
 
@@ -203,7 +275,7 @@
     display: inline-flex;
     align-items: center;
 
-    > span {
+    >span {
       display: block;
       margin-right: 1rem;
     }
@@ -274,11 +346,11 @@
     cursor: pointer;
 
     input:checked {
-      ~ .product-details__color-circle {
+      ~.product-details__color-circle {
         border-color: var(--color-accent);
       }
 
-      ~ .product-details__color-name {
+      ~.product-details__color-name {
         opacity: 1;
         visibility: visible;
       }
@@ -362,6 +434,27 @@
 .product-characteristics {
   width: 100%;
   display: block;
+  margin-bottom: 4rem;
+
+  &:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
+
+  &__head {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  &__head-row {
+    display: block;
+  }
+
+  &__head-item {
+    font-size: 1.6rem;
+    line-height: 1;
+    font-weight: 500;
+    color: var(--color-darken);
+  }
 
   tbody {
     width: 100%;
