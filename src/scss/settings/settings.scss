@@ -57,15 +57,16 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
+}
 
-  &.lazy {
-    opacity: 0;
-    transition: opacity 300ms, transform var(--transition);
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
 
-    &.loaded {
-      opacity: 1;
-    }
-  }
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
 }
 
 a {

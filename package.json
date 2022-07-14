@@ -74,6 +74,7 @@
     "husky": "^7.0.4",
     "imagemin-pngquant": "^9.0.2",
     "imagemin-webp": "^7.0.0",
+    "lazysizes": "^5.3.2",
     "lint-staged": "^12.3.5",
     "pug-include-glob": "^0.4.3",
     "pug-lint": "^2.6.0",
