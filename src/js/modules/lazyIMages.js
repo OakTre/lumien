@@ -1,5 +1,6 @@
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+import '../../assets/js/lazysizesBG.js';
 import canUseWebp from '../helpers/canUseWebp';
 
 export default () => {
@@ -15,12 +16,12 @@ export default () => {
     });
   };
 
-  document.addEventListener('lazybeforeunveil', function (e) {
-    var bg = e.target.getAttribute('data-bg');
-    if (bg) {
-      e.target.style.backgroundImage = 'url(' + bg + ')';
-    }
-  });
+  // document.addEventListener('lazybeforeunveil', function (e) {
+  //   var bg = e.target.getAttribute('data-bg');
+  //   if (bg) {
+  //     e.target.style.backgroundImage = 'url(' + bg + ')';
+  //   }
+  // });
 
   // window.lumien_API.updateLazyLoad = () => {
   //   lazyLoadInstance.restoreAll();
