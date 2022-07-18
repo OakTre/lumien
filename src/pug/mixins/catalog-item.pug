@@ -5,4 +5,4 @@ mixin catalog-item(name, text, img, count)
       p!= text
     span.catalog-cart__link
       | Смотреть модели (#{count})
-    img.catalog-cart__img.lazy(data-src=`images/catalog-cart/${img}.png` src="#" alt=name)
+    img.catalog-cart__img.lazyload(data-src=`images/catalog-cart/${img}.png` src="#" alt=name)

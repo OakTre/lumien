@@ -1,7 +1,7 @@
 mixin cases(img, tag, name, location, txt)
   a.cases(href="/case-detail.html")
     .cases__top
-      img(data-src=`images/cases/${img}.jpg` src="#" alt=name class="cases__img lazy")
+      img(data-src=`images/cases/${img}.jpg` src="#" alt=name class="cases__img lazyload")
     .cases__bottom
       .cases__tags
         span.cases__tag= tag

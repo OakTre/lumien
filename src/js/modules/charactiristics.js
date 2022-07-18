@@ -36,7 +36,36 @@ export default () => {
         charsBtn.innerHTML = "Показать еще";
         flag = true;
         break;
-    }
-
+    };
   });
+
+  window.lumien_API.reinitHiddenRows = () => {
+    charsParents.forEach(parent => {
+      const charsCount = Number(parent.dataset.count);
+
+      hideRows(parent, charsCount);
+    });
+  };
+
+  window.lumien_API.listenCharsBtn = () => {
+    flag = true;
+    charsBtn.addEventListener("click", () => {
+      switch (flag) {
+        case true:
+          charsRows.forEach(row => row.classList.remove("hidden"));
+          flag = false;
+          charsBtn.innerHTML = "Скрыть";
+          break;
+        case false:
+          charsParents.forEach(parent => {
+            const charsCount = Number(parent.dataset.count);
+
+            hideRows(parent, charsCount);
+          });
+          charsBtn.innerHTML = "Показать еще";
+          flag = true;
+          break;
+      };
+    });
+  };
 };

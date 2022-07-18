@@ -12,7 +12,7 @@ mixin cart(tags, imgs, name, txt, feats, btn)
           .swiper-wrapper
             for img in imgs
               .swiper-slide
-                img.cart__img.lazy(data-src=`images/cart/${img}.png` src="#" alt=txt)
+                img.cart__img.lazyload(data-src=`images/cart/${img}.png` src="#" alt=txt)
           .cart__img-pagination.swiper-pagination
       .cart__bottom
         h4.cart__name= name
@@ -35,7 +35,7 @@ mixin cart(tags, imgs, name, txt, feats, btn)
           .swiper-wrapper
             for img in imgs
               .swiper-slide
-                img.cart__img.lazy(data-src=`images/cart/${img}.png` src="#" alt=txt)
+                img.cart__img.lazyload(data-src=`images/cart/${img}.png` src="#" alt=txt)
         .cart__img-pagination.swiper-pagination
       .cart__bottom
         h4.cart__name= name
