@@ -39,7 +39,7 @@ import spheresMobileTabs from './modules/spheresMobileTabs.js';
 import cartModalAccordion from './modules/cartModalAccordion.js';
 import dateInput from './modules/dateInput.js';
 import aboutPageHistorySlider from './modules/aboutPageHistorySlider.js';
-import charactiristics from './modules/charactiristics';
+import characteristics from './modules/charactiristics';
 
 smoothscroll.polyfill();
 
@@ -89,7 +89,7 @@ documenReady(() => {
   cartModalAccordion();
   dateInput();
   aboutPageHistorySlider();
-  charactiristics();
+  characteristics();
 
   // always last
   cartImgsSlider();

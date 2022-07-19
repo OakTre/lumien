@@ -1,5 +1,5 @@
 export default function clearForm(form) {
-  const inputs = Array.from(form.querySelectorAll("input"));
+  const inputs = Array.from(form.querySelectorAll("input:not([type=hidden])"));
   const textareas = Array.from(form.querySelectorAll("textarea"));
   const checkboxs = Array.from(form.querySelectorAll("input[type=checkbox]"));
   const choisesItem = Array.from(form.querySelectorAll(".choices__item--choice"));
@@ -16,17 +16,11 @@ export default function clearForm(form) {
     chckBox.checked = false;
   });
 
-  console.log(choisesItem.length);
-
   if (choisesItem.length) {
     choisesItem.forEach(item => {
       item.classList.remove("is-selected");
     })
   }
-
-  // validatedForms.forEach(form => {
-  //   form.reset();
-  // });
 
   // customSelects.forEach(select => {
   //   select.destroy();

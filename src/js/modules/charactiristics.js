@@ -1,4 +1,4 @@
-export default () => {
+const characteristics = () => {
   const charsBtn = document.querySelector(".product-characteristics__show-more-btn");
   const charsRows = Array.from(document.querySelectorAll(".product-characteristics__row"));
   const charsParents = Array.from(document.querySelectorAll(".product-characteristics"));
@@ -38,34 +38,10 @@ export default () => {
         break;
     };
   });
-
-  window.lumien_API.reinitHiddenRows = () => {
-    charsParents.forEach(parent => {
-      const charsCount = Number(parent.dataset.count);
-
-      hideRows(parent, charsCount);
-    });
-  };
-
-  window.lumien_API.listenCharsBtn = () => {
-    flag = true;
-    charsBtn.addEventListener("click", () => {
-      switch (flag) {
-        case true:
-          charsRows.forEach(row => row.classList.remove("hidden"));
-          flag = false;
-          charsBtn.innerHTML = "Скрыть";
-          break;
-        case false:
-          charsParents.forEach(parent => {
-            const charsCount = Number(parent.dataset.count);
-
-            hideRows(parent, charsCount);
-          });
-          charsBtn.innerHTML = "Показать еще";
-          flag = true;
-          break;
-      };
-    });
-  };
 };
+
+window.reinitChars = () => {
+  characteristics();
+};
+
+export default characteristics;
